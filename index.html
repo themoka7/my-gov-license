@@ -1,0 +1,1231 @@
+<title>정보관리기술사 1교시 답안지</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;700&family=Noto+Sans+KR:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --paper:#eef1f4; --surface:#ffffff; --surface-2:#f7f9fb;
+  --ink:#16233a; --pencil:#5d6b7a; --faint:#8996a5;
+  --rule:#c9d2dc; --rule-soft:#e0e6ec;
+  --mark:#b83227; --mark-soft:#f6e7e4;
+  --ok:#1d6f5c;
+  --serif:"Noto Serif KR",serif;
+  --sans:"Noto Sans KR",system-ui,-apple-system,sans-serif;
+  --mono:"JetBrains Mono","SFMono-Regular",Consolas,monospace;
+  --shadow:0 1px 2px rgba(22,35,58,.06),0 8px 24px -16px rgba(22,35,58,.28);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#0f141a; --surface:#171d25; --surface-2:#1e252e;
+    --ink:#e3e9f0; --pencil:#96a3b1; --faint:#6f7d8b;
+    --rule:#2d3844; --rule-soft:#242d37;
+    --mark:#ea7565; --mark-soft:#2e211f;
+    --ok:#5cbfa4;
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px -16px rgba(0,0,0,.7);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0f141a; --surface:#171d25; --surface-2:#1e252e;
+  --ink:#e3e9f0; --pencil:#96a3b1; --faint:#6f7d8b;
+  --rule:#2d3844; --rule-soft:#242d37;
+  --mark:#ea7565; --mark-soft:#2e211f;
+  --ok:#5cbfa4;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px -16px rgba(0,0,0,.7);
+}
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.72;
+  -webkit-text-size-adjust:100%;letter-spacing:-.005em}
+a{color:inherit}
+h1,h2,h3,h4{font-family:var(--serif);text-wrap:balance;margin:0;line-height:1.4}
+:focus-visible{outline:2px solid var(--mark);outline-offset:2px;border-radius:2px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+
+/* ---------- top bar ---------- */
+.bar{position:sticky;top:0;z-index:40;background:color-mix(in srgb,var(--surface) 88%,transparent);
+  backdrop-filter:blur(10px);border-bottom:1px solid var(--rule-soft)}
+.bar-in{max-width:1180px;margin:0 auto;padding:10px 16px;display:flex;align-items:center;gap:12px}
+.brand{font-family:var(--serif);font-weight:700;font-size:15px;white-space:nowrap}
+.brand span{color:var(--pencil);font-weight:500}
+.bar-sp{flex:1}
+.btn{font-family:var(--sans);font-size:12.5px;font-weight:500;color:var(--pencil);background:var(--surface-2);
+  border:1px solid var(--rule-soft);border-radius:6px;padding:6px 10px;cursor:pointer;white-space:nowrap}
+.btn:hover{color:var(--ink);border-color:var(--rule)}
+.meter{font-family:var(--mono);font-size:12px;color:var(--pencil);font-variant-numeric:tabular-nums;white-space:nowrap}
+.meter b{color:var(--ink)}
+#navBtn{display:none}
+@media(max-width:999px){#navBtn{display:block}}
+
+/* ---------- shell ---------- */
+.shell{max-width:1180px;margin:0 auto;padding-inline:16px;padding-block:28px 88px;
+  display:grid;grid-template-columns:236px minmax(0,1fr);gap:40px;align-items:start}
+@media(max-width:999px){.shell{grid-template-columns:minmax(0,1fr);gap:0}}
+
+/* ---------- nav ---------- */
+nav{position:sticky;top:76px;font-size:13.5px}
+@media(max-width:999px){
+  nav{position:fixed;inset:52px 0 0;z-index:39;background:var(--paper);overflow-y:auto;
+    padding:18px 16px 60px;border-top:1px solid var(--rule-soft)}
+}
+.nav-h{font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--faint);margin:18px 0 7px}
+.nav-h:first-child{margin-top:0}
+nav ol{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+nav a{display:flex;gap:8px;align-items:baseline;text-decoration:none;color:var(--pencil);
+  padding:4.5px 8px;border-radius:5px;border-left:2px solid transparent}
+nav a:hover{color:var(--ink);background:var(--surface-2)}
+nav a.on{color:var(--ink);font-weight:500;border-left-color:var(--mark);background:var(--surface-2)}
+nav a i{font-family:var(--mono);font-size:11px;font-style:normal;color:var(--faint);
+  font-variant-numeric:tabular-nums;flex:0 0 20px}
+nav a.done i{color:var(--ok)}
+
+/* ---------- prose ---------- */
+main{min-width:0}
+section{margin-bottom:64px;scroll-margin-top:74px}
+.eyebrow{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--mark)}
+h2{font-size:clamp(21px,4.2vw,27px);margin:6px 0 0}
+.lede{color:var(--pencil);max-width:64ch;margin:10px 0 0;font-size:14.5px}
+h3{font-size:17px;margin:34px 0 10px;padding-bottom:7px;border-bottom:1px solid var(--rule-soft)}
+p{margin:0 0 12px;max-width:66ch}
+ul,ol.body{max-width:66ch;padding-left:20px;margin:0 0 12px}
+li{margin-bottom:5px}
+strong{font-weight:700}
+code,.kw{font-family:var(--mono);font-size:.9em}
+.hero{background:var(--surface);border:1px solid var(--rule-soft);border-radius:10px;
+  padding:22px 22px 24px;box-shadow:var(--shadow);margin-bottom:56px}
+.hero h1{font-size:clamp(24px,5.4vw,34px)}
+.hero p{color:var(--pencil);margin:12px 0 0;font-size:15px}
+
+/* ---------- tables ---------- */
+.tw{overflow-x:auto;margin:0 0 16px;border:1px solid var(--rule-soft);border-radius:8px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:13.5px;min-width:460px}
+th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--rule-soft);vertical-align:top}
+thead th{background:var(--surface-2);font-family:var(--sans);font-weight:700;font-size:12px;
+  color:var(--pencil);letter-spacing:.02em;white-space:nowrap}
+tbody tr:last-child td{border-bottom:0}
+td:first-child{font-weight:500;white-space:nowrap}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+
+/* ---------- answer sheet card ---------- */
+.sheet{background:var(--surface);border:1px solid var(--rule);border-radius:4px;box-shadow:var(--shadow);
+  margin:0 0 14px;overflow:hidden}
+.sheet-top{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;
+  padding:10px 16px;background:var(--surface-2);border-bottom:1px solid var(--rule)}
+.tag{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--pencil);border:1px solid var(--rule);border-radius:3px;padding:2px 6px;background:var(--surface)}
+.tag.t{color:var(--mark);border-color:var(--mark);background:var(--mark-soft)}
+.sheet-top .num{font-size:11.5px;color:var(--faint);margin-left:auto}
+.q{padding:14px 16px 2px;font-family:var(--serif);font-weight:500;font-size:15.5px;
+  border-bottom:1px dashed var(--rule-soft);padding-bottom:13px}
+.q b{font-family:var(--mono);font-size:12px;color:var(--mark);font-weight:500;margin-right:6px}
+.body-wrap{padding:16px 16px 8px 16px;border-left:2px solid var(--mark-soft);margin-left:14px}
+.body-wrap h4{font-family:var(--mono);font-size:13px;font-weight:500;margin:16px 0 7px;color:var(--ink)}
+.body-wrap h4:first-child{margin-top:0}
+.body-wrap p,.body-wrap li{font-size:13.8px}
+.end{text-align:right;font-family:var(--serif);font-weight:700;color:var(--mark);
+  padding:2px 18px 14px;font-size:14px}
+pre{font-family:var(--mono);font-size:11.5px;line-height:1.62;background:var(--surface-2);
+  border:1px solid var(--rule-soft);border-radius:6px;padding:13px 14px;overflow-x:auto;margin:0 0 14px}
+
+/* ---------- keyword chips ---------- */
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 14px;padding:0;list-style:none}
+.chips li{font-family:var(--mono);font-size:11.5px;color:var(--mark);background:var(--mark-soft);
+  border-radius:3px;padding:3px 8px;margin:0}
+
+/* ---------- disclosure ---------- */
+details{border:1px solid var(--rule-soft);border-radius:8px;background:var(--surface);margin:0 0 12px}
+summary{cursor:pointer;padding:11px 15px;font-weight:500;font-size:13.5px;list-style:none;display:flex;gap:9px;align-items:center}
+summary::-webkit-details-marker{display:none}
+summary::before{content:"+";font-family:var(--mono);color:var(--mark);font-size:14px;width:11px}
+details[open] summary::before{content:"−"}
+details[open] summary{border-bottom:1px solid var(--rule-soft)}
+.det-in{padding:14px 15px 4px}
+.det-in p,.det-in li{font-size:13.8px}
+
+/* ---------- progress control ---------- */
+.prog{display:flex;flex-wrap:wrap;gap:7px;align-items:center;margin:0 0 34px}
+.pbtn{font-family:var(--mono);font-size:11.5px;color:var(--pencil);background:var(--surface);
+  border:1px solid var(--rule-soft);border-radius:5px;padding:5px 10px;cursor:pointer}
+.pbtn[aria-pressed="true"]{color:var(--surface);background:var(--ink);border-color:var(--ink)}
+.pbtn[aria-pressed="true"][data-v="2"]{background:var(--ok);border-color:var(--ok)}
+.sync{font-family:var(--mono);font-size:11px;color:var(--faint);margin-left:2px}
+
+/* ---------- callout ---------- */
+.note{border-left:2px solid var(--mark);background:var(--mark-soft);border-radius:0 6px 6px 0;
+  padding:12px 14px;margin:0 0 16px}
+.note p{margin:0;font-size:13.5px}
+.note b{color:var(--mark)}
+
+/* ---------- round question tables ---------- */
+.round{margin-bottom:40px;scroll-margin-top:74px}
+.round h3{display:flex;flex-wrap:wrap;gap:4px 10px;align-items:baseline}
+.rd{font-family:var(--mono);font-size:11px;font-weight:400;color:var(--faint);letter-spacing:.01em}
+table.qt{min-width:520px}
+table.qt td:first-child{width:34px;color:var(--faint);text-align:right}
+table.qt td:nth-child(2){white-space:normal;font-weight:400;line-height:1.6}
+table.qt td:last-child{width:84px}
+table.qt .tag{font-size:10px;padding:1px 5px}
+
+@media(max-width:640px){
+  table.qt{min-width:0}
+  table.qt thead{display:none}
+  table.qt tr{display:grid;grid-template-columns:26px minmax(0,1fr);gap:3px 9px;
+    padding:10px 12px;border-bottom:1px solid var(--rule-soft)}
+  table.qt tbody tr:last-child{border-bottom:0}
+  table.qt td{border:0;padding:0;width:auto!important}
+  table.qt td:first-child{grid-row:span 2;text-align:right}
+  table.qt td:nth-child(2){font-size:13.5px}
+}
+
+/* ---------- bottom pager (mobile) ---------- */
+.pager{position:fixed;bottom:0;left:0;right:0;z-index:38;display:none;gap:1px;
+  background:var(--rule-soft);border-top:1px solid var(--rule-soft)}
+@media(max-width:999px){.pager{display:flex}}
+.pager button{flex:1;background:var(--surface);border:0;color:var(--pencil);font-family:var(--sans);
+  font-size:12.5px;font-weight:500;padding:12px 8px;cursor:pointer}
+.pager button:disabled{color:var(--faint)}
+footer{border-top:1px solid var(--rule-soft);padding-top:18px;color:var(--faint);font-size:12.5px}
+</style>
+<div class="bar"><div class="bar-in">
+  <span class="brand">정보관리기술사 <span>1교시 답안지</span></span>
+  <span class="bar-sp"></span>
+  <span class="meter" id="meter">진도 <b>0</b>/12</span>
+  <button class="btn" id="navBtn" aria-expanded="false">목차</button>
+</div></div>
+
+<div class="shell">
+<nav id="nav" aria-label="목차">
+  <div class="nav-h">기초</div>
+  <ol>
+    <li><a href="#structure"><i>00</i>시험 구조 팩트</a></li>
+    <li><a href="#review"><i>01</i>패턴 검토 결과</a></li>
+    <li><a href="#tpl1"><i>02</i>1교시 유형별 템플릿</a></li>
+    <li><a href="#tpl2"><i>03</i>2~4교시 템플릿</a></li>
+    <li><a href="#glyph"><i>04</i>도해 표준 기호</a></li>
+  </ol>
+  <div class="nav-h">기출 회차</div>
+  <ol>
+    <li><a href="#r139"><i>139</i>제139회</a></li>
+    <li><a href="#r138"><i>138</i>제138회</a></li>
+    <li><a href="#r137"><i>137</i>제137회</a></li>
+    <li><a href="#r136"><i>136</i>제136회</a></li>
+    <li><a href="#r135"><i>135</i>제135회</a></li>
+    <li><a href="#r134"><i>134</i>제134회</a></li>
+    <li><a href="#r133"><i>133</i>제133회</a></li>
+  </ol>
+  <div class="nav-h">고빈도 주제 답안</div>
+  <ol id="navAnswers"></ol>
+</nav>
+
+<main>
+<div class="hero">
+  <h1>10점을 9분에 받아내는 1교시 답안</h1>
+  <p>1교시는 지식 시험이 아니라 <strong>속기 시험</strong>입니다. 아는 걸 다 쓰면 떨어지고, 채점 키워드만 골라 1페이지에 배치하면 붙습니다. 이 페이지는 <strong>제133~139회 1교시 기출 91문항 전문</strong>과 답안 골격 12개를 실제 답안지 형태로 담았습니다 — 시험용 답안과 "쉬운 설명"을 분리해 두었으니, 이해는 설명으로 하고 암기는 골격으로 하세요.</p>
+</div>
+
+<section id="structure">
+  <div class="eyebrow">00 / 기초</div>
+  <h2>시험 구조 팩트</h2>
+  <p class="lede">전략은 배점표에서 나옵니다. 여기서 틀리면 공부 방향 전체가 틀어집니다.</p>
+  <div class="tw"><table>
+    <thead><tr><th>교시</th><th>형식</th><th>출제 / 선택</th><th>배점</th><th>시간</th><th>문제당</th></tr></thead>
+    <tbody>
+      <tr><td>1교시</td><td>단답형(용어)</td><td class="num">13문제 중 10문제 선택</td><td class="num">10점 × 10 = 100점</td><td class="num">100분</td><td class="num">약 9분</td></tr>
+      <tr><td>2교시</td><td>논술형</td><td class="num">6문제 중 4문제 선택</td><td class="num">25점 × 4 = 100점</td><td class="num">100분</td><td class="num">약 24분</td></tr>
+      <tr><td>3교시</td><td>논술형</td><td class="num">6문제 중 4문제 선택</td><td class="num">25점 × 4 = 100점</td><td class="num">100분</td><td class="num">약 24분</td></tr>
+      <tr><td>4교시</td><td>논술형</td><td class="num">6문제 중 4문제 선택</td><td class="num">25점 × 4 = 100점</td><td class="num">100분</td><td class="num">약 24분</td></tr>
+    </tbody>
+  </table></div>
+  <p><strong>합격선은 400점 만점 평균 60점(240점)</strong>입니다. 만점을 노리는 시험이 아니라 <strong>과락 없이 240점을 모으는 시험</strong>이라는 게 전략의 출발점입니다.</p>
+  <div class="note"><p><b>여기서 갈립니다.</b> 1교시는 "10문제를 푸는" 시험이 아니라 <b>13문제 중 3문제를 버리는</b> 시험입니다. 시작 후 4~5분은 펜을 들지 말고 13문제를 전부 읽어 ◎(도해까지 그릴 수 있음) / ○(표는 채움) / ×(버림)로 분류하세요. 이 5분이 뒤의 95분을 삽니다.</p></div>
+  <h3>현실적인 목표 배분</h3>
+  <div class="tw"><table>
+    <thead><tr><th>구간</th><th>목표</th><th>근거</th></tr></thead>
+    <tbody>
+      <tr><td>1교시</td><td class="num">60~70점</td><td>◎ 4문제에서 8점, ○ 6문제에서 5~6점. 가장 통제 가능한 구간이라 여기서 벌어야 합니다.</td></tr>
+      <tr><td>2~4교시</td><td class="num">문항당 15점</td><td>25점 만점 중 15점은 "소문항 3개를 다 건드리고 빈 곳이 없는" 답안이면 나옵니다. 한 문제 20점보다 네 문제 15점이 쉽습니다.</td></tr>
+      <tr><td>백지 방지</td><td class="num">최우선</td><td>못 쓴 문항 1개 = −25점. 이 손실은 다른 문항의 완성도로 절대 못 메웁니다.</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section id="review">
+  <div class="eyebrow">01 / 검토</div>
+  <h2>패턴 검토 결과</h2>
+  <p class="lede">주신 패턴은 골격이 옳습니다. 3단 콤보, 표 중심, 영문 약어 배치, 도해 기호 표준화 — 이 네 가지는 그대로 쓰시면 됩니다. 다만 사실관계 4곳이 틀렸고, 실전에서 손이 멈추는 누락이 5곳 있습니다.</p>
+
+  <h3>바로잡아야 할 것</h3>
+  <div class="tw"><table>
+    <thead><tr><th>항목</th><th>원안</th><th>실제</th></tr></thead>
+    <tbody>
+      <tr><td>1교시 문항 수</td><td>"100분 동안 10문제를 풀어야 하므로"</td><td><strong>13문제 중 10문제 선택.</strong> '선택'이 빠지면 버리기 전략이 사라져 가장 큰 득점 수단을 잃습니다.</td></tr>
+      <tr><td>1교시 분량</td><td>1페이지 ~ 1.2페이지</td><td><strong>1페이지(답안지 1면) 고정.</strong> 1.2페이지는 다음 장으로 두 줄쯤 넘어가 채점 흐름을 끊고, 10문제×0.2페이지 = 2페이지 분량의 시간을 초과 지출합니다. "1면을 꽉 채우고 멈춘다"가 정답입니다.</td></tr>
+      <tr><td>"끝." 표기</td><td>서술형 마지막 줄에만 기재</td><td><strong>1교시를 포함한 모든 문항 답안 끝</strong>에 우측 정렬로 기재합니다. 없으면 미완성 답안으로 읽힐 수 있습니다.</td></tr>
+      <tr><td>결론 분량</td><td>0.3 ~ 0.5페이지</td><td><strong>0.2 ~ 0.3페이지.</strong> 배점은 소문항에 붙어 있습니다. 결론에 0.5페이지를 쓰는 건 배점 없는 곳에 지면을 쓰는 것 — 그 지면은 본론 표 한 줄, 도해 한 개로 가야 점수가 됩니다. 도입도 같은 이유로 0.5페이지 → 0.3페이지.</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>관점 하나 교정</h3>
+  <p>원안은 "채점관의 시선을 사로잡는다", "가독성과 완성도가 2배" 같은 <em>미관</em>의 언어로 표를 설명합니다. 실제 채점은 <strong>채점 기준표의 키워드에 배점을 얹는 방식</strong>입니다. 표를 쓰는 진짜 이유는 예뻐서가 아니라 <strong>같은 지면에 키워드를 3배 넣을 수 있어서</strong>입니다. 줄글 3줄에 키워드 2개가 들어가는 자리에, 3행 표는 항목명 3개 + 설명 키워드 6개가 들어갑니다. 이 관점으로 바꾸면 "표를 몇 개 넣을까"가 아니라 <strong>"이 표에 채점 키워드가 몇 개 박혔나"</strong>를 세게 됩니다.</p>
+
+  <h3>비어 있는 것 — 실전에서 손이 멈추는 지점</h3>
+  <ol class="body">
+    <li><strong>번호 체계가 없습니다.</strong> 대제목만 있고 하위 계층이 없어 실제로 쓰면 3분 만에 계층이 무너집니다. <code>I. → 1. → 가. → 1)</code> 4단계로 고정하고, 4단계 아래로는 절대 내려가지 마세요.</li>
+    <li><strong>모든 문제에 개념도를 요구합니다.</strong> 9분에 박스 다이어그램을 그리면 표를 못 씁니다. 도해는 <strong>아키텍처형·프로세스형에만</strong>, 비교형은 표만으로 충분합니다. 아래 유형별 템플릿이 이 분기를 처리합니다.</li>
+    <li><strong>시간 초과 시 대응이 없습니다.</strong> 1교시 후반에 반드시 시간이 부족해집니다. <strong>축약형(개요 3줄 + 표 3행 + 끝.)</strong>을 미리 손에 익혀두면 5분에 6점을 건집니다. 완성형 하나 대신 축약형 둘이 이득입니다.</li>
+    <li><strong>두문자(암기 장치)가 없습니다.</strong> 표 항목은 시험장에서 떠올려야 나옵니다. 프레임워크마다 두문자를 붙여 외우세요 — 예: 쿠버네티스 오토스케일링 <code>HPA·VPA·CA</code>, 제로 트러스트 <code>PE·PA·PEP</code>.</li>
+    <li><strong>소문항 배점 배분이 없습니다.</strong> "가/나/다" 3개면 25점을 <code>도입 3 · 가 6 · 나 6 · 다 8 · 결론 2</code> 정도로 보고 지면을 나누세요. 보통 <strong>마지막 소문항(다)에 가장 무거운 배점</strong>이 실리는데, 시간이 부족해 여기를 부실하게 쓰는 게 가장 흔한 실점입니다. 순서를 바꿔 <strong>'다'를 먼저 쓰는 것도 유효한 전략</strong>입니다.</li>
+  </ol>
+
+  <h3>그대로 가져가는 것</h3>
+  <ul>
+    <li><strong>3단 콤보</strong>(정의 → 개념도·구성요소 → 비교·적용): 1교시 골격으로 정확합니다.</li>
+    <li><strong>출제 지문을 목차명으로 그대로 사용</strong>: 채점자가 소문항 매핑을 눈으로 확인할 수 있어 실질적으로 점수가 됩니다. 가장 값어치 있는 조언입니다.</li>
+    <li><strong>영문 약어 병기</strong>(<code>RoCEv2</code>, <code>PUE</code>, <code>SHAP</code>): 채점 기준표가 영문 키워드로 쓰여 있는 경우가 많아 실제로 유효합니다.</li>
+    <li><strong>도해 기호 4~5개로 제한</strong>: 시험장에서 1~2분 내 재현이 목표라는 판단이 옳습니다.</li>
+    <li><strong>3단 분류 프레임</strong>(관리적·기술적·물리적 / 기획·구축·운영): 대응방안 문항에서 균형을 보증하는 안전장치입니다.</li>
+  </ul>
+</section>
+<section id="tpl1">
+  <div class="eyebrow">02 / 템플릿</div>
+  <h2>1교시 유형별 템플릿</h2>
+  <p class="lede">"3단 콤보" 하나로 13문제를 다 커버할 수 없습니다. 문제의 동사를 보고 5개 중 하나를 꺼내 쓰세요. 골격이 손에 붙으면 9분에 1페이지가 나옵니다.</p>
+
+  <div class="tw"><table>
+    <thead><tr><th>유형</th><th>문제의 동사</th><th>도해</th><th>중심 무기</th></tr></thead>
+    <tbody>
+      <tr><td>A 정의·개념형</td><td>"~에 대하여 설명하시오"</td><td>선택</td><td>구성요소 표</td></tr>
+      <tr><td>B 비교형</td><td>"A와 B를 비교하시오"</td><td>불필요</td><td>1:1 비교표</td></tr>
+      <tr><td>C 절차·프로세스형</td><td>"~절차/단계를 설명하시오"</td><td>필수(흐름)</td><td>단계별 표</td></tr>
+      <tr><td>D 아키텍처·구성형</td><td>"~의 구성요소를 설명하시오"</td><td>필수(계층)</td><td>계층 도해 + 표</td></tr>
+      <tr><td>E 이슈·대응형</td><td>"~문제점과 대응방안"</td><td>불필요</td><td>3단 프레임 표</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>A 정의·개념형 — 기본형</h3>
+  <pre>문 1) OOO에 대하여 설명하시오.
+
+I. OOO의 개요
+   1. 등장 배경 : ~의 한계로 인해 ~ 요구 증대        &lt;- 1줄
+   2. 정의       : OOO(영문 Full Name)이란, ~하는 ~ 기술  &lt;- 2줄
+
+II. OOO의 구조 및 핵심 구성요소
+   1. 개념도                          &lt;- 유형 D처럼 그릴 수 있으면 그림
+   2. 핵심 구성요소
+      | 구분 | 구성요소 | 역할 / 핵심 기술 |
+      |  3~4행. 여기가 답안의 절반이고 배점의 절반           |
+
+III. 적용 시 고려사항
+   1. ~ 관점 : ~                     &lt;- 2행. 유사기술 비교표로 대체 가능
+   2. ~ 관점 : ~
+                                                          끝.</pre>
+  <div class="note"><p><b>비율을 지키세요.</b> I은 4줄, II는 답안의 50%, III은 4줄. 개요를 8줄 쓰면 표가 2행으로 줄고, 배점이 실린 곳을 스스로 깎는 셈이 됩니다.</p></div>
+
+  <h3>B 비교형 — 표가 곧 답안</h3>
+  <pre>I. A와 B의 개요       &lt;- 각 1줄씩 정의. 여기서 2줄 넘기면 손해
+
+II. A와 B의 비교
+   | 비교 항목 | A | B |
+   | 목적/관점 |   |   |     &lt;- 축을 먼저 세운다: 목적, 방식, 범위,
+   | 처리 방식 |   |   |        성능, 비용, 적용 사례 중 5~6개
+   | 적용 영역 |   |   |
+   | 장점/한계 |   |   |
+
+III. 선택 기준
+   1. A가 유리한 경우 : ~
+   2. B가 유리한 경우 : ~      &lt;- "상황별 선택"으로 닫는 게 정석
+                                                          끝.</pre>
+  <p>비교형에서 점수를 잃는 이유는 거의 항상 <strong>비교 축이 흔들려서</strong>입니다. A는 성능으로, B는 비용으로 설명하면 비교가 아니라 나열입니다. <strong>축을 왼쪽 열에 먼저 박고</strong> 양쪽을 같은 축으로 채우세요.</p>
+
+  <h3>C 절차·프로세스형</h3>
+  <pre>I. 개요 (필요성 1줄 + 정의 2줄)
+
+II. OOO 절차
+   1. 절차 흐름도
+      [1.요구분석] -&gt; [2.설계] -&gt; [3.구현] -&gt; [4.검증]
+             ^                                  |
+             +----------- 피드백 ----------------+   &lt;- 점선 화살표
+   2. 단계별 상세
+      | 단계 | 주요 활동 | 산출물 |     &lt;- 산출물 열이 키워드 밀도를 올린다
+
+III. 수행 시 실패 요인 및 대응
+                                                          끝.</pre>
+
+  <h3>D 아키텍처·구성형</h3>
+  <pre>I. 개요
+
+II. OOO 아키텍처
+   1. 구성도 (계층형)
+      +---------------------------+
+      |   응용 계층 (API/UI)       |
+      +---------------------------+
+      |   제어 계층 (정책/엔진)     |
+      +---------------------------+
+      |   데이터 계층  (  DB  )     |
+      +---------------------------+
+   2. 구성요소별 역할
+      | 계층 | 구성요소 | 역할 |
+
+III. 도입 시 고려사항 (기술 / 운영 관점)
+                                                          끝.</pre>
+
+  <h3>E 이슈·대응형 — 3단 프레임으로 균형 보증</h3>
+  <pre>I. 개요 (문제 상황의 심각성 1줄 + 정의 2줄)
+
+II. OOO의 문제점
+   | 구분 | 문제점 | 영향 |
+   | 기술적 |  |  |      &lt;- 프레임을 고정하면 시험장에서
+   | 관리적 |  |  |         "생각"하지 않고 "채운다"
+   | 제도적 |  |  |
+
+III. 대응 방안
+   | 구분 | 대응 방안 | 기대 효과 |
+   | 기술적 |  |  |      &lt;- II와 같은 프레임으로 1:1 대응시킨다.
+   | 관리적 |  |  |         채점자가 짝을 눈으로 확인할 수 있어야 한다
+   | 제도적 |  |  |
+                                                          끝.</pre>
+  <p>3단 프레임은 <code>기술적·관리적·물리적</code>, <code>기획·구축·운영</code>, <code>사람·프로세스·기술</code> 중 문제에 맞는 걸 쓰면 됩니다. 중요한 건 <strong>II와 III의 프레임을 같게</strong> 놓는 것 — 문제점 3개와 대응 3개가 짝을 이루면 그 자체가 논리 점수입니다.</p>
+
+  <h3>시간이 없을 때 — 축약형</h3>
+  <p>1교시 후반 두 문제쯤에서 반드시 시간이 부족해집니다. 이때 완성형을 시도하면 마지막 문제가 백지가 됩니다. <strong>5분 축약형</strong>을 미리 익혀두세요.</p>
+  <pre>I. 개요 : 정의 2줄 (배경 생략)
+
+II. 핵심 구성요소
+   | 구분 | 내용 |      &lt;- 3행. 도해 생략, 설명 열 1개만
+                                                          끝.</pre>
+  <p>10점 중 5~6점입니다. 백지(0점)와의 차이가 6점이고, 이 6점이 합격선을 넘깁니다. <strong>완성형 1개보다 축약형 2개가 항상 이득</strong>입니다.</p>
+</section>
+
+<section id="tpl2">
+  <div class="eyebrow">03 / 템플릿</div>
+  <h2>2~4교시 템플릿</h2>
+  <p class="lede">원안의 4단 목차 구조는 맞습니다. 배점 배분과 소문항 매핑 규칙만 붙이면 실전용이 됩니다.</p>
+  <pre>문 3) 시계열 데이터의 이상치에 대하여 다음을 설명하시오.
+      가. 이상치의 유형   나. 탐지 방식   다. 실무 적용 시 고려사항
+
+I.   시계열 데이터 이상치의 개요                      [0.3p / 3점]
+     1. 이상치 탐지의 필요성
+     2. 정의 및 전체 개념도
+
+II.  시계열 데이터의 이상치 유형                      [0.8p / 6점]   &lt;- '가' 지문 그대로
+III. 시계열 데이터 이상치 탐지 방식                   [0.8p / 6점]   &lt;- '나' 지문 그대로
+IV.  실무 적용 시 고려사항                           [0.9p / 8점]   &lt;- '다' 지문 그대로
+
+V.   결론 및 제언                                    [0.2p / 2점]
+                                                          끝.</pre>
+  <div class="tw"><table>
+    <thead><tr><th>규칙</th><th>내용</th></tr></thead>
+    <tbody>
+      <tr><td>지문 복사</td><td>소문항 "가/나/다"의 표현을 <strong>대제목에 글자 그대로</strong> 옮깁니다. 채점자가 매핑을 확인하는 데 드는 노력을 0으로 만드는 게 목적입니다.</td></tr>
+      <tr><td>배점 역순 작성</td><td>마지막 소문항 '다'에 가장 무거운 배점이 실리는데, 시간에 밀려 여기가 부실해지는 게 최대 실점입니다. <strong>IV를 먼저 쓰고 II·III을 채우는 순서</strong>도 유효합니다.</td></tr>
+      <tr><td>번호 4단계</td><td><code>I. → 1. → 가. → 1)</code>. 5단계로 내려가면 계층이 무너지고 읽는 사람이 길을 잃습니다.</td></tr>
+      <tr><td>페이지당 시각물 1개</td><td>표 또는 도해를 <strong>페이지마다 최소 1개</strong>. 3페이지면 3개. 줄글만 두 페이지가 이어지면 키워드 밀도가 떨어집니다.</td></tr>
+      <tr><td>결론은 요약 금지</td><td>앞 내용 반복은 0점입니다. <strong>거버넌스 연계 · 법·제도 개선 · 단계적 도입 로드맵</strong> 중 2~3개를 기술사 시야로 제언합니다.</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section id="glyph">
+  <div class="eyebrow">04 / 템플릿</div>
+  <h2>도해 표준 기호</h2>
+  <p class="lede">기호를 5개로 제한하는 원안의 판단이 옳습니다. 시험장에서 1~2분 내 재현이 기준이라, 손에 붙은 조립 패턴 3개만 있으면 충분합니다.</p>
+  <div class="tw"><table>
+    <thead><tr><th>기호</th><th>의미</th><th>쓰는 곳</th></tr></thead>
+    <tbody>
+      <tr><td class="num">[  ]</td><td>처리 주체 · 컴포넌트</td><td>모든 도해의 기본 단위</td></tr>
+      <tr><td class="num">──▶</td><td>정상 흐름 · 요청</td><td>프로세스, 데이터 흐름</td></tr>
+      <tr><td class="num">┄┄▶</td><td>피드백 · 비동기 · 제어</td><td>루프, 이벤트, 정책 조회</td></tr>
+      <tr><td class="num">(  )</td><td>저장소 · DB</td><td>데이터 계층</td></tr>
+      <tr><td class="num">▨</td><td>보안 · 검증 지점</td><td>보안 문항의 통제점</td></tr>
+    </tbody>
+  </table></div>
+  <h3>조립 패턴 3개</h3>
+  <pre>1) 파이프라인 (절차형)
+   [수집] --&gt; [정제] --&gt; [학습] --&gt; [배포]
+                 ^                    |
+                 +---- 재학습 트리거 ---+
+
+2) 계층 (아키텍처형)
+   +----------------+
+   |  응용 / API     |
+   +----------------+
+   |  제어 / 정책     |
+   +----------------+
+   |   (  저장소  )   |
+   +----------------+
+
+3) 통제점 (보안형)
+   [사용자] --&gt; ▨PEP --&gt; [자원]
+                 :
+                 v (정책 조회)
+              [PDP] --- ( 정책 DB )</pre>
+  <p>이 세 개로 1교시 도해 문항의 대부분이 처리됩니다. 새 도해를 즉흥으로 그리려 하지 말고, <strong>세 패턴 중 하나에 이름만 바꿔 끼우세요.</strong></p>
+</section>
+<section id="rounds">
+  <div class="eyebrow">06 / 기출</div>
+  <h2>회차별 1교시 기출 — 제133~139회</h2>
+  <p class="lede">공식 문제지에서 추출한 <strong>7개 회차 91문항 전문</strong>입니다. 유형 태그는 문제의 동사를 기준으로 분류했으니, 위의 유형별 템플릿과 짝지어 훈련하세요.</p>
+  <div class="note"><p><b>먼저 이걸 하세요.</b> 답안을 외우기 전에, 각 회차 표를 보고 <b>"내가 지금 시험장이라면 어느 3개를 버릴까"</b>를 30초 안에 정하는 훈련부터 하세요. 1교시 점수는 아는 문제를 잘 쓰는 데서 나오는 게 아니라, <b>버릴 문제를 빨리 버리는 데서</b> 나옵니다.</p></div>
+
+<section id="r139" class="round">
+  <h3>제139회 <span class="rd">1교시 단답형 · 13문제 중 10문제 선택 · 각 10점</span></h3>
+  <div class="tw"><table class="qt"><thead><tr><th>번</th><th>문제</th><th>유형</th></tr></thead><tbody>
+    <tr><td class="num">1</td><td>WBS(Work Breakdown Structure) 작성방법</td><td><span class="tag t">절차형</span></td></tr>
+    <tr><td class="num">2</td><td>대수의 법칙과 중심극한정리</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">3</td><td>AdvancedRAG(Retrieval-AugmentedGeneration)와ModularRAG(Retrieval-Augmented Generation) 비교</td><td><span class="tag t">비교형</span></td></tr>
+    <tr><td class="num">4</td><td>IT 프로젝트에서 발생할 수 있는 부정적 위험(Negative Risk)과 대응 전략</td><td><span class="tag t">이슈대응형</span></td></tr>
+    <tr><td class="num">5</td><td>소프트웨어 무중단 배포 방식</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">6</td><td>엣지(Edge) 컴퓨팅과 클라우드 컴퓨팅의 차이점</td><td><span class="tag t">비교형</span></td></tr>
+    <tr><td class="num">7</td><td>분산 데이터베이스의 투명성</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">8</td><td>과적합(Overfitting)과 과소적합(Underfitting)의 발생 원인과 해결 방안</td><td><span class="tag t">이슈대응형</span></td></tr>
+    <tr><td class="num">9</td><td>맥케이브 순환복잡도(McCabe’s Cyclomatic Complexity)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">10</td><td>Wi-Fi 7</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">11</td><td>CTEM(Continuous Threat Exposure Management)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">12</td><td>양자머신러닝(QML, Quantum Machine Learning)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">13</td><td>개인정보보호를 위한 가명처리 기법</td><td><span class="tag t">개념형</span></td></tr>
+  </tbody></table></div>
+</section>
+<section id="r138" class="round">
+  <h3>제138회 <span class="rd">1교시 단답형 · 13문제 중 10문제 선택 · 각 10점</span></h3>
+  <div class="tw"><table class="qt"><thead><tr><th>번</th><th>문제</th><th>유형</th></tr></thead><tbody>
+    <tr><td class="num">1</td><td>미국 국립표준기술연구소에서 발행한 AI RMF(Risk Management Framework)의 개념과 4가지 핵심구조, 7가지 신뢰 가능한 특성을 설명하시오.</td><td><span class="tag t">구성형</span></td></tr>
+    <tr><td class="num">2</td><td>프로젝트 위험관리</td><td><span class="tag t">이슈대응형</span></td></tr>
+    <tr><td class="num">3</td><td>ISO/IEC 42001:2023</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">4</td><td>베이즈 정리</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">5</td><td>안면인식 결제 서비스</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">6</td><td>소프트웨어 개발 프로젝트에서 선도개발을 위한 개발방법론 테일러링(Tailoring)</td><td><span class="tag t">절차형</span></td></tr>
+    <tr><td class="num">7</td><td>자기회귀모형(Autoregressive model)과 이동평균모형(Moving Average model)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">8</td><td>데이터 관측가능성(Data Observability)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">9</td><td>정보모델링의 참조 무결성</td><td><span class="tag t">구성형</span></td></tr>
+    <tr><td class="num">10</td><td>TTPs(Tactics, Techniques and Procedures)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">11</td><td>은행가 알고리즘(Banker&#x27;s Algorithm)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">12</td><td>프롬프트 인젝션(Prompt Injection)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">13</td><td>모델 전도 공격(Model Inversion Attack)</td><td><span class="tag t">이슈대응형</span></td></tr>
+  </tbody></table></div>
+</section>
+<section id="r137" class="round">
+  <h3>제137회 <span class="rd">1교시 단답형 · 13문제 중 10문제 선택 · 각 10점</span></h3>
+  <div class="tw"><table class="qt"><thead><tr><th>번</th><th>문제</th><th>유형</th></tr></thead><tbody>
+    <tr><td class="num">1</td><td>동적 라우팅프로토콜인IGP (InteriorGatewayProtocol)와 EGP(ExteriorGateway Protocol)를 설명하시오.</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">2</td><td>디지털 포렌식에서 아티팩트(Artifact)를 설명하시오.</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">3</td><td>MODBUS 프로토콜을 설명하시오.</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">4</td><td>암호문 공격(Ciphertext Attack)을 설명하시오.</td><td><span class="tag t">이슈대응형</span></td></tr>
+    <tr><td class="num">5</td><td>GNN(Graph Neural Network)을설명하시오.</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">6</td><td>AI 거버넌스(Artificial Intelligence Governance)를설명하시오.</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">7</td><td>트랜스포머(Transformer)와MoE(Mixture of Experts)를설명하시오.</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">8</td><td>AI 신뢰성 검인증 제도(CAT)를 설명하시오.</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">9</td><td>A/B 테스팅을 설명하시오.</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">10</td><td>데이터 늪(DataSwamp)을 설명하시오.</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">11</td><td>소프트웨어 역공학과 재공학을 설명하시오.</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">12</td><td>이진 탐색 트리를 설명하시오.</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">13</td><td>데이터마이닝의 연관 규칙 분석(Association Rule Analysis) 지표를 설명하시오.</td><td><span class="tag t">개념형</span></td></tr>
+  </tbody></table></div>
+</section>
+<section id="r136" class="round">
+  <h3>제136회 <span class="rd">1교시 단답형 · 13문제 중 10문제 선택 · 각 10점</span></h3>
+  <div class="tw"><table class="qt"><thead><tr><th>번</th><th>문제</th><th>유형</th></tr></thead><tbody>
+    <tr><td class="num">1</td><td>화이트 레이블 마케팅(White Label Marketing)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">2</td><td>범용 AI(General-Purpose AI) 위험관리 프레임워크</td><td><span class="tag t">이슈대응형</span></td></tr>
+    <tr><td class="num">3</td><td>에이전틱 AI(Agentic AI)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">4</td><td>제4정규형</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">5</td><td>프록시(Proxy) 디자인 패턴</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">6</td><td>DevOps 장점과 단점</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">7</td><td>세그먼테이션 오류(Segmentation Fault)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">8</td><td>CXL(Compute Express Link)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">9</td><td>서버리스 컴퓨팅(Serverless Computing)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">10</td><td>개인정보 안심구역과 데이터안심구역 비교</td><td><span class="tag t">비교형</span></td></tr>
+    <tr><td class="num">11</td><td>CC(Common Criteria)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">12</td><td>타원곡선 암호(ECC, Elliptic Curve Cryptography)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">13</td><td>MCP(Model Context Protocol)</td><td><span class="tag t">개념형</span></td></tr>
+  </tbody></table></div>
+</section>
+<section id="r135" class="round">
+  <h3>제135회 <span class="rd">1교시 단답형 · 13문제 중 10문제 선택 · 각 10점</span></h3>
+  <div class="tw"><table class="qt"><thead><tr><th>번</th><th>문제</th><th>유형</th></tr></thead><tbody>
+    <tr><td class="num">1</td><td>PR(Precision Recall) 곡선과 ROC(Receiver Operating Characteristic) 곡선 비교</td><td><span class="tag t">비교형</span></td></tr>
+    <tr><td class="num">2</td><td>Multimodal LLM(Large Language Model)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">3</td><td>요구사항 추적표(Requirement Traceability Matrix)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">4</td><td>IBN(Intent-Based Networking)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">5</td><td>SIEM(Security Information &amp; Event Management)와 SOAR(Security Orchestration, Automation &amp; Response) 비교</td><td><span class="tag t">비교형</span></td></tr>
+    <tr><td class="num">6</td><td>실루엣 계수(Silhouette Coefficient)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">7</td><td>개인정보 안심구역</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">8</td><td>불편추정량(Unbiased Estimator)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">9</td><td>소프트웨어 기술 부채의 유형과 관리 방법</td><td><span class="tag t">절차형</span></td></tr>
+    <tr><td class="num">10</td><td>IEEE 802.11bn</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">11</td><td>팬텀충돌(Phantom Conflict)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">12</td><td>VAE(Variational AutoEncoder)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">13</td><td>AGI(ArtificialGeneralIntelligence)측면에서 ANI(ArtificialNarrowIntelligence)의 필요성</td><td><span class="tag t">개념형</span></td></tr>
+  </tbody></table></div>
+</section>
+<section id="r134" class="round">
+  <h3>제134회 <span class="rd">1교시 단답형 · 13문제 중 10문제 선택 · 각 10점</span></h3>
+  <div class="tw"><table class="qt"><thead><tr><th>번</th><th>문제</th><th>유형</th></tr></thead><tbody>
+    <tr><td class="num">1</td><td>터크만 사다리 모델(Tuckman Ladder Model)의 팀 발달 단계별 특징</td><td><span class="tag t">절차형</span></td></tr>
+    <tr><td class="num">2</td><td>시장 규모 추정 방법인 TAM-SAM-SOM(Total Addressable Market-Serviceable Addressable Market-Serviceable Obtainable Market) 프레임워크</td><td><span class="tag t">절차형</span></td></tr>
+    <tr><td class="num">3</td><td>머신러닝(Machine Learning) 성능지표</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">4</td><td>형상관리의 개념과 형상관리 기준선(Baseline)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">5</td><td>객체 간의 데이터 보호를 위한 정보은닉(Information Hiding)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">6</td><td>이미지 데이터 어노테이션(Data Annotation) 유형과 기법</td><td><span class="tag t">구성형</span></td></tr>
+    <tr><td class="num">7</td><td>정적 SQL(Static SQL)과 동적 SQL(Dynamic SQL) 비교</td><td><span class="tag t">비교형</span></td></tr>
+    <tr><td class="num">8</td><td>RIP(Routing Information Protocol)와 OSPF(Open Shortest Path First) 비교</td><td><span class="tag t">비교형</span></td></tr>
+    <tr><td class="num">9</td><td>인터미턴트 컴퓨팅(Intermittent Computing)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">10</td><td>스토리지 가상화(Storage Virtualization) 유형별 특징</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">11</td><td>개인정보 보호 강화기술(Privacy Enhancing Technology)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">12</td><td>고대역 초고속 메모리(High Bandwidth Memory)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">13</td><td>RAG(Retrieval Augmented Generation)</td><td><span class="tag t">개념형</span></td></tr>
+  </tbody></table></div>
+</section>
+<section id="r133" class="round">
+  <h3>제133회 <span class="rd">1교시 단답형 · 13문제 중 10문제 선택 · 각 10점</span></h3>
+  <div class="tw"><table class="qt"><thead><tr><th>번</th><th>문제</th><th>유형</th></tr></thead><tbody>
+    <tr><td class="num">1</td><td>REST API(REpresentational State Transfer Application Programming Interface)에 대하여 설명하시오.</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">2</td><td>소프트웨어 테스트 유형 중 뮤테이션 테스트(Mutation Test)에 대하여 설명하시오.</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">3</td><td>NoSQL유형과 모델링 절차를 설명하시오.</td><td><span class="tag t">절차형</span></td></tr>
+    <tr><td class="num">4</td><td>전자봉투 생성절차와 개봉절차를 설명하시오.</td><td><span class="tag t">절차형</span></td></tr>
+    <tr><td class="num">5</td><td>동형암호(Homomorphic Encryption)의 동작원리와 유형을 설명하시오.</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">6</td><td>기술수용모델(TechnologyAcceptanceModel;TAM)의개념과주요구성요소에대하여 설명하시오.</td><td><span class="tag t">구성형</span></td></tr>
+    <tr><td class="num">7</td><td>데이터모델링에서CRUD매트릭스(Matrix)를 사용하는목적과이를 표현하는방법에 대하여 설명하시오.</td><td><span class="tag t">절차형</span></td></tr>
+    <tr><td class="num">8</td><td>인공지능 신뢰성의 개념과 핵심 속성에 대하여 설명하시오.</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">9</td><td>BCP(BusinessContinuityPlanning)수립 시의 주요 지표와DRS(DisasterRecovery System) 구축 시의 핵심 고려사항에 대하여 설명하시오.</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">10</td><td>딥페이크(Deepfake)에 대하여 설명하시오.</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">11</td><td>소프트웨어 유지보수 향상 및 비용절감을 위한 3R을 설명하시오.</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">12</td><td>쿠버네티스(Kubernetes)를 설명하시오.</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">13</td><td>TCP(TransmissionControlProtocol)프로토콜의3-wayhandshake와4-wayhandshake를 설명하시오.</td><td><span class="tag t">개념형</span></td></tr>
+  </tbody></table></div>
+</section>
+
+<section id="answers">
+  <div class="eyebrow">07 / 모범답안</div>
+  <h2>1교시 모범답안 12</h2>
+  <p class="lede">각 답안은 <strong>답안지 1면 분량</strong>으로 맞췄습니다. 위의 답안 카드는 시험장에서 그대로 재현할 골격이고, 아래 "쉬운 설명"은 이해용입니다 — 설명으로 이해하고, 카드로 암기하세요. 회차 표기는 사장님이 기출 원문을 주시면 채웁니다.</p>
+  <div class="note"><p><b>기출 대응 현황.</b> 제133~139회 91문항을 확인한 결과, 아래 12개 중 <b>RAG(134회 13번 · 139회 3번)</b>, <b>가명처리(139회 13번 · 134회 11번 PET)</b>, <b>쿠버네티스(133회 12번)</b>가 직접 출제된 주제입니다. 나머지는 최근 출제 흐름(AI 거버넌스 · 데이터 품질 · 공급망 보안 · 프로젝트 관리)에 맞춘 대비용입니다. <b>회차별 전 문항 답안은 139회부터 순차로 채웁니다.</b></p></div>
+</section>
+<section id="a1" class="ans" data-item="a1" data-title="CAP 정리와 PACELC">
+  <h3>01. CAP 정리와 PACELC</h3>
+  <div class="prog"><button class="pbtn" data-v="1">골격 외움</button><button class="pbtn" data-v="2">손으로 써봄</button><span class="sync" data-sync></span></div>
+  <div class="sheet">
+    <div class="sheet-top"><span class="tag t">B 비교형</span><span class="tag">10점</span><span class="tag">9분</span><span class="num">데이터베이스 · 분산시스템</span></div>
+    <div class="q"><b>문)</b> 분산 데이터베이스의 CAP 정리와 이를 확장한 PACELC에 대하여 설명하시오.</div>
+    <div class="body-wrap">
+      <h4>I. 개요</h4>
+      <p>1. 배경 : 분산 DB에서 노드 분할은 <strong>제거 불가능한 상수</strong>이므로 설계는 선택의 문제가 됨</p>
+      <p>2. 정의 : <strong>CAP</strong>는 네트워크 분할(P) 발생 시 <strong>일관성(C)</strong>과 <strong>가용성(A)</strong> 중 하나만 보장 가능함을 규명한 정리이며, <strong>PACELC</strong>는 여기에 <strong>분할이 없는 정상 상태(Else)의 지연(L) vs 일관성(C)</strong> 선택을 추가한 확장 모델</p>
+      <h4>II. CAP 3요소 및 PACELC 확장</h4>
+      <div class="tw"><table><thead><tr><th>구분</th><th>요소</th><th>의미</th></tr></thead><tbody>
+        <tr><td>C</td><td>Consistency</td><td>모든 노드가 동일 시점에 동일 데이터 반환(선형화)</td></tr>
+        <tr><td>A</td><td>Availability</td><td>모든 요청이 성공/실패 응답을 반드시 수신</td></tr>
+        <tr><td>P</td><td>Partition tolerance</td><td>노드 간 통신 단절에도 시스템 지속 동작</td></tr>
+        <tr><td>L</td><td>Latency</td><td>정상 상태에서 응답 지연 최소화 (PACELC 추가분)</td></tr>
+      </tbody></table></div>
+<pre>[분할 발생?] --예--&gt; P : A(가용성) 선택 or C(일관성) 선택
+      |
+      +--아니오--&gt; E : L(지연) 선택 or C(일관성) 선택   &lt;- PACELC의 기여</pre>
+      <h4>III. 제품별 선택 및 적용 기준</h4>
+      <div class="tw"><table><thead><tr><th>분류</th><th>제품</th><th>적용 업무</th></tr></thead><tbody>
+        <tr><td>PC / EC</td><td>MongoDB, HBase</td><td>금융 원장, 재고 — 오류보다 지연이 낫다</td></tr>
+        <tr><td>PA / EL</td><td>Cassandra, DynamoDB</td><td>로그, 추천, SNS — 지연보다 근사값이 낫다</td></tr>
+      </tbody></table></div>
+    </div>
+    <div class="end">끝.</div>
+  </div>
+  <ul class="chips"><li>Partition tolerance</li><li>선형화(Linearizability)</li><li>PACELC</li><li>PA/EL</li><li>PC/EC</li><li>최종적 일관성</li></ul>
+  <details><summary>쉬운 설명 · 자주 틀리는 함정</summary><div class="det-in">
+    <p><strong>비유.</strong> 서울과 부산에 같은 장부를 두고 장사한다고 보세요. 두 도시 사이 전화가 끊기면(P) 둘 중 하나입니다 — <strong>"확실해질 때까지 장사를 멈춘다"(C 선택)</strong>, 아니면 <strong>"각자 장부에 적고 나중에 맞춘다"(A 선택)</strong>. 은행이라면 멈추는 게 맞고, 좋아요 수라면 각자 적는 게 맞습니다.</p>
+    <p>PACELC가 왜 나왔냐면 — 전화는 <strong>평소엔 안 끊깁니다.</strong> CAP은 사고가 났을 때만 이야기하는데, 시스템은 99% 정상 상태로 삽니다. 그 정상 상태에서도 "부산 장부까지 확인하고 답할까(C), 서울 것만 보고 빨리 답할까(L)"라는 <strong>같은 성격의 선택</strong>이 계속 일어난다는 지적입니다. 그래서 PACELC가 실무에 더 유용합니다.</p>
+    <p><strong>함정 1 — "셋 중 둘을 고른다"고 쓰면 감점입니다.</strong> P는 고르는 게 아니라 주어지는 조건입니다. 네트워크는 반드시 끊깁니다. 그래서 실제 선택지는 <strong>CP냐 AP냐 둘뿐</strong>이고, CA는 단일 노드에서나 성립하는 이야기입니다.</p>
+    <p><strong>함정 2 — C를 "데이터가 안 깨지는 것"으로 쓰면 틀립니다.</strong> CAP의 C는 무결성이 아니라 <strong>선형화(모든 노드가 같은 순서로 같은 값을 본다)</strong>입니다. ACID의 C와 다른 개념이라는 걸 한 줄로 밝히면 변별력이 생깁니다.</p>
+  </div></details>
+</section>
+
+<section id="a2" class="ans" data-item="a2" data-title="Saga 패턴">
+  <h3>02. MSA 분산 트랜잭션 — Saga 패턴</h3>
+  <div class="prog"><button class="pbtn" data-v="1">골격 외움</button><button class="pbtn" data-v="2">손으로 써봄</button><span class="sync" data-sync></span></div>
+  <div class="sheet">
+    <div class="sheet-top"><span class="tag t">D 아키텍처형</span><span class="tag">10점</span><span class="tag">9분</span><span class="num">소프트웨어 아키텍처</span></div>
+    <div class="q"><b>문)</b> MSA 환경의 분산 트랜잭션 처리를 위한 Saga 패턴에 대하여 설명하시오.</div>
+    <div class="body-wrap">
+      <h4>I. 개요</h4>
+      <p>1. 배경 : MSA는 서비스별 DB 분리(<strong>Database per Service</strong>)로 2PC 적용이 불가하여 대안 필요</p>
+      <p>2. 정의 : <strong>Saga</strong>란 분산 트랜잭션을 <strong>로컬 트랜잭션의 연속</strong>으로 분해하고, 실패 시 <strong>보상 트랜잭션(Compensating Tx)</strong>으로 역순 취소하여 <strong>최종 일관성</strong>을 확보하는 패턴</p>
+      <h4>II. 구현 방식 및 구조</h4>
+      <div class="tw"><table><thead><tr><th>구분</th><th>Choreography</th><th>Orchestration</th></tr></thead><tbody>
+        <tr><td>제어</td><td>이벤트 기반 분산 제어</td><td>Orchestrator 중앙 제어</td></tr>
+        <tr><td>결합도</td><td>낮음</td><td>상대적으로 높음</td></tr>
+        <tr><td>흐름 추적</td><td>어려움 (분산 추적 필수)</td><td>용이 (상태 기계로 관리)</td></tr>
+        <tr><td>적합</td><td>참여 서비스 3개 이하</td><td>참여 서비스 4개 이상, 복잡 분기</td></tr>
+      </tbody></table></div>
+<pre>[주문] --&gt; [결제] --&gt; [배송]        (정상 흐름)
+   ^          ^          |
+   |          |          v 실패
+ 보상3 &lt;--- 보상2 &lt;--- [재고 부족]   (역순 보상 트랜잭션)</pre>
+      <h4>III. 적용 시 고려사항</h4>
+      <p>1. <strong>보상 불가 업무 식별</strong> : 메일 발송·외부 정산은 취소 불가 → 사가 <strong>마지막 단계</strong>에 배치</p>
+      <p>2. <strong>멱등성(Idempotency)</strong> 및 <strong>Outbox 패턴</strong> : 메시지 중복·유실 대비 필수</p>
+    </div>
+    <div class="end">끝.</div>
+  </div>
+  <ul class="chips"><li>보상 트랜잭션</li><li>최종적 일관성</li><li>Choreography</li><li>Orchestration</li><li>Outbox 패턴</li><li>멱등성</li><li>Database per Service</li></ul>
+  <details><summary>쉬운 설명 · 자주 틀리는 함정</summary><div class="det-in">
+    <p><strong>비유.</strong> 여행 예약을 생각하세요. 항공 → 호텔 → 렌터카를 각각 다른 회사에 겁니다. 렌터카가 없다는 걸 알았을 때, 아무도 "전체 예약을 없던 일로" 눌러줄 수 없습니다. <strong>호텔에 전화해서 취소하고, 항공사에 전화해서 취소하는 것</strong> — 그게 보상 트랜잭션입니다. DB의 rollback은 "안 한 걸로 되돌리는" 것이지만, 보상은 <strong>"취소했다는 새 기록을 남기는"</strong> 것입니다. 이 차이가 핵심입니다.</p>
+    <p><strong>왜 2PC를 못 쓰나.</strong> 2PC는 모든 참여자가 "준비됐음"이라고 답할 때까지 자원을 잠급니다. 서비스가 20개면 20개가 서로를 기다리고, 하나가 죽으면 전부 멈춥니다. MSA의 목적 자체(독립 배포·장애 격리)를 무너뜨리기 때문에 안 쓰는 겁니다.</p>
+    <p><strong>함정 1 — 순서를 아무렇게나 쓰면 실무 감점입니다.</strong> "보상 불가 단계를 마지막에 배치"는 반드시 III에 넣으세요. 메일을 먼저 보내고 나중에 실패하면 회수할 방법이 없습니다.</p>
+    <p><strong>함정 2 — Saga를 "롤백 패턴"으로 정의하면 틀립니다.</strong> 중간 상태가 <strong>외부에 보인다</strong>는 게 Saga의 본질적 대가입니다("주문됨" 상태가 잠깐 노출됨). 격리성(I)을 포기했다는 점을 한 줄로 적으면 이해도가 드러납니다.</p>
+  </div></details>
+</section>
+
+<section id="a3" class="ans" data-item="a3" data-title="제로 트러스트 아키텍처">
+  <h3>03. 제로 트러스트 아키텍처(ZTA)</h3>
+  <div class="prog"><button class="pbtn" data-v="1">골격 외움</button><button class="pbtn" data-v="2">손으로 써봄</button><span class="sync" data-sync></span></div>
+  <div class="sheet">
+    <div class="sheet-top"><span class="tag t">D 아키텍처형</span><span class="tag">10점</span><span class="tag">9분</span><span class="num">정보보안</span></div>
+    <div class="q"><b>문)</b> 제로 트러스트 아키텍처(Zero Trust Architecture)에 대하여 설명하시오.</div>
+    <div class="body-wrap">
+      <h4>I. 개요</h4>
+      <p>1. 배경 : 클라우드·재택근무 확산으로 <strong>경계 기반 보안(Perimeter Security)</strong>의 내부 신뢰 가정이 붕괴</p>
+      <p>2. 정의 : <strong>ZTA</strong>란 "<strong>절대 신뢰하지 말고 항상 검증하라</strong>"를 원칙으로, 모든 접근 요구를 <strong>자원 단위</strong>로 <strong>동적 인증·인가</strong>하는 보안 아키텍처 (<strong>NIST SP 800-207</strong>)</p>
+      <h4>II. 핵심 구성요소 (PE · PA · PEP)</h4>
+<pre>          [ 정책 결정 지점 (PDP) ]
+          +---------+---------+
+          |   PE    |   PA    |      PE : 신뢰 점수 산정
+          +---------+---------+      PA : 허용/차단 최종 결정
+                :
+        (정책 조회)  :  &lt;- 신호: ID, 단말상태, 위치, 행위
+                v
+[주체] ---&gt; ▨ PEP ---&gt; ( 자원 )     PEP : 실제 차단/허용 집행</pre>
+      <div class="tw"><table><thead><tr><th>구성요소</th><th>명칭</th><th>역할</th></tr></thead><tbody>
+        <tr><td>PE</td><td>Policy Engine</td><td>신호 수집·신뢰도 평가로 접근 허용 여부 판단</td></tr>
+        <tr><td>PA</td><td>Policy Administrator</td><td>PE 판단을 세션 수립/차단 명령으로 변환</td></tr>
+        <tr><td>PEP</td><td>Policy Enforcement Point</td><td>주체-자원 경로상에서 정책을 실제 집행</td></tr>
+      </tbody></table></div>
+      <h4>III. 구현 기술 및 도입 시 고려사항</h4>
+      <p>1. 구현 기술 : <strong>SDP</strong>, <strong>마이크로세그멘테이션</strong>, <strong>IAM/MFA</strong>, <strong>CASB</strong></p>
+      <p>2. 고려사항 : <strong>단계적 전환</strong>(핵심 자산 우선) 및 <strong>PEP 단일 장애점</strong> 대비 이중화 필수</p>
+    </div>
+    <div class="end">끝.</div>
+  </div>
+  <ul class="chips"><li>NIST SP 800-207</li><li>Never Trust, Always Verify</li><li>PE/PA/PEP</li><li>마이크로세그멘테이션</li><li>SDP</li><li>최소 권한</li><li>동적 인증·인가</li></ul>
+  <details><summary>쉬운 설명 · 자주 틀리는 함정</summary><div class="det-in">
+    <p><strong>비유.</strong> 기존 보안은 <strong>아파트 공동현관</strong>입니다. 현관을 통과하면 단지 안은 자유롭게 다닐 수 있죠. 문제는 도둑이 한 번 현관을 뚫으면 모든 집을 털 수 있다는 것 — 이게 <strong>내부 이동(lateral movement)</strong>입니다.</p>
+    <p>제로 트러스트는 공동현관을 없애고 <strong>집집마다 문을 잠그는</strong> 방식입니다. 게다가 그 문은 카드키가 아니라 <strong>매번 다시 판단하는 문</strong>입니다 — "이 사람이 맞나? 지금 쓰는 노트북에 백신이 도는가? 새벽 3시에 베트남에서 접속하는 게 평소 패턴인가?" 조건이 나빠지면 통과했던 사람도 다시 막습니다.</p>
+    <p>구성요소 세 개는 <strong>회사 출입 절차</strong>로 외우면 안 잊습니다 — <strong>PE는 심사관</strong>(서류 보고 점수 매김), <strong>PA는 결재권자</strong>(출입증 발급/회수 지시), <strong>PEP는 경비원</strong>(문 앞에서 실제로 막음). 시험에서는 이 세 글자와 역할 매칭이 배점의 핵심입니다.</p>
+    <p><strong>함정 1 — 제품 나열로 답하면 감점입니다.</strong> "제로 트러스트 솔루션을 도입한다"는 틀린 접근이고, ZTA는 <strong>아키텍처 원칙</strong>입니다. SDP·마이크로세그멘테이션은 그 원칙을 구현하는 수단으로만 배치하세요.</p>
+    <p><strong>함정 2 — PEP 이중화를 빼먹기 쉽습니다.</strong> 모든 트래픽이 PEP를 지나므로 여기가 죽으면 전사가 멈춥니다. 실무 관점 한 줄이 III에 있으면 변별력이 됩니다.</p>
+  </div></details>
+</section>
+<section id="a4" class="ans" data-item="a4" data-title="MLOps">
+  <h3>04. MLOps</h3>
+  <div class="prog"><button class="pbtn" data-v="1">골격 외움</button><button class="pbtn" data-v="2">손으로 써봄</button><span class="sync" data-sync></span></div>
+  <div class="sheet">
+    <div class="sheet-top"><span class="tag t">C 절차형</span><span class="tag">10점</span><span class="tag">9분</span><span class="num">인공지능 · 개발방법론</span></div>
+    <div class="q"><b>문)</b> MLOps에 대하여 설명하시오.</div>
+    <div class="body-wrap">
+      <h4>I. 개요</h4>
+      <p>1. 배경 : ML 모델의 <strong>90% 이상이 운영 배포에 실패</strong>하고, 배포 후에도 <strong>모델 드리프트</strong>로 성능이 감쇠</p>
+      <p>2. 정의 : <strong>MLOps</strong>란 DevOps 원리를 ML 생애주기에 적용하여 <strong>데이터·모델·코드</strong> 3요소의 <strong>버전 관리·자동화·지속 학습</strong>을 실현하는 운영 체계</p>
+      <h4>II. MLOps 파이프라인 및 단계별 활동</h4>
+<pre>[데이터 수집] --&gt; [특성 공학] --&gt; [학습/검증] --&gt; [배포] --&gt; [모니터링]
+                       ^                                        |
+                       +------- 재학습 트리거(드리프트 감지) ------+
+                  ( Feature Store )   ( Model Registry )</pre>
+      <div class="tw"><table><thead><tr><th>단계</th><th>주요 활동</th><th>산출물 / 도구</th></tr></thead><tbody>
+        <tr><td>CD4ML 준비</td><td>데이터 검증, 특성 표준화</td><td>Feature Store, DVC</td></tr>
+        <tr><td>지속 학습(CT)</td><td>자동 재학습, 하이퍼파라미터 탐색</td><td>실험 추적(MLflow), 파이프라인(Kubeflow)</td></tr>
+        <tr><td>배포(CI/CD)</td><td>모델 패키징, 카나리·섀도 배포</td><td>Model Registry, 서빙 API</td></tr>
+        <tr><td>모니터링</td><td>드리프트·성능·공정성 감시</td><td>드리프트 지표(PSI, KS)</td></tr>
+      </tbody></table></div>
+      <h4>III. DevOps와의 차이 및 성숙도</h4>
+      <div class="tw"><table><thead><tr><th>관점</th><th>DevOps</th><th>MLOps</th></tr></thead><tbody>
+        <tr><td>버전 대상</td><td>코드</td><td><strong>코드 + 데이터 + 모델</strong></td></tr>
+        <tr><td>파이프라인</td><td>CI / CD</td><td>CI / CD + <strong>CT(지속 학습)</strong></td></tr>
+        <tr><td>성능 저하</td><td>코드 변경 시에만</td><td><strong>무변경 상태에서도 저하</strong>(드리프트)</td></tr>
+      </tbody></table></div>
+    </div>
+    <div class="end">끝.</div>
+  </div>
+  <ul class="chips"><li>CT(Continuous Training)</li><li>모델 드리프트</li><li>데이터 드리프트</li><li>Feature Store</li><li>Model Registry</li><li>실험 추적</li><li>CD4ML</li><li>성숙도 레벨 0~2</li></ul>
+  <details><summary>쉬운 설명 · 자주 틀리는 함정</summary><div class="det-in">
+    <p><strong>비유.</strong> 일반 소프트웨어는 <strong>기계</strong>입니다 — 건드리지 않으면 어제 하던 대로 오늘도 돕니다. 그런데 ML 모델은 <strong>농작물</strong>입니다. 심어놓고 코드를 한 줄도 안 바꿔도, <strong>날씨(=현실 데이터)가 바뀌면 수확량이 떨어집니다.</strong></p>
+    <p>코로나 이전 데이터로 학습한 수요예측 모델이 2020년에 다 틀린 게 그겁니다. 코드 버그가 아니라 <strong>세상이 변한 것</strong>이죠. 이게 <strong>드리프트</strong>이고, 그래서 ML에는 DevOps에 없는 게 하나 더 붙습니다 — <strong>CT(지속 학습)</strong>, 즉 "알아서 다시 배우게 만드는 자동화"입니다.</p>
+    <p><strong>왜 버전 관리 대상이 3개인가.</strong> 코드만 저장해두면 반년 뒤 같은 모델을 못 만듭니다. 같은 코드에 <strong>다른 데이터</strong>를 넣으면 다른 모델이 나오니까요. 그래서 <strong>코드·데이터·모델을 한 세트로</strong> 묶어 버전을 매깁니다 — 이게 재현성(Reproducibility)이고 MLOps의 출발점입니다.</p>
+    <p><strong>함정 1 — "DevOps + AI"로 정의하면 감점입니다.</strong> 반드시 <strong>CT</strong>와 <strong>3요소 버전 관리</strong>를 정의에 넣으세요. 이 두 개가 차별점이고 배점 포인트입니다.</p>
+    <p><strong>함정 2 — 데이터 드리프트와 모델(개념) 드리프트를 구분하면 점수가 붙습니다.</strong> 입력 분포가 변한 게 데이터 드리프트, 입력-정답 관계 자체가 변한 게 개념 드리프트입니다.</p>
+  </div></details>
+</section>
+
+<section id="a5" class="ans" data-item="a5" data-title="데이터 메시">
+  <h3>05. 데이터 메시(Data Mesh)</h3>
+  <div class="prog"><button class="pbtn" data-v="1">골격 외움</button><button class="pbtn" data-v="2">손으로 써봄</button><span class="sync" data-sync></span></div>
+  <div class="sheet">
+    <div class="sheet-top"><span class="tag t">A 개념형</span><span class="tag">10점</span><span class="tag">9분</span><span class="num">데이터 관리 · 아키텍처</span></div>
+    <div class="q"><b>문)</b> 데이터 메시(Data Mesh)에 대하여 설명하시오.</div>
+    <div class="body-wrap">
+      <h4>I. 개요</h4>
+      <p>1. 배경 : 중앙집중형 데이터 레이크에서 <strong>중앙 데이터팀이 병목</strong>이 되고, 도메인 지식 부재로 데이터 품질이 저하</p>
+      <p>2. 정의 : <strong>데이터 메시</strong>란 데이터의 <strong>소유권을 도메인으로 이관</strong>하고 데이터를 <strong>제품(Product)</strong>으로 관리하는 <strong>분산형 사회기술적 데이터 아키텍처</strong></p>
+      <h4>II. 4대 원칙</h4>
+      <div class="tw"><table><thead><tr><th>원칙</th><th>내용</th><th>실현 수단</th></tr></thead><tbody>
+        <tr><td>도메인 소유권</td><td>데이터를 생성한 도메인이 끝까지 책임</td><td>도메인별 데이터팀, DDD 경계</td></tr>
+        <tr><td>제품으로서의 데이터</td><td>발견성·신뢰성·SLA를 갖춘 산출물로 제공</td><td>데이터 계약, 데이터 카탈로그</td></tr>
+        <tr><td>셀프서비스 플랫폼</td><td>도메인이 스스로 파이프라인 구축</td><td>공통 인프라 플랫폼팀</td></tr>
+        <tr><td>연합 컴퓨팅 거버넌스</td><td>전역 표준 + 지역 자율의 병행</td><td>정책 코드화, 상호운용 표준</td></tr>
+      </tbody></table></div>
+<pre>[주문 도메인] [결제 도메인] [배송 도메인]   &lt;- 각자 데이터 제품 소유·발행
+      |            |            |
+      +------------+------------+
+                   |
+        ( 셀프서비스 데이터 플랫폼 )        &lt;- 중앙은 '플랫폼'만 제공
+                   :
+          [연합 거버넌스 협의체]            &lt;- 전역 표준만 합의</pre>
+      <h4>III. 데이터 레이크와의 비교</h4>
+      <div class="tw"><table><thead><tr><th>관점</th><th>데이터 레이크</th><th>데이터 메시</th></tr></thead><tbody>
+        <tr><td>소유</td><td>중앙 데이터팀</td><td>업무 도메인</td></tr>
+        <tr><td>확장 한계</td><td>도메인 증가 시 병목</td><td>도메인 단위 수평 확장</td></tr>
+        <tr><td>선결 조건</td><td>기술 역량</td><td><strong>조직 성숙도 · 플랫폼 역량</strong></td></tr>
+      </tbody></table></div>
+    </div>
+    <div class="end">끝.</div>
+  </div>
+  <ul class="chips"><li>도메인 소유권</li><li>Data as a Product</li><li>셀프서비스 데이터 플랫폼</li><li>연합 컴퓨팅 거버넌스</li><li>데이터 계약</li><li>사회기술적 아키텍처</li></ul>
+  <details><summary>쉬운 설명 · 자주 틀리는 함정</summary><div class="det-in">
+    <p><strong>비유.</strong> 데이터 레이크는 <strong>회사에 식당이 하나</strong>인 구조입니다. 모든 부서가 재료를 갖다주고, 중앙 주방이 다 요리합니다. 부서가 5개일 땐 잘 돌지만 50개가 되면 주방에 줄이 섭니다. 게다가 주방장은 <strong>재료를 잘 모릅니다</strong> — "이 컬럼이 왜 null인지" 아는 사람은 그 업무를 하는 부서인데, 주방은 모르니 품질이 떨어집니다.</p>
+    <p>데이터 메시는 <strong>부서마다 자기 주방을 갖게</strong> 합니다. 대신 두 가지를 강제합니다 — 내놓는 음식은 <strong>남이 먹을 수 있는 상태(=제품)</strong>여야 하고, 접시 규격·위생 기준 같은 <strong>공통 표준은 지켜야</strong> 합니다. 중앙 조직은 요리를 그만두고 <strong>주방 설비를 깔아주는 역할</strong>로 바뀝니다.</p>
+    <p><strong>"데이터를 제품으로"가 무슨 뜻인가.</strong> 그냥 테이블을 열어주는 게 아니라 — 문서가 있고, 담당자가 있고, "이 데이터는 5분 내 갱신됩니다" 같은 <strong>약속(SLA)</strong>이 붙은 상태입니다. 쓰는 사람이 담당자를 찾아 헤매지 않아도 되면 제품, 헤매야 하면 그냥 테이블입니다.</p>
+    <p><strong>함정 1 — 기술로만 답하면 감점입니다.</strong> 데이터 메시는 <strong>조직 설계가 절반</strong>인 <strong>사회기술적(socio-technical)</strong> 개념입니다. "도메인에 데이터 인력을 배치할 수 있는가"가 성공 조건이라는 점을 III에 넣으세요.</p>
+    <p><strong>함정 2 — 만능으로 쓰면 위험합니다.</strong> 도메인이 적고 데이터 인력이 부족한 조직에는 <strong>중앙집중이 더 낫습니다.</strong> "조직 성숙도가 전제"라는 한 줄이 기술사다운 균형을 보여줍니다.</p>
+  </div></details>
+</section>
+
+<section id="a6" class="ans" data-item="a6" data-title="XAI — LIME과 SHAP">
+  <h3>06. XAI — LIME과 SHAP</h3>
+  <div class="prog"><button class="pbtn" data-v="1">골격 외움</button><button class="pbtn" data-v="2">손으로 써봄</button><span class="sync" data-sync></span></div>
+  <div class="sheet">
+    <div class="sheet-top"><span class="tag t">B 비교형</span><span class="tag">10점</span><span class="tag">9분</span><span class="num">인공지능 · 신뢰성</span></div>
+    <div class="q"><b>문)</b> 설명가능 인공지능(XAI)의 대표 기법인 LIME과 SHAP를 비교하여 설명하시오.</div>
+    <div class="body-wrap">
+      <h4>I. 개요</h4>
+      <p>1. 배경 : 딥러닝의 <strong>블랙박스</strong> 특성으로 금융·의료 등 고위험 영역에서 <strong>설명 의무(GDPR 제22조, AI 기본법)</strong> 충족 불가</p>
+      <p>2. 정의 : <strong>XAI</strong>란 모델의 판단 근거를 인간이 이해 가능한 형태로 제시하는 기법으로, 대표적으로 <strong>LIME</strong>과 <strong>SHAP</strong>이 있음</p>
+      <h4>II. LIME과 SHAP의 비교</h4>
+      <div class="tw"><table><thead><tr><th>비교 항목</th><th>LIME</th><th>SHAP</th></tr></thead><tbody>
+        <tr><td>이론 기반</td><td>국소 <strong>대리 모델</strong>(선형 근사)</td><td>협조적 게임이론 <strong>Shapley Value</strong></td></tr>
+        <tr><td>산출 의미</td><td>해당 예측 주변의 근사 기여도</td><td>기여도의 <strong>공정 분배(수학적 보증)</strong></td></tr>
+        <tr><td>설명 범위</td><td>국소(Local) 중심</td><td>국소 + <strong>전역(Global) 집계 가능</strong></td></tr>
+        <tr><td>계산 비용</td><td>낮음 (샘플링 기반)</td><td><strong>높음</strong> (조합 계산, 근사법 필요)</td></tr>
+        <tr><td>안정성</td><td>샘플링에 따라 <strong>결과 변동</strong></td><td>일관성·가법성 <strong>공리 만족</strong></td></tr>
+      </tbody></table></div>
+<pre>[원본 모델(블랙박스)]
+        |  예측값
+        v
+ LIME : 관심 데이터 주변만 흔들어 --&gt; [단순 선형모델]로 근사 --&gt; 설명
+ SHAP : 특성 조합별 기여 계산 -----&gt; 기여도 분배(합 = 예측-기댓값) --&gt; 설명</pre>
+      <h4>III. 선택 기준</h4>
+      <p>1. <strong>LIME</strong> : 실시간 응답, 개별 민원 대응 등 <strong>속도 우선</strong> 상황</p>
+      <p>2. <strong>SHAP</strong> : 규제 대응·모델 검증 등 <strong>일관성과 근거의 방어 가능성</strong>이 필요한 상황</p>
+    </div>
+    <div class="end">끝.</div>
+  </div>
+  <ul class="chips"><li>Shapley Value</li><li>국소 대리 모델</li><li>Local / Global 설명</li><li>가법성·일관성 공리</li><li>GDPR 제22조</li><li>블랙박스</li></ul>
+  <details><summary>쉬운 설명 · 자주 틀리는 함정</summary><div class="det-in">
+    <p><strong>SHAP 비유 — 회식비 나누기.</strong> 팀이 프로젝트로 성과급 1,000만원을 받았습니다. 누가 얼마나 기여했는지 어떻게 나눌까요? Shapley의 답은 <strong>"모든 조합을 다 해본다"</strong>입니다 — A 혼자면 얼마, A+B면 얼마, B가 A에 합류했을 때 늘어난 몫이 B의 기여... 이걸 모든 순서로 평균 냅니다. 수학적으로 <strong>가장 공정한 배분이라는 게 증명</strong>돼 있습니다. 대신 사람이 20명이면 조합이 폭발해서 <strong>느립니다.</strong></p>
+    <p><strong>LIME 비유 — 지구는 평평하다.</strong> 지구는 둥글지만, <strong>내 집 앞 10미터</strong>만 보면 평평하다고 해도 틀리지 않습니다. LIME은 이 아이디어입니다. 복잡한 모델 전체를 설명하려 하지 않고, <strong>알고 싶은 그 데이터 하나 주변만</strong> 이리저리 흔들어보고 "여기선 소득이 오르면 승인률이 오른다"는 <strong>단순한 직선</strong>으로 대신 설명합니다. 빠르지만, 흔드는 방식이 매번 조금씩 달라서 <strong>돌릴 때마다 답이 살짝 바뀝니다.</strong></p>
+    <p><strong>실무에서 이 차이가 왜 중요한가.</strong> 대출이 거절된 고객이 항의해서 두 번 돌렸는데 이유가 다르게 나오면, 그건 <strong>설명이 아니라 사고</strong>입니다. 그래서 규제 대응은 SHAP을 씁니다.</p>
+    <p><strong>함정 1 — 둘을 "비슷한 두 도구"로 나열하면 감점입니다.</strong> 반드시 <strong>이론 기반(게임이론 vs 대리모델)</strong>과 <strong>안정성</strong> 축을 넣으세요. 여기가 변별점입니다.</p>
+    <p><strong>함정 2 — XAI를 인과관계로 설명하면 틀립니다.</strong> 둘 다 <strong>기여도(상관)</strong>를 보여줄 뿐 <strong>인과를 증명하지 않습니다.</strong> 이 한 줄을 III에 넣으면 이해 깊이가 드러납니다.</p>
+  </div></details>
+</section>
+<section id="a7" class="ans" data-item="a7" data-title="RAG">
+  <h3>07. RAG(검색증강생성)</h3>
+  <div class="prog"><button class="pbtn" data-v="1">골격 외움</button><button class="pbtn" data-v="2">손으로 써봄</button><span class="sync" data-sync></span></div>
+  <div class="sheet">
+    <div class="sheet-top"><span class="tag t">D 아키텍처형</span><span class="tag">10점</span><span class="tag">9분</span><span class="num">인공지능 · 생성형 AI</span></div>
+    <div class="q"><b>문)</b> RAG(Retrieval-Augmented Generation)에 대하여 설명하시오.</div>
+    <div class="body-wrap">
+      <h4>I. 개요</h4>
+      <p>1. 배경 : LLM의 <strong>환각(Hallucination)</strong>과 <strong>지식 컷오프</strong>, 사내 데이터 미학습 문제로 업무 적용에 한계</p>
+      <p>2. 정의 : <strong>RAG</strong>란 질의 시점에 <strong>외부 지식베이스에서 관련 문서를 검색</strong>하여 <strong>프롬프트에 근거로 주입</strong>한 뒤 생성하는, 학습 없이 지식을 갱신하는 아키텍처</p>
+      <h4>II. 처리 절차 및 구성요소</h4>
+<pre>[사전] 원문 --&gt; 청킹 --&gt; 임베딩 --&gt; ( Vector DB )
+                                        ^
+[질의] 질문 --&gt; 임베딩 --&gt; 유사도 검색 ---+
+                            |
+                            v
+                    [재순위화(Rerank)]
+                            |
+                  질문 + 근거 문서 --&gt; [ LLM ] --&gt; 답변 + 출처</pre>
+      <div class="tw"><table><thead><tr><th>단계</th><th>구성요소</th><th>핵심 기술 / 품질 요인</th></tr></thead><tbody>
+        <tr><td>색인</td><td>청킹, 임베딩 모델</td><td>청크 크기·중첩 설계가 검색 품질을 좌우</td></tr>
+        <tr><td>검색</td><td>Vector DB</td><td>ANN 색인(HNSW), <strong>하이브리드 검색</strong>(BM25 + 벡터)</td></tr>
+        <tr><td>정제</td><td>Reranker</td><td>Cross-encoder로 상위 문서 재정렬</td></tr>
+        <tr><td>생성</td><td>LLM, 프롬프트</td><td>근거 기반 응답 강제, <strong>출처 제시</strong></td></tr>
+      </tbody></table></div>
+      <h4>III. 파인튜닝과의 비교</h4>
+      <div class="tw"><table><thead><tr><th>관점</th><th>RAG</th><th>파인튜닝</th></tr></thead><tbody>
+        <tr><td>지식 갱신</td><td>문서 교체로 <strong>즉시</strong></td><td>재학습 필요</td></tr>
+        <tr><td>출처 추적</td><td><strong>가능</strong>(근거 문서 제시)</td><td>불가</td></tr>
+        <tr><td>적합 목적</td><td>지식 주입</td><td>어투·형식·도메인 문체 학습</td></tr>
+      </tbody></table></div>
+    </div>
+    <div class="end">끝.</div>
+  </div>
+  <ul class="chips"><li>환각(Hallucination)</li><li>청킹</li><li>임베딩</li><li>Vector DB / HNSW</li><li>하이브리드 검색</li><li>Reranker</li><li>Grounding</li><li>출처 제시</li></ul>
+  <details><summary>쉬운 설명 · 자주 틀리는 함정</summary><div class="det-in">
+    <p><strong>비유 — 오픈북 시험.</strong> 파인튜닝은 <strong>시험 전에 밤새 외우게 하는 것</strong>입니다. 외운 내용이 바뀌면 또 밤을 새야 하고, "그거 어디서 봤어?"라고 물으면 대답을 못 합니다. RAG는 <strong>시험장에 책을 들고 들어가게</strong> 하는 것입니다. 문제를 받으면 해당 페이지를 펴서 보고 답하니, <strong>책만 바꿔 끼우면 지식이 갱신</strong>되고 <strong>"몇 페이지에서 봤다"고 출처를 댈 수 있습니다.</strong></p>
+    <p><strong>왜 환각이 줄어드나.</strong> LLM이 헛소리하는 건 대개 <strong>모르는데 아는 척해야 할 때</strong>입니다. 눈앞에 근거 문서를 놓아주면 지어낼 필요가 없어집니다. 반대로 검색이 엉뚱한 문서를 물어오면 <strong>엉뚱한 근거로 자신 있게 틀립니다</strong> — RAG 품질의 병목은 LLM이 아니라 <strong>검색</strong>입니다.</p>
+    <p><strong>청킹이 왜 그렇게 중요한가.</strong> 문서를 자르는 방식이 검색 품질을 정합니다. 너무 크게 자르면 한 덩어리에 잡소리가 섞여 유사도가 흐려지고, 너무 작게 자르면 <strong>문맥이 끊겨</strong> "이것은"의 '이것'이 뭔지 모르는 조각이 나옵니다. 그래서 <strong>중첩(overlap)</strong>을 줘서 자릅니다.</p>
+    <p><strong>함정 1 — "벡터 검색"만 쓰면 감점입니다.</strong> 실무에서는 <strong>하이브리드 검색</strong>(키워드 BM25 + 벡터)이 정석입니다. 사번·모델명 같은 <strong>고유명사는 벡터가 오히려 약하기</strong> 때문입니다. 이 한 줄이 실무 감각을 보여줍니다.</p>
+    <p><strong>함정 2 — 보안 항목을 빼먹기 쉽습니다.</strong> 검색 단계에서 <strong>사용자 권한 필터링</strong>을 안 하면, 권한 없는 문서가 근거로 들어가 LLM이 친절하게 요약해줍니다. 사내 RAG의 최대 사고 유형입니다.</p>
+  </div></details>
+</section>
+
+<section id="a8" class="ans" data-item="a8" data-title="SW 공급망 보안과 SBOM">
+  <h3>08. SW 공급망 보안과 SBOM</h3>
+  <div class="prog"><button class="pbtn" data-v="1">골격 외움</button><button class="pbtn" data-v="2">손으로 써봄</button><span class="sync" data-sync></span></div>
+  <div class="sheet">
+    <div class="sheet-top"><span class="tag t">E 이슈·대응형</span><span class="tag">10점</span><span class="tag">9분</span><span class="num">정보보안 · SW공학</span></div>
+    <div class="q"><b>문)</b> 소프트웨어 공급망 보안과 SBOM에 대하여 설명하시오.</div>
+    <div class="body-wrap">
+      <h4>I. 개요</h4>
+      <p>1. 배경 : SolarWinds·Log4Shell 등 <strong>단일 구성요소 침해가 전 산업으로 전파</strong>되는 사고가 반복</p>
+      <p>2. 정의 : <strong>SBOM</strong>이란 SW를 구성하는 <strong>모든 컴포넌트·버전·라이선스·의존관계</strong>를 기계 판독 가능 형식으로 명세한 <strong>구성요소 목록</strong>(SW 성분표)</p>
+      <h4>II. 공급망 위협 및 SBOM 표준</h4>
+      <div class="tw"><table><thead><tr><th>구분</th><th>위협</th><th>사례</th></tr></thead><tbody>
+        <tr><td>개발 단계</td><td>악성 오픈소스, 타이포스쿼팅</td><td>패키지명 오타 유도 배포</td></tr>
+        <tr><td>빌드 단계</td><td>빌드 시스템 침해, 산출물 위조</td><td>SolarWinds</td></tr>
+        <tr><td>배포·운영</td><td>알려진 취약점 미조치</td><td>Log4Shell</td></tr>
+      </tbody></table></div>
+      <div class="tw"><table><thead><tr><th>표준</th><th>주관</th><th>특징</th></tr></thead><tbody>
+        <tr><td><strong>SPDX</strong></td><td>Linux Foundation</td><td>ISO/IEC 5962 국제표준, 라이선스 표현 강점</td></tr>
+        <tr><td><strong>CycloneDX</strong></td><td>OWASP</td><td>보안·취약점 연계 강점, VEX 지원</td></tr>
+      </tbody></table></div>
+      <h4>III. 대응 방안</h4>
+      <div class="tw"><table><thead><tr><th>구분</th><th>대응 방안</th></tr></thead><tbody>
+        <tr><td>기술적</td><td>CI/CD 내 <strong>SBOM 자동 생성</strong>, SCA 취약점 스캔, <strong>산출물 서명</strong>(Sigstore), <strong>SLSA</strong> 빌드 무결성</td></tr>
+        <tr><td>관리적</td><td>계약서에 <strong>SBOM 제출 의무</strong> 명시, 취약점 대응 SLA, <strong>VEX</strong>로 영향도 회신</td></tr>
+        <tr><td>제도적</td><td>미 <strong>행정명령 14028</strong>, 국내 SW 공급망 보안 가이드라인 준수</td></tr>
+      </tbody></table></div>
+    </div>
+    <div class="end">끝.</div>
+  </div>
+  <ul class="chips"><li>SBOM</li><li>SPDX / CycloneDX</li><li>VEX</li><li>SLSA</li><li>Sigstore</li><li>SCA</li><li>타이포스쿼팅</li><li>행정명령 14028</li></ul>
+  <details><summary>쉬운 설명 · 자주 틀리는 함정</summary><div class="det-in">
+    <p><strong>비유 — 식품 성분표.</strong> 라면 봉지 뒤에는 성분이 다 적혀 있습니다. 그래서 <strong>"○○산 원료에서 문제가 발견됐다"</strong>는 뉴스가 뜨면, 어느 제품을 회수해야 하는지 몇 시간 안에 알 수 있습니다. SBOM은 소프트웨어의 그 성분표입니다.</p>
+    <p><strong>Log4Shell 때 실제로 벌어진 일</strong>이 이걸 잘 보여줍니다. 취약점 자체는 하루면 패치가 나왔는데, 대부분의 기업이 몇 주를 태웠습니다. 이유는 고치기 어려워서가 아니라 <strong>"우리가 Log4j를 쓰는지조차 몰라서"</strong>였습니다. 내가 직접 안 썼어도 내가 쓴 라이브러리가 쓰고 있었으니까요. 성분표가 없으면 <strong>회수 대상을 모릅니다.</strong></p>
+    <p><strong>VEX가 왜 같이 나오나.</strong> 성분표만 있으면 "취약한 부품이 들어 있다"는 목록이 수천 건 나옵니다. 그런데 대부분은 <strong>실제로는 안 위험합니다</strong>(그 기능을 호출하지 않으니까). VEX는 <strong>"들어 있지만 영향 없음"을 공식적으로 회신하는 문서</strong>입니다. SBOM이 성분표라면 VEX는 <strong>"이 성분은 우리 제품에선 반응하지 않습니다"라는 해명서</strong>입니다. 이 짝을 알면 답안이 한 단계 올라갑니다.</p>
+    <p><strong>함정 1 — SBOM을 "취약점 점검 도구"로 쓰면 틀립니다.</strong> SBOM은 <strong>목록(명세)</strong>일 뿐이고, 취약점을 찾는 건 <strong>SCA</strong>, 영향도를 회신하는 건 <strong>VEX</strong>입니다. 역할 분리를 정확히 쓰세요.</p>
+    <p><strong>함정 2 — 기술만 쓰면 반쪽입니다.</strong> 실제로 가장 효과가 큰 건 <strong>"납품 시 SBOM을 제출하라"는 계약 조항</strong>입니다. 관리적·제도적 대응까지 3단으로 채우는 게 이 유형의 정석입니다.</p>
+  </div></details>
+</section>
+
+<section id="a9" class="ans" data-item="a9" data-title="EVM 획득가치관리">
+  <h3>09. EVM(획득가치관리)</h3>
+  <div class="prog"><button class="pbtn" data-v="1">골격 외움</button><button class="pbtn" data-v="2">손으로 써봄</button><span class="sync" data-sync></span></div>
+  <div class="sheet">
+    <div class="sheet-top"><span class="tag t">A 개념형</span><span class="tag">10점</span><span class="tag">9분</span><span class="num">프로젝트 관리</span></div>
+    <div class="q"><b>문)</b> EVM(Earned Value Management)의 주요 지표와 활용 방안에 대하여 설명하시오.</div>
+    <div class="body-wrap">
+      <h4>I. 개요</h4>
+      <p>1. 배경 : 진척률을 담당자 주관에 의존하면 <strong>90% 신드롬</strong>이 발생하여 납기 지연을 조기에 인지하지 못함</p>
+      <p>2. 정의 : <strong>EVM</strong>이란 <strong>일정과 원가를 화폐 단위로 통합</strong>하여 계획 대비 실적을 객관적으로 측정하고 <strong>완료 시점을 예측</strong>하는 성과 관리 기법</p>
+      <h4>II. 기본 요소 및 성과 지표</h4>
+      <div class="tw"><table><thead><tr><th>구분</th><th>지표</th><th>산식 및 판정</th></tr></thead><tbody>
+        <tr><td rowspan="3">기본값</td><td><strong>PV</strong> (계획가치)</td><td>현재까지 계획된 작업의 예산액</td></tr>
+        <tr><td><strong>EV</strong> (획득가치)</td><td>실제 완료 작업의 <strong>예산액</strong></td></tr>
+        <tr><td><strong>AC</strong> (실투입비)</td><td>실제 지출된 원가</td></tr>
+        <tr><td rowspan="2">차이</td><td><strong>SV</strong> (일정차이)</td><td>EV − PV &nbsp; (음수 = 지연)</td></tr>
+        <tr><td><strong>CV</strong> (원가차이)</td><td>EV − AC &nbsp; (음수 = 초과)</td></tr>
+        <tr><td rowspan="2">지수</td><td><strong>SPI</strong></td><td>EV ÷ PV &nbsp; (&lt;1 = 지연)</td></tr>
+        <tr><td><strong>CPI</strong></td><td>EV ÷ AC &nbsp; (&lt;1 = 예산 초과)</td></tr>
+        <tr><td>예측</td><td><strong>EAC</strong></td><td>BAC ÷ CPI &nbsp; (완료 시 총원가 추정)</td></tr>
+      </tbody></table></div>
+<pre>비용
+ |            AC ---- 실투입 (많이 씀)
+ |          /
+ |        /  PV ---- 계획
+ |      /  /
+ |    /  /  EV ---- 실제 성과 (적게 함)
+ |  / _/                       CV = EV-AC &lt; 0  원가 초과
+ |/_/                          SV = EV-PV &lt; 0  일정 지연
+ +--------------------- 시간</pre>
+      <h4>III. 활용 시 고려사항</h4>
+      <p>1. <strong>선결 조건</strong> : <strong>WBS 기반 원가 기준선(BAC)</strong>과 진척 측정 규칙(0/100, 50/50 등) 사전 합의 필수</p>
+      <p>2. <strong>한계</strong> : <strong>품질을 측정하지 못함</strong> → 결함 지표·리스크 지표와 병행 관리</p>
+    </div>
+    <div class="end">끝.</div>
+  </div>
+  <ul class="chips"><li>PV / EV / AC</li><li>SV / CV</li><li>SPI / CPI</li><li>BAC / EAC / ETC</li><li>90% 신드롬</li><li>원가 기준선</li><li>WBS</li></ul>
+  <details><summary>쉬운 설명 · 자주 틀리는 함정</summary><div class="det-in">
+    <p><strong>왜 필요한가 — 90% 신드롬.</strong> 개발자에게 진척을 물으면 2주째부터 "90% 됐습니다"가 나오고, 그 90%가 두 달간 유지됩니다. 주관적 보고로는 지연을 <strong>납기 직전에야</strong> 알게 됩니다. EVM은 "느낌"을 빼고 <strong>돈으로 환산</strong>해 버립니다.</p>
+    <p><strong>세 값의 뜻을 한 줄로.</strong> 벽돌 100개를 100만원에 쌓는 공사, 오늘까지 50개를 쌓기로 했다고 하죠.</p>
+    <ul>
+      <li><strong>PV = 50만원</strong> — 오늘까지 <em>쌓기로 한</em> 양의 값어치</li>
+      <li><strong>EV = 40만원</strong> — 실제로 쌓은 게 40개니까 <em>번 돈</em>은 40만원어치</li>
+      <li><strong>AC = 60만원</strong> — 그런데 <em>쓴 돈</em>은 60만원</li>
+    </ul>
+    <p>즉 <strong>40만원어치 일을 하고 60만원을 썼고, 원래는 50만원어치를 했어야 합니다.</strong> 일정도 늦고(SV = −10) 돈도 새고(CV = −20) 있습니다. EVM의 전부가 이 세 숫자의 비교입니다.</p>
+    <p><strong>EAC가 무서운 이유.</strong> CPI가 0.67(=40/60)이라면, 이 팀은 <strong>1원어치 일에 1.5원을 쓰는 팀</strong>입니다. 남은 일도 같은 효율로 할 테니 총액은 100 ÷ 0.67 = <strong>약 150만원</strong>이 됩니다. "지금 50% 초과했지만 나중에 만회하겠다"는 보고를 <strong>숫자로 반박</strong>할 수 있는 게 EVM의 실전 가치입니다.</p>
+    <p><strong>함정 1 — EV를 "실제 쓴 돈"으로 쓰면 완전히 틀립니다.</strong> EV는 <strong>한 일의 예산액</strong>입니다. 여기가 헷갈리면 모든 지표가 무너집니다. "EV = 실적 × 예산단가"로 외우세요.</p>
+    <p><strong>함정 2 — 품질 한계를 안 쓰면 감점입니다.</strong> 대충 만들어 빨리 쌓으면 SPI·CPI가 <strong>좋아집니다.</strong> EVM은 품질을 보지 않는다는 한계를 III에 반드시 넣으세요.</p>
+  </div></details>
+</section>
+<section id="a10" class="ans" data-item="a10" data-title="FinOps">
+  <h3>10. FinOps</h3>
+  <div class="prog"><button class="pbtn" data-v="1">골격 외움</button><button class="pbtn" data-v="2">손으로 써봄</button><span class="sync" data-sync></span></div>
+  <div class="sheet">
+    <div class="sheet-top"><span class="tag t">C 절차형</span><span class="tag">10점</span><span class="tag">9분</span><span class="num">IT 거버넌스 · 클라우드</span></div>
+    <div class="q"><b>문)</b> FinOps에 대하여 설명하시오.</div>
+    <div class="body-wrap">
+      <h4>I. 개요</h4>
+      <p>1. 배경 : 클라우드의 <strong>사용량 기반 과금</strong>과 <strong>분산된 지출 권한</strong>으로 예산 통제가 사후적으로만 가능</p>
+      <p>2. 정의 : <strong>FinOps</strong>란 재무·기술·비즈니스 조직이 협업하여 클라우드 지출의 <strong>가시성을 확보</strong>하고 <strong>단위 경제성(Unit Economics)</strong> 기준으로 <strong>비용 대비 가치를 최적화</strong>하는 운영 문화·체계</p>
+      <h4>II. FinOps 수행 절차 (3단계 반복)</h4>
+<pre>[Inform 가시화] --&gt; [Optimize 최적화] --&gt; [Operate 운영정착]
+       ^                                          |
+       +--------- 지속 개선 루프(월 단위) ----------+</pre>
+      <div class="tw"><table><thead><tr><th>단계</th><th>주요 활동</th><th>핵심 수단</th></tr></thead><tbody>
+        <tr><td><strong>Inform</strong></td><td>비용 배분·표시, 단위원가 산정</td><td><strong>태깅 정책</strong>, Showback/<strong>Chargeback</strong></td></tr>
+        <tr><td><strong>Optimize</strong></td><td>낭비 제거, 요금 최적화</td><td><strong>Rightsizing</strong>, 유휴자원 회수, <strong>RI·Savings Plan</strong>, Spot</td></tr>
+        <tr><td><strong>Operate</strong></td><td>거버넌스 정착, 이상 감지</td><td><strong>예산 알림</strong>, 이상지출 탐지, FinOps 협의체</td></tr>
+      </tbody></table></div>
+      <h4>III. 도입 시 고려사항</h4>
+      <p>1. <strong>태깅이 선결 조건</strong> : 태깅 미비 시 비용 배분 불가 → <strong>미태깅 자원 생성 차단 정책</strong> 병행</p>
+      <p>2. <strong>목표는 절감이 아닌 가치</strong> : 단순 축소는 성능 저하를 유발 → <strong>단위당 원가(건당·사용자당)</strong>를 KPI로 설정</p>
+    </div>
+    <div class="end">끝.</div>
+  </div>
+  <ul class="chips"><li>Inform / Optimize / Operate</li><li>단위 경제성</li><li>Showback / Chargeback</li><li>Rightsizing</li><li>RI / Savings Plan</li><li>태깅 정책</li><li>이상지출 탐지</li></ul>
+  <details><summary>쉬운 설명 · 자주 틀리는 함정</summary><div class="det-in">
+    <p><strong>비유 — 회사 전기요금.</strong> 예전 IDC는 <strong>정액제 아파트</strong>였습니다. 서버를 사두면 24시간 켜놔도 추가 청구가 없죠. 클라우드는 <strong>종량제</strong>입니다. 게다가 스위치가 <strong>전 직원 손에</strong> 있습니다 — 개발자가 마음대로 서버를 켤 수 있으니까요. 그래서 월말에 청구서를 보고 놀라는데, 그때는 이미 썼습니다.</p>
+    <p>FinOps의 3단계는 이 문제를 순서대로 답합니다. <strong>Inform은 "누가 켰는지 이름표를 붙이는 것"</strong>(태깅), <strong>Optimize는 "빈 방 불 끄고 요금제 바꾸는 것"</strong>, <strong>Operate는 "매달 이걸 하는 습관과 담당자를 만드는 것"</strong>입니다.</p>
+    <p><strong>왜 태깅이 전부인가.</strong> 이름표가 없으면 <strong>"이 서버 꺼도 되나요?"에 아무도 답을 못 합니다.</strong> 그래서 아무도 못 끄고, 유휴 자원이 영원히 돕니다. FinOps 실패의 90%는 기술이 아니라 <strong>태깅 규칙을 강제하지 못해서</strong>입니다. 그래서 "미태깅이면 생성을 아예 막는" 정책이 실전 해법입니다.</p>
+    <p><strong>단위 경제성이 왜 핵심 개념인가.</strong> 총비용이 늘어난 것 자체는 나쁜 게 아닙니다. <strong>매출이 2배인데 비용이 1.5배면 잘하고 있는 것</strong>입니다. 그래서 FinOps는 총액이 아니라 <strong>"주문 1건당 클라우드 비용"</strong> 같은 단위원가를 봅니다. 이 관점이 있으면 "비용 절감 활동"으로 답한 답안과 차별화됩니다.</p>
+    <p><strong>함정 — 비용 절감 기법 나열로 끝내면 감점입니다.</strong> FinOps는 <strong>재무·기술·현업의 협업 문화이자 운영 체계</strong>입니다. 조직(협의체)과 <strong>Chargeback</strong>으로 <strong>책임을 사용 부서에 귀속</strong>시키는 구조를 반드시 넣으세요.</p>
+  </div></details>
+</section>
+
+<section id="a11" class="ans" data-item="a11" data-title="가명처리와 차분 프라이버시">
+  <h3>11. 가명처리와 차분 프라이버시</h3>
+  <div class="prog"><button class="pbtn" data-v="1">골격 외움</button><button class="pbtn" data-v="2">손으로 써봄</button><span class="sync" data-sync></span></div>
+  <div class="sheet">
+    <div class="sheet-top"><span class="tag t">B 비교형</span><span class="tag">10점</span><span class="tag">9분</span><span class="num">개인정보보호</span></div>
+    <div class="q"><b>문)</b> 가명처리와 차분 프라이버시(Differential Privacy)를 비교하여 설명하시오.</div>
+    <div class="body-wrap">
+      <h4>I. 개요</h4>
+      <p>1. 배경 : 데이터 3법 개정으로 <strong>가명정보의 통계·연구 목적 활용</strong>이 허용되었으나, <strong>재식별 위험</strong>에 대한 정량적 보증은 미흡</p>
+      <p>2. 정의 : <strong>가명처리</strong>는 식별자를 대체·삭제하여 추가 정보 없이는 특정 개인을 알 수 없게 하는 처리이며, <strong>차분 프라이버시</strong>는 질의 결과에 <strong>수학적으로 계산된 노이즈</strong>를 주입해 <strong>개인의 포함 여부를 구별 불가</strong>하게 만드는 프라이버시 보호 모델</p>
+      <h4>II. 비교</h4>
+      <div class="tw"><table><thead><tr><th>비교 항목</th><th>가명처리</th><th>차분 프라이버시</th></tr></thead><tbody>
+        <tr><td>보호 대상</td><td><strong>데이터 자체</strong>(레코드)</td><td><strong>질의·분석 결과</strong></td></tr>
+        <tr><td>방식</td><td>가명대체, 총계처리, 범주화, 마스킹</td><td>라플라스·가우시안 <strong>노이즈 주입</strong></td></tr>
+        <tr><td>보호 수준</td><td>정성적(적정성 평가로 판단)</td><td><strong>정량적 보증</strong> (ε, δ)</td></tr>
+        <tr><td>재식별 내성</td><td>결합·연계 공격에 <strong>취약</strong></td><td>사후 결합에도 <strong>보증 유지</strong></td></tr>
+        <tr><td>법적 지위</td><td><strong>개인정보보호법상 명문 근거</strong></td><td>기법 (직접 근거 아님)</td></tr>
+      </tbody></table></div>
+<pre>가명처리 : [원본 DB] --가명대체--&gt; ( 가명 DB ) --&gt; 분석  (데이터를 바꿈)
+차분P    : [원본 DB] --&gt; 질의 --&gt; ▨노이즈 주입 --&gt; 결과   (답을 흐림)
+                                  ε 작을수록 강한 보호 / 낮은 정확도</pre>
+      <h4>III. 적용 방안</h4>
+      <p>1. <strong>상호 보완 적용</strong> : 원본은 가명처리로 보관, <strong>외부 공개 통계·API 응답</strong>에는 차분 프라이버시 적용</p>
+      <p>2. <strong>프라이버시 예산 관리</strong> : 반복 질의 시 ε 누적 소진 → <strong>질의 총량 통제</strong> 필요</p>
+    </div>
+    <div class="end">끝.</div>
+  </div>
+  <ul class="chips"><li>가명정보</li><li>재식별 위험</li><li>ε(엡실론) · 프라이버시 예산</li><li>라플라스 메커니즘</li><li>k-익명성</li><li>적정성 평가</li><li>데이터 3법</li></ul>
+  <details><summary>쉬운 설명 · 자주 틀리는 함정</summary><div class="det-in">
+    <p><strong>가명처리 비유 — 이름을 지운 명부.</strong> 명부에서 이름을 지우고 "A씨, B씨"로 바꿉니다. 문제는 남은 정보로 <strong>역추적이 됩니다.</strong> "35세, 부산 금정구, 정보관리기술사 보유"만 있으면 지역에서 몇 명 안 됩니다. 여기에 다른 데이터를 <strong>붙이면(결합)</strong> 특정됩니다. 넷플릭스가 익명 시청기록을 공개했다가 IMDb 리뷰와 결합해 개인이 특정된 유명한 사고가 정확히 이 유형입니다.</p>
+    <p><strong>차분 프라이버시 비유 — 동전을 던지고 답하게 하기.</strong> "당신은 탈세한 적 있습니까?"를 조사한다고 하죠. 그냥 물으면 아무도 사실대로 답하지 않습니다. 그런데 이렇게 시키면 됩니다 — <strong>"동전을 몰래 던져서 앞면이면 무조건 '예'라고 하고, 뒷면이면 사실대로 답하세요."</strong></p>
+    <p>이제 어떤 개인의 '예'도 <strong>동전 때문인지 사실인지 알 수 없습니다.</strong> 그런데 <strong>1만 명을 모으면</strong> 동전의 영향은 계산해서 빼버릴 수 있어서 <strong>전체 비율은 정확하게 나옵니다.</strong> 이게 차분 프라이버시의 전부입니다 — <strong>개인은 숨고 통계는 살립니다.</strong></p>
+    <p><strong>ε(엡실론)의 의미.</strong> 노이즈를 얼마나 넣을지 정하는 손잡이입니다. <strong>ε가 작으면</strong> 노이즈가 커서 보호는 강하고 <strong>결과는 부정확</strong>합니다. 반대면 반대입니다. 그래서 정답이 없고 <strong>정책적 결정</strong>입니다. 이 트레이드오프를 한 줄 쓰면 이해도가 드러납니다.</p>
+    <p><strong>"프라이버시 예산"이 왜 있나.</strong> 같은 질문을 100번 물어서 평균을 내면 <strong>노이즈가 상쇄되어 진값이 드러납니다.</strong> 그래서 질의할 때마다 ε를 <strong>깎아나가고, 예산이 떨어지면 더 못 묻게</strong> 합니다. 이 항목을 아는 답안은 드물어서 변별력이 큽니다.</p>
+    <p><strong>함정 1 — 둘을 경쟁 기술로 쓰면 감점입니다.</strong> <strong>계층이 다릅니다</strong> — 가명처리는 저장 데이터, 차분 프라이버시는 분석 결과를 보호합니다. "함께 쓴다"가 정답입니다.</p>
+    <p><strong>함정 2 — 법적 지위를 섞으면 위험합니다.</strong> 가명정보는 <strong>법에 정의와 활용 근거가 있는 법적 개념</strong>이고, 차분 프라이버시는 <strong>기법</strong>입니다. 차분 프라이버시를 적용해도 가명처리 의무가 면제되지 않습니다.</p>
+  </div></details>
+</section>
+
+<section id="a12" class="ans" data-item="a12" data-title="쿠버네티스 오토스케일링">
+  <h3>12. 쿠버네티스 오토스케일링(HPA · VPA · CA)</h3>
+  <div class="prog"><button class="pbtn" data-v="1">골격 외움</button><button class="pbtn" data-v="2">손으로 써봄</button><span class="sync" data-sync></span></div>
+  <div class="sheet">
+    <div class="sheet-top"><span class="tag t">A 개념형</span><span class="tag">10점</span><span class="tag">9분</span><span class="num">클라우드 인프라</span></div>
+    <div class="q"><b>문)</b> 쿠버네티스의 오토스케일링 방식에 대하여 설명하시오.</div>
+    <div class="body-wrap">
+      <h4>I. 개요</h4>
+      <p>1. 배경 : 고정 용량 설계는 <strong>피크 대응 실패</strong> 또는 <strong>평시 유휴 비용</strong> 중 하나를 반드시 초래</p>
+      <p>2. 정의 : 쿠버네티스 오토스케일링이란 부하에 따라 <strong>Pod 수(수평)·Pod 자원(수직)·Node 수(클러스터)</strong>를 자동 조정하여 <strong>가용성과 비용 효율을 동시에</strong> 확보하는 메커니즘</p>
+      <h4>II. 3가지 오토스케일링 방식</h4>
+      <div class="tw"><table><thead><tr><th>구분</th><th>조정 대상</th><th>동작 및 특징</th></tr></thead><tbody>
+        <tr><td><strong>HPA</strong><br>(수평)</td><td>Pod <strong>개수</strong></td><td>CPU·메모리·커스텀 지표 기준 <strong>replica 증감</strong>. 무중단. <strong>Stateless</strong>에 적합</td></tr>
+        <tr><td><strong>VPA</strong><br>(수직)</td><td>Pod <strong>자원 요청량</strong></td><td>request/limit 재산정. 적용 시 <strong>Pod 재기동 수반</strong>. Stateful·단일 인스턴스에 적합</td></tr>
+        <tr><td><strong>CA</strong><br>(클러스터)</td><td><strong>Node 개수</strong></td><td>Pending Pod 발생 시 노드 증설, 유휴 노드 회수. <strong>인프라 계층</strong></td></tr>
+      </tbody></table></div>
+<pre>부하 증가
+   |
+   v
+ [HPA] Pod 3 --&gt; 6 증설
+   |
+   +--&gt; 노드 자원 부족 --&gt; Pod Pending
+                              |
+                              v
+                          [CA] Node 2 --&gt; 3 증설      &lt;- HPA와 CA는 연쇄 동작
+
+ [VPA] Pod 1개의 요청량 500m --&gt; 1000m (재기동 발생)  &lt;- HPA와 동일지표 병용 금지</pre>
+      <h4>III. 적용 시 고려사항</h4>
+      <p>1. <strong>HPA와 VPA 충돌 방지</strong> : 동일 지표(CPU) 기준 병용 시 상호 진동 → VPA는 <strong>메모리 또는 권고 모드</strong>로 분리</p>
+      <p>2. <strong>확장 지연 대비</strong> : 노드 증설은 분 단위 소요 → <strong>여유 자원 확보</strong>(Pod 우선순위·Overprovisioning) 및 <strong>PDB</strong> 설정</p>
+    </div>
+    <div class="end">끝.</div>
+  </div>
+  <ul class="chips"><li>HPA / VPA / CA</li><li>replica</li><li>request / limit</li><li>Pending Pod</li><li>KEDA(이벤트 기반)</li><li>PDB</li><li>Overprovisioning</li></ul>
+  <details><summary>쉬운 설명 · 자주 틀리는 함정</summary><div class="det-in">
+    <p><strong>비유 — 식당.</strong> 손님이 몰릴 때 방법이 세 가지입니다.</p>
+    <ul>
+      <li><strong>HPA = 알바를 더 부른다</strong> (같은 일 하는 사람을 늘림). 가장 흔하고 안전합니다.</li>
+      <li><strong>VPA = 주방장에게 더 큰 칼과 더 큰 화구를 준다</strong> (한 사람의 능력을 키움). 단 <strong>교체하려면 잠깐 요리를 멈춰야</strong> 합니다 — 그래서 재기동이 따릅니다.</li>
+      <li><strong>CA = 옆 가게를 임대해 홀을 넓힌다</strong> (건물 자체를 늘림). 알바를 20명 불렀는데 <strong>서 있을 자리가 없으면</strong> 이걸 해야 합니다.</li>
+    </ul>
+    <p><strong>HPA와 CA는 왜 짝으로 도나.</strong> HPA가 Pod를 늘리려는데 노드에 자리가 없으면 Pod가 <strong>Pending 상태로 뜹니다</strong>(대기). CA는 이 Pending을 신호로 보고 노드를 붙입니다. 즉 <strong>HPA가 요구하고 CA가 공급하는 구조</strong>입니다. 이 연쇄를 도해로 보여주면 답안이 확실히 좋아집니다.</p>
+    <p><strong>왜 HPA와 VPA를 같이 쓰면 안 되나.</strong> 둘 다 CPU를 보고 움직이면 이렇게 됩니다 — CPU가 높다 → HPA가 Pod를 늘린다 → Pod당 CPU가 내려간다 → VPA가 "자원이 남네" 하고 요청량을 줄인다 → 다시 CPU가 높아진다 → 반복. <strong>서로 상대의 조치를 무효화하며 진동</strong>합니다. 이 함정을 아는 답안은 흔치 않아 변별력이 큽니다.</p>
+    <p><strong>실무 한 줄 더.</strong> HPA는 CPU만 보는 게 아니라 <strong>큐 길이·초당 요청 수</strong> 같은 커스텀 지표로도 돕니다(<strong>KEDA</strong>). 배치·큐 소비 워크로드는 CPU보다 <strong>큐 적체량</strong>이 맞는 지표라는 점을 쓰면 좋습니다.</p>
+    <p><strong>함정 — 세 개를 나열만 하면 6점입니다.</strong> <strong>연쇄(HPA→CA)</strong>와 <strong>충돌(HPA↔VPA)</strong>, 그리고 <strong>확장 지연</strong>까지 III에 넣어야 9~10점입니다.</p>
+  </div></details>
+</section>
+
+</section>
+
+<footer>
+  <p>정보관리기술사 1교시 답안 훈련 노트 · 시험 구조와 배점은 시행 회차의 수험자 안내로 최종 확인하세요.</p>
+</footer>
+</main>
+</div>
+
+<div class="pager">
+  <button id="prev">← 이전</button>
+  <button id="next">다음 →</button>
+</div>
+<script>
+(function(){
+  "use strict";
+  var LS = "ipe-1교시-progress";
+  var answers = [].slice.call(document.querySelectorAll("section.ans"));
+  var sections = [].slice.call(document.querySelectorAll("main section[id]"));
+  var nav = document.getElementById("nav");
+  var navBtn = document.getElementById("navBtn");
+  var meter = document.getElementById("meter");
+  var state = {};
+  var docRef = null;
+
+  /* ---- restore local first so the page is never blank of progress ---- */
+  try { state = JSON.parse(localStorage.getItem(LS) || "{}") || {}; } catch (e) { state = {}; }
+
+  /* ---- build the answer nav from the sections themselves ---- */
+  var navList = document.getElementById("navAnswers");
+  answers.forEach(function (sec, i) {
+    var li = document.createElement("li");
+    var a = document.createElement("a");
+    a.href = "#" + sec.id;
+    a.dataset.item = sec.dataset.item;
+    a.innerHTML = '<i>' + String(i + 1).padStart(2, "0") + '</i>' +
+                  '<span>' + sec.dataset.title + '</span>';
+    li.appendChild(a);
+    navList.appendChild(li);
+  });
+  var navLinks = [].slice.call(nav.querySelectorAll("a"));
+
+  /* ---- render ---- */
+  function render() {
+    var done = 0;
+    answers.forEach(function (sec) {
+      var id = sec.dataset.item;
+      var lv = state[id] || 0;
+      if (lv >= 2) done++;
+      sec.querySelectorAll(".pbtn").forEach(function (b) {
+        b.setAttribute("aria-pressed", lv >= Number(b.dataset.v) ? "true" : "false");
+      });
+    });
+    navLinks.forEach(function (a) {
+      if (a.dataset.item) a.classList.toggle("done", (state[a.dataset.item] || 0) >= 2);
+    });
+    meter.innerHTML = "진도 <b>" + done + "</b>/" + answers.length;
+  }
+
+  /* ---- persist: local always, shared store when this view has one ---- */
+  function persist() {
+    try { localStorage.setItem(LS, JSON.stringify(state)); } catch (e) {}
+    if (docRef) {
+      docRef.set({ items: state, updatedAt: Date.now() }).catch(function () {});
+    }
+  }
+
+  document.querySelectorAll(".pbtn").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var sec = btn.closest("section.ans");
+      var id = sec.dataset.item;
+      var v = Number(btn.dataset.v);
+      state[id] = (state[id] || 0) === v ? v - 1 : v;
+      if (state[id] < 0) state[id] = 0;
+      render();
+      persist();
+    });
+  });
+
+  /* ---- cross-device sync, when the viewer can run it ---- */
+  function noteSync(text) {
+    document.querySelectorAll("[data-sync]").forEach(function (el) { el.textContent = text; });
+  }
+  (async function () {
+    try {
+      if (!window.claude || !window.claude.use) return;
+      var db = await window.claude.use("db");
+      if (!db) return;
+      docRef = db.doc("progress/main");
+      var snap = await docRef.get();
+      if (snap.exists) {
+        var body = snap.data() || {};
+        if (body.items) { state = Object.assign({}, body.items, state); render(); }
+      }
+      docRef.onSnapshot(function (s) {
+        if (!s.exists) return;
+        var b = s.data() || {};
+        if (b.items) { state = Object.assign({}, state, b.items); render(); }
+      }, function () { noteSync(""); });
+      noteSync("PC · 모바일 동기화 중");
+    } catch (e) { /* progress stays local to this browser */ }
+  })();
+
+  /* ---- mobile drawer ---- */
+  var mq = window.matchMedia("(max-width: 999px)");
+  var open = false;
+  function syncNav() {
+    nav.hidden = mq.matches && !open;
+    navBtn.setAttribute("aria-expanded", open ? "true" : "false");
+    navBtn.textContent = open ? "닫기" : "목차";
+  }
+  navBtn.addEventListener("click", function () { open = !open; syncNav(); });
+  nav.addEventListener("click", function (e) {
+    if (e.target.closest("a") && mq.matches) { open = false; syncNav(); }
+  });
+  mq.addEventListener("change", function () { open = false; syncNav(); });
+  syncNav();
+
+  /* ---- current-section highlight ---- */
+  var current = null;
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (en) {
+      if (en.isIntersecting) current = en.target.id;
+    });
+    navLinks.forEach(function (a) {
+      a.classList.toggle("on", a.getAttribute("href") === "#" + current);
+    });
+  }, { rootMargin: "-72px 0px -70% 0px" });
+  sections.forEach(function (s) { io.observe(s); });
+
+  /* ---- bottom pager ---- */
+  function go(step) {
+    var idx = sections.findIndex(function (s) { return s.id === current; });
+    if (idx < 0) idx = 0;
+    var t = sections[Math.min(sections.length - 1, Math.max(0, idx + step))];
+    if (t) t.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+  document.getElementById("prev").addEventListener("click", function () { go(-1); });
+  document.getElementById("next").addEventListener("click", function () { go(1); });
+
+  render();
+})();
+</script>
