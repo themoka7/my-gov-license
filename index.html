@@ -161,7 +161,6 @@ details[open] summary{border-bottom:1px solid var(--rule-soft)}
 table.qt{min-width:520px}
 table.qt td:first-child{width:34px;color:var(--faint);text-align:right}
 table.qt td:nth-child(2){white-space:normal;font-weight:400;line-height:1.6}
-table.qt td:last-child{width:84px}
 table.qt .tag{font-size:10px;padding:1px 5px}
 
 @media(max-width:640px){
@@ -193,6 +192,39 @@ table.qt .tag{font-size:10px;padding:1px 5px}
 .herolink a:hover{text-decoration:underline}
 #repoLink{text-decoration:none}
 @media(max-width:520px){#repoLink{display:none}}
+
+/* ---------- per-question share ---------- */
+.sh{font-family:var(--mono);font-size:10px;letter-spacing:.04em;color:var(--faint);
+  background:transparent;border:1px solid var(--rule-soft);border-radius:3px;
+  padding:2px 6px;margin-left:6px;cursor:pointer;white-space:nowrap}
+.sh:hover{color:var(--mark);border-color:var(--mark);background:var(--mark-soft)}
+.prog .sh{margin-left:0;font-size:11.5px;padding:5px 10px;border-radius:5px;
+  border-color:var(--rule-soft);color:var(--pencil)}
+.prog .sh:hover{color:var(--mark)}
+table.qt td:last-child{width:132px;white-space:nowrap}
+
+.shwrap{position:fixed;inset:0;z-index:60;display:flex;align-items:center;justify-content:center;
+  background:rgba(12,18,26,.55);padding:16px}
+.shbox{background:var(--surface);border:1px solid var(--rule);border-radius:10px;
+  box-shadow:0 20px 50px -20px rgba(0,0,0,.5);max-width:460px;width:100%;
+  max-height:88vh;overflow-y:auto;padding:18px}
+.shbox h4{font-family:var(--serif);font-size:15px;margin:0 0 4px}
+.shq{font-size:13.5px;color:var(--pencil);margin:0 0 14px;line-height:1.6}
+.shgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px;margin:0 0 12px}
+.shgrid a,.shgrid button{display:block;text-align:center;font-family:var(--sans);font-size:13px;
+  font-weight:500;color:var(--ink);background:var(--surface-2);border:1px solid var(--rule-soft);
+  border-radius:6px;padding:9px 6px;cursor:pointer;text-decoration:none}
+.shgrid a:hover,.shgrid button:hover{border-color:var(--mark);color:var(--mark)}
+.shnote{font-size:11.5px;color:var(--faint);margin:0 0 12px;line-height:1.55}
+.shta{width:100%;height:132px;font-family:var(--mono);font-size:11px;line-height:1.55;
+  color:var(--ink);background:var(--surface-2);border:1px solid var(--rule-soft);
+  border-radius:6px;padding:9px;resize:vertical}
+.shfoot{display:flex;gap:8px;align-items:center;margin-top:10px}
+.shfoot button{font-family:var(--sans);font-size:12.5px;font-weight:500;padding:7px 12px;
+  border-radius:6px;cursor:pointer;border:1px solid var(--rule-soft);
+  background:var(--surface-2);color:var(--pencil)}
+.shfoot button:hover{color:var(--ink)}
+.shmsg{font-family:var(--mono);font-size:11px;color:var(--ok);margin-left:auto}
 
 /* ---------- bottom pager (mobile) ---------- */
 .pager{position:fixed;bottom:0;left:0;right:0;z-index:38;display:none;gap:1px;
@@ -2852,6 +2884,162 @@ MA(1) :  ■ ▪ (끝)           다음 1시점만 영향, 이후 0
   }
   document.getElementById("prev").addEventListener("click", function () { go(-1); });
   document.getElementById("next").addEventListener("click", function () { go(1); });
+
+
+  /* ---------- 문항별 공유: 다른 AI에게 더 깊이 물어보기 ---------- */
+  var TARGETS = [
+    { label: "ChatGPT",    url: function (q) { return "https://chatgpt.com/?q=" + encodeURIComponent(q); } },
+    { label: "Claude",     url: function (q) { return "https://claude.ai/new?q=" + encodeURIComponent(q); } },
+    { label: "Perplexity", url: function (q) { return "https://www.perplexity.ai/search?q=" + encodeURIComponent(q); } },
+    { label: "Gemini",     url: function () { return "https://gemini.google.com/app"; }, copyFirst: true }
+  ];
+
+  function buildPrompt(round, num, text) {
+    var where = round ? ("정보관리기술사 제" + round + "회 1교시 " + num + "번") : "정보관리기술사 1교시 출제 예상 주제";
+    return [
+      "아래는 " + where + " 문제입니다.",
+      "",
+      "문제: " + text,
+      "",
+      "기술사 답안 작성 관점에서 다음을 정리해 주세요.",
+      "1. 등장 배경과 핵심 정의 (2~3문장, 영문 약어 병기)",
+      "2. 핵심 구성요소 또는 절차 — 표로 정리",
+      "3. 유사 개념과의 비교 — 혼동하기 쉬운 지점 중심",
+      "4. 실무 적용 시 고려사항과 흔한 실패 요인",
+      "5. 답안에 반드시 넣어야 할 채점 키워드 목록",
+      "",
+      "분량은 시험 답안지 1면(9분 작성) 기준으로 압축하고, 줄글보다 표를 활용해 주세요."
+    ].join("\n");
+  }
+
+  /* 공유 버튼 주입 — 문항 표의 유형 칸과 답안 카드의 진도 줄 */
+  document.querySelectorAll("section.round table.qt tbody tr").forEach(function (tr) {
+    if (!tr.cells[2]) return;
+    var b = document.createElement("button");
+    b.type = "button"; b.className = "sh"; b.textContent = "공유";
+    b.setAttribute("aria-label", "이 문제를 다른 AI에게 물어보기");
+    tr.cells[2].appendChild(b);
+  });
+  answers.forEach(function (sec) {
+    var row = sec.querySelector(".prog");
+    if (!row) return;
+    var b = document.createElement("button");
+    b.type = "button"; b.className = "sh"; b.textContent = "다른 AI에게 물어보기";
+    row.insertBefore(b, row.querySelector("[data-sync]"));
+  });
+
+  /* 클립보드: 권한이 막힌 뷰에서도 텍스트 영역으로 대체 */
+  function copyText(t) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      return navigator.clipboard.writeText(t).then(function () { return true; },
+                                                   function () { return legacyCopy(t); });
+    }
+    return Promise.resolve(legacyCopy(t));
+  }
+  function legacyCopy(t) {
+    try {
+      var ta = document.createElement("textarea");
+      ta.value = t; ta.style.position = "fixed"; ta.style.opacity = "0";
+      document.body.appendChild(ta); ta.select();
+      var ok = document.execCommand("copy");
+      document.body.removeChild(ta);
+      return ok;
+    } catch (e) { return false; }
+  }
+
+  var dlg = null;
+  function closeDialog() {
+    if (dlg) { dlg.remove(); dlg = null; }
+  }
+  function openDialog(round, num, text) {
+    closeDialog();
+    var prompt = buildPrompt(round, num, text);
+    var title = round ? ("제" + round + "회 " + num + "번") : "출제 예상 주제";
+
+    dlg = document.createElement("div");
+    dlg.className = "shwrap";
+    dlg.setAttribute("role", "dialog");
+    dlg.setAttribute("aria-label", "문제 공유");
+
+    var box = document.createElement("div");
+    box.className = "shbox";
+    var h4 = document.createElement("h4"); h4.textContent = title;
+    var q = document.createElement("p"); q.className = "shq"; q.textContent = text;
+    var grid = document.createElement("div"); grid.className = "shgrid";
+    var note = document.createElement("p"); note.className = "shnote";
+    note.textContent = "ChatGPT·Claude·Perplexity는 질문이 입력된 상태로 열립니다. "
+                     + "Gemini는 링크로 질문을 전달할 수 없어, 프롬프트를 복사한 뒤 새 창에서 붙여넣어야 합니다.";
+    var ta = document.createElement("textarea");
+    ta.className = "shta"; ta.readOnly = true; ta.value = prompt;
+    ta.id = "sharePrompt";
+    var foot = document.createElement("div"); foot.className = "shfoot";
+    var copyBtn = document.createElement("button");
+    copyBtn.type = "button"; copyBtn.textContent = "프롬프트 복사";
+    var closeBtn = document.createElement("button");
+    closeBtn.type = "button"; closeBtn.textContent = "닫기";
+    var msg = document.createElement("span"); msg.className = "shmsg";
+
+    TARGETS.forEach(function (t) {
+      var el;
+      if (t.copyFirst) {
+        el = document.createElement("button");
+        el.type = "button";
+        el.textContent = t.label + " (복사 후 열기)";
+        el.addEventListener("click", function () {
+          copyText(prompt).then(function (ok) {
+            msg.textContent = ok ? "복사됨 — 붙여넣으세요" : "복사 실패 — 아래에서 직접 선택하세요";
+            if (!ok) { ta.focus(); ta.select(); }
+            window.open(t.url(), "_blank", "noopener");
+          });
+        });
+      } else {
+        el = document.createElement("a");
+        el.href = t.url(prompt);
+        el.target = "_blank"; el.rel = "noopener";
+        el.textContent = t.label;
+      }
+      grid.appendChild(el);
+    });
+
+    copyBtn.addEventListener("click", function () {
+      copyText(prompt).then(function (ok) {
+        msg.textContent = ok ? "복사됨" : "복사 실패 — 아래에서 직접 선택하세요";
+        if (!ok) { ta.focus(); ta.select(); }
+      });
+    });
+    closeBtn.addEventListener("click", closeDialog);
+
+    foot.appendChild(copyBtn); foot.appendChild(closeBtn); foot.appendChild(msg);
+    box.appendChild(h4); box.appendChild(q); box.appendChild(grid);
+    box.appendChild(note); box.appendChild(ta); box.appendChild(foot);
+    dlg.appendChild(box);
+    dlg.addEventListener("click", function (e) { if (e.target === dlg) closeDialog(); });
+    document.body.appendChild(dlg);
+    copyBtn.focus();
+  }
+
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") closeDialog();
+  });
+
+  document.addEventListener("click", function (e) {
+    var btn = e.target.closest(".sh");
+    if (!btn) return;
+    var tr = btn.closest("section.round tbody tr");
+    if (tr) {
+      openDialog(btn.closest("section.round").id.slice(1),
+                 tr.cells[0].textContent.trim(),
+                 tr.cells[1].textContent.trim());
+      return;
+    }
+    var sec = btn.closest("section.ans");
+    if (!sec) return;
+    var qEl = sec.querySelector(".q");
+    var qText = qEl ? qEl.textContent.replace(/^\s*문\s*\d*\s*\)\s*/, "").trim() : sec.dataset.title;
+    var g = sec.dataset.group || "";
+    var num = (sec.dataset.item.match(/-(\d+)$/) || [, ""])[1];
+    openDialog(/^\d+$/.test(g) ? g : null, num, qText);
+  });
 
   render();
 })();
