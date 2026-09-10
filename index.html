@@ -128,7 +128,7 @@ pre{font-family:var(--mono);font-size:11.5px;line-height:1.62;background:var(--s
 /* ---------- keyword chips ---------- */
 .chips{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 14px;padding:0;list-style:none}
 .chips li{font-family:var(--mono);font-size:11.5px;color:var(--mark);background:var(--mark-soft);
-  border-radius:3px;padding:3px 8px;margin:0}
+  border-radius:3px;padding:3px 8px;margin:0;overflow-wrap:anywhere;max-width:100%}
 
 /* ---------- disclosure ---------- */
 details{border:1px solid var(--rule-soft);border-radius:8px;background:var(--surface);margin:0 0 12px}
@@ -211,6 +211,8 @@ footer{border-top:1px solid var(--rule-soft);padding-top:18px;color:var(--faint)
     <li><a href="#r134"><i>134</i>제134회</a></li>
     <li><a href="#r133"><i>133</i>제133회</a></li>
   </ol>
+  <div class="nav-h">제139회 답안</div>
+  <ol id="nav-139"></ol>
   <div class="nav-h">고빈도 주제 답안</div>
   <ol id="navAnswers"></ol>
 </nav>
@@ -467,6 +469,7 @@ V.   결론 및 제언                                    [0.2p / 2점]
 
 <section id="r139" class="round">
   <h3>제139회 <span class="rd">1교시 단답형 · 13문제 중 10문제 선택 · 각 10점</span></h3>
+  <p style="margin:-2px 0 12px;font-size:13.5px"><a href="#g139" style="color:var(--mark);text-decoration:none;font-weight:500">↓ 이 회차 13문항 답안 보기</a></p>
   <div class="tw"><table class="qt"><thead><tr><th>번</th><th>문제</th><th>유형</th></tr></thead><tbody>
     <tr><td class="num">1</td><td>WBS(Work Breakdown Structure) 작성방법</td><td><span class="tag t">절차형</span></td></tr>
     <tr><td class="num">2</td><td>대수의 법칙과 중심극한정리</td><td><span class="tag t">개념형</span></td></tr>
@@ -592,13 +595,589 @@ V.   결론 및 제언                                    [0.2p / 2점]
   </tbody></table></div>
 </section>
 
+<section id="g139" >
+  <div class="eyebrow">07 / 회차 답안</div>
+  <h2>제139회 1교시 답안 13</h2>
+  <p class="lede">최신 회차인 제139회 <strong>13문항 전체</strong> 답안입니다. 다음은 138회로 이어집니다. 각 카드는 <strong>답안지 1면 · 9분</strong> 기준이고, 아래 "쉬운 설명"은 이해용입니다.</p>
+</section>
+
+<section id="q139-1" class="ans" data-group="139" data-item="q139-1" data-title="WBS 작성방법">
+  <h3>139-1. WBS 작성방법</h3>
+  <div class="prog"><button class="pbtn" data-v="1">골격 외움</button><button class="pbtn" data-v="2">손으로 써봄</button><span class="sync" data-sync></span></div>
+  <div class="sheet">
+    <div class="sheet-top"><span class="tag t">C 절차형</span><span class="tag">10점</span><span class="tag">9분</span><span class="num">제139회 1번 · 프로젝트 관리</span></div>
+    <div class="q"><b>문 1)</b> WBS(Work Breakdown Structure) 작성방법</div>
+    <div class="body-wrap">
+      <h4>I. 개요</h4>
+      <p>1. 필요성 : 범위가 문장으로만 존재하면 누락·중복이 발생하고 일정·원가 산정의 기준이 없음</p>
+      <p>2. 정의 : <strong>WBS</strong>란 프로젝트 범위를 <strong>인도물(Deliverable) 중심</strong>으로 관리 가능한 단위까지 <strong>계층 분해</strong>한 구조로, 일정·원가·자원 기준선의 <strong>공통 골격</strong></p>
+      <h4>II. 작성 절차 및 작성 원칙</h4>
+<pre>[범위기술서·요구사항] --&gt; [상위 인도물 식별] --&gt; [계층적 분해]
+                                                    |
+        [WBS 코드 부여] &lt;-- [WBS 사전 작성] &lt;--------+
+                |
+                v
+        [검증] --&gt; 범위 기준선(Scope Baseline) 확정</pre>
+      <div class="tw"><table><thead><tr><th>절차</th><th>주요 활동</th><th>산출물</th></tr></thead><tbody>
+        <tr><td>1. 투입물 확인</td><td>범위기술서·요구사항 문서 검토</td><td>인도물 목록</td></tr>
+        <tr><td>2. 계층 분해</td><td>인도물 → 산출물 → <strong>작업 패키지</strong>까지 분해</td><td>WBS 계층도</td></tr>
+        <tr><td>3. 사전 작성</td><td>패키지별 범위·담당·산정근거·인수기준 기술</td><td><strong>WBS 사전</strong></td></tr>
+        <tr><td>4. 코드 부여</td><td>1.1.2 형태 계정코드 체계 부여</td><td>WBS 코드체계</td></tr>
+        <tr><td>5. 검증</td><td>누락·중복 점검 후 기준선 승인</td><td>범위 기준선</td></tr>
+      </tbody></table></div>
+      <div class="tw"><table><thead><tr><th>작성 원칙</th><th>내용</th></tr></thead><tbody>
+        <tr><td><strong>100% 규칙</strong></td><td>하위 요소의 합 = 상위 요소의 전부. WBS에 없는 작업은 범위 밖</td></tr>
+        <tr><td><strong>상호 배타성</strong></td><td>요소 간 중복 금지 → 중복 산정·책임 공백 방지</td></tr>
+        <tr><td><strong>8/80 규칙</strong></td><td>작업 패키지는 <strong>8~80시간</strong> 규모로 분해(관리 가능 단위)</td></tr>
+        <tr><td>인도물 중심</td><td>동사가 아닌 <strong>명사(결과물)</strong>로 기술</td></tr>
+      </tbody></table></div>
+      <h4>III. 활용 및 유의사항</h4>
+      <p>1. 활용 : <strong>RAM/RACI</strong>(책임 배정), <strong>일정·원가 기준선</strong>, <strong>EVM</strong>의 측정 단위, 위험 식별 단위</p>
+      <p>2. 유의 : 조직도·일정표와 혼동 금지 → WBS는 <strong>범위의 분해</strong>이며, 과도한 분해는 관리 비용만 증가</p>
+    </div>
+    <div class="end">끝.</div>
+  </div>
+  <ul class="chips"><li>100% 규칙</li><li>작업 패키지</li><li>8/80 규칙</li><li>WBS 사전</li><li>범위 기준선</li><li>상호 배타성</li><li>Control Account</li></ul>
+  <details><summary>쉬운 설명 · 자주 틀리는 함정</summary><div class="det-in">
+    <p><strong>비유 — 이사 견적.</strong> "우리 집 이사 얼마예요?"라고 물으면 아무도 답을 못 합니다. 그런데 <strong>방별로 짐을 다 적어 내리면</strong> 견적이 나옵니다. WBS가 정확히 그 목록입니다. 일정과 돈은 <strong>목록이 있어야</strong> 계산되기 때문에, WBS는 프로젝트 계획의 첫 단추입니다.</p>
+    <p><strong>100% 규칙이 왜 중요한가.</strong> "WBS에 없는 일은 프로젝트 범위가 아니다"라는 선언입니다. 그래서 나중에 고객이 "이것도 해주세요"라고 할 때 <strong>변경 요청으로 처리할 근거</strong>가 됩니다. 반대로 WBS를 허술하게 만들면 그 모든 게 공짜 추가 작업이 됩니다.</p>
+    <p><strong>8/80이 무슨 뜻인가.</strong> 작업 하나를 <strong>1일~2주 분량</strong>으로 쪼개라는 경험 규칙입니다. 더 크게 두면 진척을 물어봤을 때 "하고 있습니다"밖에 안 나오고, 더 잘게 쪼개면 <strong>관리 자체가 일이 되어버립니다.</strong> "주간 회의에서 끝났다/안 끝났다로 답할 수 있는 크기"가 기준입니다.</p>
+    <p><strong>함정 1 — WBS를 동사로 쓰면 감점입니다.</strong> "설계한다"가 아니라 <strong>"설계서"</strong>입니다. 인도물 중심이어야 완료 판정이 명확해집니다.</p>
+    <p><strong>함정 2 — 조직도·일정표와 헷갈리면 틀립니다.</strong> WBS는 <strong>범위</strong>의 분해입니다. 사람 배정은 OBS/RAM, 순서와 기간은 일정계획에서 붙습니다.</p>
+  </div></details>
+</section>
+
+<section id="q139-2" class="ans" data-group="139" data-item="q139-2" data-title="대수의 법칙과 중심극한정리">
+  <h3>139-2. 대수의 법칙과 중심극한정리</h3>
+  <div class="prog"><button class="pbtn" data-v="1">골격 외움</button><button class="pbtn" data-v="2">손으로 써봄</button><span class="sync" data-sync></span></div>
+  <div class="sheet">
+    <div class="sheet-top"><span class="tag t">B 비교형</span><span class="tag">10점</span><span class="tag">9분</span><span class="num">제139회 2번 · 확률통계</span></div>
+    <div class="q"><b>문 2)</b> 대수의 법칙과 중심극한정리</div>
+    <div class="body-wrap">
+      <h4>I. 개요</h4>
+      <p>1. 배경 : 표본으로 모집단을 추론하는 <strong>통계적 추정</strong>의 이론적 근거로, 데이터 분석·A/B 테스트·품질관리의 전제</p>
+      <p>2. 정의 : <strong>대수의 법칙(LLN)</strong>은 표본 크기가 커지면 <strong>표본평균이 모평균에 수렴</strong>함을, <strong>중심극한정리(CLT)</strong>는 모집단 분포와 무관하게 <strong>표본평균의 분포가 정규분포에 근사</strong>함을 규명한 정리</p>
+      <h4>II. 두 정리의 비교</h4>
+      <div class="tw"><table><thead><tr><th>비교 항목</th><th>대수의 법칙 (LLN)</th><th>중심극한정리 (CLT)</th></tr></thead><tbody>
+        <tr><td>설명 대상</td><td>표본평균이 <strong>어디로 가는가</strong>(값)</td><td>표본평균이 <strong>어떻게 흩어지는가</strong>(분포)</td></tr>
+        <tr><td>결론</td><td>X̄ → μ (n → ∞)</td><td>X̄ ~ N(μ, σ²/n) 근사</td></tr>
+        <tr><td>전제</td><td>독립·동일분포, 유한 기댓값</td><td>독립·동일분포, <strong>유한 분산</strong>, n 충분(통상 n ≥ 30)</td></tr>
+        <tr><td>모집단 분포</td><td>무관</td><td><strong>무관</strong>(정규성 가정 불필요)</td></tr>
+        <tr><td>실무 용도</td><td>표본이 많을수록 추정이 안정</td><td><strong>신뢰구간·가설검정·표본크기 산정</strong></td></tr>
+      </tbody></table></div>
+<pre>표본 크기 n 증가 --&gt; ① LLN : X̄ 가 μ 로 수렴 (오차 감소)
+                    ② CLT : X̄ 의 분포가 정규분포 모양으로 수렴
+                             표준오차 = σ / √n   &lt;- n 4배면 오차 절반</pre>
+      <h4>III. 실무 적용</h4>
+      <p>1. <strong>A/B 테스트</strong> : CLT로 표본크기·신뢰구간 산정 → <strong>조기 종료(peeking) 금지</strong> 근거</p>
+      <p>2. <strong>품질·용량 관리</strong> : 관리도(3σ) 및 <strong>몬테카를로 시뮬레이션</strong>의 수렴 근거</p>
+    </div>
+    <div class="end">끝.</div>
+  </div>
+  <ul class="chips"><li>X̄ → μ</li><li>N(μ, σ²/n)</li><li>표준오차 σ/√n</li><li>독립·동일분포(i.i.d.)</li><li>n ≥ 30</li><li>신뢰구간</li><li>표본크기 산정</li></ul>
+  <details><summary>쉬운 설명 · 자주 틀리는 함정</summary><div class="det-in">
+    <p><strong>대수의 법칙 — 주사위.</strong> 주사위를 10번 굴리면 평균이 2.8도 나오고 4.5도 나옵니다. 그런데 <strong>10만 번 굴리면 반드시 3.5 근처</strong>입니다. "많이 하면 이론값에 가까워진다" — 이게 대수의 법칙입니다. 보험사와 카지노가 먹고사는 원리입니다.</p>
+    <p><strong>중심극한정리 — 훨씬 신기한 이야기.</strong> 주사위 눈은 1~6이 <strong>똑같은 확률</strong>로 나옵니다(정규분포가 전혀 아닙니다). 그런데 <strong>주사위 30개를 굴려 평균을 낸 값</strong>을 여러 번 기록하면, 그 기록들은 <strong>종 모양 정규분포</strong>가 됩니다. 원래 분포가 뭐였든 상관없이 말입니다. 이게 CLT이고, <strong>통계학이 실무에서 작동하는 이유</strong>입니다 — 모집단 분포를 몰라도 추정할 수 있게 해주니까요.</p>
+    <p><strong>둘의 차이를 한 문장으로.</strong> LLN은 <strong>"어디로 가느냐"</strong>(3.5로 간다), CLT는 <strong>"가는 길이 어떻게 생겼느냐"</strong>(종 모양으로 퍼진다). LLN만으로는 신뢰구간을 못 만들고, <strong>CLT가 있어야 "95% 신뢰구간"이 계산됩니다.</strong></p>
+    <p><strong>실무에서 왜 중요한가 — σ/√n.</strong> 표준오차가 <strong>√n</strong>에 반비례한다는 건, 정밀도를 2배 올리려면 <strong>표본을 4배</strong> 모아야 한다는 뜻입니다. A/B 테스트 기간이 왜 그렇게 오래 걸리는지, 왜 중간에 훔쳐보고 종료하면 안 되는지가 여기서 나옵니다.</p>
+    <p><strong>함정 1 — CLT를 "표본이 정규분포가 된다"로 쓰면 틀립니다.</strong> 정규분포에 가까워지는 건 <strong>표본평균의 분포</strong>이고, 표본 자체의 분포가 아닙니다. 채점에서 갈리는 지점입니다.</p>
+    <p><strong>함정 2 — 전제를 빼먹기 쉽습니다.</strong> <strong>유한 분산</strong>이 필요합니다. 분산이 무한한 분포(코시 분포 등)에는 CLT가 적용되지 않습니다.</p>
+  </div></details>
+</section>
+
+<section id="q139-3" class="ans" data-group="139" data-item="q139-3" data-title="Advanced RAG와 Modular RAG 비교">
+  <h3>139-3. Advanced RAG와 Modular RAG 비교</h3>
+  <div class="prog"><button class="pbtn" data-v="1">골격 외움</button><button class="pbtn" data-v="2">손으로 써봄</button><span class="sync" data-sync></span></div>
+  <div class="sheet">
+    <div class="sheet-top"><span class="tag t">B 비교형</span><span class="tag">10점</span><span class="tag">9분</span><span class="num">제139회 3번 · 생성형 AI</span></div>
+    <div class="q"><b>문 3)</b> Advanced RAG와 Modular RAG 비교</div>
+    <div class="body-wrap">
+      <h4>I. 개요</h4>
+      <p>1. 배경 : <strong>Naive RAG</strong>(색인–검색–생성 3단)의 낮은 검색 정확도·문맥 유실 문제를 해결하는 과정에서 RAG 패러다임이 단계적으로 발전</p>
+      <p>2. 정의 : <strong>Advanced RAG</strong>는 기존 파이프라인의 <strong>전·후처리를 최적화</strong>한 형태이고, <strong>Modular RAG</strong>는 기능을 <strong>교체 가능한 모듈로 분해</strong>하여 흐름 자체를 재구성하는 형태</p>
+      <h4>II. 비교</h4>
+      <div class="tw"><table><thead><tr><th>비교 항목</th><th>Advanced RAG</th><th>Modular RAG</th></tr></thead><tbody>
+        <tr><td>개선 관점</td><td>파이프라인 <strong>단계별 품질 개선</strong></td><td>파이프라인 <strong>구조 자체의 재구성</strong></td></tr>
+        <tr><td>흐름</td><td><strong>순차 고정</strong>(검색 → 생성)</td><td><strong>반복·분기·조건 라우팅</strong> 가능</td></tr>
+        <tr><td>핵심 기법</td><td>사전검색(쿼리 재작성·확장, 청킹 최적화, 메타데이터 필터), 사후검색(<strong>재순위화</strong>, 컨텍스트 압축)</td><td>Search·Routing·Memory·Fusion·Predict 등 <strong>모듈 조합</strong>, <strong>Self-RAG·FLARE</strong> 등 적응형 패턴</td></tr>
+        <tr><td>재검색 판단</td><td>불가(1회 검색)</td><td><strong>자체 평가 후 재검색</strong> 가능</td></tr>
+        <tr><td>복잡도 / 비용</td><td>낮음, 운영 용이</td><td>높음, LLM 호출 증가로 <strong>지연·비용 상승</strong></td></tr>
+        <tr><td>적합 상황</td><td>단일 도메인 문서 QA</td><td>다중 소스·다단계 추론 질의</td></tr>
+      </tbody></table></div>
+<pre>Advanced : 질의 -&gt; [재작성] -&gt; 검색 -&gt; [재순위화] -&gt; LLM -&gt; 답변   (직선)
+
+Modular  : 질의 -&gt; [라우팅] -+-&gt; 벡터검색 --+
+                            +-&gt; DB/API ----+-&gt; [융합] -&gt; LLM -&gt; [자체평가]
+                                                          ^          |
+                                                          +-- 부족시 재검색</pre>
+      <h4>III. 선택 기준</h4>
+      <p>1. <strong>Advanced 우선 적용</strong> : 대부분의 사내 문서 QA는 <strong>청킹·재순위화만으로 큰 개선</strong> → 비용 대비 효과 최적</p>
+      <p>2. <strong>Modular 전환 시점</strong> : 다중 소스 결합·다단계 추론이 필요하고, <strong>지연과 비용 증가를 수용</strong>할 수 있을 때</p>
+    </div>
+    <div class="end">끝.</div>
+  </div>
+  <ul class="chips"><li>Naive / Advanced / Modular RAG</li><li>쿼리 재작성·확장</li><li>재순위화(Rerank)</li><li>컨텍스트 압축</li><li>Self-RAG</li><li>FLARE</li><li>조건 라우팅</li><li>모듈 오케스트레이션</li></ul>
+  <details><summary>쉬운 설명 · 자주 틀리는 함정</summary><div class="det-in">
+    <p><strong>비유 — 자료 조사를 시키는 방식.</strong></p>
+    <ul>
+      <li><strong>Naive RAG</strong> = 신입에게 "이 키워드로 검색해서 나온 상위 3건 보고 써와" — 검색이 빗나가면 보고서도 빗나갑니다.</li>
+      <li><strong>Advanced RAG</strong> = 같은 절차인데 <strong>앞뒤를 다듬은 것</strong>입니다. "검색어를 이렇게 바꿔서 찾고(사전), 찾은 10건 중 진짜 관련 있는 3건만 골라서(사후) 쓰라"고 시킵니다. 순서는 그대로 한 방향입니다.</li>
+      <li><strong>Modular RAG</strong> = <strong>일하는 방식을 스스로 정하게</strong> 합니다. "질문 성격에 따라 사내 위키를 볼지 DB를 조회할지 판단하고(라우팅), 자료가 부족하면 <strong>다시 찾아보고</strong>(재검색), 여러 출처를 합쳐서 쓰라(융합)."</li>
+    </ul>
+    <p><strong>핵심 차이 한 줄.</strong> Advanced는 <strong>같은 길을 더 잘 가는 것</strong>, Modular는 <strong>길을 갈아탈 수 있게 만드는 것</strong>입니다. 이 대비를 답안 첫 줄에 박으면 나머지는 근거 나열이 됩니다.</p>
+    <p><strong>실무 조언 한 줄.</strong> 유행은 Modular지만, 실제로 사내 RAG 품질을 가장 크게 올리는 건 대개 <strong>청킹 다시 하기와 재순위화 붙이기</strong>입니다. 비용도 훨씬 싸죠. "Advanced를 먼저 하고, 막혔을 때 Modular로 간다"는 판단을 쓰면 기술사다운 균형이 됩니다.</p>
+    <p><strong>함정 — Modular를 "더 좋은 것"으로 쓰면 감점입니다.</strong> LLM을 여러 번 호출하니 <strong>지연과 비용이 몇 배</strong>가 되고, 흐름이 동적이라 <strong>디버깅과 재현이 어렵습니다.</strong> 발전 단계는 우열이 아니라 <strong>트레이드오프</strong>라는 점을 III에 넣으세요.</p>
+  </div></details>
+</section>
+<section id="q139-4" class="ans" data-group="139" data-item="q139-4" data-title="부정적 위험과 대응 전략">
+  <h3>139-4. IT 프로젝트의 부정적 위험과 대응 전략</h3>
+  <div class="prog"><button class="pbtn" data-v="1">골격 외움</button><button class="pbtn" data-v="2">손으로 써봄</button><span class="sync" data-sync></span></div>
+  <div class="sheet">
+    <div class="sheet-top"><span class="tag t">E 이슈대응형</span><span class="tag">10점</span><span class="tag">9분</span><span class="num">제139회 4번 · 프로젝트 관리</span></div>
+    <div class="q"><b>문 4)</b> IT 프로젝트에서 발생할 수 있는 부정적 위험(Negative Risk)과 대응 전략</div>
+    <div class="body-wrap">
+      <h4>I. 개요</h4>
+      <p>1. 정의 : <strong>부정적 위험(위협)</strong>이란 발생 시 프로젝트 목표(범위·일정·원가·품질)에 <strong>불리한 영향</strong>을 주는 불확실한 사건</p>
+      <p>2. 특징 : <strong>문제(Issue)와 구분</strong> — 위험은 아직 발생하지 않은 <strong>확률적 사건</strong>이므로 사전 계획이 가능</p>
+      <h4>II. IT 프로젝트의 주요 부정적 위험</h4>
+      <div class="tw"><table><thead><tr><th>구분</th><th>위험</th><th>영향</th></tr></thead><tbody>
+        <tr><td>범위</td><td><strong>요구사항 불명확·잦은 변경</strong>(Scope Creep)</td><td>재작업, 일정·원가 초과</td></tr>
+        <tr><td>인력</td><td>핵심 인력 이탈, 역량 부족</td><td>지식 유실, 생산성 저하</td></tr>
+        <tr><td>기술</td><td>신기술 미검증, 성능 목표 미달</td><td>아키텍처 재설계</td></tr>
+        <tr><td>외부</td><td>연계 기관·공급사 지연, 법·제도 변경</td><td>임계경로 지연</td></tr>
+        <tr><td>보안</td><td>개인정보 유출, 컴플라이언스 미준수</td><td>사업 중단·제재</td></tr>
+      </tbody></table></div>
+      <h4>III. 대응 전략 (PMBOK 5가지)</h4>
+      <div class="tw"><table><thead><tr><th>전략</th><th>내용</th><th>IT 적용 예</th></tr></thead><tbody>
+        <tr><td><strong>회피</strong>(Avoid)</td><td>위험 원인 제거 — 계획 변경</td><td>미검증 신기술 대신 검증된 스택 채택</td></tr>
+        <tr><td><strong>전가</strong>(Transfer)</td><td>제3자에게 영향·책임 이전</td><td>보험, 성과보증, <strong>고정가 계약</strong>, 전문업체 위탁</td></tr>
+        <tr><td><strong>완화</strong>(Mitigate)</td><td>발생 확률 또는 영향을 낮춤</td><td><strong>PoC·프로토타입</strong>, 이중화, 코드리뷰, 지식 이전</td></tr>
+        <tr><td><strong>수용</strong>(Accept)</td><td>대응 없이 감수 — 능동적 수용은 <strong>예비비 확보</strong></td><td>저영향 위험은 우발사태 예비비로 흡수</td></tr>
+        <tr><td><strong>에스컬레이션</strong></td><td>권한 범위를 넘는 위험을 <strong>상위 조직에 이관</strong></td><td>법·제도 변경, 전사 표준 변경</td></tr>
+      </tbody></table></div>
+      <p>※ <strong>P-I 매트릭스</strong>(발생확률 × 영향)로 우선순위를 정한 뒤 전략을 배정하고, <strong>위험관리대장</strong>에 등재하여 <strong>위험 소유자</strong>를 지정함</p>
+    </div>
+    <div class="end">끝.</div>
+  </div>
+  <ul class="chips"><li>회피·전가·완화·수용·에스컬레이션</li><li>P-I 매트릭스</li><li>위험관리대장</li><li>위험 소유자</li><li>우발사태 예비비</li><li>관리 예비비</li><li>Scope Creep</li></ul>
+  <details><summary>쉬운 설명 · 자주 틀리는 함정</summary><div class="det-in">
+    <p><strong>비유 — 장마철 여행.</strong> 다섯 가지 대응이 그대로 나옵니다.</p>
+    <ul>
+      <li><strong>회피</strong> = 장마철을 피해 <strong>날짜를 바꾼다</strong> (원인 제거)</li>
+      <li><strong>전가</strong> = <strong>여행자 보험</strong>을 든다 (비가 오는 건 그대로, 손해만 남에게)</li>
+      <li><strong>완화</strong> = <strong>우산과 방수 신발</strong>을 챙긴다 (비는 오지만 피해를 줄임)</li>
+      <li><strong>수용</strong> = "비 오면 그냥 맞자" — 다만 <strong>여유 예산</strong>은 챙겨둔다</li>
+      <li><strong>에스컬레이션</strong> = 태풍 경보라 내가 결정할 일이 아니니 <strong>회사에 보고</strong>한다</li>
+    </ul>
+    <p><strong>전가와 완화를 헷갈리기 쉽습니다.</strong> 전가는 <strong>위험 자체는 그대로 두고 손실 부담만 옮기는</strong> 것입니다. 보험을 들어도 비는 옵니다. 반면 완화는 <strong>실제로 확률이나 피해를 줄입니다.</strong> 외주를 주는 게 전가인지 완화인지는 <strong>계약 형태</strong>가 결정합니다 — 고정가라면 전가, 인력만 빌리는 것이면 아무것도 아닙니다.</p>
+    <p><strong>"수용"이 게으름이 아닌 이유.</strong> 모든 위험에 대응하면 대응 비용이 프로젝트를 잡아먹습니다. 발생확률·영향이 낮은 건 <strong>의도적으로 감수하는 게 합리적</strong>이고, 대신 <strong>우발사태 예비비</strong>를 잡아둡니다. 이걸 "능동적 수용"이라 부릅니다.</p>
+    <p><strong>함정 1 — 위험과 문제를 섞으면 감점입니다.</strong> 이미 터진 건 <strong>이슈(Issue)</strong>이고 위험관리가 아니라 이슈관리 대상입니다. 정의에서 이 구분을 한 줄 잡아주세요.</p>
+    <p><strong>함정 2 — 예비비 두 종류를 구분하면 점수가 붙습니다.</strong> <strong>우발사태 예비비</strong>는 식별된 위험용으로 PM이 쓰고, <strong>관리 예비비</strong>는 미식별 위험용으로 스폰서 승인이 필요합니다.</p>
+  </div></details>
+</section>
+
+<section id="q139-5" class="ans" data-group="139" data-item="q139-5" data-title="소프트웨어 무중단 배포 방식">
+  <h3>139-5. 소프트웨어 무중단 배포 방식</h3>
+  <div class="prog"><button class="pbtn" data-v="1">골격 외움</button><button class="pbtn" data-v="2">손으로 써봄</button><span class="sync" data-sync></span></div>
+  <div class="sheet">
+    <div class="sheet-top"><span class="tag t">D 구성형</span><span class="tag">10점</span><span class="tag">9분</span><span class="num">제139회 5번 · DevOps</span></div>
+    <div class="q"><b>문 5)</b> 소프트웨어 무중단 배포 방식</div>
+    <div class="body-wrap">
+      <h4>I. 개요</h4>
+      <p>1. 배경 : 24×365 서비스에서 배포 점검시간 확보가 불가하고, 배포 실패 시 <strong>즉시 복구(MTTR 단축)</strong>가 요구됨</p>
+      <p>2. 정의 : <strong>무중단 배포</strong>란 서비스 가동을 유지한 상태에서 신버전을 반영하는 배포 방식으로, <strong>트래픽 전환 시점과 범위</strong>를 제어하여 위험을 통제</p>
+      <h4>II. 배포 방식별 비교</h4>
+      <div class="tw"><table><thead><tr><th>방식</th><th>동작</th><th>롤백</th><th>자원</th><th>적용</th></tr></thead><tbody>
+        <tr><td><strong>Blue-Green</strong></td><td>동일 환경 2세트 구성 후 라우팅 일괄 전환</td><td><strong>즉시</strong>(역전환)</td><td><strong>2배</strong></td><td>금융·기간계 등 안정성 우선</td></tr>
+        <tr><td><strong>Canary</strong></td><td>트래픽 일부(1→10→50%)만 신버전에 점진 노출</td><td>빠름(비중 축소)</td><td>소폭 증가</td><td>대규모 사용자 서비스</td></tr>
+        <tr><td><strong>Rolling</strong></td><td>인스턴스를 순차 교체</td><td>느림(재배포)</td><td><strong>추가 없음</strong></td><td>기본값, 자원 제약 환경</td></tr>
+        <tr><td><strong>Shadow</strong></td><td>실 트래픽을 <strong>복제</strong>해 신버전에 흘려 검증(응답 미사용)</td><td>불필요</td><td>2배</td><td>성능·정합성 사전 검증</td></tr>
+      </tbody></table></div>
+<pre>Blue-Green :  [LB] --100%--&gt; (Blue v1)      전환 후:  [LB] --100%--&gt; (Green v2)
+                     ┄0%┄┄&gt; (Green v2)                    ┄0%┄┄&gt; (Blue v1) 대기
+
+Canary     :  [LB] --95%--&gt; (v1)     지표 정상 --&gt; 비중 확대
+                     --5%--&gt; (v2) ▨ 모니터링(에러율·지연) --&gt; 이상시 0%로 회수</pre>
+      <h4>III. 공통 선결 조건</h4>
+      <p>1. <strong>DB 하위 호환</strong> : 구·신 버전이 동시 가동되므로 <strong>확장–수축(Expand–Contract)</strong> 방식으로 스키마 변경. 컬럼 삭제·타입 변경은 배포 후 별도 반영</p>
+      <p>2. <strong>무상태화</strong> : 세션 외부화(Redis 등), <strong>Readiness Probe</strong>·<strong>Graceful Shutdown</strong>으로 요청 유실 방지</p>
+    </div>
+    <div class="end">끝.</div>
+  </div>
+  <ul class="chips"><li>Blue-Green</li><li>Canary</li><li>Rolling Update</li><li>Shadow(Mirroring)</li><li>확장–수축 패턴</li><li>Readiness Probe</li><li>Graceful Shutdown</li><li>피처 토글</li></ul>
+  <details><summary>쉬운 설명 · 자주 틀리는 함정</summary><div class="det-in">
+    <p><strong>비유 — 식당 리모델링.</strong></p>
+    <ul>
+      <li><strong>Blue-Green</strong> = <strong>옆 건물에 새 매장을 똑같이 차려두고</strong>, 어느 날 간판만 옮깁니다. 문제가 생기면 <strong>간판을 다시 돌리면 끝</strong>이라 롤백이 제일 빠릅니다. 대신 <strong>매장 두 개 임대료</strong>를 냅니다.</li>
+      <li><strong>Canary</strong> = 신메뉴를 <strong>손님 20명 중 1명에게만</strong> 내봅니다. 반응이 괜찮으면 5명, 그다음 전체로. 사고가 나도 <strong>피해자가 1명</strong>입니다. 이름은 탄광의 카나리아에서 왔습니다.</li>
+      <li><strong>Rolling</strong> = <strong>테이블을 한 개씩</strong> 새 것으로 바꿉니다. 추가 비용은 없지만, 중간에는 새 테이블과 헌 테이블이 <strong>섞여 있습니다.</strong></li>
+      <li><strong>Shadow</strong> = 손님 주문을 <strong>새 주방에도 똑같이 전달해 요리해보고, 그 음식은 버립니다.</strong> 손님은 전혀 모르는 채로 신 주방의 실력을 검증합니다.</li>
+    </ul>
+    <p><strong>실무에서 진짜 어려운 건 배포가 아니라 DB입니다.</strong> 어떤 방식을 써도 잠시 <strong>구버전과 신버전이 같은 DB를 함께 씁니다.</strong> 그래서 "컬럼 이름을 바꾸는" 배포는 무중단이 불가능합니다 — 구버전이 옛 이름을 찾다 죽으니까요. 해법이 <strong>확장–수축</strong>입니다: ① 새 컬럼을 <strong>추가</strong>하고 양쪽에 쓰기 → ② 신버전 배포 → ③ 구버전이 사라진 뒤 옛 컬럼 <strong>삭제</strong>. 이 세 배포로 나눕니다. 이 한 단락을 쓰면 답안이 확실히 위로 올라갑니다.</p>
+    <p><strong>함정 1 — 방식만 나열하면 6점입니다.</strong> <strong>롤백 속도·자원 비용·DB 호환 요구</strong>를 비교 축으로 세우고, 선결 조건까지 써야 9~10점입니다.</p>
+    <p><strong>함정 2 — Canary와 A/B 테스트를 같은 것으로 쓰면 틀립니다.</strong> Canary는 <strong>기술적 안정성 검증</strong>(에러율·지연)이 목적이고, A/B는 <strong>비즈니스 지표 비교</strong>가 목적입니다. 메커니즘이 비슷해도 판단 기준이 다릅니다.</p>
+  </div></details>
+</section>
+
+<section id="q139-6" class="ans" data-group="139" data-item="q139-6" data-title="엣지 컴퓨팅과 클라우드 컴퓨팅">
+  <h3>139-6. 엣지 컴퓨팅과 클라우드 컴퓨팅의 차이점</h3>
+  <div class="prog"><button class="pbtn" data-v="1">골격 외움</button><button class="pbtn" data-v="2">손으로 써봄</button><span class="sync" data-sync></span></div>
+  <div class="sheet">
+    <div class="sheet-top"><span class="tag t">B 비교형</span><span class="tag">10점</span><span class="tag">9분</span><span class="num">제139회 6번 · 클라우드</span></div>
+    <div class="q"><b>문 6)</b> 엣지(Edge) 컴퓨팅과 클라우드 컴퓨팅의 차이점</div>
+    <div class="body-wrap">
+      <h4>I. 개요</h4>
+      <p>1. 배경 : IoT·AI 확산으로 데이터가 <strong>발생 지점에서 폭증</strong>하면서, 전량 중앙 전송 방식이 <strong>지연·대역폭·프라이버시</strong> 한계에 도달</p>
+      <p>2. 정의 : <strong>클라우드 컴퓨팅</strong>은 중앙 데이터센터에서 자원을 집중 제공하는 방식이고, <strong>엣지 컴퓨팅</strong>은 <strong>데이터 발생 지점 근처</strong>에서 연산을 수행하는 <strong>분산 컴퓨팅</strong> 방식</p>
+      <h4>II. 비교</h4>
+      <div class="tw"><table><thead><tr><th>비교 항목</th><th>엣지 컴퓨팅</th><th>클라우드 컴퓨팅</th></tr></thead><tbody>
+        <tr><td>처리 위치</td><td>단말·기지국·현장 게이트웨이</td><td>중앙 데이터센터</td></tr>
+        <tr><td><strong>지연</strong></td><td><strong>수 ms</strong> (초저지연)</td><td>수십~수백 ms</td></tr>
+        <tr><td>대역폭</td><td>로컬 선처리로 <strong>전송량 절감</strong></td><td>원시 데이터 전량 전송</td></tr>
+        <tr><td>컴퓨팅 파워</td><td><strong>제약</strong>(전력·공간·발열)</td><td>사실상 무제한, <strong>탄력적 확장</strong></td></tr>
+        <tr><td>프라이버시</td><td>원본을 <strong>외부로 내보내지 않음</strong></td><td>중앙 집중 → 규제 대응 필요</td></tr>
+        <tr><td>네트워크 단절</td><td><strong>자율 동작 가능</strong></td><td>서비스 불가</td></tr>
+        <tr><td>운영·관리</td><td>노드 다수 분산 → <strong>관리 복잡</strong></td><td>중앙 통제 용이</td></tr>
+      </tbody></table></div>
+<pre>[센서/단말] --&gt; ▨[엣지] 실시간 추론·필터링 --&gt; ( 클라우드 ) 모델 학습·장기 저장
+      ^              |                                  |
+      +-- 즉시 제어 --+          모델 배포 ┄┄┄┄┄┄┄┄┄┄┄┄┄┄+   &lt;- 상호 보완 구조</pre>
+      <h4>III. 적용 방안</h4>
+      <p>1. <strong>역할 분담이 정답</strong> : <strong>학습·집계는 클라우드</strong>, <strong>추론·실시간 제어는 엣지</strong> (예: 스마트팩토리 불량 검출, 자율주행)</p>
+      <p>2. <strong>고려사항</strong> : 엣지 노드의 <strong>물리 보안·원격 업데이트(OTA)</strong> 체계와 <strong>모델 버전 일관성</strong> 확보 필요</p>
+    </div>
+    <div class="end">끝.</div>
+  </div>
+  <ul class="chips"><li>초저지연</li><li>대역폭 절감</li><li>데이터 주권</li><li>Device–Edge–Fog–Cloud</li><li>온디바이스 추론</li><li>MEC</li><li>OTA 업데이트</li><li>연합학습</li></ul>
+  <details><summary>쉬운 설명 · 자주 틀리는 함정</summary><div class="det-in">
+    <p><strong>비유 — 자동차 브레이크.</strong> 자율주행차가 앞의 장애물을 봤다고 하죠. 이 판단을 <strong>서울 데이터센터에 물어보고 답을 기다린다면</strong>, 왕복 100밀리초 동안 차는 시속 100km에서 <strong>약 3미터를 더 갑니다.</strong> 그래서 브레이크 판단은 <strong>차 안에서</strong> 해야 합니다 — 이게 엣지입니다.</p>
+    <p>반대로 "전국 차량 100만 대의 주행 데이터로 인식 모델을 더 똑똑하게 학습시키는" 일은 차 안에서 못 합니다. GPU도 전기도 부족하니까요. <strong>그건 클라우드 일</strong>입니다.</p>
+    <p><strong>그래서 정답은 "어느 게 더 좋냐"가 아닙니다.</strong> <strong>학습은 클라우드, 판단은 엣지</strong> — 이 역할 분담이 실제 아키텍처입니다. 비교 문제인데 결론이 "상호 보완"으로 끝나는 게 어색해 보일 수 있지만, 이게 정확한 답입니다.</p>
+    <p><strong>대역폭 이야기 하나.</strong> CCTV 100대의 4K 영상을 24시간 클라우드로 올리면 회선비가 서버비보다 비쌉니다. 엣지에서 <strong>"사람이 나타난 3초"만 골라 올리면</strong> 전송량이 수백분의 일로 줄어듭니다. 엣지의 실제 도입 이유 1위가 지연이 아니라 <strong>회선비</strong>인 경우가 많습니다.</p>
+    <p><strong>함정 1 — 엣지의 단점을 안 쓰면 감점입니다.</strong> 노드가 <strong>수백~수천 개로 흩어져</strong> 있어서 패치·모니터링·물리 보안이 어렵습니다. 창고 구석의 게이트웨이는 <strong>누가 들고 갈 수도</strong> 있습니다.</p>
+    <p><strong>함정 2 — 포그(Fog) 컴퓨팅과의 관계를 한 줄 쓰면 변별력이 생깁니다.</strong> 엣지는 <strong>단말에 최대한 붙은 층</strong>, 포그는 그 위의 <strong>지역 집계 층</strong>으로 보는 게 일반적입니다.</p>
+  </div></details>
+</section>
+<section id="q139-7" class="ans" data-group="139" data-item="q139-7" data-title="분산 데이터베이스의 투명성">
+  <h3>139-7. 분산 데이터베이스의 투명성</h3>
+  <div class="prog"><button class="pbtn" data-v="1">골격 외움</button><button class="pbtn" data-v="2">손으로 써봄</button><span class="sync" data-sync></span></div>
+  <div class="sheet">
+    <div class="sheet-top"><span class="tag t">A 개념형</span><span class="tag">10점</span><span class="tag">9분</span><span class="num">제139회 7번 · 데이터베이스</span></div>
+    <div class="q"><b>문 7)</b> 분산 데이터베이스의 투명성</div>
+    <div class="body-wrap">
+      <h4>I. 개요</h4>
+      <p>1. 정의 : <strong>투명성(Transparency)</strong>이란 데이터가 여러 사이트에 <strong>분산·복제되어 있음을 사용자가 인식할 필요 없이</strong>, <strong>단일 중앙 DB처럼</strong> 접근·이용할 수 있게 하는 성질</p>
+      <p>2. 목적 : 분산의 복잡성을 <strong>DBMS 계층이 은닉</strong>하여 응용 프로그램의 독립성을 확보</p>
+      <h4>II. 6가지 투명성</h4>
+      <div class="tw"><table><thead><tr><th>투명성</th><th>은닉 대상</th><th>의미</th></tr></thead><tbody>
+        <tr><td><strong>분할(단편화)</strong></td><td>테이블이 쪼개진 사실</td><td>수평·수직 단편화를 몰라도 전체 테이블로 질의 가능</td></tr>
+        <tr><td><strong>위치</strong></td><td>데이터가 있는 사이트</td><td>물리적 저장 위치를 몰라도 논리명으로 접근. <strong>이전 시에도 응용 무변경</strong></td></tr>
+        <tr><td><strong>복제</strong></td><td>사본의 존재·개수</td><td>복제본 수를 몰라도 되고, <strong>일관성 유지는 DBMS 책임</strong></td></tr>
+        <tr><td><strong>병행(동시성)</strong></td><td>타 사용자의 동시 접근</td><td>여러 사이트의 동시 트랜잭션에도 <strong>결과의 일관성</strong> 보장</td></tr>
+        <tr><td><strong>장애</strong></td><td>사이트·통신 장애</td><td>장애에도 트랜잭션의 <strong>원자성</strong> 보장(전부 반영 또는 전부 취소)</td></tr>
+        <tr><td><strong>지역 사상</strong></td><td>사이트별 DBMS 차이</td><td>지역 DBMS 종류·스키마가 달라도 동일한 방식으로 접근</td></tr>
+      </tbody></table></div>
+<pre>          [ 응용 프로그램 ]  ← 단일 DB로 인식
+                  |
+        +---- 전역 스키마 ----+          ▲ 투명성 계층이 은닉
+        |  분할·위치·복제 사상  |
+   ( 사이트A )  ( 사이트B )  ( 사이트C )   ← 실제로는 분산·복제</pre>
+      <h4>III. 구현 시 고려사항</h4>
+      <p>1. <strong>비용과의 상충</strong> : 투명성을 높이면 <strong>2PC·전역 카탈로그</strong> 등 오버헤드로 성능이 저하 → 업무 특성에 따라 수준 선택</p>
+      <p>2. <strong>CAP과의 관계</strong> : 네트워크 분할 시 장애·복제 투명성을 완전히 유지할 수 없음 → <strong>최종적 일관성</strong> 등 완화 모델 병용</p>
+    </div>
+    <div class="end">끝.</div>
+  </div>
+  <ul class="chips"><li>분할(단편화) 투명성</li><li>위치 투명성</li><li>복제 투명성</li><li>병행 투명성</li><li>장애 투명성</li><li>지역 사상 투명성</li><li>전역 스키마</li><li>2PC</li></ul>
+  <details><summary>쉬운 설명 · 자주 틀리는 함정</summary><div class="det-in">
+    <p><strong>비유 — 은행 계좌.</strong> 사장님이 ATM에서 잔액을 조회할 때, 그 데이터가 <strong>서울 센터에 있는지 대전 센터에 있는지, 사본이 3개인지</strong> 궁리하지 않습니다. 그냥 "내 잔액"이 나옵니다. 이렇게 <strong>사용자가 아무것도 몰라도 되게 만드는 성질</strong>이 투명성입니다.</p>
+    <p><strong>6개를 외우는 법.</strong> "데이터를 어떻게 흩어놨는지"에 대한 것 3개와 "동시에 쓰고 고장 나면 어쩌나"에 대한 것 3개로 묶으면 쉽습니다.</p>
+    <ul>
+      <li><strong>흩어놓은 방식</strong> — <strong>분할</strong>(쪼갰다) · <strong>위치</strong>(어디 뒀다) · <strong>복제</strong>(몇 개 복사했다)</li>
+      <li><strong>운영 중 문제</strong> — <strong>병행</strong>(남이 동시에 건드림) · <strong>장애</strong>(하나가 죽음) · <strong>지역 사상</strong>(DBMS 종류가 다름)</li>
+    </ul>
+    <p><strong>위치 투명성의 실무 가치.</strong> 데이터를 서울에서 부산으로 <strong>옮겼는데 소스 코드를 한 줄도 안 고쳐도 되는 것</strong> — 이게 위치 투명성입니다. 반대로 코드에 IP나 서버명이 박혀 있으면 투명성이 깨진 상태입니다.</p>
+    <p><strong>함정 1 — 6개 나열만 하면 6점입니다.</strong> <strong>"투명성은 공짜가 아니다"</strong>를 III에 쓰세요. 투명성을 완벽히 제공하려면 DBMS가 2PC로 전 사이트를 조율해야 하고, 그러면 <strong>느려지고 한 사이트가 죽으면 전체가 멈춥니다.</strong> 그래서 실무의 분산 DB는 투명성을 <strong>일부 포기</strong>합니다.</p>
+    <p><strong>함정 2 — CAP과 연결하면 확실히 변별됩니다.</strong> 장애 투명성과 복제 투명성을 동시에 완전 보장하는 것은 <strong>CAP 정리상 불가능</strong>합니다. 이 한 줄이 암기 답안과 이해 답안을 가릅니다.</p>
+  </div></details>
+</section>
+
+<section id="q139-8" class="ans" data-group="139" data-item="q139-8" data-title="과적합과 과소적합">
+  <h3>139-8. 과적합과 과소적합의 발생 원인과 해결 방안</h3>
+  <div class="prog"><button class="pbtn" data-v="1">골격 외움</button><button class="pbtn" data-v="2">손으로 써봄</button><span class="sync" data-sync></span></div>
+  <div class="sheet">
+    <div class="sheet-top"><span class="tag t">E 이슈대응형</span><span class="tag">10점</span><span class="tag">9분</span><span class="num">제139회 8번 · 머신러닝</span></div>
+    <div class="q"><b>문 8)</b> 과적합(Overfitting)과 과소적합(Underfitting)의 발생 원인과 해결 방안</div>
+    <div class="body-wrap">
+      <h4>I. 개요</h4>
+      <p>1. 정의 : <strong>과적합</strong>은 훈련 데이터에 과도하게 맞춰져 <strong>일반화 성능이 저하</strong>된 상태, <strong>과소적합</strong>은 데이터의 패턴조차 학습하지 못한 상태</p>
+      <p>2. 본질 : 양자는 <strong>편향–분산 트레이드오프</strong>의 양극 — 과소적합은 <strong>고편향</strong>, 과적합은 <strong>고분산</strong></p>
+      <h4>II. 진단 및 발생 원인</h4>
+      <div class="tw"><table><thead><tr><th>구분</th><th>진단(오차)</th><th>발생 원인</th></tr></thead><tbody>
+        <tr><td><strong>과적합</strong></td><td>훈련오차 <strong>낮음</strong><br>검증오차 <strong>높음</strong></td><td>모델 복잡도 과다, 학습 데이터 부족, <strong>노이즈까지 학습</strong>, 특성 과다(차원의 저주), 과도한 epoch, <strong>데이터 누출</strong></td></tr>
+        <tr><td><strong>과소적합</strong></td><td>훈련오차 <strong>높음</strong><br>검증오차 <strong>높음</strong></td><td>모델 표현력 부족, 유효 특성 미확보, <strong>과도한 규제</strong>, 학습 부족, 부적절한 학습률</td></tr>
+      </tbody></table></div>
+<pre>오차
+ |  \                          / 검증오차
+ |   \                       /
+ |    \___________________ /        &lt;- 최적 지점(조기 종료)
+ |          훈련오차 ＼＿＿＿＿＿
+ +---------------------------------- 모델 복잡도
+   [과소적합]      [적정]      [과적합]</pre>
+      <h4>III. 해결 방안</h4>
+      <div class="tw"><table><thead><tr><th>구분</th><th>해결 방안</th></tr></thead><tbody>
+        <tr><td>과적합<br>(복잡도 ↓)</td><td><strong>규제화</strong>(L1/L2), <strong>드롭아웃</strong>, <strong>조기 종료</strong>, 데이터 증강, <strong>교차검증</strong>, 앙상블(배깅), 특성 선택, 모델 단순화</td></tr>
+        <tr><td>과소적합<br>(복잡도 ↑)</td><td>모델 확장(층·파라미터 증가), <strong>특성 공학</strong>·비선형 특성 추가, 규제 완화, 학습 연장, 부스팅</td></tr>
+        <tr><td>공통</td><td>훈련·검증·시험 <strong>3분할</strong> 및 학습곡선 모니터링, <strong>드리프트 감시</strong>(MLOps 연계)</td></tr>
+      </tbody></table></div>
+    </div>
+    <div class="end">끝.</div>
+  </div>
+  <ul class="chips"><li>편향–분산 트레이드오프</li><li>일반화 성능</li><li>규제화 L1/L2</li><li>드롭아웃</li><li>조기 종료</li><li>교차검증(k-fold)</li><li>데이터 증강</li><li>데이터 누출</li></ul>
+  <details><summary>쉬운 설명 · 자주 틀리는 함정</summary><div class="det-in">
+    <p><strong>비유 — 수능 공부.</strong></p>
+    <ul>
+      <li><strong>과적합</strong> = <strong>기출문제 답만 통째로 외운 학생</strong>입니다. 풀어본 문제집은 100점인데, 처음 보는 시험지를 주면 무너집니다. 원리가 아니라 <strong>그 문제의 답</strong>을 외웠기 때문입니다.</li>
+      <li><strong>과소적합</strong> = <strong>공부를 아직 안 한 학생</strong>입니다. 기출도 못 풀고 새 문제도 못 풉니다.</li>
+    </ul>
+    <p><strong>그래서 진단이 간단합니다.</strong> <strong>기출(훈련) 점수와 모의고사(검증) 점수를 나란히 놓으면</strong> 끝납니다 — 둘 다 낮으면 과소적합, <strong>기출만 높으면 과적합</strong>입니다. 답안에 이 표를 넣으면 채점자가 이해도를 바로 확인합니다.</p>
+    <p><strong>규제화(Regularization)가 뭘 하는가.</strong> "너무 열심히 외우지 못하게 벌점을 주는 것"입니다. 모델이 특정 특성에 지나치게 큰 가중치를 주려 하면 손실에 <strong>페널티를 더해</strong> 말립니다. <strong>드롭아웃</strong>은 더 재미있습니다 — 학습할 때마다 뉴런 일부를 <strong>랜덤으로 쉬게</strong> 합니다. 특정 뉴런에 의존하지 못하니 <strong>여러 조원이 다 일을 배우는</strong> 효과가 납니다.</p>
+    <p><strong>실무에서 제일 무서운 건 데이터 누출(Leakage)입니다.</strong> 검증 데이터의 정보가 학습에 섞여 들어가는 것 — 예를 들어 <strong>전체 데이터로 스케일링을 먼저 하고 나서 분할</strong>하면 이미 누출입니다. 검증 점수가 비현실적으로 좋으면 실력이 아니라 누출을 의심해야 합니다.</p>
+    <p><strong>함정 1 — 해결 방안만 나열하면 감점입니다.</strong> <strong>편향–분산 트레이드오프</strong>로 두 현상을 하나의 축에 놓아야 합니다. "복잡도를 낮춘다 / 높인다"는 <strong>반대 방향 처방</strong>이라는 구조가 보이면 답안이 정리됩니다.</p>
+    <p><strong>함정 2 — 데이터를 늘리는 게 항상 답은 아닙니다.</strong> 데이터 추가는 <strong>과적합에는 효과적이지만 과소적합에는 거의 무효</strong>입니다. 모델이 못 배우는 게 문제인데 교재를 더 준다고 해결되지 않습니다.</p>
+  </div></details>
+</section>
+
+<section id="q139-9" class="ans" data-group="139" data-item="q139-9" data-title="맥케이브 순환복잡도">
+  <h3>139-9. 맥케이브 순환복잡도</h3>
+  <div class="prog"><button class="pbtn" data-v="1">골격 외움</button><button class="pbtn" data-v="2">손으로 써봄</button><span class="sync" data-sync></span></div>
+  <div class="sheet">
+    <div class="sheet-top"><span class="tag t">A 개념형</span><span class="tag">10점</span><span class="tag">9분</span><span class="num">제139회 9번 · 소프트웨어 공학</span></div>
+    <div class="q"><b>문 9)</b> 맥케이브 순환복잡도(McCabe's Cyclomatic Complexity)</div>
+    <div class="body-wrap">
+      <h4>I. 개요</h4>
+      <p>1. 배경 : "복잡하다"는 주관적 판단을 <strong>정량 지표</strong>로 대체하여 테스트 범위와 유지보수 위험을 객관적으로 관리할 필요</p>
+      <p>2. 정의 : <strong>순환복잡도 V(G)</strong>란 프로그램의 <strong>제어 흐름 그래프</strong>에서 <strong>선형 독립적인 실행 경로의 수</strong>를 측정한 화이트박스 복잡도 지표</p>
+      <h4>II. 산출 방법 및 판정 기준</h4>
+      <div class="tw"><table><thead><tr><th>산출식</th><th>내용</th></tr></thead><tbody>
+        <tr><td><strong>V(G) = E − N + 2P</strong></td><td>E: 간선 수, N: 노드 수, P: 연결 요소 수(단일 모듈은 1)</td></tr>
+        <tr><td><strong>V(G) = D + 1</strong></td><td>D: <strong>분기(판단) 노드 수</strong> — 시험장에서 가장 빠른 계산법</td></tr>
+        <tr><td><strong>V(G) = R</strong></td><td>R: 그래프가 평면을 나누는 <strong>닫힌 영역 수 + 1</strong></td></tr>
+      </tbody></table></div>
+<pre>if (a) { ... } else { ... }        노드 N=4, 간선 E=4, 판단노드 D=1
+                                    V(G) = 4 - 4 + 2 = 2  ( = D + 1 = 2 )
+        (1)
+       /   \        &lt;- 분기 1개 --&gt; 독립 경로 2개
+     (2)   (3)         --&gt; 기본 경로 테스트 최소 케이스 = 2건
+       \   /
+        (4)</pre>
+      <div class="tw"><table><thead><tr><th>V(G)</th><th>복잡도</th><th>조치</th></tr></thead><tbody>
+        <tr><td class="num">1 ~ 10</td><td>단순·안정</td><td>양호 — 권고 상한</td></tr>
+        <tr><td class="num">11 ~ 20</td><td>보통</td><td>주의 관찰</td></tr>
+        <tr><td class="num">21 ~ 50</td><td>복잡·위험</td><td><strong>리팩토링 권고</strong></td></tr>
+        <tr><td class="num">50 초과</td><td>매우 위험</td><td>테스트 사실상 불가 → <strong>재작성</strong></td></tr>
+      </tbody></table></div>
+      <h4>III. 활용 및 한계</h4>
+      <p>1. 활용 : <strong>기본 경로 테스트</strong>의 최소 테스트 케이스 수 산정, 리팩토링 대상 선별, 코드 품질 게이트(정적분석 도구)</p>
+      <p>2. 한계 : <strong>데이터 복잡도·결합도·응집도를 미반영</strong>하고 <strong>switch문을 과대평가</strong> → 결합도 지표·코드 리뷰와 병행 필요</p>
+    </div>
+    <div class="end">끝.</div>
+  </div>
+  <ul class="chips"><li>V(G) = E − N + 2P</li><li>판단노드 + 1</li><li>제어 흐름 그래프</li><li>선형 독립 경로</li><li>기본 경로 테스트</li><li>V(G) ≤ 10</li><li>화이트박스 테스트</li></ul>
+  <details><summary>쉬운 설명 · 자주 틀리는 함정</summary><div class="det-in">
+    <p><strong>비유 — 갈림길이 있는 등산로.</strong> 산길에 갈림길이 하나면 <strong>정상까지 가는 경로가 2개</strong>입니다. 갈림길이 둘이면 4개... 이렇게 <strong>"끝까지 가는 서로 다른 길이 몇 개냐"</strong>를 센 게 순환복잡도입니다. 길이 많으면 <strong>다 걸어봐야 안전을 확인할 수 있으니</strong>, 그만큼 테스트가 많이 필요합니다.</p>
+    <p><strong>시험장에서는 이것만 쓰세요 — 판단노드 + 1.</strong> 그래프를 그려 E와 N을 세는 건 시간이 아깝습니다. 코드에서 <strong>if · else if · while · for · case · &amp;&amp; · ||</strong> 를 세고 <strong>1을 더하면</strong> 끝입니다. else는 세지 않습니다(if 하나에 딸린 것이라).</p>
+    <p><strong>왜 "10 이하"라는 숫자가 나왔나.</strong> 맥케이브가 제시한 경험적 기준입니다. V(G)가 10이면 그 함수 하나를 제대로 테스트하려면 <strong>최소 10개의 테스트 케이스</strong>가 필요하다는 뜻이고, 그 이상이면 사람이 머릿속에 다 담지 못해 <strong>버그를 놓치기 시작합니다.</strong></p>
+    <p><strong>실무에서 쓰는 방식.</strong> SonarQube 같은 정적분석 도구가 자동으로 재주고, CI에서 <strong>"복잡도 15 초과 함수 신규 추가 금지"</strong> 같은 품질 게이트를 걸어둡니다. 레거시 리팩토링 순서를 정할 때도 <strong>복잡도 × 변경 빈도</strong>가 높은 함수부터 손대는 게 정석입니다.</p>
+    <p><strong>함정 1 — 산식만 쓰면 6점입니다.</strong> <strong>"독립 경로 수 = 기본 경로 테스트의 최소 케이스 수"</strong>라는 연결을 반드시 쓰세요. 이 지표가 왜 테스트와 묶이는지가 배점 포인트입니다.</p>
+    <p><strong>함정 2 — 한계를 안 쓰면 감점입니다.</strong> case가 20개인 switch문은 복잡도 21이 나오지만 <strong>사람이 읽기에는 전혀 어렵지 않습니다.</strong> 반대로 복잡도 3이어도 전역 변수를 열 개 건드리는 함수는 훨씬 위험합니다. 순환복잡도는 <strong>제어 흐름만</strong> 본다는 점을 짚으세요.</p>
+  </div></details>
+</section>
+
+<section id="q139-10" class="ans" data-group="139" data-item="q139-10" data-title="Wi-Fi 7">
+  <h3>139-10. Wi-Fi 7</h3>
+  <div class="prog"><button class="pbtn" data-v="1">골격 외움</button><button class="pbtn" data-v="2">손으로 써봄</button><span class="sync" data-sync></span></div>
+  <div class="sheet">
+    <div class="sheet-top"><span class="tag t">A 개념형</span><span class="tag">10점</span><span class="tag">9분</span><span class="num">제139회 10번 · 네트워크</span></div>
+    <div class="q"><b>문 10)</b> Wi-Fi 7</div>
+    <div class="body-wrap">
+      <h4>I. 개요</h4>
+      <p>1. 배경 : XR·8K 스트리밍·산업용 무선 제어 확산으로 <strong>고속·초저지연·고신뢰</strong> 무선 요구가 증대</p>
+      <p>2. 정의 : <strong>Wi-Fi 7</strong>이란 <strong>IEEE 802.11be(EHT, Extremely High Throughput)</strong> 표준 기반의 차세대 무선랜으로, 최대 <strong>약 46Gbps</strong>의 이론 처리량을 제공</p>
+      <h4>II. 핵심 기술</h4>
+      <div class="tw"><table><thead><tr><th>기술</th><th>내용</th><th>Wi-Fi 6/6E 대비</th></tr></thead><tbody>
+        <tr><td><strong>MLO</strong><br>(Multi-Link Operation)</td><td>2.4·5·6GHz <strong>복수 대역을 동시 사용</strong>(집성 또는 이중화)</td><td><strong>신규</strong> — 최대 차별점</td></tr>
+        <tr><td><strong>320MHz 채널</strong></td><td>채널 대역폭 2배 확대</td><td>160MHz → <strong>320MHz</strong></td></tr>
+        <tr><td><strong>4096-QAM</strong></td><td>심볼당 12bit 전송</td><td>1024-QAM → 처리량 <strong>약 20% ↑</strong></td></tr>
+        <tr><td><strong>16×16 MU-MIMO</strong></td><td>동시 접속 스트림 확대</td><td>8×8 → <strong>16×16</strong></td></tr>
+        <tr><td><strong>Multi-RU / 프리앰블 펑처링</strong></td><td>간섭 구간을 <strong>제외하고</strong> 잔여 대역 활용</td><td>간섭 환경 효율 개선</td></tr>
+        <tr><td><strong>R-TWT</strong></td><td>특정 단말에 <strong>전송 시간 예약</strong> → 지연 보장</td><td>TWT의 결정론적 확장</td></tr>
+      </tbody></table></div>
+<pre>Wi-Fi 6 : [단말] --- 5GHz 한 대역만 사용 --- [AP]
+
+Wi-Fi 7 : [단말] === 2.4GHz ===+
+                === 5GHz   ===+=== [AP]   MLO : 동시 사용
+                === 6GHz   ===+           → 집성(속도↑) 또는 이중전송(신뢰↑)</pre>
+      <h4>III. 활용 및 도입 시 고려사항</h4>
+      <p>1. 활용 : XR/메타버스, 8K 무선 전송, <strong>산업용 실시간 제어</strong>(R-TWT 기반), 고밀도 사무·경기장</p>
+      <p>2. 고려사항 : <strong>6GHz 대역 국내 사용 조건</strong>(출력·실내 제한) 확인, 단말 지원 여부, 320MHz 활용을 위한 <strong>주파수 여유</strong> 및 백홀·PoE 용량 확보</p>
+    </div>
+    <div class="end">끝.</div>
+  </div>
+  <ul class="chips"><li>IEEE 802.11be</li><li>EHT</li><li>MLO</li><li>320MHz</li><li>4096-QAM</li><li>16×16 MU-MIMO</li><li>프리앰블 펑처링</li><li>R-TWT</li></ul>
+  <details><summary>쉬운 설명 · 자주 틀리는 함정</summary><div class="det-in">
+    <p><strong>MLO만 이해하면 이 문제는 끝납니다.</strong> 나머지는 "더 넓게, 더 촘촘히, 더 많이"라는 <strong>양적 개선</strong>인데, MLO는 <strong>구조가 바뀐 것</strong>이라 유일한 질적 변화입니다.</p>
+    <p><strong>비유 — 다차선 도로.</strong> Wi-Fi 6까지는 단말이 <strong>한 번에 한 대역만</strong> 씁니다. 5GHz를 쓰다가 혼잡하면 6GHz로 <strong>갈아타야</strong> 하는데, 갈아타는 순간 끊깁니다. MLO는 <strong>세 차선을 동시에 점유</strong>합니다. 그러면 두 가지를 고를 수 있습니다.</p>
+    <ul>
+      <li><strong>집성</strong> — 세 차선에 짐을 나눠 실어 <strong>속도를 올린다</strong></li>
+      <li><strong>이중 전송</strong> — 같은 짐을 세 차선에 <strong>동시에 보내</strong> 하나가 막혀도 도착하게 한다 (<strong>지연 흔들림 제거</strong>)</li>
+    </ul>
+    <p>공장 로봇 제어나 VR처럼 <strong>"빠른 것보다 안 끊기는 게 중요한"</strong> 용도에서는 두 번째가 핵심입니다. Wi-Fi 7이 산업용으로 거론되는 이유가 여기입니다.</p>
+    <p><strong>프리앰블 펑처링도 쉽습니다.</strong> 320MHz 중 <strong>일부 구간만 다른 기기가 쓰고 있으면</strong>, 예전에는 채널 전체를 못 썼습니다. Wi-Fi 7은 <strong>그 구멍만 빼고</strong> 나머지를 씁니다 — 도로 한 차선에 공사 중이면 그 차선만 비우고 지나가는 것입니다.</p>
+    <p><strong>함정 1 — 속도만 쓰면 6점입니다.</strong> "46Gbps"는 이론치이고 실제로는 한참 낮습니다. <strong>MLO·R-TWT로 지연과 신뢰성을 확보한 것</strong>이 Wi-Fi 7의 본질이라는 서술이 있어야 합니다.</p>
+    <p><strong>함정 2 — 6GHz를 Wi-Fi 7의 신규 기능으로 쓰면 틀립니다.</strong> 6GHz 대역은 <strong>Wi-Fi 6E에서 이미 도입</strong>됐습니다. Wi-Fi 7의 기여는 그 대역을 <strong>동시에 함께 쓰는 것</strong>(MLO)입니다.</p>
+  </div></details>
+</section>
+<section id="q139-11" class="ans" data-group="139" data-item="q139-11" data-title="CTEM">
+  <h3>139-11. CTEM(지속적 위협 노출 관리)</h3>
+  <div class="prog"><button class="pbtn" data-v="1">골격 외움</button><button class="pbtn" data-v="2">손으로 써봄</button><span class="sync" data-sync></span></div>
+  <div class="sheet">
+    <div class="sheet-top"><span class="tag t">C 절차형</span><span class="tag">10점</span><span class="tag">9분</span><span class="num">제139회 11번 · 정보보안</span></div>
+    <div class="q"><b>문 11)</b> CTEM(Continuous Threat Exposure Management)</div>
+    <div class="body-wrap">
+      <h4>I. 개요</h4>
+      <p>1. 배경 : 기존 취약점 관리(VM)는 <strong>CVE 목록만 양산</strong>하여 우선순위 판단이 불가하고, 클라우드·SaaS 확산으로 <strong>공격 표면이 상시 변동</strong></p>
+      <p>2. 정의 : <strong>CTEM</strong>이란 조직의 공격 표면을 <strong>지속적으로 발견·검증</strong>하고 <strong>실제 악용 가능성과 사업 영향</strong>을 기준으로 우선순위를 정해 조치하는 <strong>순환형 보안 관리 체계</strong>(Gartner 제시)</p>
+      <h4>II. CTEM 5단계 절차</h4>
+<pre>[1.범위설정] --&gt; [2.발견] --&gt; [3.우선순위화] --&gt; [4.검증] --&gt; [5.실행동원]
+      ^                                                              |
+      +---------------- 지속 순환(Continuous) --------------------------+</pre>
+      <div class="tw"><table><thead><tr><th>단계</th><th>주요 활동</th><th>핵심 수단</th></tr></thead><tbody>
+        <tr><td><strong>1. 범위 설정</strong><br>(Scoping)</td><td>보호 대상을 <strong>사업 관점</strong>으로 정의(핵심 서비스·공급망 포함)</td><td>자산 중요도 평가</td></tr>
+        <tr><td><strong>2. 발견</strong><br>(Discovery)</td><td>자산·취약점·설정 오류·노출 계정 식별</td><td><strong>EASM</strong>, CAASM, 자산 인벤토리</td></tr>
+        <tr><td><strong>3. 우선순위화</strong><br>(Prioritization)</td><td>CVSS가 아닌 <strong>악용 가능성 × 사업 영향</strong>으로 순위 결정</td><td><strong>EPSS</strong>, KEV, 공격 경로 분석</td></tr>
+        <tr><td><strong>4. 검증</strong><br>(Validation)</td><td>실제로 침해가 성립하는지 <strong>공격자 관점 시험</strong></td><td><strong>BAS</strong>, 자동 침투시험, 레드팀</td></tr>
+        <tr><td><strong>5. 실행 동원</strong><br>(Mobilization)</td><td>조치 주체·절차 확정 및 <strong>부서 간 협업 자동화</strong></td><td>티켓 연동, SLA, 경영 보고</td></tr>
+      </tbody></table></div>
+      <h4>III. 기존 취약점 관리와의 차이 및 고려사항</h4>
+      <div class="tw"><table><thead><tr><th>관점</th><th>기존 VM</th><th>CTEM</th></tr></thead><tbody>
+        <tr><td>기준</td><td>CVSS 점수순</td><td><strong>악용 가능성·사업 영향</strong></td></tr>
+        <tr><td>검증</td><td>스캐너 탐지로 종료</td><td><strong>공격 성립 여부 실증</strong></td></tr>
+        <tr><td>주기</td><td>주기적(분기·월)</td><td><strong>지속적</strong></td></tr>
+      </tbody></table></div>
+      <p>※ 고려사항 : <strong>5단계 Mobilization이 실패 지점</strong> — 기술 도구보다 <strong>조치 책임과 의사결정 체계</strong> 확립이 성공 요건</p>
+    </div>
+    <div class="end">끝.</div>
+  </div>
+  <ul class="chips"><li>Scoping</li><li>Discovery</li><li>Prioritization</li><li>Validation</li><li>Mobilization</li><li>공격 표면 관리(EASM)</li><li>BAS</li><li>EPSS / KEV</li><li>공격 경로 분석</li><li>노출(Exposure)</li></ul>
+  <details><summary>쉬운 설명 · 자주 틀리는 함정</summary><div class="det-in">
+    <p><strong>문제의식부터.</strong> 취약점 스캐너를 돌리면 <strong>"심각(Critical) 3,000건"</strong>이 나옵니다. 인력으로는 다 못 고칩니다. 그러면 뭘 먼저 고칠까요? 기존 방식은 <strong>CVSS 점수 높은 순</strong>이었는데, 이게 함정입니다 — <strong>점수 9.8인데 인터넷에서 닿지도 않는 내부 장비</strong>와, <strong>점수 7.5인데 외부에 열려 있고 실제 공격 코드가 돌아다니는 서버</strong> 중 어느 쪽이 급한가요? 당연히 후자입니다. CTEM은 이 판단을 체계화한 것입니다.</p>
+    <p><strong>5단계를 순서대로 읽으면 이야기가 됩니다.</strong> ① <strong>뭘 지킬지 정하고</strong>(범위) → ② <strong>실제로 뭐가 노출됐나 찾고</strong>(발견) → ③ <strong>진짜 급한 것부터 줄 세우고</strong>(우선순위) → ④ <strong>정말 뚫리는지 때려보고</strong>(검증) → ⑤ <strong>누가 언제 고칠지 정해서 실제로 고친다</strong>(동원).</p>
+    <p><strong>4단계 "검증"이 왜 특별한가.</strong> 스캐너가 "취약함"이라고 말해도, 실제로는 <strong>방화벽에 막혀 악용이 불가능한</strong> 경우가 아주 많습니다. 그래서 CTEM은 <strong>BAS(침해·공격 시뮬레이션)</strong>로 실제 공격을 흉내내 봅니다. "경고가 울리는가"가 아니라 <strong>"실제로 들어와지는가"</strong>를 확인하는 겁니다.</p>
+    <p><strong>실무에서 가장 많이 실패하는 곳은 5단계입니다.</strong> 보안팀이 "이거 고쳐주세요"라고 하면, 서버는 인프라팀이, 코드는 개발팀이, 재기동 승인은 현업이 합니다. <strong>고칠 권한이 보안팀에 없어서</strong> 목록만 쌓입니다. 그래서 CTEM은 도구가 아니라 <strong>거버넌스</strong>라는 점을 III에 쓰면 기술사다운 답안이 됩니다.</p>
+    <p><strong>함정 1 — CTEM을 솔루션·제품으로 쓰면 감점입니다.</strong> <strong>프로그램(관리 체계)</strong>이고, EASM·BAS는 그 안에서 쓰이는 도구입니다.</p>
+    <p><strong>함정 2 — 기존 VM과의 대비를 빼면 반쪽입니다.</strong> <strong>"목록 관리 → 노출 관리"</strong>로의 전환이 이 개념의 핵심입니다.</p>
+  </div></details>
+</section>
+
+<section id="q139-12" class="ans" data-group="139" data-item="q139-12" data-title="양자머신러닝(QML)">
+  <h3>139-12. 양자머신러닝(QML)</h3>
+  <div class="prog"><button class="pbtn" data-v="1">골격 외움</button><button class="pbtn" data-v="2">손으로 써봄</button><span class="sync" data-sync></span></div>
+  <div class="sheet">
+    <div class="sheet-top"><span class="tag t">A 개념형</span><span class="tag">10점</span><span class="tag">9분</span><span class="num">제139회 12번 · 신기술</span></div>
+    <div class="q"><b>문 12)</b> 양자머신러닝(QML, Quantum Machine Learning)</div>
+    <div class="body-wrap">
+      <h4>I. 개요</h4>
+      <p>1. 배경 : 고전 컴퓨팅의 연산 한계와 대규모 모델의 전력·비용 문제에 대한 대안 탐색</p>
+      <p>2. 정의 : <strong>QML</strong>이란 양자컴퓨팅의 <strong>중첩(Superposition)·얽힘(Entanglement)</strong> 특성을 활용하여 머신러닝의 <strong>학습·추론을 가속하거나 표현력을 확장</strong>하는 융합 기술</p>
+      <h4>II. 유형 분류 및 핵심 기법</h4>
+      <div class="tw"><table><thead><tr><th>구분</th><th>데이터</th><th>알고리즘</th><th>비고</th></tr></thead><tbody>
+        <tr><td>CC</td><td>고전</td><td>고전</td><td>기존 ML</td></tr>
+        <tr><td><strong>CQ</strong></td><td><strong>고전</strong></td><td><strong>양자</strong></td><td><strong>현재 연구의 주류</strong></td></tr>
+        <tr><td>QC</td><td>양자</td><td>고전</td><td>양자 실험 데이터 분석</td></tr>
+        <tr><td>QQ</td><td>양자</td><td>양자</td><td>장기 목표</td></tr>
+      </tbody></table></div>
+      <div class="tw"><table><thead><tr><th>핵심 기법</th><th>내용</th></tr></thead><tbody>
+        <tr><td><strong>데이터 인코딩</strong></td><td>고전 데이터를 양자 상태로 사상 — 진폭·각도·기저 인코딩</td></tr>
+        <tr><td><strong>VQC / PQC</strong></td><td><strong>변분 양자 회로</strong> — 파라미터를 가진 양자 회로를 고전 옵티마이저로 학습</td></tr>
+        <tr><td><strong>QSVM</strong></td><td>양자 <strong>커널</strong>로 고차원 특성 공간 사상 후 분류</td></tr>
+        <tr><td><strong>QNN / QAOA</strong></td><td>양자 신경망, 조합 최적화 근사 알고리즘</td></tr>
+      </tbody></table></div>
+<pre>[고전 데이터] --인코딩--&gt; | 양자 회로 (파라미터 θ) | --측정--&gt; 결과
+                                    ^                        |
+                                    +-- θ 갱신 -- [고전 옵티마이저]
+                              &lt;- 하이브리드 변분 구조 (NISQ 시대의 현실적 방식)</pre>
+      <h4>III. 한계 및 전망</h4>
+      <p>1. 한계 : <strong>NISQ</strong> 단계로 큐비트 수 부족·<strong>디코히런스</strong>·오류정정 미성숙, <strong>배런 플래토</strong>(기울기 소실), <strong>데이터 인코딩 I/O 병목</strong></p>
+      <p>2. 전망 : 신소재·신약 설계, 포트폴리오 최적화 등 <strong>양자 우위가 기대되는 특정 문제</strong>부터 적용. 단기에는 <strong>하이브리드</strong>가 현실적</p>
+    </div>
+    <div class="end">끝.</div>
+  </div>
+  <ul class="chips"><li>중첩·얽힘</li><li>CQ / QC / QQ</li><li>변분 양자 회로(VQC)</li><li>양자 커널·QSVM</li><li>QAOA</li><li>NISQ</li><li>배런 플래토</li><li>디코히런스</li></ul>
+  <details><summary>쉬운 설명 · 자주 틀리는 함정</summary><div class="det-in">
+    <p><strong>중첩이 왜 힘이 되는가 — 미로.</strong> 고전 컴퓨터는 미로에서 갈림길을 만나면 <strong>한 길씩 차례로</strong> 가봅니다. 양자 컴퓨터는 중첩 덕분에 <strong>모든 길을 동시에 걸친 상태</strong>로 계산을 진행합니다. 다만 여기서 오해가 많은데 — <strong>"모든 답을 동시에 얻는다"가 아닙니다.</strong> 측정하면 하나로 붕괴하니까요. 실제 기술은 <strong>정답의 확률이 커지도록 파동을 간섭시키는 것</strong>이고, 그래서 양자 알고리즘 설계가 어렵습니다.</p>
+    <p><strong>현실의 QML은 "반은 고전"입니다.</strong> 지금 양자컴퓨터는 몇 분만 돌려도 <strong>노이즈로 계산이 망가집니다</strong>(디코히런스). 그래서 깊은 계산을 못 맡깁니다. 대안이 <strong>하이브리드 변분 방식</strong>입니다 — <strong>짧은 양자 회로</strong>를 한 번 돌려 결과를 재고, <strong>파라미터 조정은 우리가 아는 고전 컴퓨터</strong>가 합니다. 이걸 반복합니다. 딥러닝의 순전파/역전파에서 <strong>순전파만 양자로 바꾼 셈</strong>입니다.</p>
+    <p><strong>QSVM은 감을 잡기 쉽습니다.</strong> SVM의 커널 트릭은 "데이터를 고차원으로 올려 직선으로 자르는" 기법입니다. QML은 그 <strong>고차원 공간을 양자 상태 공간으로</strong> 씁니다 — 큐비트 n개면 2ⁿ 차원이라, 고전 컴퓨터가 흉내내기 힘든 특성 공간이 공짜로 생깁니다.</p>
+    <p><strong>가장 뼈아픈 한계 — 데이터 넣는 데서 이득이 사라집니다.</strong> 양자 회로 계산이 아무리 빨라도, <strong>고전 데이터 N개를 양자 상태로 집어넣는 데 N에 비례하는 시간</strong>이 걸리면 전체 이득이 없어집니다. 이게 <strong>I/O 병목</strong>이고, 빅데이터 분석에 QML을 바로 쓰기 어려운 진짜 이유입니다. 이 한 줄을 쓰면 유행어 나열 답안과 확실히 갈립니다.</p>
+    <p><strong>함정 1 — "기하급수적으로 빨라진다"고 단정하면 감점입니다.</strong> 특정 문제 구조에서만 성립합니다. <strong>NISQ</strong>라는 현재 단계를 명시하는 게 안전하고 정확합니다.</p>
+    <p><strong>함정 2 — 배런 플래토를 알면 변별력이 큽니다.</strong> 회로를 깊게 쌓으면 <strong>기울기가 지수적으로 0에 수렴</strong>해 학습이 아예 안 됩니다. QML의 대표적 난점입니다.</p>
+  </div></details>
+</section>
+
+<section id="q139-13" class="ans" data-group="139" data-item="q139-13" data-title="가명처리 기법">
+  <h3>139-13. 개인정보보호를 위한 가명처리 기법</h3>
+  <div class="prog"><button class="pbtn" data-v="1">골격 외움</button><button class="pbtn" data-v="2">손으로 써봄</button><span class="sync" data-sync></span></div>
+  <div class="sheet">
+    <div class="sheet-top"><span class="tag t">D 구성형</span><span class="tag">10점</span><span class="tag">9분</span><span class="num">제139회 13번 · 개인정보보호</span></div>
+    <div class="q"><b>문 13)</b> 개인정보보호를 위한 가명처리 기법</div>
+    <div class="body-wrap">
+      <h4>I. 개요</h4>
+      <p>1. 배경 : 데이터 3법 개정으로 <strong>가명정보</strong>는 통계작성·과학적 연구·공익적 기록보존 목적에 <strong>동의 없이 활용</strong> 가능</p>
+      <p>2. 정의 : <strong>가명처리</strong>란 개인정보의 일부를 삭제·대체하여 <strong>추가 정보 없이는 특정 개인을 알아볼 수 없도록</strong> 하는 처리(개인정보보호법 제2조)</p>
+      <h4>II. 가명처리 기법 분류</h4>
+      <div class="tw"><table><thead><tr><th>분류</th><th>세부 기법</th><th>적용 대상</th></tr></thead><tbody>
+        <tr><td><strong>삭제</strong></td><td>(부분)삭제, 행 항목 삭제, <strong>마스킹</strong></td><td>식별자(주민번호·이름)</td></tr>
+        <tr><td><strong>통계처리</strong></td><td>총계처리, 부분총계, 평균·최대·최소 대체</td><td>수치형 속성</td></tr>
+        <tr><td><strong>일반화</strong><br>(범주화)</td><td>라운딩(일반·랜덤·제어), <strong>상·하단코딩</strong>, 로컬 일반화, 범위 방법</td><td>연령·소득 등 희귀값</td></tr>
+        <tr><td><strong>암호화</strong></td><td>양방향/<strong>일방향(해시)</strong>, 순서보존·형태보존 암호, <strong>동형암호</strong></td><td>재현 필요 식별자</td></tr>
+        <tr><td><strong>무작위화</strong></td><td><strong>잡음 추가</strong>, 순열(스와핑), <strong>토큰화</strong>, 표본추출</td><td>준식별자 조합</td></tr>
+      </tbody></table></div>
+<pre>[원본] --&gt; ① 사전준비 --&gt; ② 위험성 검토 --&gt; ③ 가명처리 --&gt; ④ 적정성 검토 --&gt; ⑤ 안전관리
+                                                              |
+                                          부적정 ┄┄┄ 재처리 ┄┄+   (k-익명성 등으로 판정)
+   ▨ 추가정보(매핑 키)는 반드시 분리 보관 · 접근통제</pre>
+      <h4>III. 적정성 검토 및 유의사항</h4>
+      <p>1. <strong>적정성 판단 지표</strong> : <strong>k-익명성</strong>(동일 속성 조합 k개 이상), <strong>l-다양성</strong>(민감속성 다양성), <strong>t-근접성</strong>(분포 유사성)</p>
+      <p>2. 유의사항 : <strong>재식별 금지 의무</strong>, <strong>추가정보 분리 보관</strong>, 가명정보 <strong>결합은 지정 결합전문기관</strong>을 통해서만 수행</p>
+    </div>
+    <div class="end">끝.</div>
+  </div>
+  <ul class="chips"><li>가명정보</li><li>마스킹·총계처리</li><li>일반화(범주화)</li><li>일방향 암호화</li><li>토큰화</li><li>k-익명성 / l-다양성 / t-근접성</li><li>적정성 검토</li><li>결합전문기관</li><li>추가정보 분리보관</li></ul>
+  <details><summary>쉬운 설명 · 자주 틀리는 함정</summary><div class="det-in">
+    <p><strong>큰 그림부터.</strong> 개인정보를 다루는 상태는 셋입니다 — <strong>개인정보</strong>(누군지 안다) / <strong>가명정보</strong>(추가 정보가 있으면 안다) / <strong>익명정보</strong>(영구히 모른다). 가명정보는 <strong>가운데</strong>이고, 그래서 <strong>다시 되돌릴 수 있다는 게 특징이자 위험</strong>입니다. 되돌리는 열쇠(매핑 키)를 <strong>따로 금고에 넣어두는 것</strong>이 규제의 핵심입니다.</p>
+    <p><strong>기법 5분류를 쉽게 외우는 법.</strong> "지우고 · 뭉치고 · 뭉뚱그리고 · 잠그고 · 섞는다"</p>
+    <ul>
+      <li><strong>지우고</strong>(삭제·마스킹) — 홍길동 → 홍*동</li>
+      <li><strong>뭉치고</strong>(총계처리) — 개인 급여 대신 <strong>부서 평균</strong>만 남김</li>
+      <li><strong>뭉뚱그리고</strong>(일반화) — 37세 → <strong>30대</strong>, 서울 강남구 역삼동 → <strong>서울</strong></li>
+      <li><strong>잠그고</strong>(암호화·해시) — 같은 사람은 같은 값이 나오게 하되 원문은 못 보게</li>
+      <li><strong>섞는다</strong>(잡음·스와핑) — 나이에 ±3 노이즈, 두 사람의 지역을 서로 바꿈</li>
+    </ul>
+    <p><strong>일반화가 왜 필요한가 — 상단코딩.</strong> 연령을 그냥 두면 <strong>"98세"</strong> 한 명이 바로 특정됩니다. 그래서 <strong>"90세 이상"</strong>으로 묶습니다. 소득도 마찬가지로 최상단은 "10억 이상"으로 잘라냅니다. 희귀값이 곧 식별자라는 게 요점입니다.</p>
+    <p><strong>k-익명성을 한 줄로.</strong> <strong>"나와 똑같아 보이는 사람이 최소 k명은 있어야 한다."</strong> k=5면, (30대·서울·남성) 조합에 해당하는 사람이 최소 5명이라 나를 콕 집을 수 없습니다. 그런데 그 5명이 <strong>전부 같은 병명</strong>이면 병명은 그대로 노출되죠 — 그래서 <strong>l-다양성</strong>이 추가로 필요합니다. 이 흐름으로 쓰면 이해도가 드러납니다.</p>
+    <p><strong>함정 1 — 가명처리와 익명처리를 섞으면 감점입니다.</strong> 가명정보는 <strong>여전히 개인정보</strong>여서 보호법의 안전조치 의무를 받습니다. 익명정보는 법 적용 대상이 아닙니다.</p>
+    <p><strong>함정 2 — 절차와 적정성 검토를 빼면 반쪽입니다.</strong> 기법 나열만으로는 6점입니다. <strong>5단계 절차 + k-익명성 판정 + 추가정보 분리보관</strong>까지 있어야 9~10점입니다.</p>
+    <p><strong>함정 3 — 결합을 자체 수행한다고 쓰면 틀립니다.</strong> 서로 다른 개인정보처리자의 가명정보 결합은 <strong>지정된 결합전문기관</strong>을 통해서만 가능합니다.</p>
+  </div></details>
+</section>
+
 <section id="answers">
   <div class="eyebrow">07 / 모범답안</div>
   <h2>1교시 모범답안 12</h2>
   <p class="lede">각 답안은 <strong>답안지 1면 분량</strong>으로 맞췄습니다. 위의 답안 카드는 시험장에서 그대로 재현할 골격이고, 아래 "쉬운 설명"은 이해용입니다 — 설명으로 이해하고, 카드로 암기하세요. 회차 표기는 사장님이 기출 원문을 주시면 채웁니다.</p>
-  <div class="note"><p><b>기출 대응 현황.</b> 제133~139회 91문항을 확인한 결과, 아래 12개 중 <b>RAG(134회 13번 · 139회 3번)</b>, <b>가명처리(139회 13번 · 134회 11번 PET)</b>, <b>쿠버네티스(133회 12번)</b>가 직접 출제된 주제입니다. 나머지는 최근 출제 흐름(AI 거버넌스 · 데이터 품질 · 공급망 보안 · 프로젝트 관리)에 맞춘 대비용입니다. <b>회차별 전 문항 답안은 139회부터 순차로 채웁니다.</b></p></div>
+  <div class="note"><p><b>기출 대응 현황.</b> 제133~139회 91문항을 확인한 결과, 아래 12개 중 <b>RAG(134회 13번 · 139회 3번)</b>, <b>가명처리(139회 13번 · 134회 11번 PET)</b>, <b>쿠버네티스(133회 12번)</b>가 직접 출제된 주제입니다. 나머지는 최근 출제 흐름(AI 거버넌스 · 데이터 품질 · 공급망 보안 · 프로젝트 관리)에 맞춘 대비용입니다. <b>회차별 전 문항 답안은 139회를 완료했고 138회부터 계속 채웁니다.</b></p></div>
 </section>
-<section id="a1" class="ans" data-item="a1" data-title="CAP 정리와 PACELC">
+<section id="a1" class="ans" data-group="freq" data-item="a1" data-title="CAP 정리와 PACELC">
   <h3>01. CAP 정리와 PACELC</h3>
   <div class="prog"><button class="pbtn" data-v="1">골격 외움</button><button class="pbtn" data-v="2">손으로 써봄</button><span class="sync" data-sync></span></div>
   <div class="sheet">
@@ -635,7 +1214,7 @@ V.   결론 및 제언                                    [0.2p / 2점]
   </div></details>
 </section>
 
-<section id="a2" class="ans" data-item="a2" data-title="Saga 패턴">
+<section id="a2" class="ans" data-group="freq" data-item="a2" data-title="Saga 패턴">
   <h3>02. MSA 분산 트랜잭션 — Saga 패턴</h3>
   <div class="prog"><button class="pbtn" data-v="1">골격 외움</button><button class="pbtn" data-v="2">손으로 써봄</button><span class="sync" data-sync></span></div>
   <div class="sheet">
@@ -671,7 +1250,7 @@ V.   결론 및 제언                                    [0.2p / 2점]
   </div></details>
 </section>
 
-<section id="a3" class="ans" data-item="a3" data-title="제로 트러스트 아키텍처">
+<section id="a3" class="ans" data-group="freq" data-item="a3" data-title="제로 트러스트 아키텍처">
   <h3>03. 제로 트러스트 아키텍처(ZTA)</h3>
   <div class="prog"><button class="pbtn" data-v="1">골격 외움</button><button class="pbtn" data-v="2">손으로 써봄</button><span class="sync" data-sync></span></div>
   <div class="sheet">
@@ -710,7 +1289,7 @@ V.   결론 및 제언                                    [0.2p / 2점]
     <p><strong>함정 2 — PEP 이중화를 빼먹기 쉽습니다.</strong> 모든 트래픽이 PEP를 지나므로 여기가 죽으면 전사가 멈춥니다. 실무 관점 한 줄이 III에 있으면 변별력이 됩니다.</p>
   </div></details>
 </section>
-<section id="a4" class="ans" data-item="a4" data-title="MLOps">
+<section id="a4" class="ans" data-group="freq" data-item="a4" data-title="MLOps">
   <h3>04. MLOps</h3>
   <div class="prog"><button class="pbtn" data-v="1">골격 외움</button><button class="pbtn" data-v="2">손으로 써봄</button><span class="sync" data-sync></span></div>
   <div class="sheet">
@@ -750,7 +1329,7 @@ V.   결론 및 제언                                    [0.2p / 2점]
   </div></details>
 </section>
 
-<section id="a5" class="ans" data-item="a5" data-title="데이터 메시">
+<section id="a5" class="ans" data-group="freq" data-item="a5" data-title="데이터 메시">
   <h3>05. 데이터 메시(Data Mesh)</h3>
   <div class="prog"><button class="pbtn" data-v="1">골격 외움</button><button class="pbtn" data-v="2">손으로 써봄</button><span class="sync" data-sync></span></div>
   <div class="sheet">
@@ -793,7 +1372,7 @@ V.   결론 및 제언                                    [0.2p / 2점]
   </div></details>
 </section>
 
-<section id="a6" class="ans" data-item="a6" data-title="XAI — LIME과 SHAP">
+<section id="a6" class="ans" data-group="freq" data-item="a6" data-title="XAI — LIME과 SHAP">
   <h3>06. XAI — LIME과 SHAP</h3>
   <div class="prog"><button class="pbtn" data-v="1">골격 외움</button><button class="pbtn" data-v="2">손으로 써봄</button><span class="sync" data-sync></span></div>
   <div class="sheet">
@@ -831,7 +1410,7 @@ V.   결론 및 제언                                    [0.2p / 2점]
     <p><strong>함정 2 — XAI를 인과관계로 설명하면 틀립니다.</strong> 둘 다 <strong>기여도(상관)</strong>를 보여줄 뿐 <strong>인과를 증명하지 않습니다.</strong> 이 한 줄을 III에 넣으면 이해 깊이가 드러납니다.</p>
   </div></details>
 </section>
-<section id="a7" class="ans" data-item="a7" data-title="RAG">
+<section id="a7" class="ans" data-group="freq" data-item="a7" data-title="RAG">
   <h3>07. RAG(검색증강생성)</h3>
   <div class="prog"><button class="pbtn" data-v="1">골격 외움</button><button class="pbtn" data-v="2">손으로 써봄</button><span class="sync" data-sync></span></div>
   <div class="sheet">
@@ -875,7 +1454,7 @@ V.   결론 및 제언                                    [0.2p / 2점]
   </div></details>
 </section>
 
-<section id="a8" class="ans" data-item="a8" data-title="SW 공급망 보안과 SBOM">
+<section id="a8" class="ans" data-group="freq" data-item="a8" data-title="SW 공급망 보안과 SBOM">
   <h3>08. SW 공급망 보안과 SBOM</h3>
   <div class="prog"><button class="pbtn" data-v="1">골격 외움</button><button class="pbtn" data-v="2">손으로 써봄</button><span class="sync" data-sync></span></div>
   <div class="sheet">
@@ -914,7 +1493,7 @@ V.   결론 및 제언                                    [0.2p / 2점]
   </div></details>
 </section>
 
-<section id="a9" class="ans" data-item="a9" data-title="EVM 획득가치관리">
+<section id="a9" class="ans" data-group="freq" data-item="a9" data-title="EVM 획득가치관리">
   <h3>09. EVM(획득가치관리)</h3>
   <div class="prog"><button class="pbtn" data-v="1">골격 외움</button><button class="pbtn" data-v="2">손으로 써봄</button><span class="sync" data-sync></span></div>
   <div class="sheet">
@@ -965,7 +1544,7 @@ V.   결론 및 제언                                    [0.2p / 2점]
     <p><strong>함정 2 — 품질 한계를 안 쓰면 감점입니다.</strong> 대충 만들어 빨리 쌓으면 SPI·CPI가 <strong>좋아집니다.</strong> EVM은 품질을 보지 않는다는 한계를 III에 반드시 넣으세요.</p>
   </div></details>
 </section>
-<section id="a10" class="ans" data-item="a10" data-title="FinOps">
+<section id="a10" class="ans" data-group="freq" data-item="a10" data-title="FinOps">
   <h3>10. FinOps</h3>
   <div class="prog"><button class="pbtn" data-v="1">골격 외움</button><button class="pbtn" data-v="2">손으로 써봄</button><span class="sync" data-sync></span></div>
   <div class="sheet">
@@ -1000,7 +1579,7 @@ V.   결론 및 제언                                    [0.2p / 2점]
   </div></details>
 </section>
 
-<section id="a11" class="ans" data-item="a11" data-title="가명처리와 차분 프라이버시">
+<section id="a11" class="ans" data-group="freq" data-item="a11" data-title="가명처리와 차분 프라이버시">
   <h3>11. 가명처리와 차분 프라이버시</h3>
   <div class="prog"><button class="pbtn" data-v="1">골격 외움</button><button class="pbtn" data-v="2">손으로 써봄</button><span class="sync" data-sync></span></div>
   <div class="sheet">
@@ -1039,7 +1618,7 @@ V.   결론 및 제언                                    [0.2p / 2점]
   </div></details>
 </section>
 
-<section id="a12" class="ans" data-item="a12" data-title="쿠버네티스 오토스케일링">
+<section id="a12" class="ans" data-group="freq" data-item="a12" data-title="쿠버네티스 오토스케일링">
   <h3>12. 쿠버네티스 오토스케일링(HPA · VPA · CA)</h3>
   <div class="prog"><button class="pbtn" data-v="1">골격 외움</button><button class="pbtn" data-v="2">손으로 써봄</button><span class="sync" data-sync></span></div>
   <div class="sheet">
@@ -1115,16 +1694,22 @@ V.   결론 및 제언                                    [0.2p / 2점]
   try { state = JSON.parse(localStorage.getItem(LS) || "{}") || {}; } catch (e) { state = {}; }
 
   /* ---- build the answer nav from the sections themselves ---- */
-  var navList = document.getElementById("navAnswers");
-  answers.forEach(function (sec, i) {
+  var lists = { freq: document.getElementById("navAnswers"),
+                "139": document.getElementById("nav-139") };
+  var seq = { freq: 0, "139": 0 };
+  answers.forEach(function (sec) {
+    var g = sec.dataset.group || "freq";
+    var list = lists[g];
+    if (!list) return;
+    seq[g] += 1;
     var li = document.createElement("li");
     var a = document.createElement("a");
     a.href = "#" + sec.id;
     a.dataset.item = sec.dataset.item;
-    a.innerHTML = '<i>' + String(i + 1).padStart(2, "0") + '</i>' +
+    a.innerHTML = '<i>' + String(seq[g]).padStart(2, "0") + '</i>' +
                   '<span>' + sec.dataset.title + '</span>';
     li.appendChild(a);
-    navList.appendChild(li);
+    list.appendChild(li);
   });
   var navLinks = [].slice.call(nav.querySelectorAll("a"));
 
