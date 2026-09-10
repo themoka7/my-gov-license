@@ -254,7 +254,7 @@ footer{border-top:1px solid var(--rule-soft);padding-top:18px;color:var(--faint)
     <li><a href="#glyph"><i>04</i>도해 표준 기호</a></li>
   </ol>
   <div class="nav-h">기출 회차</div>
-  <div class="rgrid"><a href="#r139" class="has">139</a><a href="#r138" class="has">138</a><a href="#r137">137</a><a href="#r136">136</a><a href="#r135">135</a><a href="#r134">134</a><a href="#r133">133</a><a href="#r132">132</a><a href="#r131">131</a><a href="#r130">130</a><a href="#r129">129</a><a href="#r128">128</a><a href="#r127">127</a><a href="#r126">126</a><a href="#r125">125</a><a href="#r124">124</a><a href="#r123">123</a><a href="#r122">122</a><a href="#r121">121</a><a href="#r120">120</a><a href="#r119">119</a><a href="#r118">118</a><a href="#r117">117</a><a href="#r116">116</a><a href="#r114">114</a><a href="#r113">113</a><a href="#r111">111</a><a href="#r110">110</a></div>
+  <div class="rgrid"><a href="#r139" class="has">139</a><a href="#r138" class="has">138</a><a href="#r137" class="has">137</a><a href="#r136">136</a><a href="#r135">135</a><a href="#r134">134</a><a href="#r133">133</a><a href="#r132">132</a><a href="#r131">131</a><a href="#r130">130</a><a href="#r129">129</a><a href="#r128">128</a><a href="#r127">127</a><a href="#r126">126</a><a href="#r125">125</a><a href="#r124">124</a><a href="#r123">123</a><a href="#r122">122</a><a href="#r121">121</a><a href="#r120">120</a><a href="#r119">119</a><a href="#r118">118</a><a href="#r117">117</a><a href="#r116">116</a><a href="#r114">114</a><a href="#r113">113</a><a href="#r111">111</a><a href="#r110">110</a></div>
   <div id="navGroups"></div>
 </nav>
 
@@ -549,6 +549,7 @@ V.   결론 및 제언                                    [0.2p / 2점]
 </section>
 <section id="r137" class="round">
   <h3>제137회 <span class="rd">1교시 단답형 · 13문제 중 10문제 선택 · 각 10점</span></h3>
+  <p class="anslink"><a href="#g137">↓ 이 회차 13문항 답안 보기</a></p>
   <div class="tw"><table class="qt"><thead><tr><th>번</th><th>문제</th><th>유형</th></tr></thead><tbody>
     <tr><td class="num">1</td><td>동적 라우팅프로토콜인IGP (InteriorGatewayProtocol)와 EGP(ExteriorGateway Protocol)를 설명하시오.</td><td><span class="tag t">개념형</span></td></tr>
     <tr><td class="num">2</td><td>디지털 포렌식에서 아티팩트(Artifact)를 설명하시오.</td><td><span class="tag t">개념형</span></td></tr>
@@ -2229,11 +2230,603 @@ MA(1) :  ■ ▪ (끝)           다음 1시점만 영향, 이후 0
   </div></details>
 </section>
 
+<section id="g137">
+  <div class="eyebrow">회차 답안</div>
+  <h2>제137회 1교시 답안 13</h2>
+  <p class="lede">네트워크(1·3번)·포렌식·자료구조가 섞여 최근 AI 편중 회차와 결이 다릅니다. 고전 영역이 절반이라 <strong>버릴 3문제를 고르기가 쉬운 회차</strong>였습니다.</p>
+</section>
+
+<section id="q137-1" class="ans" data-group="137" data-item="q137-1" data-title="IGP와 EGP">
+  <h3>137-1. IGP와 EGP</h3>
+  <div class="prog"><button class="pbtn" data-v="1">골격 외움</button><button class="pbtn" data-v="2">손으로 써봄</button><span class="sync" data-sync></span></div>
+  <div class="sheet">
+    <div class="sheet-top"><span class="tag t">B 비교형</span><span class="tag">10점</span><span class="tag">9분</span><span class="num">제137회 1번 · 네트워크</span></div>
+    <div class="q"><b>문 1)</b> 동적 라우팅 프로토콜인 IGP(Interior Gateway Protocol)와 EGP(Exterior Gateway Protocol)를 설명하시오.</div>
+    <div class="body-wrap">
+      <h4>I. 개요</h4>
+      <p>1. 배경 : 인터넷은 단일 조직이 관리하는 <strong>AS(Autonomous System)</strong>의 집합이므로, <strong>AS 내부</strong>와 <strong>AS 간</strong> 라우팅의 목적이 근본적으로 다름</p>
+      <p>2. 정의 : <strong>IGP</strong>는 단일 AS 내부에서 <strong>최적 경로(최단거리)</strong>를 찾는 프로토콜이고, <strong>EGP</strong>는 AS 간에 <strong>정책 기반 경로</strong>를 교환하는 프로토콜</p>
+      <h4>II. IGP와 EGP의 비교</h4>
+      <div class="tw"><table><thead><tr><th>비교 항목</th><th>IGP</th><th>EGP</th></tr></thead><tbody>
+        <tr><td>적용 범위</td><td>AS <strong>내부</strong></td><td>AS <strong>간</strong></td></tr>
+        <tr><td>목적</td><td><strong>최단·최적 경로</strong> 선택</td><td><strong>정책·계약 기반</strong> 경로 선택</td></tr>
+        <tr><td>알고리즘</td><td>거리벡터(RIP), <strong>링크상태</strong>(OSPF·IS-IS)</td><td><strong>경로벡터</strong>(Path Vector)</td></tr>
+        <tr><td>대표 프로토콜</td><td><strong>RIP</strong>(hop 최대 15), <strong>OSPF</strong>(Dijkstra·Area), EIGRP</td><td><strong>BGP-4</strong> (TCP 179)</td></tr>
+        <tr><td>메트릭</td><td>hop 수, 대역폭·지연 기반 cost</td><td><strong>AS_PATH</strong>, Local Preference, MED 등 속성</td></tr>
+        <tr><td>수렴 속도</td><td>빠름 (초 단위)</td><td>느림 (경로 수 방대)</td></tr>
+        <tr><td>확장성</td><td>단일 조직 규모</td><td><strong>전 인터넷 규모</strong></td></tr>
+      </tbody></table></div>
+<pre>        [ AS 100 ]                    [ AS 200 ]
+   R1 ---OSPF--- R2 ---- BGP ---- R3 ---OSPF--- R4
+   └──── IGP: 내부 최단경로 ───┘  ↑   └──── IGP ────┘
+                            EGP: AS 간 정책 경로 교환</pre>
+      <h4>III. 적용 시 고려사항</h4>
+      <p>1. <strong>역할 분담</strong> : 내부는 IGP로 빠르게 수렴시키고, 외부 연결은 BGP로 <strong>정책 제어</strong> — 한쪽이 다른 쪽을 대체할 수 없음</p>
+      <p>2. <strong>재분배(Redistribution) 주의</strong> : IGP ↔ BGP 경로 재분배 시 <strong>경로 루프·경로 폭증</strong> 위험 → 필터링·경로 요약 필수</p>
+    </div>
+    <div class="end">끝.</div>
+  </div>
+  <ul class="chips"><li>AS(Autonomous System)</li><li>RIP / OSPF / IS-IS</li><li>BGP-4</li><li>거리벡터·링크상태·경로벡터</li><li>AS_PATH</li><li>Dijkstra / Area</li><li>경로 재분배</li></ul>
+  <details><summary>쉬운 설명 · 자주 틀리는 함정</summary><div class="det-in">
+    <p><strong>비유 — 회사 안 길찾기 vs 회사 간 물류.</strong> 같은 건물 안에서는 <strong>"어디가 제일 가까운가"</strong>만 따지면 됩니다. 3층에서 7층 갈 때 계단이든 엘리베이터든 <strong>빠른 쪽</strong>이 정답이죠. 이게 IGP입니다.</p>
+    <p>그런데 서울에서 부산 협력사로 화물을 보낼 때는 이야기가 달라집니다. <strong>최단 경로가 정답이 아닙니다.</strong> "저 업체와는 계약이 있어서 통행료가 싸다", "저 경로는 경쟁사 소유라 안 쓴다" — <strong>돈과 계약이 경로를 결정합니다.</strong> 이게 EGP(BGP)입니다.</p>
+    <p><strong>그래서 BGP는 "최단"이 아닙니다.</strong> BGP가 경로를 고르는 1순위 기준은 거리가 아니라 <strong>Local Preference(우리 회사 정책)</strong>이고, AS_PATH 길이는 그다음입니다. 이 점이 IGP와의 본질적 차이라 답안 II의 '목적' 행에 반드시 넣으세요.</p>
+    <p><strong>세 알고리즘을 한 줄로.</strong> <strong>거리벡터</strong>는 "옆집이 알려준 거리를 믿는다"(RIP — 그래서 잘못된 정보가 퍼지고 수렴이 느림), <strong>링크상태</strong>는 "전체 지도를 각자 그려 직접 계산한다"(OSPF — 빠르고 정확하지만 메모리·CPU를 씀), <strong>경로벡터</strong>는 "지나온 AS 목록을 통째로 전달한다"(BGP — 자기 AS 번호가 목록에 있으면 루프라고 판단).</p>
+    <p><strong>실무 사고 하나.</strong> BGP 경로 하나를 잘못 광고해서 <strong>전 세계 트래픽이 한 통신사로 몰려 인터넷이 멈춘</strong> 사고가 여러 번 있었습니다(BGP 하이재킹·오광고). AS 간 라우팅은 <strong>기본적으로 상대를 신뢰하는 구조</strong>라서 그렇습니다. 대응으로 RPKI·경로 필터링을 씁니다 — 한 줄 쓰면 좋습니다.</p>
+    <p><strong>함정 1 — EGP를 프로토콜 이름으로 쓰면 애매해집니다.</strong> 과거에 실제로 'EGP'라는 프로토콜이 있었지만, 지금은 <strong>범주(카테고리)</strong>를 뜻하고 실제 구현체는 <strong>BGP-4 하나</strong>입니다. "EGP 범주의 사실상 유일한 표준이 BGP-4"로 쓰는 게 정확합니다.</p>
+    <p><strong>함정 2 — RIP의 hop 15 제한을 빼먹기 쉽습니다.</strong> 16이면 도달 불가로 처리하는데, 이게 거리벡터의 <strong>무한 계수(count to infinity)</strong> 문제를 막기 위한 장치라는 점까지 쓰면 이해도가 드러납니다.</p>
+  </div></details>
+</section>
+
+<section id="q137-2" class="ans" data-group="137" data-item="q137-2" data-title="디지털 포렌식 아티팩트">
+  <h3>137-2. 디지털 포렌식 아티팩트</h3>
+  <div class="prog"><button class="pbtn" data-v="1">골격 외움</button><button class="pbtn" data-v="2">손으로 써봄</button><span class="sync" data-sync></span></div>
+  <div class="sheet">
+    <div class="sheet-top"><span class="tag t">D 구성형</span><span class="tag">10점</span><span class="tag">9분</span><span class="num">제137회 2번 · 정보보안</span></div>
+    <div class="q"><b>문 2)</b> 디지털 포렌식에서 아티팩트(Artifact)를 설명하시오.</div>
+    <div class="body-wrap">
+      <h4>I. 개요</h4>
+      <p>1. 배경 : 침해·부정행위 조사에서 <strong>삭제된 파일 자체보다</strong> 운영체제가 자동으로 남긴 <strong>행위 흔적</strong>이 결정적 증거가 되는 경우가 많음</p>
+      <p>2. 정의 : <strong>아티팩트</strong>란 사용자·시스템의 행위 결과로 운영체제·응용프로그램이 <strong>자동 생성·변경한 흔적 데이터</strong>로, 행위의 <strong>주체·시점·대상</strong>을 재구성하는 근거</p>
+      <h4>II. 아티팩트 유형 (행위 유형별)</h4>
+      <div class="tw"><table><thead><tr><th>행위</th><th>주요 아티팩트</th><th>확인 가능 정보</th></tr></thead><tbody>
+        <tr><td><strong>프로그램 실행</strong></td><td><strong>Prefetch</strong>, UserAssist, 점프리스트, Amcache</td><td>실행 파일명·횟수·최초/최종 실행 시각</td></tr>
+        <tr><td><strong>파일 접근·삭제</strong></td><td><strong>$MFT</strong>, $LogFile, <strong>$UsnJrnl</strong>, LNK, ShellBags, 휴지통($I/$R)</td><td>파일 생성·수정·삭제 이력, 폴더 탐색 경로</td></tr>
+        <tr><td><strong>외부장치 연결</strong></td><td>레지스트리 <strong>USBSTOR</strong>, setupapi 로그</td><td>USB 제조사·시리얼·최초 연결 시각</td></tr>
+        <tr><td><strong>웹·네트워크</strong></td><td>브라우저 History·Cache·Cookie, DNS 캐시</td><td>접속 URL·검색어·다운로드 이력</td></tr>
+        <tr><td><strong>계정·로그온</strong></td><td>이벤트 로그(4624/4625), SAM</td><td>로그온 성공·실패, 계정 생성</td></tr>
+        <tr><td><strong>메모리·가상</strong></td><td>pagefile, hiberfil, 메모리 덤프</td><td>실행 중 프로세스, 복호화된 평문·키</td></tr>
+      </tbody></table></div>
+      <h4>III. 분석 시 고려사항</h4>
+      <p>1. <strong>증거 능력 확보</strong> : <strong>쓰기 방지</strong> 후 사본 분석, <strong>해시로 무결성</strong> 입증, <strong>연계보관성(Chain of Custody)</strong> 기록 — 절차 흠결은 증거 배제로 직결</p>
+      <p>2. <strong>교차 검증</strong> : 단일 아티팩트는 조작·오해 소지 → <strong>타임라인 분석</strong>으로 복수 아티팩트를 시각 순 정렬해 상호 검증. <strong>안티포렌식</strong>(타임스탬프 변조·와이핑) 징후 병행 확인</p>
+    </div>
+    <div class="end">끝.</div>
+  </div>
+  <ul class="chips"><li>Prefetch</li><li>$MFT / $UsnJrnl</li><li>ShellBags</li><li>USBSTOR</li><li>레지스트리 하이브</li><li>타임라인 분석</li><li>연계보관성(CoC)</li><li>안티포렌식</li></ul>
+  <details><summary>쉬운 설명 · 자주 틀리는 함정</summary><div class="det-in">
+    <p><strong>핵심 개념 하나 — "파일을 지워도 흔적은 남습니다".</strong> 아티팩트는 <strong>범인이 남기려고 남긴 게 아닙니다.</strong> 윈도우가 <strong>성능과 편의를 위해 알아서 기록</strong>해 둔 부산물입니다. 그래서 지우기가 어렵고, 그래서 증거가 됩니다.</p>
+    <p><strong>Prefetch가 좋은 예입니다.</strong> 윈도우는 프로그램을 빨리 띄우려고 <strong>"이 프로그램이 뭘 읽는지 미리 기록"</strong>해 둡니다. 순수하게 속도를 위한 기능이죠. 그런데 조사관에게는 <strong>"이 PC에서 그 해킹 도구가 3번 실행됐고, 마지막은 화요일 밤 11시"</strong>라는 증거가 됩니다. 실행 파일을 지워도 프리페치는 남습니다.</p>
+    <p><strong>ShellBags는 더 흥미롭습니다.</strong> 폴더 창의 크기와 위치를 기억해주는 기능인데, 결과적으로 <strong>"이 사용자가 어떤 폴더를 열어봤는지"</strong>가 기록됩니다. 외장하드를 꽂아 특정 폴더를 뒤진 사실이, <strong>그 외장하드가 없어도</strong> 남습니다.</p>
+    <p><strong>USB 유출 조사의 정석.</strong> 자료 유출 사건에서는 세 개를 붙입니다 — <strong>USBSTOR</strong>(어떤 USB가 언제 꽂혔나) + <strong>LNK·ShellBags</strong>(그 드라이브의 어떤 파일·폴더를 열었나) + <strong>$UsnJrnl</strong>(파일이 복사·생성된 이력). 하나씩은 정황이지만 <strong>셋이 시각 순으로 맞아떨어지면</strong> 증거가 됩니다. 이게 타임라인 분석입니다.</p>
+    <p><strong>왜 절차를 그렇게 강조하나.</strong> 기술적으로 완벽히 찾아내도, <strong>원본 디스크를 그냥 켜서 분석했다면</strong> 증거로 못 씁니다. 부팅만 해도 수천 개 파일의 접근 시각이 바뀌어 <strong>원본이 오염</strong>되니까요. 그래서 반드시 쓰기 방지 장치를 걸고 이미지를 떠서, 해시로 원본과 동일함을 입증한 뒤 <strong>사본만</strong> 분석합니다.</p>
+    <p><strong>함정 1 — 아티팩트를 "삭제된 파일 복구"로 쓰면 감점입니다.</strong> 파일 복구는 별개 기법이고, 아티팩트는 <strong>행위 흔적</strong>입니다. 파일이 하나도 복구되지 않아도 <strong>"복사했다는 사실"</strong>은 입증할 수 있다는 게 요점입니다.</p>
+    <p><strong>함정 2 — 시각 정보를 그대로 믿으면 안 됩니다.</strong> 타임스탬프는 <strong>변조가 쉽습니다</strong>(타임스톰핑). 그래서 변조가 어려운 <strong>$LogFile·$UsnJrnl</strong> 같은 저수준 기록과 교차 검증합니다. 이 한 줄이 변별력이 됩니다.</p>
+  </div></details>
+</section>
+
+<section id="q137-3" class="ans" data-group="137" data-item="q137-3" data-title="MODBUS 프로토콜">
+  <h3>137-3. MODBUS 프로토콜</h3>
+  <div class="prog"><button class="pbtn" data-v="1">골격 외움</button><button class="pbtn" data-v="2">손으로 써봄</button><span class="sync" data-sync></span></div>
+  <div class="sheet">
+    <div class="sheet-top"><span class="tag t">A 개념형</span><span class="tag">10점</span><span class="tag">9분</span><span class="num">제137회 3번 · 네트워크 · OT</span></div>
+    <div class="q"><b>문 3)</b> MODBUS 프로토콜을 설명하시오.</div>
+    <div class="body-wrap">
+      <h4>I. 개요</h4>
+      <p>1. 배경 : 1979년 Modicon이 <strong>PLC 통신용</strong>으로 공개한 이후, 단순·개방성으로 <strong>산업 제어(OT) 분야의 사실상 표준</strong>으로 정착</p>
+      <p>2. 정의 : <strong>MODBUS</strong>란 <strong>마스터–슬레이브</strong> 방식으로 PLC·센서·계측기의 데이터를 읽고 쓰는 <strong>애플리케이션 계층 산업용 통신 프로토콜</strong></p>
+      <h4>II. 변종 및 데이터 모델</h4>
+      <div class="tw"><table><thead><tr><th>변종</th><th>전송 매체</th><th>부호화 / 오류검출</th></tr></thead><tbody>
+        <tr><td><strong>Modbus RTU</strong></td><td>시리얼(RS-485/232)</td><td>바이너리 / <strong>CRC-16</strong> — 가장 널리 사용</td></tr>
+        <tr><td>Modbus ASCII</td><td>시리얼</td><td>텍스트 / LRC — 가독성 우선</td></tr>
+        <tr><td><strong>Modbus TCP</strong></td><td>이더넷</td><td><strong>TCP 502</strong>, MBAP 헤더 (TCP가 오류검출 대체)</td></tr>
+      </tbody></table></div>
+      <div class="tw"><table><thead><tr><th>데이터 모델</th><th>크기</th><th>접근</th><th>용도</th></tr></thead><tbody>
+        <tr><td>Coil</td><td>1 bit</td><td>읽기/쓰기</td><td>출력 접점 (밸브 개폐)</td></tr>
+        <tr><td>Discrete Input</td><td>1 bit</td><td>읽기</td><td>입력 접점 (리밋 스위치)</td></tr>
+        <tr><td>Input Register</td><td>16 bit</td><td>읽기</td><td>계측값 (온도·압력)</td></tr>
+        <tr><td>Holding Register</td><td>16 bit</td><td>읽기/쓰기</td><td>설정값 (목표 온도)</td></tr>
+      </tbody></table></div>
+<pre>[마스터(HMI/SCADA)] --요청(슬레이브ID + 기능코드 + 주소 + 개수)--&gt; [슬레이브(PLC)]
+                    &lt;--------------- 응답(데이터) 또는 예외 -----------
+  기능코드 : 01 코일읽기 · 03 홀딩레지스터읽기 · 05 단일코일쓰기 · 06 단일레지스터쓰기
+  폴링 방식 — 슬레이브는 스스로 말하지 않음 (마스터가 물어야 답함)</pre>
+      <h4>III. 보안 취약점 및 대응</h4>
+      <p>1. <strong>구조적 취약점</strong> : <strong>인증·암호화·무결성 검증이 전무</strong> → 명령 위조·재전송(Replay)·스캔으로 <strong>실제 설비 조작</strong> 가능. 오류검출(CRC)은 <strong>전송 오류용이며 보안 기능이 아님</strong></p>
+      <p>2. <strong>대응</strong> : 망분리·<strong>일방향 게이트웨이</strong>, <strong>DPI 기반 이상 명령 탐지</strong>, Modbus/TCP Security(TLS) 적용, <strong>IEC 62443</strong> 기반 구역·도관(Zone &amp; Conduit) 설계</p>
+    </div>
+    <div class="end">끝.</div>
+  </div>
+  <ul class="chips"><li>마스터–슬레이브</li><li>RTU / ASCII / TCP</li><li>TCP 502 · MBAP</li><li>기능 코드</li><li>Coil / Register</li><li>CRC-16</li><li>인증·암호화 부재</li><li>IEC 62443</li></ul>
+  <details><summary>쉬운 설명 · 자주 틀리는 함정</summary><div class="det-in">
+    <p><strong>왜 40년 넘은 프로토콜이 아직 쓰이나.</strong> 답은 <strong>단순함</strong>입니다. 명세가 얇아서 8비트 마이크로컨트롤러에도 올라가고, 로열티가 없고, 어느 회사 장비든 붙습니다. 공장 설비는 <strong>20~30년을 쓰기 때문에</strong>, 한번 깔린 프로토콜은 쉽게 안 바뀝니다.</p>
+    <p><strong>데이터 모델 4종을 외우는 법 — 2×2 표입니다.</strong> <strong>비트냐 워드냐</strong> × <strong>읽기만이냐 쓰기도 되냐</strong>.</p>
+    <ul>
+      <li>비트 + 읽기만 = <strong>Discrete Input</strong> (스위치가 눌렸나)</li>
+      <li>비트 + 쓰기 가능 = <strong>Coil</strong> (밸브를 열어라)</li>
+      <li>워드 + 읽기만 = <strong>Input Register</strong> (지금 온도 몇 도냐)</li>
+      <li>워드 + 쓰기 가능 = <strong>Holding Register</strong> (목표 온도를 80도로)</li>
+    </ul>
+    <p><strong>여기서 보안 문제가 그대로 드러납니다.</strong> "밸브를 열어라"(코일 쓰기)와 "목표 온도를 800도로"(레지스터 쓰기)를 <strong>누구든 보낼 수 있습니다.</strong> 아무 인증이 없으니까요. 네트워크에 접근만 하면 <strong>실제 설비가 움직입니다.</strong> 스턱스넷·산업 제어 사고들이 이런 구조를 파고들었습니다.</p>
+    <p><strong>CRC를 보안이라고 쓰면 안 되는 이유.</strong> CRC는 <strong>전선 노이즈로 비트가 깨진 것</strong>을 잡는 장치입니다. 공격자는 데이터를 바꾸고 <strong>CRC를 다시 계산해서 붙이면</strong> 끝입니다. 오류검출과 무결성 검증(MAC)은 전혀 다른 개념이라는 걸 짚으면 변별력이 큽니다.</p>
+    <p><strong>실무 대응의 현실.</strong> "프로토콜을 안전한 걸로 바꾸자"는 대개 불가능합니다 — 설비를 세워야 하고 벤더 지원이 끊깁니다. 그래서 실제 대응은 <strong>프로토콜을 그대로 두고 주변을 감싸는</strong> 쪽입니다: 망을 분리하고, <strong>나가는 방향만 허용하는 일방향 게이트웨이</strong>를 두고, 정상 명령 패턴을 학습해 <strong>이상 명령을 탐지</strong>합니다. 이 판단이 있으면 기술사다운 답안이 됩니다.</p>
+    <p><strong>함정 — 폴링 방식을 빼먹기 쉽습니다.</strong> 슬레이브는 <strong>스스로 보고하지 않습니다.</strong> 마스터가 계속 물어봐야 하니, 슬레이브가 많아지면 <strong>주기가 길어져 실시간성이 떨어집니다.</strong> 이게 Modbus의 구조적 한계라 III에 넣을 만합니다.</p>
+  </div></details>
+</section>
+<section id="q137-4" class="ans" data-group="137" data-item="q137-4" data-title="암호문 공격">
+  <h3>137-4. 암호문 공격</h3>
+  <div class="prog"><button class="pbtn" data-v="1">골격 외움</button><button class="pbtn" data-v="2">손으로 써봄</button><span class="sync" data-sync></span></div>
+  <div class="sheet">
+    <div class="sheet-top"><span class="tag t">E 이슈대응형</span><span class="tag">10점</span><span class="tag">9분</span><span class="num">제137회 4번 · 암호학</span></div>
+    <div class="q"><b>문 4)</b> 암호문 공격(Ciphertext Attack)을 설명하시오.</div>
+    <div class="body-wrap">
+      <h4>I. 개요</h4>
+      <p>1. 배경 : 암호 알고리즘의 안전성은 <strong>공격자가 무엇을 얻을 수 있는지</strong>를 전제로 평가해야 하므로, 공격 능력별 <strong>공격 모델</strong>이 정의됨</p>
+      <p>2. 정의 : <strong>암호문 공격</strong>이란 암호문 및 관련 정보를 이용해 <strong>키 또는 평문을 복원</strong>하려는 암호 분석 공격으로, 공격자에게 주어진 능력에 따라 4가지로 분류</p>
+      <h4>II. 공격 모델 4분류</h4>
+      <div class="tw"><table><thead><tr><th>공격</th><th>공격자가 가진 것</th><th>대표 기법 / 사례</th></tr></thead><tbody>
+        <tr><td><strong>COA</strong><br>암호문 단독</td><td>암호문만</td><td>빈도분석, 전수조사 — 고전 암호 해독</td></tr>
+        <tr><td><strong>KPA</strong><br>기지 평문</td><td>일부 <strong>평문–암호문 쌍</strong></td><td>선형·차분 분석의 기초, 프로토콜 고정 헤더 이용</td></tr>
+        <tr><td><strong>CPA</strong><br>선택 평문</td><td>원하는 <strong>평문을 암호화</strong> 요청 가능</td><td><strong>공개키 암호는 항상 CPA 가능</strong> → 확률적 암호화 필수</td></tr>
+        <tr><td><strong>CCA</strong><br>선택 암호문</td><td>원하는 <strong>암호문을 복호화</strong> 요청 가능</td><td><strong>패딩 오라클 공격</strong>, BEAST — CCA1(비적응)/CCA2(적응적)</td></tr>
+      </tbody></table></div>
+<pre>공격자 능력 (약함 → 강함)
+  COA  &lt;  KPA  &lt;  CPA  &lt;  CCA
+   |                        |
+   +-- 이것만 막으면 부족 ----+-- 여기까지 견뎌야 실전 안전
+                              안전성 목표 : IND-CPA → IND-CCA2</pre>
+      <h4>III. 대응 방안</h4>
+      <div class="tw"><table><thead><tr><th>구분</th><th>대응</th></tr></thead><tbody>
+        <tr><td>알고리즘</td><td><strong>검증된 표준</strong> 사용(AES 등), 자체 개발 금지, 충분한 키 길이</td></tr>
+        <tr><td>운영 모드</td><td><strong>인증된 암호화(AEAD)</strong> — AES-GCM·ChaCha20-Poly1305로 <strong>기밀성+무결성 동시</strong> 확보 → CCA 차단</td></tr>
+        <tr><td>구현</td><td><strong>IV·논스 난수화·재사용 금지</strong>, 복호화 실패 시 <strong>오류 메시지·처리 시간 통일</strong>(오라클 제거), 상수 시간 비교</td></tr>
+        <tr><td>운영</td><td>키 교체·수명 관리, 부채널(타이밍·전력) 대응</td></tr>
+      </tbody></table></div>
+    </div>
+    <div class="end">끝.</div>
+  </div>
+  <ul class="chips"><li>COA / KPA / CPA / CCA</li><li>IND-CPA · IND-CCA2</li><li>패딩 오라클</li><li>AEAD (AES-GCM)</li><li>확률적 암호화</li><li>IV·논스 재사용 금지</li><li>부채널 공격</li></ul>
+  <details><summary>쉬운 설명 · 자주 틀리는 함정</summary><div class="det-in">
+    <p><strong>비유 — 금고 털이의 조건을 등급으로 나눈 것.</strong> 네 모델은 공격 기법이 아니라 <strong>"공격자에게 무엇을 허용하고도 안전한가"</strong>라는 기준입니다.</p>
+    <ul>
+      <li><strong>COA</strong> = 잠긴 금고만 보고 열기 — 제일 불리한 조건</li>
+      <li><strong>KPA</strong> = 예전에 열렸던 금고 몇 개의 <strong>비밀번호와 내용물을 알고</strong> 도전</li>
+      <li><strong>CPA</strong> = <strong>내가 원하는 물건을 넣어 잠가보게</strong> 해주는 상태 — 입출력 관계를 마음껏 관찰</li>
+      <li><strong>CCA</strong> = <strong>내가 만든 자물쇠를 열어달라고 시킬 수</strong> 있는 상태 — 가장 강력</li>
+    </ul>
+    <p><strong>"CPA는 왜 항상 가능한가"가 이 문제의 핵심 통찰입니다.</strong> 공개키 암호는 <strong>공개키가 공개되어 있으니</strong>, 누구나 원하는 평문을 얼마든지 암호화해볼 수 있습니다. 즉 <strong>CPA는 막을 수 없는 기본 조건</strong>입니다. 그래서 RSA를 교과서처럼 그냥 쓰면 안 됩니다 — 같은 평문이 항상 같은 암호문이 되니, <strong>"예"/"아니오" 두 값 중 뭘 보냈는지 미리 암호화해보고 비교하면 바로 드러납니다.</strong> 해결책이 <strong>패딩으로 난수를 섞는 확률적 암호화</strong>(OAEP)입니다.</p>
+    <p><strong>CCA가 현실적인 이유 — 패딩 오라클.</strong> "공격자가 복호화를 시킬 수 있다니 비현실적"이라 느껴지지만, 실제로는 쉽게 생깁니다. 서버가 잘못된 암호문을 받았을 때 <strong>"패딩 오류"와 "복호화 실패"를 다르게 응답하면</strong>, 공격자는 암호문을 조금씩 바꿔 보내며 그 차이만으로 <strong>평문을 한 바이트씩 알아냅니다.</strong> 키를 몰라도 됩니다. 서버가 <strong>본인도 모르게 복호화 신탁(oracle) 역할</strong>을 해준 셈입니다.</p>
+    <p><strong>그래서 대응의 핵심이 두 개입니다.</strong> ① <strong>오류를 구별하지 못하게</strong> 만들기(메시지·응답 시간 통일) ② 애초에 <strong>변조된 암호문은 복호화 시도조차 안 하기</strong> — 이게 <strong>AEAD</strong>입니다. AES-GCM은 복호화 전에 인증 태그를 먼저 검증해서, 태그가 안 맞으면 <strong>아무 정보도 흘리지 않고 즉시 거부</strong>합니다.</p>
+    <p><strong>함정 1 — "CCA는 이론적 공격"으로 쓰면 감점입니다.</strong> 패딩 오라클·BEAST 같은 <strong>실제 대규모 취약점</strong>이 CCA입니다. 실전 기준은 <strong>IND-CCA2</strong>입니다.</p>
+    <p><strong>함정 2 — 대응을 "키 길이 늘리기"로만 쓰면 부족합니다.</strong> 이 공격들은 <strong>키를 무차별 대입하는 게 아니라 구조와 구현의 틈</strong>을 파고듭니다. 키 2048비트여도 패딩 오라클이 있으면 뚫립니다. <strong>운영 모드와 구현</strong>이 대응의 중심이라는 점을 쓰세요.</p>
+  </div></details>
+</section>
+
+<section id="q137-5" class="ans" data-group="137" data-item="q137-5" data-title="GNN">
+  <h3>137-5. GNN(그래프 신경망)</h3>
+  <div class="prog"><button class="pbtn" data-v="1">골격 외움</button><button class="pbtn" data-v="2">손으로 써봄</button><span class="sync" data-sync></span></div>
+  <div class="sheet">
+    <div class="sheet-top"><span class="tag t">D 구성형</span><span class="tag">10점</span><span class="tag">9분</span><span class="num">제137회 5번 · 인공지능</span></div>
+    <div class="q"><b>문 5)</b> GNN(Graph Neural Network)을 설명하시오.</div>
+    <div class="body-wrap">
+      <h4>I. 개요</h4>
+      <p>1. 배경 : CNN·RNN은 <strong>격자·순서 구조</strong>를 전제하므로, 소셜 네트워크·분자·거래망 같은 <strong>비정형 관계 데이터</strong>에 직접 적용 불가</p>
+      <p>2. 정의 : <strong>GNN</strong>이란 노드와 엣지로 구성된 그래프에서 <strong>이웃 노드의 정보를 반복 집계(Message Passing)</strong>하여 노드·엣지·그래프의 표현(임베딩)을 학습하는 신경망</p>
+      <h4>II. 동작 원리 및 주요 모델</h4>
+<pre>  1층 : 직접 이웃의 정보를 모음        (   B  )
+  2층 : 이웃의 이웃까지 반영              \
+  L층 : L-hop 범위의 구조를 표현      ( A ) --- ( C )   A의 임베딩 =
+                                          /            f(A, 집계(B, C, D))
+  ① Message : 이웃 특성 변환         (   D  )
+  ② Aggregate: 합·평균·최대·어텐션으로 통합  (순서 무관 = 순열 불변)
+  ③ Update  : 자신의 표현 갱신
+  ④ Readout : 그래프 전체 표현 산출 (그래프 분류 시)</pre>
+      <div class="tw"><table><thead><tr><th>모델</th><th>집계 방식</th><th>특징</th></tr></thead><tbody>
+        <tr><td><strong>GCN</strong></td><td>차수로 정규화한 <strong>가중 평균</strong></td><td>기본형, 단순·효율. <strong>전이적</strong>(학습 시 그래프 필요)</td></tr>
+        <tr><td><strong>GraphSAGE</strong></td><td>이웃 <strong>샘플링</strong> 후 집계</td><td><strong>귀납적</strong> — 새 노드에도 적용 가능, 대규모 확장</td></tr>
+        <tr><td><strong>GAT</strong></td><td><strong>어텐션</strong>으로 이웃별 가중치 학습</td><td>중요한 이웃에 집중, 해석성 향상</td></tr>
+      </tbody></table></div>
+      <div class="tw"><table><thead><tr><th>수행 과제</th><th>예시</th></tr></thead><tbody>
+        <tr><td>노드 분류</td><td>계정의 사기 여부 판정</td></tr>
+        <tr><td>링크 예측</td><td>추천(사용자–상품 연결 예측)</td></tr>
+        <tr><td>그래프 분류</td><td>분자 구조의 독성 여부(신약 탐색)</td></tr>
+      </tbody></table></div>
+      <h4>III. 한계 및 고려사항</h4>
+      <p>1. <strong>과평활화(Over-smoothing)</strong> : 층을 깊게 쌓으면 모든 노드 표현이 유사해져 변별력 상실 → 통상 <strong>2~3층</strong>, 잔차 연결·정규화 병행</p>
+      <p>2. <strong>확장성</strong> : 이웃 수가 지수적으로 증가(이웃 폭발) → <strong>샘플링·미니배치·그래프 분할</strong> 필요</p>
+    </div>
+    <div class="end">끝.</div>
+  </div>
+  <ul class="chips"><li>Message Passing</li><li>순열 불변성</li><li>GCN / GraphSAGE / GAT</li><li>전이적 vs 귀납적</li><li>노드분류·링크예측·그래프분류</li><li>과평활화</li><li>이웃 폭발</li><li>Readout</li></ul>
+  <details><summary>쉬운 설명 · 자주 틀리는 함정</summary><div class="det-in">
+    <p><strong>핵심 아이디어 한 문장 — "너를 알려면 네 친구들을 보면 된다".</strong> GNN은 어떤 노드를 이해할 때 <strong>자기 정보 + 이웃들의 정보</strong>를 합칩니다. 그리고 이 과정을 두세 번 반복하면, <strong>친구의 친구</strong>까지 자연스럽게 반영됩니다.</p>
+    <p><strong>사기 탐지로 보면 명확합니다.</strong> 어떤 계정 하나만 보면 정상입니다 — 가입일도 멀쩡하고 거래액도 평범하죠. 그런데 <strong>이 계정이 거래하는 상대들</strong>을 보니 전부 사기 계정입니다. 계정 자체의 속성으로는 절대 못 잡고, <strong>관계를 봐야</strong> 잡힙니다. 이게 GNN이 금융·보험에서 실제로 쓰이는 이유입니다.</p>
+    <p><strong>"순열 불변"이 왜 중요한가.</strong> 이미지는 픽셀 순서가 정해져 있고 문장은 단어 순서가 있습니다. 그런데 <strong>내 친구 목록에는 순서가 없습니다.</strong> A·B·C 순으로 읽든 C·B·A 순으로 읽든 <strong>같은 결과가 나와야</strong> 합니다. 그래서 집계에 <strong>합·평균·최대</strong>처럼 순서와 무관한 연산을 씁니다. 이 제약이 GNN 설계의 출발점입니다.</p>
+    <p><strong>세 모델의 차이를 회의에 비유하면.</strong> <strong>GCN</strong>은 "모든 참석자 의견을 균등 평균" — 목소리 큰 사람(연결 많은 노드)의 영향을 차수로 나눠 억제합니다. <strong>GAT</strong>는 "중요한 사람 말에 더 비중" — 어텐션으로 가중치를 <strong>학습</strong>합니다. <strong>GraphSAGE</strong>는 "참석자가 너무 많으니 <strong>몇 명만 샘플링</strong>해서 듣기" — 그래서 대규모 그래프와 <strong>처음 보는 노드</strong>에도 씁니다.</p>
+    <p><strong>과평활화가 재미있는 한계입니다.</strong> 딥러닝은 보통 층을 쌓으면 좋아지는데, GNN은 <strong>반대</strong>입니다. 층을 10개 쌓으면 정보가 그래프 전체로 퍼져 <strong>모든 노드가 결국 "그래프 평균"에 수렴</strong>합니다. 전교생이 서로 계속 대화하면 <strong>결국 다 같은 의견</strong>이 되는 것과 같습니다. 그래서 GNN은 <strong>얕게(2~3층)</strong> 씁니다 — 이 사실을 아는 답안은 드물어 변별력이 큽니다.</p>
+    <p><strong>함정 — "그래프 데이터에 쓰는 딥러닝"으로만 쓰면 6점입니다.</strong> <strong>Message Passing 3단계</strong>와 <strong>순열 불변</strong>을 넣어야 원리를 이해한 답안이 됩니다.</p>
+  </div></details>
+</section>
+
+<section id="q137-6" class="ans" data-group="137" data-item="q137-6" data-title="AI 거버넌스">
+  <h3>137-6. AI 거버넌스</h3>
+  <div class="prog"><button class="pbtn" data-v="1">골격 외움</button><button class="pbtn" data-v="2">손으로 써봄</button><span class="sync" data-sync></span></div>
+  <div class="sheet">
+    <div class="sheet-top"><span class="tag t">D 구성형</span><span class="tag">10점</span><span class="tag">9분</span><span class="num">제137회 6번 · AI 거버넌스</span></div>
+    <div class="q"><b>문 6)</b> AI 거버넌스(Artificial Intelligence Governance)를 설명하시오.</div>
+    <div class="body-wrap">
+      <h4>I. 개요</h4>
+      <p>1. 배경 : AI의 편향·환각·오작동이 <strong>법적 책임과 사회적 위험</strong>으로 현실화되어, 기술 통제가 아닌 <strong>조직 차원의 통제 체계</strong>가 요구됨</p>
+      <p>2. 정의 : <strong>AI 거버넌스</strong>란 AI의 <strong>기획–개발–배포–운영–폐기</strong> 전 주기에서 위험을 통제하고 <strong>신뢰성·책임성·규제 준수</strong>를 확보하기 위한 조직·정책·프로세스·기술의 총체</p>
+      <h4>II. 구성 체계 (3단 프레임)</h4>
+      <div class="tw"><table><thead><tr><th>구분</th><th>구성 요소</th><th>내용</th></tr></thead><tbody>
+        <tr><td><strong>관리적</strong></td><td>조직·정책</td><td><strong>AI 윤리위원회</strong>, 책임자(CAIO) 지정, AI 윤리원칙·내부 지침, 역할·책임(RACI)</td></tr>
+        <tr><td rowspan="2"><strong>기술적</strong></td><td>프로세스</td><td><strong>AI 영향평가</strong>, 단계별 <strong>검토 게이트</strong>, 데이터 품질·편향 검증, 배포 승인</td></tr>
+        <tr><td>도구</td><td><strong>XAI</strong>(LIME·SHAP), 편향 탐지, <strong>모델 레지스트리</strong>, 드리프트 모니터링(MLOps 연계)</td></tr>
+        <tr><td><strong>제도적</strong></td><td>규제 준수</td><td><strong>EU AI Act</strong>(위험 4등급), <strong>ISO/IEC 42001</strong> 인증, <strong>NIST AI RMF</strong>, 국내 AI 기본법·개인정보보호법</td></tr>
+      </tbody></table></div>
+<pre>[기획] -&gt; [개발] -&gt; [검증] -&gt; [배포] -&gt; [운영] -&gt; [폐기]
+   ▨        ▨         ▨        ▨        ▨
+   └─ 각 단계에 검토 게이트 : 통과 못하면 다음 단계로 못 감
+                    :
+        [ AI 윤리위원회 · 책임자 ]  &lt;- 게이트를 세울 실제 권한이 핵심</pre>
+      <h4>III. 성공 요건</h4>
+      <p>1. <strong>실질적 권한</strong> : 위원회가 <strong>배포를 막을 수 있어야</strong> 거버넌스이며, 권고만 하면 문서로 남는 형식에 그침</p>
+      <p>2. <strong>MLOps와의 결합</strong> : 거버넌스 요구(편향 검증·설명 로그·드리프트 감시)를 <strong>파이프라인에 자동화</strong>해야 지속 가능 → 수작업 검토는 반드시 생략됨</p>
+    </div>
+    <div class="end">끝.</div>
+  </div>
+  <ul class="chips"><li>AI 생애주기 거버넌스</li><li>AI 윤리위원회</li><li>AI 영향평가</li><li>검토 게이트</li><li>EU AI Act 위험 4등급</li><li>ISO/IEC 42001</li><li>NIST AI RMF</li><li>MLOps 연계</li></ul>
+  <details><summary>쉬운 설명 · 자주 틀리는 함정</summary><div class="det-in">
+    <p><strong>비유 — 신약 허가 절차.</strong> 제약사가 약을 만들었다고 바로 팔 수 없습니다. <strong>임상 단계마다 심사를 통과</strong>해야 하고, 팔기 시작한 뒤에도 <strong>부작용을 계속 보고</strong>해야 합니다. AI 거버넌스가 하려는 게 정확히 이겁니다 — <strong>"만들었으니 쓴다"를 "검증했으니 쓴다"로 바꾸는 것</strong>입니다.</p>
+    <p><strong>왜 기술만으로 안 되나.</strong> 편향 탐지 도구를 사면 "우리 채용 AI가 특정 집단을 15% 덜 통과시킨다"는 <strong>숫자는 나옵니다.</strong> 그런데 그 숫자를 보고 <strong>"출시를 멈출 사람"</strong>이 없으면 아무 일도 안 일어납니다. 그래서 거버넌스의 절반은 <strong>조직과 권한</strong>입니다. 답안에서 관리적 항목을 먼저 쓰는 게 맞습니다.</p>
+    <p><strong>세 규범을 구분하면 138회 1·3번까지 같이 해결됩니다.</strong> <strong>EU AI Act = 법</strong>(위반 시 과징금, 위험을 4등급으로 나눠 고위험은 사전 적합성 평가), <strong>ISO/IEC 42001 = 인증</strong>(체계를 갖췄음을 제3자가 증명), <strong>NIST AI RMF = 지침</strong>(어떻게 할지 알려주는 자발적 프레임워크). 실무는 "RMF로 방법을 배우고, 42001로 인증받아, AI Act에 대응"하는 3단 구성입니다.</p>
+    <p><strong>영향평가가 기존 위험평가와 다른 점.</strong> 정보보안의 위험평가는 <strong>"우리 회사가 입을 피해"</strong>를 봅니다. AI 영향평가는 <strong>"이 AI가 이용자와 사회에 미칠 영향"</strong>까지 봅니다. 대출 심사 AI가 특정 지역을 불리하게 판정하는 건 회사 손해가 아니라 <strong>그 지역 주민의 피해</strong>인데, 이걸 평가 대상에 넣는 게 차이입니다.</p>
+    <p><strong>실무에서 가장 자주 실패하는 지점.</strong> 거버넌스 문서를 훌륭하게 만들어 놓고 <strong>수작업 체크리스트로 운영</strong>하는 경우입니다. 프로젝트가 바빠지면 <strong>그 체크리스트는 100% 생략됩니다.</strong> 그래서 편향 검증·설명 로그를 <strong>CI 파이프라인에 넣어 통과 못 하면 배포가 안 되게</strong> 만드는 게 실전 해법입니다. 이 한 단락이 답안의 무게를 만듭니다.</p>
+    <p><strong>함정 — "AI 윤리"로만 쓰면 감점입니다.</strong> 윤리원칙은 거버넌스의 <strong>일부</strong>입니다. <strong>생애주기·프로세스·조직 권한·규제 준수</strong>까지 묶어야 거버넌스이고, 3단 프레임(관리적·기술적·제도적)으로 쓰면 균형이 보증됩니다.</p>
+  </div></details>
+</section>
+<section id="q137-7" class="ans" data-group="137" data-item="q137-7" data-title="트랜스포머와 MoE">
+  <h3>137-7. 트랜스포머와 MoE</h3>
+  <div class="prog"><button class="pbtn" data-v="1">골격 외움</button><button class="pbtn" data-v="2">손으로 써봄</button><span class="sync" data-sync></span></div>
+  <div class="sheet">
+    <div class="sheet-top"><span class="tag t">B 비교형</span><span class="tag">10점</span><span class="tag">9분</span><span class="num">제137회 7번 · 인공지능</span></div>
+    <div class="q"><b>문 7)</b> 트랜스포머(Transformer)와 MoE(Mixture of Experts)를 설명하시오.</div>
+    <div class="body-wrap">
+      <h4>I. 개요</h4>
+      <p>1. 정의 : <strong>트랜스포머</strong>는 <strong>셀프 어텐션</strong>으로 시퀀스 내 모든 토큰 간 관계를 병렬 계산하는 구조이고, <strong>MoE</strong>는 그 <strong>FFN 층을 다수 전문가로 분할</strong>해 토큰별로 일부만 활성화하는 <strong>희소 확장 구조</strong></p>
+      <p>2. 관계 : 양자는 대립 개념이 아니라 <strong>MoE가 트랜스포머의 FFN을 대체</strong>하는 <strong>포함 관계</strong></p>
+      <h4>II. 구조 및 핵심 요소</h4>
+      <div class="tw"><table><thead><tr><th>구분</th><th>구성 요소</th><th>역할</th></tr></thead><tbody>
+        <tr><td rowspan="3">트랜스포머</td><td><strong>Self-Attention</strong> (Q·K·V)</td><td>토큰 간 연관도를 계산해 문맥 반영. 복잡도 <strong>O(n²)</strong></td></tr>
+        <tr><td><strong>Multi-Head</strong></td><td>여러 관점의 관계를 병렬 학습</td></tr>
+        <tr><td><strong>위치 인코딩</strong>, FFN, 잔차+LayerNorm</td><td>순서 정보 부여, 비선형 변환, 학습 안정화</td></tr>
+        <tr><td rowspan="2">MoE</td><td><strong>Router(Gating)</strong></td><td>토큰별로 상위 <strong>k개 전문가</strong>만 선택 (통상 k=1~2)</td></tr>
+        <tr><td><strong>Experts</strong> (다수 FFN)</td><td>각기 다른 패턴 담당 → <strong>희소 활성화</strong></td></tr>
+      </tbody></table></div>
+<pre>[Dense 트랜스포머]              [MoE 트랜스포머]
+  토큰 --&gt; Attention              토큰 --&gt; Attention
+            |                                |
+        [ FFN 1개 ]                     [ Router ] 토큰별 선택
+            |                          /    |    \
+        전체 파라미터 매번 사용      [E1] [E2] ... [E8]   &lt;- 8개 중 2개만 활성
+                                        \   /
+                                       가중 합
+   파라미터 = 연산량                파라미터 ↑↑ , 연산량은 그대로</pre>
+      <h4>III. 비교 및 도입 시 고려사항</h4>
+      <div class="tw"><table><thead><tr><th>관점</th><th>Dense</th><th>MoE</th></tr></thead><tbody>
+        <tr><td>파라미터 vs 연산</td><td>비례</td><td><strong>파라미터는 크게, 연산은 작게</strong></td></tr>
+        <tr><td>학습 안정성</td><td>안정</td><td><strong>부하 불균형·라우터 붕괴</strong> 위험 → 보조 손실 필요</td></tr>
+        <tr><td>서빙 메모리</td><td>파라미터만큼</td><td><strong>전 전문가 상주 필요</strong> → 메모리 부담 큼</td></tr>
+      </tbody></table></div>
+      <p>※ 고려사항 : <strong>부하 분산 손실(Load Balancing Loss)</strong>로 특정 전문가 편중을 억제하고, <strong>전문가 병렬</strong> 시 노드 간 <strong>통신(All-to-All) 비용</strong>이 병목이 됨</p>
+    </div>
+    <div class="end">끝.</div>
+  </div>
+  <ul class="chips"><li>Self-Attention (Q·K·V)</li><li>Multi-Head</li><li>위치 인코딩</li><li>O(n²) 복잡도</li><li>Router / Gating</li><li>희소 활성화</li><li>Top-k 라우팅</li><li>부하 분산 손실</li></ul>
+  <details><summary>쉬운 설명 · 자주 틀리는 함정</summary><div class="det-in">
+    <p><strong>트랜스포머의 셀프 어텐션 — 문장 속 대명사 찾기.</strong> "그 남자가 가방을 들었는데 <strong>그것이</strong> 무거웠다"에서 '그것'은 가방입니다. RNN은 왼쪽부터 순서대로 읽으며 기억을 이어가야 하니 멀어지면 잊습니다. 어텐션은 <strong>모든 단어를 동시에 놓고 서로 얼마나 관련있는지 점수를 매깁니다.</strong> '그것'과 '가방'의 점수가 높게 나오면 연결이 잡히죠. 거리가 멀어도 <strong>한 번에</strong> 봅니다.</p>
+    <p><strong>대가는 O(n²)입니다.</strong> 모든 단어 쌍을 다 비교하니, 문장이 2배 길어지면 계산은 <strong>4배</strong>가 됩니다. 긴 문서를 넣기 어려운 이유이고, 그래서 컨텍스트 길이가 곧 비용입니다.</p>
+    <p><strong>MoE 비유 — 종합병원.</strong> Dense 모델은 <strong>만능 의사 한 명</strong>이 모든 환자를 봅니다. 실력을 키우려면 그 의사 한 명을 계속 공부시켜야 하고, 환자마다 <strong>모든 지식을 동원</strong>합니다.</p>
+    <p>MoE는 <strong>접수 창구(Router) + 전문 진료과 8개</strong> 구조입니다. 환자가 오면 접수에서 "이건 정형외과와 재활의학과로" 하고 <strong>2곳만 보냅니다.</strong> 병원 전체 지식은 8배로 늘었는데, <strong>환자 한 명당 소모되는 진료는 2/8</strong>입니다. 이게 "파라미터는 크게, 연산은 작게"의 정체입니다.</p>
+    <p><strong>MoE의 실제 골칫거리 두 개.</strong></p>
+    <ul>
+      <li><strong>부하 불균형</strong> — 접수 창구가 <strong>편한 과로만 계속 보냅니다.</strong> 인기 없는 과는 환자를 못 받아 실력이 안 늘고, 결국 <strong>죽은 전문가</strong>가 됩니다(라우터 붕괴). 그래서 "골고루 보내라"는 <strong>보조 손실</strong>을 억지로 붙입니다.</li>
+      <li><strong>메모리</strong> — 환자 한 명당 2개 과만 쓰더라도, <strong>8개 과 전부가 병원에 상주</strong>해야 합니다. 그래서 추론 연산은 싸지만 <strong>GPU 메모리는 전체 파라미터만큼</strong> 듭니다. "MoE가 무조건 싸다"가 아닌 이유입니다.</li>
+    </ul>
+    <p><strong>함정 1 — 둘을 병렬 비교하면 감점입니다.</strong> "트랜스포머 vs MoE"가 아니라 <strong>MoE는 트랜스포머의 한 부품(FFN)을 바꾼 것</strong>입니다. 정의 2번에 포함 관계를 명시하세요.</p>
+    <p><strong>함정 2 — 어텐션까지 MoE로 바꾼다고 쓰면 틀립니다.</strong> 통상 MoE는 <strong>FFN 층</strong>에 적용하고 <strong>어텐션은 그대로</strong> 둡니다.</p>
+  </div></details>
+</section>
+
+<section id="q137-8" class="ans" data-group="137" data-item="q137-8" data-title="AI 신뢰성 검·인증 제도">
+  <h3>137-8. AI 신뢰성 검·인증 제도(CAT)</h3>
+  <div class="prog"><button class="pbtn" data-v="1">골격 외움</button><button class="pbtn" data-v="2">손으로 써봄</button><span class="sync" data-sync></span></div>
+  <div class="sheet">
+    <div class="sheet-top"><span class="tag t">C 절차형</span><span class="tag">10점</span><span class="tag">9분</span><span class="num">제137회 8번 · AI 거버넌스</span></div>
+    <div class="q"><b>문 8)</b> AI 신뢰성 검인증 제도(CAT)를 설명하시오.</div>
+    <div class="body-wrap">
+      <h4>I. 개요</h4>
+      <p>1. 배경 : AI 제품의 신뢰성을 <strong>공급자 자체 주장</strong>에만 의존할 수 없어, <strong>제3자가 시험·확인</strong>하는 제도적 장치가 요구됨</p>
+      <p>2. 정의 : <strong>AI 신뢰성 검·인증</strong>이란 AI 시스템이 <strong>신뢰성 요구사항</strong>(투명성·견고성·공정성·책임성 등)을 충족하는지 <strong>표준 기준에 따라 시험·평가</strong>하고 그 결과를 공식 확인해 주는 제도로, 국내에서는 <strong>과기정통부 정책에 따라 TTA</strong>가 운영</p>
+      <h4>II. 검증과 인증의 구분 및 절차</h4>
+      <div class="tw"><table><thead><tr><th>구분</th><th>검증(Verification)</th><th>인증(Certification)</th></tr></thead><tbody>
+        <tr><td>대상</td><td>개별 신뢰성 항목·성능</td><td>신뢰성 요구사항 <strong>전반</strong></td></tr>
+        <tr><td>산출</td><td><strong>시험성적서</strong></td><td><strong>인증서</strong> + 사후관리</td></tr>
+        <tr><td>용도</td><td>특정 항목 입증</td><td>대외 신뢰 확보, <strong>조달·공공 도입</strong> 근거</td></tr>
+      </tbody></table></div>
+<pre>[신청] --&gt; [시험계획 수립] --&gt; [시험·평가] --&gt; [심의] --&gt; [발급] --&gt; [사후관리]
+              (평가기준 확정)      (문서심사        (위원회)   (성적서/     (변경 시
+                                    + 시험)                    인증서)      재평가)</pre>
+      <div class="tw"><table><thead><tr><th>평가 영역(예)</th><th>확인 내용</th></tr></thead><tbody>
+        <tr><td>데이터 품질</td><td>수집·라벨링 절차, 대표성, 편향 검토</td></tr>
+        <tr><td>모델 성능·견고성</td><td>정확도, 적대적 입력·이상 입력 내성</td></tr>
+        <tr><td>투명성·설명성</td><td>모델 문서화, 판단 근거 제공 여부</td></tr>
+        <tr><td>관리 체계</td><td>생애주기 관리, 사고 대응, 책임 소재</td></tr>
+      </tbody></table></div>
+      <h4>III. 의의 및 한계</h4>
+      <p>1. <strong>의의</strong> : 공공·조달에서 <strong>신뢰성 입증 수단</strong>으로 활용되고, <strong>EU AI Act</strong>의 적합성 평가 및 <strong>ISO/IEC 42001</strong> 인증과 상호 보완</p>
+      <p>2. <strong>한계</strong> : 인증은 <strong>특정 시점·특정 버전</strong>에 대한 확인 → 모델 재학습·드리프트 시 유효성이 약화되므로 <strong>사후관리와 재평가 주기</strong> 설계가 필수</p>
+    </div>
+    <div class="end">끝.</div>
+  </div>
+  <ul class="chips"><li>AI 신뢰성 검·인증</li><li>TTA 운영</li><li>검증(시험성적서) / 인증(인증서)</li><li>신뢰성 요구사항</li><li>사후관리·재평가</li><li>EU AI Act 적합성 평가</li><li>ISO/IEC 42001</li></ul>
+  <details><summary>쉬운 설명 · 자주 틀리는 함정</summary><div class="det-in">
+    <div class="note"><p><b>먼저 짚을 것.</b> 이 문항은 <b>국내 제도</b>라 명칭·평가 항목 구성이 운영 지침 개정에 따라 바뀝니다. 위 답안은 제도의 <b>골격</b>(검증/인증 구분, 절차, 평가 영역)으로 구성했습니다. <b>CAT의 정확한 영문 명칭과 최신 평가 항목은 TTA 시행 지침으로 확인</b>하시고, 답안에는 확실한 것(운영기관·검증/인증 구분·절차)을 중심으로 쓰는 게 안전합니다. 제가 확인 없이 약어를 풀어 쓰지 않은 이유입니다.</p></div>
+    <p><strong>비유 — KC 인증.</strong> 전기 제품에 KC 마크가 붙어 있으면, 소비자가 <strong>회로를 뜯어보지 않고도</strong> 안전 기준을 통과했다고 신뢰합니다. AI 신뢰성 검·인증은 같은 일을 AI에 하려는 겁니다 — 발주기관이 <strong>모델을 직접 검증할 능력이 없어도</strong> 신뢰성을 판단할 근거를 주는 것이죠.</p>
+    <p><strong>검증과 인증의 차이를 한 줄로.</strong> <strong>검증은 "이 항목을 시험해봤다"</strong>는 성적표이고, <strong>인증은 "전반적으로 기준을 충족한다"</strong>는 자격증입니다. 시험 성적표는 점수만 알려주고, 자격증은 <strong>유지 조건과 사후관리</strong>가 따라붙습니다.</p>
+    <p><strong>이 제도의 근본적 어려움 — AI는 변합니다.</strong> 전기 제품은 인증받은 회로가 <strong>3년 뒤에도 같습니다.</strong> 그런데 AI는 <strong>재학습하면 다른 모델</strong>이 되고, 재학습을 안 해도 <strong>세상이 변하면 성능이 떨어집니다</strong>(드리프트 — 138-8·139-8과 연결). 그래서 "인증받은 AI"라는 말이 <strong>어느 시점의 어느 버전</strong>을 뜻하는지가 항상 문제입니다. III에 이 한계를 쓰면 답안이 확실히 올라갑니다.</p>
+    <p><strong>세 규범과의 위치.</strong> <strong>ISO/IEC 42001</strong>은 <strong>조직의 관리 체계</strong>를 인증하고, <strong>AI 신뢰성 검·인증</strong>은 <strong>제품·시스템</strong>을 시험합니다. <strong>EU AI Act</strong>는 고위험 AI에 <strong>적합성 평가를 법으로 요구</strong>합니다. 즉 조직 인증 + 제품 인증 + 법적 요구가 <strong>서로 다른 층</strong>이라는 점을 쓰면 137-6(AI 거버넌스)과 자연스럽게 이어집니다.</p>
+    <p><strong>함정 — 성능 인증으로만 쓰면 감점입니다.</strong> 정확도만 보는 게 아니라 <strong>데이터 품질·편향·설명성·관리 체계</strong>까지 봅니다. "신뢰성"은 성능보다 넓은 개념이라는 점이 핵심입니다.</p>
+  </div></details>
+</section>
+
+<section id="q137-9" class="ans" data-group="137" data-item="q137-9" data-title="A/B 테스팅">
+  <h3>137-9. A/B 테스팅</h3>
+  <div class="prog"><button class="pbtn" data-v="1">골격 외움</button><button class="pbtn" data-v="2">손으로 써봄</button><span class="sync" data-sync></span></div>
+  <div class="sheet">
+    <div class="sheet-top"><span class="tag t">C 절차형</span><span class="tag">10점</span><span class="tag">9분</span><span class="num">제137회 9번 · 데이터 분석</span></div>
+    <div class="q"><b>문 9)</b> A/B 테스팅을 설명하시오.</div>
+    <div class="body-wrap">
+      <h4>I. 개요</h4>
+      <p>1. 배경 : 개선안의 효과를 <strong>경험과 직관</strong>으로 판단하면 개선과 악화를 구분할 수 없어, <strong>통계적 근거</strong>가 필요</p>
+      <p>2. 정의 : <strong>A/B 테스팅</strong>이란 사용자를 <strong>무작위로</strong> 대조군(A)과 실험군(B)에 배정하고 <strong>핵심 지표의 차이가 통계적으로 유의한지</strong> 검정하는 온라인 통제 실험</p>
+      <h4>II. 수행 절차 및 통계 요소</h4>
+<pre>[가설 수립] --&gt; [지표 정의(OEC)] --&gt; [표본크기 산정] --&gt; [무작위 배정]
+                                                              |
+       [의사결정] &lt;-- [유의성 검정] &lt;-- [실험 실행(기간 준수)] &lt;+
+                          |
+                          +--&gt; 유의하지 않음 = "차이 없음"이 아니라 "판단 보류"</pre>
+      <div class="tw"><table><thead><tr><th>요소</th><th>내용</th></tr></thead><tbody>
+        <tr><td><strong>OEC</strong></td><td>실험의 성패를 판단하는 <strong>단일 핵심 지표</strong> (지표가 많으면 결론이 안 남)</td></tr>
+        <tr><td>가설</td><td>귀무가설(차이 없음) vs 대립가설(차이 있음)</td></tr>
+        <tr><td><strong>유의수준 α</strong></td><td>1종 오류 — 차이가 없는데 있다고 판단 (통상 0.05)</td></tr>
+        <tr><td><strong>검정력 1−β</strong></td><td>2종 오류의 반대 — 차이가 있을 때 잡아낼 확률 (통상 0.8)</td></tr>
+        <tr><td><strong>MDE</strong></td><td>검출하려는 <strong>최소 효과 크기</strong> — 표본크기를 결정</td></tr>
+        <tr><td>표본크기</td><td>n ∝ σ² / MDE² → <strong>정밀도 2배는 표본 4배</strong> (CLT 근거)</td></tr>
+      </tbody></table></div>
+      <h4>III. 흔한 오류 및 유의사항</h4>
+      <div class="tw"><table><thead><tr><th>오류</th><th>내용 및 대응</th></tr></thead><tbody>
+        <tr><td><strong>조기 종료</strong>(Peeking)</td><td>유의해 보일 때 중단 → <strong>위양성 급증</strong>. 사전 산정 기간·표본 준수</td></tr>
+        <tr><td><strong>다중 비교</strong></td><td>지표 20개를 보면 1개는 우연히 유의 → <strong>보정</strong>(Bonferroni) 또는 OEC 단일화</td></tr>
+        <tr><td>신규성 효과</td><td>초기 호기심으로 지표 상승 → 충분한 기간(주 단위 주기 포함) 확보</td></tr>
+        <tr><td><strong>SRM</strong></td><td>배정 비율이 50:50에서 벗어나면 <strong>실험 자체를 신뢰 불가</strong> → 결과 폐기·원인 조사</td></tr>
+        <tr><td>간섭(네트워크 효과)</td><td>사용자 간 상호작용이 있으면 개별 배정 무효 → <strong>클러스터 단위 배정</strong></td></tr>
+      </tbody></table></div>
+    </div>
+    <div class="end">끝.</div>
+  </div>
+  <ul class="chips"><li>무작위 배정</li><li>OEC</li><li>귀무·대립가설</li><li>유의수준 α / 검정력</li><li>MDE</li><li>p-value</li><li>조기 종료(Peeking)</li><li>다중 비교 보정</li><li>SRM</li></ul>
+  <details><summary>쉬운 설명 · 자주 틀리는 함정</summary><div class="det-in">
+    <p><strong>본질은 "무작위 배정"입니다.</strong> 두 버전의 성과를 비교하는 건 누구나 합니다. 문제는 <strong>비교 대상이 공정한가</strong>죠. "지난주 vs 이번주"로 비교하면 <strong>주말·프로모션·날씨</strong>가 섞입니다. A/B 테스트가 강력한 이유는 <strong>같은 시점에 무작위로 나눠서</strong> 그 모든 외부 요인이 <strong>양쪽에 균등하게</strong> 들어가게 만든 것입니다.</p>
+    <p><strong>왜 마음대로 멈추면 안 되나 — 제일 흔한 사고.</strong> 지표를 매일 들여다보면 <strong>우연히 유의해 보이는 날이 반드시 옵니다.</strong> 동전을 100번 던지는 중에 <strong>"지금 앞면이 7:3이네, 이 동전은 이상해!"</strong> 하고 멈추는 것과 같습니다. 매일 확인하고 좋아 보일 때 종료하면 <strong>실제 위양성률이 5%가 아니라 30%를 넘어갑니다.</strong> 그래서 기간과 표본을 <strong>미리 정하고 그때까지 안 봅니다</strong>(또는 순차 검정 기법을 씁니다).</p>
+    <p><strong>표본이 왜 그렇게 많이 필요한가 — 139-2와 이어집니다.</strong> 표준오차가 <strong>σ/√n</strong>이니, <strong>작은 차이를 잡아내려면 표본이 제곱으로</strong> 늘어납니다. 전환율을 <strong>10% → 12%</strong>(2%p) 확인하는 건 몇천 명이면 되지만, <strong>10% → 10.2%</strong>(0.2%p)를 확인하려면 <strong>100배</strong>가 필요합니다. 그래서 대기업만 미세한 개선을 실험할 수 있습니다.</p>
+    <p><strong>SRM이 실무에서 가장 유용한 점검입니다.</strong> 50:50으로 나눴는데 실제 유입이 <strong>50.8 : 49.2</strong>로 나왔다면 — 표본이 크면 이건 우연이 아닙니다. <strong>배정 로직이나 로깅에 버그</strong>가 있다는 신호입니다. 이때 결과가 아무리 좋아 보여도 <strong>버려야</strong> 합니다. 이 항목을 쓰면 실무 경험이 드러납니다.</p>
+    <p><strong>Canary 배포와의 차이(139-5와 연결).</strong> 메커니즘은 비슷하게 트래픽을 나누지만 <strong>목적이 다릅니다.</strong> Canary는 <strong>기술적 안정성</strong>(에러율·지연)을 보고 문제 없으면 확대하는 것이고, A/B는 <strong>비즈니스 지표</strong>를 통계적으로 비교해 <strong>어느 쪽이 나은지 결정</strong>하는 것입니다.</p>
+    <p><strong>함정 — "유의하지 않음"을 "효과 없음"으로 쓰면 틀립니다.</strong> 표본이 부족했을 수도 있습니다. 정확히는 <strong>"차이를 확인하지 못했다"</strong>이고, 이때는 <strong>신뢰구간의 폭</strong>을 함께 봐야 합니다.</p>
+  </div></details>
+</section>
+<section id="q137-10" class="ans" data-group="137" data-item="q137-10" data-title="데이터 늪">
+  <h3>137-10. 데이터 늪(Data Swamp)</h3>
+  <div class="prog"><button class="pbtn" data-v="1">골격 외움</button><button class="pbtn" data-v="2">손으로 써봄</button><span class="sync" data-sync></span></div>
+  <div class="sheet">
+    <div class="sheet-top"><span class="tag t">E 이슈대응형</span><span class="tag">10점</span><span class="tag">9분</span><span class="num">제137회 10번 · 데이터 관리</span></div>
+    <div class="q"><b>문 10)</b> 데이터 늪(Data Swamp)을 설명하시오.</div>
+    <div class="body-wrap">
+      <h4>I. 개요</h4>
+      <p>1. 배경 : 데이터 레이크의 <strong>스키마 온 리드</strong>(적재 시 구조 강제 없음) 특성을 <strong>거버넌스 없이</strong> 운용한 결과 발생</p>
+      <p>2. 정의 : <strong>데이터 늪</strong>이란 데이터 레이크에 데이터가 적재되어 있으나 <strong>메타데이터·소유권·품질 관리의 부재</strong>로 <strong>무엇이 있는지 알 수 없고 신뢰할 수 없어</strong> 활용 불가능해진 상태</p>
+      <h4>II. 발생 원인 및 증상</h4>
+      <div class="tw"><table><thead><tr><th>구분</th><th>발생 원인</th><th>나타나는 증상</th></tr></thead><tbody>
+        <tr><td>메타데이터</td><td><strong>카탈로그·데이터 사전 부재</strong></td><td>테이블이 무슨 데이터인지 알 수 없음</td></tr>
+        <tr><td>소유권</td><td>담당자·책임 미지정</td><td>"이거 써도 되나요?"에 <strong>답할 사람이 없음</strong></td></tr>
+        <tr><td>품질</td><td>적재 시 <strong>검증 게이트 없음</strong></td><td>중복·결측·규격 불일치 데이터 혼재</td></tr>
+        <tr><td>계보</td><td>Lineage 미관리</td><td>출처·가공 이력 추적 불가 → 신뢰 불가</td></tr>
+        <tr><td>수명주기</td><td>보존·삭제 정책 부재</td><td>유령 데이터 누적, <strong>저장 비용 증가</strong></td></tr>
+        <tr><td>접근통제</td><td>권한·개인정보 분류 미비</td><td><strong>규정 위반 위험</strong> 상시 노출</td></tr>
+      </tbody></table></div>
+<pre>[데이터 레이크]                       [데이터 늪]
+  적재 + 메타데이터 + 소유권       적재만 (관리 없음)
+  + 품질검증 + 계보 + 정책
+        |                                 |
+    찾을 수 있고 믿을 수 있다        있는 줄도 모르고 못 믿는다
+        &lt;- 차이는 저장 기술이 아니라 거버넌스 -&gt;</pre>
+      <h4>III. 방지 방안</h4>
+      <div class="tw"><table><thead><tr><th>구분</th><th>방지 방안</th></tr></thead><tbody>
+        <tr><td>관리적</td><td><strong>도메인 소유권</strong> 부여(데이터 메시), <strong>데이터 계약</strong>·SLA, 보존·폐기 정책</td></tr>
+        <tr><td>기술적</td><td><strong>데이터 카탈로그</strong>·메타데이터 자동 수집, <strong>영역 분리</strong>(Raw–Cleansed–Curated 존), 적재 시 <strong>스키마·품질 게이트</strong>, <strong>계보 추적</strong>·데이터 관측가능성, <strong>레이크하우스</strong>(테이블 포맷으로 스키마 진화·ACID)</td></tr>
+        <tr><td>제도적</td><td>개인정보 분류·태깅 의무화, 접근통제 및 감사 로그</td></tr>
+      </tbody></table></div>
+    </div>
+    <div class="end">끝.</div>
+  </div>
+  <ul class="chips"><li>스키마 온 리드</li><li>데이터 카탈로그</li><li>메타데이터 관리</li><li>Lineage(계보)</li><li>Raw–Cleansed–Curated 존</li><li>데이터 계약</li><li>레이크하우스</li><li>도메인 소유권</li></ul>
+  <details><summary>쉬운 설명 · 자주 틀리는 함정</summary><div class="det-in">
+    <p><strong>비유 — 창고와 쓰레기장.</strong> 같은 물건을 넣어도, <strong>선반에 이름표를 붙이고 목록을 적어두면 창고</strong>이고, <strong>그냥 던져 넣으면 쓰레기장</strong>입니다. 물건의 양이나 창고 크기가 아니라 <strong>목록과 담당자가 있는지</strong>가 둘을 가릅니다. 데이터 레이크와 데이터 늪의 차이도 정확히 이것 — <strong>저장 기술은 똑같습니다.</strong></p>
+    <p><strong>왜 이렇게 되나 — 데이터 레이크의 장점이 곧 함정입니다.</strong> 데이터 레이크의 매력은 <strong>"일단 다 넣어두고 나중에 쓸 때 해석한다"</strong>(스키마 온 리드)입니다. DW처럼 미리 설계할 필요가 없어 빠르죠. 그런데 이 "나중에"가 <strong>영원히 오지 않으면</strong> 늪이 됩니다. 넣을 때 아무 규칙이 없으니 3년 뒤엔 <strong>아무도 그 데이터가 뭔지 모릅니다.</strong></p>
+    <p><strong>현장에서 늪을 확인하는 질문 하나.</strong> <strong>"이 테이블 담당자가 누구예요?"</strong> — 답이 안 나오면 이미 늪입니다. 담당자가 없으면 품질을 물을 곳도, 지워도 되는지 물을 곳도 없습니다. 그래서 방지 방안 1번이 기술이 아니라 <strong>소유권</strong>입니다.</p>
+    <p><strong>영역 분리(존)가 실전에서 효과적입니다.</strong> 하나의 레이크를 세 층으로 나눕니다 — <strong>Raw</strong>(원본 그대로, 손대지 않음) / <strong>Cleansed</strong>(정제·표준화 완료) / <strong>Curated</strong>(업무에서 바로 쓰는 확정 데이터). 그러면 "믿고 쓸 수 있는 데이터"의 위치가 명확해집니다. 아무 구분 없는 단일 버킷이 늪의 전형입니다.</p>
+    <p><strong>다른 회차와의 연결.</strong> <strong>138-8 데이터 관측가능성</strong>이 늪을 <strong>조기에 감지</strong>하는 장치이고, <strong>고빈도 답안의 데이터 메시</strong>가 <strong>소유권을 도메인으로 넘기는</strong> 구조적 해법입니다. 이 세 문항을 하나의 이야기로 묶어 외우면 서술형에도 그대로 씁니다.</p>
+    <p><strong>함정 1 — "데이터가 너무 많아서 생긴 문제"로 쓰면 감점입니다.</strong> 양이 아니라 <strong>관리 부재</strong>가 원인입니다. 10TB짜리 잘 관리된 레이크는 늪이 아니고, 100GB짜리 방치된 버킷은 늪입니다.</p>
+    <p><strong>함정 2 — 대응을 도구 도입으로만 쓰면 부족합니다.</strong> 카탈로그 솔루션을 사도 <strong>메타데이터를 채울 담당자가 없으면</strong> 빈 카탈로그가 됩니다. 관리적·제도적 방안까지 3단으로 쓰세요.</p>
+  </div></details>
+</section>
+
+<section id="q137-11" class="ans" data-group="137" data-item="q137-11" data-title="역공학과 재공학">
+  <h3>137-11. 소프트웨어 역공학과 재공학</h3>
+  <div class="prog"><button class="pbtn" data-v="1">골격 외움</button><button class="pbtn" data-v="2">손으로 써봄</button><span class="sync" data-sync></span></div>
+  <div class="sheet">
+    <div class="sheet-top"><span class="tag t">B 비교형</span><span class="tag">10점</span><span class="tag">9분</span><span class="num">제137회 11번 · SW공학</span></div>
+    <div class="q"><b>문 11)</b> 소프트웨어 역공학과 재공학을 설명하시오.</div>
+    <div class="body-wrap">
+      <h4>I. 개요</h4>
+      <p>1. 배경 : 문서가 유실되고 담당자가 부재한 <strong>레거시 시스템</strong>의 유지보수 비용이 급증하여, <strong>3R</strong>(역공학·재공학·재사용) 기법이 요구됨</p>
+      <p>2. 정의 : <strong>역공학</strong>은 완성된 시스템에서 <strong>설계·명세 정보를 추출</strong>하는 활동이고, <strong>재공학</strong>은 기존 시스템을 <strong>기능은 유지하며 품질·유지보수성을 개선</strong>하는 활동</p>
+      <h4>II. 비교</h4>
+      <div class="tw"><table><thead><tr><th>비교 항목</th><th>역공학 (Reverse Engineering)</th><th>재공학 (Re-engineering)</th></tr></thead><tbody>
+        <tr><td>목적</td><td>정보의 <strong>추출·이해</strong></td><td>시스템의 <strong>개선·재구축</strong></td></tr>
+        <tr><td>방향</td><td>구현 → 설계 (<strong>추상화 수준 상승</strong>)</td><td>분석 → 재구성 → <strong>재구현</strong> (순환)</td></tr>
+        <tr><td>산출물</td><td>설계서, 자료구조도, 흐름도, 명세</td><td><strong>개선된 시스템</strong> + 최신 문서</td></tr>
+        <tr><td>기능 변경</td><td>없음 (분석만)</td><td>없음 (<strong>기능 동등성 유지</strong>)</td></tr>
+        <tr><td>관계</td><td>재공학의 <strong>선행 단계로 포함</strong></td><td>역공학 + 재구조화 + 순공학</td></tr>
+        <tr><td>주요 기법</td><td>정적 분석, 디컴파일, 자료 흐름 분석</td><td>재구조화, 모듈화, 마이그레이션, 코드 변환</td></tr>
+      </tbody></table></div>
+<pre>            [ 설계·명세 ]
+             ^           |
+     역공학  |           | 순공학(Forward)
+             |           v
+            [ 소스 코드 ] --재구조화(Restructuring)--&gt; [ 개선된 코드 ]
+
+     재공학 = 역공학 -&gt; (명세 이해·보완) -&gt; 재구조화 -&gt; 순공학  전체 순환</pre>
+      <h4>III. 적용 시 고려사항</h4>
+      <p>1. <strong>기능 동등성 보증</strong> : 재공학의 대전제는 <strong>기존 기능이 그대로 동작하는 것</strong> → <strong>회귀 테스트 세트를 먼저 확보</strong>해야 착수 가능</p>
+      <p>2. <strong>법적 제약</strong> : 타사 제품 역공학은 <strong>저작권·라이선스·계약상 금지 조항</strong>에 저촉될 수 있어 사전 검토 필요</p>
+    </div>
+    <div class="end">끝.</div>
+  </div>
+  <ul class="chips"><li>3R (역공학·재공학·재사용)</li><li>추상화 수준 상승</li><li>순공학(Forward Engineering)</li><li>재구조화(Restructuring)</li><li>기능 동등성</li><li>회귀 테스트</li><li>마이그레이션</li></ul>
+  <details><summary>쉬운 설명 · 자주 틀리는 함정</summary><div class="det-in">
+    <p><strong>비유 — 도면 없는 오래된 집.</strong> 30년 된 집을 고쳐야 하는데 <strong>설계도가 없습니다.</strong></p>
+    <ul>
+      <li><strong>역공학</strong> = 벽을 두드려 보고 배관을 따라가며 <strong>도면을 다시 그리는 일</strong>. 집은 하나도 안 바뀝니다. 결과물은 <strong>도면</strong>입니다.</li>
+      <li><strong>재공학</strong> = 그 도면을 가지고 <strong>배관과 전기를 실제로 교체하는 일</strong>. 방 개수와 용도는 그대로 두고 <strong>속만 튼튼하게</strong> 만듭니다.</li>
+    </ul>
+    <p>즉 <strong>역공학은 재공학의 첫 단계</strong>입니다. 대립 관계로 쓰면 안 되고, <strong>포함 관계</strong>로 써야 합니다.</p>
+    <p><strong>"기능은 그대로"가 왜 그렇게 중요한가.</strong> 재공학은 <strong>새 기능을 넣는 프로젝트가 아닙니다.</strong> 현업 입장에서는 <strong>돈을 쓰는데 화면이 하나도 안 바뀌는</strong> 프로젝트라 설득이 어렵습니다. 그래서 명분이 <strong>유지보수 비용 절감·장애 감소·인력 이탈 대비</strong>가 됩니다. 반대로 "이 기회에 기능도 좀 바꾸자"가 들어오면 <strong>실패 확률이 급등</strong>합니다 — 개선 실패인지 신규 기능 버그인지 구분이 안 되니까요.</p>
+    <p><strong>그래서 실무 순서가 정해져 있습니다.</strong> 착수 전에 <strong>회귀 테스트를 먼저 만듭니다.</strong> "고치기 전과 후의 출력이 같다"를 자동으로 확인할 수 없으면, 코드를 손대는 순간 <strong>무엇이 깨졌는지 알 방법이 없습니다.</strong> 문서도 없는 레거시라면 <strong>현재 동작 자체가 유일한 명세</strong>이기 때문입니다. 이 한 단락이 답안의 실무 무게를 만듭니다.</p>
+    <p><strong>리팩토링과의 차이.</strong> <strong>리팩토링</strong>은 코드 수준의 작은 구조 개선(함수 분리, 이름 변경)이고, <strong>재공학</strong>은 <strong>시스템 수준</strong>(아키텍처 교체, 언어·플랫폼 마이그레이션)입니다. 규모와 범위가 다릅니다 — 139-3? 아니라 <strong>139회 2교시 기술부채</strong> 문항과 이어집니다.</p>
+    <p><strong>함정 1 — 역공학을 "크래킹·불법 분석"으로 쓰면 감점입니다.</strong> 정당한 <strong>유지보수 기법</strong>입니다. 다만 <strong>타사 제품</strong>에 적용할 때 법적 제약이 있다는 점을 III에 한 줄 쓰는 게 균형입니다.</p>
+    <p><strong>함정 2 — 3R을 빼먹지 마세요.</strong> 역공학·재공학·<strong>재사용</strong>이 한 세트이고, 133회 11번에 "유지보수 향상 및 비용절감을 위한 3R"로 직접 출제됐습니다.</p>
+  </div></details>
+</section>
+
+<section id="q137-12" class="ans" data-group="137" data-item="q137-12" data-title="이진 탐색 트리">
+  <h3>137-12. 이진 탐색 트리</h3>
+  <div class="prog"><button class="pbtn" data-v="1">골격 외움</button><button class="pbtn" data-v="2">손으로 써봄</button><span class="sync" data-sync></span></div>
+  <div class="sheet">
+    <div class="sheet-top"><span class="tag t">A 개념형</span><span class="tag">10점</span><span class="tag">9분</span><span class="num">제137회 12번 · 자료구조</span></div>
+    <div class="q"><b>문 12)</b> 이진 탐색 트리를 설명하시오.</div>
+    <div class="body-wrap">
+      <h4>I. 개요</h4>
+      <p>1. 정의 : <strong>이진 탐색 트리(BST)</strong>란 모든 노드에 대해 <strong>왼쪽 서브트리의 모든 값 &lt; 노드 값 &lt; 오른쪽 서브트리의 모든 값</strong>을 만족하는 이진 트리</p>
+      <p>2. 특성 : 비교마다 탐색 범위가 절반으로 줄어 평균 <strong>O(log n)</strong> 탐색이 가능하고, <strong>중위 순회 시 정렬된 순서</strong>가 출력됨</p>
+      <h4>II. 연산 및 삭제 처리</h4>
+<pre>              (50)              탐색 40 : 50과 비교 -&gt; 작으므로 왼쪽
+             /    \                       30과 비교 -&gt; 크므로 오른쪽 -&gt; 40 발견
+          (30)    (70)
+          /  \    /  \          중위 순회 : 20 30 40 50 60 70 80  (정렬됨)
+       (20)(40)(60)(80)</pre>
+      <div class="tw"><table><thead><tr><th>연산</th><th>평균</th><th>최악</th><th>비고</th></tr></thead><tbody>
+        <tr><td>탐색·삽입·삭제</td><td><strong>O(log n)</strong></td><td><strong>O(n)</strong></td><td>최악 = 정렬된 데이터 삽입 시 <strong>편향 트리</strong>(연결 리스트화)</td></tr>
+      </tbody></table></div>
+      <div class="tw"><table><thead><tr><th>삭제 3가지 경우</th><th>처리 방법</th></tr></thead><tbody>
+        <tr><td>자식 없음(리프)</td><td>그냥 제거</td></tr>
+        <tr><td>자식 1개</td><td>자식을 부모에 <strong>직접 연결</strong></td></tr>
+        <tr><td><strong>자식 2개</strong></td><td><strong>중위 후속자</strong>(오른쪽 서브트리의 최솟값) 또는 <strong>중위 선행자</strong>로 값을 대체한 뒤, 그 노드를 삭제</td></tr>
+      </tbody></table></div>
+      <h4>III. 편향 문제 해결 및 비교</h4>
+      <div class="tw"><table><thead><tr><th>구조</th><th>균형 유지 방법</th><th>용도</th></tr></thead><tbody>
+        <tr><td><strong>AVL 트리</strong></td><td>좌우 높이차 ≤ 1, <strong>회전</strong>으로 재균형</td><td>탐색 위주 (엄격한 균형)</td></tr>
+        <tr><td><strong>레드-블랙 트리</strong></td><td>색 규칙으로 느슨한 균형</td><td>삽입·삭제 빈번 (표준 라이브러리 map/set)</td></tr>
+        <tr><td><strong>B-tree / B+tree</strong></td><td>다진 트리, 노드=디스크 블록</td><td><strong>DB 인덱스·파일 시스템</strong></td></tr>
+      </tbody></table></div>
+      <p>※ <strong>해시 테이블과의 비교</strong> : 단건 조회는 해시가 평균 O(1)로 유리하나, <strong>범위 검색·정렬 순회·최근접 값 탐색</strong>은 BST 계열만 가능 → DB 인덱스가 B+tree인 이유</p>
+    </div>
+    <div class="end">끝.</div>
+  </div>
+  <ul class="chips"><li>BST 성질</li><li>중위 순회 = 정렬</li><li>O(log n) / 최악 O(n)</li><li>편향 트리</li><li>중위 후속자</li><li>AVL / 레드-블랙</li><li>B+tree</li><li>범위 검색</li></ul>
+  <details><summary>쉬운 설명 · 자주 틀리는 함정</summary><div class="det-in">
+    <p><strong>비유 — 사전에서 단어 찾기.</strong> 사전을 펼쳐 <strong>중간을 보고</strong> 찾는 단어가 앞이면 앞쪽 절반만, 뒤면 뒤쪽 절반만 봅니다. 1만 페이지 사전도 <strong>14번</strong>이면 찾습니다. BST가 이 방식을 자료구조로 굳힌 것입니다.</p>
+    <p><strong>최악의 경우가 왜 생기나 — 이게 시험 포인트입니다.</strong> 정렬된 데이터 <strong>1, 2, 3, 4, 5</strong>를 순서대로 삽입하면 어떻게 될까요? 1이 뿌리, 2는 1의 오른쪽, 3은 2의 오른쪽... <strong>오른쪽으로만 쭉 뻗은 막대</strong>가 됩니다. 트리가 아니라 <strong>연결 리스트</strong>죠. 탐색이 O(n)으로 떨어집니다.</p>
+    <p>그런데 <strong>실무 데이터는 정렬된 순서로 들어오는 게 아주 흔합니다</strong>(ID 순, 날짜 순). 그래서 <strong>순수 BST는 실무에서 거의 쓰지 않고</strong>, AVL이나 레드-블랙처럼 <strong>스스로 균형을 잡는 트리</strong>를 씁니다. "BST는 개념, 실무는 균형 트리"로 정리하면 됩니다.</p>
+    <p><strong>자식 2개 삭제가 왜 까다로운가.</strong> 노드를 빼면 <strong>자리가 하나인데 자식이 둘</strong>이라 누구를 올릴지 정할 수 없습니다. 해법이 영리합니다 — <strong>지우지 않고 값만 바꿉니다.</strong> BST 성질을 깨지 않는 값이 딱 두 개 있는데, <strong>왼쪽 서브트리의 최댓값</strong>(바로 아래 값) 또는 <strong>오른쪽 서브트리의 최솟값</strong>(바로 위 값)입니다. 그 값을 가져와 덮어쓰고, <strong>원래 그 값이 있던 노드</strong>를 지웁니다. 그 노드는 자식이 <strong>최대 1개</strong>라 쉬운 경우로 환원됩니다.</p>
+    <p><strong>왜 DB 인덱스는 B+tree인가 — 실무에서 가장 중요한 포인트.</strong> 이유는 <strong>디스크</strong>입니다. 디스크는 읽을 때 <strong>블록 단위(수 KB)</strong>로 가져옵니다. 이진 트리는 노드마다 값이 1개라 <strong>한 번 읽어 1개만 비교</strong>합니다 — 깊이가 20이면 디스크 읽기 20번. B+tree는 <strong>한 노드에 수백 개</strong>를 담아 <strong>한 번 읽고 수백 개를 비교</strong>합니다. 그래서 깊이가 3~4로 줄고, 디스크 읽기가 <strong>3~4번</strong>이면 끝납니다.</p>
+    <p><strong>해시와의 갈림길.</strong> <strong>"WHERE id = 5"</strong>는 해시가 빠릅니다. 그런데 <strong>"WHERE age BETWEEN 20 AND 30"</strong> 이나 <strong>"ORDER BY name"</strong>은 해시로 불가능합니다 — 해시는 순서를 없애버리니까요. DB는 범위 검색과 정렬이 필수라 <strong>B+tree</strong>를 씁니다. 이 대비를 쓰면 배점이 확실합니다.</p>
+    <p><strong>함정 — 성질을 "왼쪽 자식 &lt; 부모"로만 쓰면 틀립니다.</strong> <strong>서브트리 전체</strong>가 조건을 만족해야 합니다. 직접 자식만 비교하면 BST가 아닙니다.</p>
+  </div></details>
+</section>
+
+<section id="q137-13" class="ans" data-group="137" data-item="q137-13" data-title="연관 규칙 분석 지표">
+  <h3>137-13. 연관 규칙 분석 지표</h3>
+  <div class="prog"><button class="pbtn" data-v="1">골격 외움</button><button class="pbtn" data-v="2">손으로 써봄</button><span class="sync" data-sync></span></div>
+  <div class="sheet">
+    <div class="sheet-top"><span class="tag t">A 개념형</span><span class="tag">10점</span><span class="tag">9분</span><span class="num">제137회 13번 · 데이터 마이닝</span></div>
+    <div class="q"><b>문 13)</b> 데이터마이닝의 연관 규칙 분석(Association Rule Analysis) 지표를 설명하시오.</div>
+    <div class="body-wrap">
+      <h4>I. 개요</h4>
+      <p>1. 정의 : <strong>연관 규칙 분석</strong>이란 거래 데이터에서 <strong>"X를 사면 Y도 산다"</strong> 형태의 동시 발생 패턴을 찾는 비지도 학습 기법(<strong>장바구니 분석</strong>)</p>
+      <p>2. 필요성 : 규칙 후보가 방대하므로 <strong>3대 지표</strong>로 유용한 규칙만 선별</p>
+      <h4>II. 3대 지표 (규칙 X → Y)</h4>
+      <div class="tw"><table><thead><tr><th>지표</th><th>산식</th><th>의미 / 판정</th></tr></thead><tbody>
+        <tr><td><strong>지지도</strong><br>Support</td><td>P(X∩Y)<br>= X,Y 동시 포함 거래수 ÷ 전체 거래수</td><td>규칙의 <strong>빈도·적용 범위</strong>. 낮으면 우연·희귀 → 사업적 가치 없음</td></tr>
+        <tr><td><strong>신뢰도</strong><br>Confidence</td><td>P(Y|X)<br>= Support(X∩Y) ÷ Support(X)</td><td>X 구매 시 Y도 살 <strong>조건부 확률</strong>. 규칙의 신뢰성</td></tr>
+        <tr><td><strong>향상도</strong><br>Lift</td><td>P(X∩Y) ÷ (P(X)·P(Y))<br>= Confidence ÷ Support(Y)</td><td><strong>독립 대비 배수</strong><br>&gt;1 양의 연관 · =1 <strong>무관</strong> · &lt;1 음의 연관</td></tr>
+      </tbody></table></div>
+<pre>전체 1,000건 · 빵 200건 · 우유 800건 · 빵∩우유 160건
+
+ 지지도(빵→우유) = 160/1000 = 0.16
+ 신뢰도(빵→우유) = 160/200  = 0.80   &lt;- 80%! 좋아 보이지만…
+ 향상도(빵→우유) = 0.80/0.80 = 1.0   &lt;- 우유는 원래 80%가 산다 = 무관!
+
+ 신뢰도만 보면 속는다. 반드시 Lift 로 검증한다.</pre>
+      <h4>III. 도출 절차 및 유의사항</h4>
+      <p>1. <strong>절차</strong> : ① 최소지지도로 <strong>빈발항목집합</strong> 도출(<strong>Apriori</strong> — 빈발집합의 부분집합도 빈발하다는 선험적 원리로 탐색 공간 축소, 대용량은 <strong>FP-Growth</strong>) → ② 최소신뢰도로 규칙 생성 → ③ <strong>Lift</strong>로 최종 선별</p>
+      <p>2. <strong>유의사항</strong> : 상관관계이며 <strong>인과관계가 아님</strong>. 지지도 기준을 낮추면 규칙이 폭증하고, 높이면 <strong>희귀·고가 상품이 탈락</strong> → 업무 목적에 따라 조정</p>
+    </div>
+    <div class="end">끝.</div>
+  </div>
+  <ul class="chips"><li>지지도 / 신뢰도 / 향상도</li><li>Lift = 1 은 무관</li><li>빈발항목집합</li><li>Apriori 선험적 원리</li><li>FP-Growth</li><li>장바구니 분석</li><li>상관 ≠ 인과</li></ul>
+  <details><summary>쉬운 설명 · 자주 틀리는 함정</summary><div class="det-in">
+    <p><strong>이 문제의 전부는 "신뢰도만 보면 속는다"입니다.</strong> 위 답안의 계산 예시가 핵심이니 그것만 확실히 이해하시면 됩니다.</p>
+    <p><strong>세 지표를 편의점 사장 입장으로 바꿔 보면.</strong></p>
+    <ul>
+      <li><strong>지지도</strong> = <strong>"이 조합이 얼마나 자주 팔리나"</strong> — 하루 1건 팔리는 조합으로 매대를 바꿀 수는 없습니다. 사업적 규모의 문제.</li>
+      <li><strong>신뢰도</strong> = <strong>"빵 산 사람 중 몇 %가 우유도 사나"</strong> — 규칙이 얼마나 잘 맞나.</li>
+      <li><strong>향상도</strong> = <strong>"그게 원래 비율보다 높은 건가"</strong> — 진짜 연관인지 검증.</li>
+    </ul>
+    <p><strong>왜 향상도가 필요한가 — 삼각김밥의 함정.</strong> "삼각김밥 → 봉지커피" 신뢰도가 <strong>70%</strong>로 나왔습니다. 대단해 보이죠. 그런데 알고 보니 <strong>우리 가게 손님 전체의 70%가 봉지커피를 삽니다.</strong> 삼각김밥과 아무 관계가 없습니다. <strong>향상도 = 0.70 / 0.70 = 1.0</strong> — 완전 무관입니다.</p>
+    <p>반대 경우도 있습니다. "기저귀 → 맥주" 신뢰도가 <strong>10%</strong>밖에 안 됩니다. 낮아 보이죠. 그런데 전체 손님 중 맥주 구매율이 <strong>2%</strong>라면 — <strong>향상도 = 0.10 / 0.02 = 5배</strong>입니다. <strong>기저귀를 산 사람은 맥주를 5배 더 삽니다.</strong> 이게 진짜 발견입니다. <strong>신뢰도가 낮아도 향상도가 높으면 가치 있는 규칙</strong>이라는 게 요점입니다.</p>
+    <p><strong>Apriori의 아이디어도 한 줄로 쉽습니다.</strong> 상품이 1,000개면 조합은 천문학적입니다. 그런데 <strong>"{빵, 우유, 계란}이 자주 팔린다면 {빵, 우유}도 당연히 자주 팔린다"</strong>는 당연한 사실을 뒤집으면 — <strong>{빵, 우유}가 드물다면 {빵, 우유, 계란}은 볼 필요조차 없습니다.</strong> 이렇게 가지를 쳐서 탐색량을 줄입니다. 이게 선험적(a priori) 원리입니다.</p>
+    <p><strong>함정 1 — 인과로 쓰면 감점입니다.</strong> "기저귀를 사서 맥주를 산다"가 아닙니다. 함께 팔린다는 <strong>관측</strong>일 뿐이고, 원인은 제3의 요인(아이 아빠의 주말 장보기)일 수 있습니다. 128회 8번에 <strong>상관관계와 인과관계</strong>가 직접 출제됐습니다.</p>
+    <p><strong>함정 2 — 지지도 기준의 딜레마를 쓰면 변별력이 큽니다.</strong> 최소지지도를 높이면 <strong>고가·희귀 상품 규칙이 전부 탈락</strong>합니다. 그런데 사업적으로는 명품·가전 같은 <strong>저빈도 고마진 조합</strong>이 더 중요할 수 있습니다. 기준값은 통계가 아니라 <strong>업무 판단</strong>이라는 점을 III에 쓰세요.</p>
+  </div></details>
+</section>
+
 <section id="answers">
   <div class="eyebrow">07 / 모범답안</div>
   <h2>1교시 모범답안 12</h2>
   <p class="lede">각 답안은 <strong>답안지 1면 분량</strong>으로 맞췄습니다. 위의 답안 카드는 시험장에서 그대로 재현할 골격이고, 아래 "쉬운 설명"은 이해용입니다 — 설명으로 이해하고, 카드로 암기하세요. 회차 표기는 사장님이 기출 원문을 주시면 채웁니다.</p>
-  <div class="note"><p><b>기출 대응 현황.</b> 제110~139회 364문항을 확인한 결과, 아래 12개 중 <b>RAG(134회 13번 · 139회 3번)</b>, <b>가명처리(139회 13번 · 134회 11번 PET)</b>, <b>쿠버네티스(133회 12번)</b>가 직접 출제된 주제입니다. 나머지는 최근 출제 흐름(AI 거버넌스 · 데이터 품질 · 공급망 보안 · 프로젝트 관리)에 맞춘 대비용입니다. <b>회차별 전 문항 답안은 139·138회를 완료했고 137회부터 계속 채웁니다.</b></p></div>
+  <div class="note"><p><b>기출 대응 현황.</b> 제110~139회 364문항을 확인한 결과, 아래 12개 중 <b>RAG(134회 13번 · 139회 3번)</b>, <b>가명처리(139회 13번 · 134회 11번 PET)</b>, <b>쿠버네티스(133회 12번)</b>가 직접 출제된 주제입니다. 나머지는 최근 출제 흐름(AI 거버넌스 · 데이터 품질 · 공급망 보안 · 프로젝트 관리)에 맞춘 대비용입니다. <b>회차별 전 문항 답안은 139·138·137회를 완료했고 136회부터 계속 채웁니다.</b></p></div>
 </section>
 <section id="a1" class="ans" data-group="freq" data-item="a1" data-title="CAP 정리와 PACELC">
   <h3>01. CAP 정리와 PACELC</h3>
