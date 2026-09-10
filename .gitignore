@@ -1,0 +1,8 @@
+# 워크플로가 생성하는 배포 산출물
+_site/
+
+# 로컬 작업 파일
+v/
+txt/
+all1.json
+gisul1.json

@@ -1,7 +1,13 @@
 # 정보관리기술사 1교시 학습 노트
 
-> **📖 학습 페이지 → https://claude.ai/code/artifact/5a917a7b-ce47-4bec-bebd-7ba1543804be**
-> PC·모바일 어디서든 열립니다. 진도 체크는 기기 간 동기화됩니다.
+> ## 📖 학습 페이지
+>
+> | 주소 | 진도 체크 |
+> |---|---|
+> | **https://themoka7.github.io/my-gov-license/** | 브라우저별 저장 (localStorage) |
+> | [claude.ai 아티팩트](https://claude.ai/code/artifact/5a917a7b-ce47-4bec-bebd-7ba1543804be) | **기기 간 동기화** (PC에서 체크한 게 휴대폰에도) |
+>
+> 내용은 동일합니다. 기기를 옮겨 다니며 공부하실 거면 아티팩트 쪽을 쓰세요.
 
 제110~139회 **공식 문제지 원문**에서 추출한 1교시 단답형 기출 **364문항**(28개 회차)과,
 시험장에서 그대로 재현할 **답안지 1면 분량 모범답안**을 담은 단일 페이지 학습 자료.
@@ -53,9 +59,33 @@
 | `index.html` | 학습 페이지 본체. 이 파일 하나가 곧 페이지입니다 |
 | `제1NN회 정보관리기술사*.pdf` / `.hwp` | 원본 문제지 (PDF 27종 + HWP 1종) |
 | `tools/extract_1gyosi.py` | 문제지 → 1교시 13문항 파싱 스크립트 |
+| `tools/build_pages.py` | 아티팩트 조각 → 정적 호스팅용 완전한 문서 빌드 |
+| `.github/workflows/pages.yml` | main 푸시 시 GitHub Pages 자동 배포 |
 
 `index.html`은 외부 의존성이 없는 단일 파일입니다. 브라우저로 바로 열어도 동작하며,
 글꼴(Google Fonts)만 네트워크에서 가져옵니다.
+
+### 왜 빌드 단계가 있나
+
+`index.html`은 **Claude Artifact 용 조각**입니다 — `<!doctype>`·`<html>`·`<head>`가 없고,
+아티팩트 플랫폼이 발행할 때 charset·viewport·기본 리셋을 감싸줍니다.
+
+이 파일을 정적 호스팅이 그대로 서빙하면 **quirks 모드로 렌더링되고, viewport 메타가 없어
+모바일에서 데스크톱 폭으로 축소**됩니다. 그래서 `tools/build_pages.py`가 배포 시점에
+완전한 문서로 감싸 `_site/index.html`을 만듭니다. 원본은 하나로 유지하면서 두 곳에
+모두 올바르게 올라가게 하는 장치입니다.
+
+```bash
+python3 tools/build_pages.py   # → _site/index.html
+```
+
+### GitHub Pages 배포
+
+`main`에 `index.html`이 푸시되면 `.github/workflows/pages.yml`이 빌드 후 배포합니다.
+
+**최초 1회만 저장소 설정이 필요합니다** — `Settings → Pages → Build and deployment`의
+**Source를 `GitHub Actions`로** 지정하세요. `Deploy from a branch`로 두면 빌드 단계를
+건너뛰고 조각 파일이 그대로 서빙되어 모바일 레이아웃이 깨집니다.
 
 ## 회차 추가하는 방법
 
