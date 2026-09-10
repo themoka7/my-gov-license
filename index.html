@@ -175,6 +175,16 @@ table.qt .tag{font-size:10px;padding:1px 5px}
   table.qt td:nth-child(2){font-size:13.5px}
 }
 
+.anslink{margin:-2px 0 12px;font-size:13.5px}
+.anslink a{color:var(--mark);text-decoration:none;font-weight:500}
+.rgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:4px;margin:0 0 4px}
+.rgrid a{display:block;text-align:center;font-family:var(--mono);font-size:11.5px;
+  color:var(--pencil);text-decoration:none;padding:5px 2px;border:1px solid var(--rule-soft);
+  border-radius:4px;font-variant-numeric:tabular-nums}
+.rgrid a:hover{color:var(--ink);border-color:var(--rule);background:var(--surface-2)}
+.rgrid a.has{color:var(--mark);border-color:var(--mark);font-weight:500}
+.rgrid a.on{background:var(--surface-2);color:var(--ink)}
+
 /* ---------- bottom pager (mobile) ---------- */
 .pager{position:fixed;bottom:0;left:0;right:0;z-index:38;display:none;gap:1px;
   background:var(--rule-soft);border-top:1px solid var(--rule-soft)}
@@ -202,22 +212,14 @@ footer{border-top:1px solid var(--rule-soft);padding-top:18px;color:var(--faint)
     <li><a href="#glyph"><i>04</i>도해 표준 기호</a></li>
   </ol>
   <div class="nav-h">기출 회차</div>
-  <ol>
-    <li><a href="#r139"><i>139</i>제139회</a></li>
-    <li><a href="#r138"><i>138</i>제138회</a></li>
-    <li><a href="#r137"><i>137</i>제137회</a></li>
-    <li><a href="#r136"><i>136</i>제136회</a></li>
-    <li><a href="#r135"><i>135</i>제135회</a></li>
-    <li><a href="#r134"><i>134</i>제134회</a></li>
-    <li><a href="#r133"><i>133</i>제133회</a></li>
-  </ol>
+  <div class="rgrid"><a href="#r139" class="has">139</a><a href="#r138" class="has">138</a><a href="#r137">137</a><a href="#r136">136</a><a href="#r135">135</a><a href="#r134">134</a><a href="#r133">133</a><a href="#r132">132</a><a href="#r131">131</a><a href="#r130">130</a><a href="#r129">129</a><a href="#r128">128</a><a href="#r127">127</a><a href="#r126">126</a><a href="#r125">125</a><a href="#r124">124</a><a href="#r123">123</a><a href="#r122">122</a><a href="#r121">121</a><a href="#r120">120</a><a href="#r119">119</a><a href="#r118">118</a><a href="#r117">117</a><a href="#r116">116</a><a href="#r114">114</a><a href="#r113">113</a><a href="#r111">111</a><a href="#r110">110</a></div>
   <div id="navGroups"></div>
 </nav>
 
 <main>
 <div class="hero">
   <h1>10점을 9분에 받아내는 1교시 답안</h1>
-  <p>1교시는 지식 시험이 아니라 <strong>속기 시험</strong>입니다. 아는 걸 다 쓰면 떨어지고, 채점 키워드만 골라 1페이지에 배치하면 붙습니다. 이 페이지는 <strong>제133~139회 1교시 기출 91문항 전문</strong>과 답안 골격 12개를 실제 답안지 형태로 담았습니다 — 시험용 답안과 "쉬운 설명"을 분리해 두었으니, 이해는 설명으로 하고 암기는 골격으로 하세요.</p>
+  <p>1교시는 지식 시험이 아니라 <strong>속기 시험</strong>입니다. 아는 걸 다 쓰면 떨어지고, 채점 키워드만 골라 1페이지에 배치하면 붙습니다. 이 페이지는 <strong>제110~139회 1교시 기출 364문항 전문</strong>과 답안 골격 12개를 실제 답안지 형태로 담았습니다 — 시험용 답안과 "쉬운 설명"을 분리해 두었으니, 이해는 설명으로 하고 암기는 골격으로 하세요.</p>
 </div>
 
 <section id="structure">
@@ -460,13 +462,13 @@ V.   결론 및 제언                                    [0.2p / 2점]
 </section>
 <section id="rounds">
   <div class="eyebrow">06 / 기출</div>
-  <h2>회차별 1교시 기출 — 제133~139회</h2>
-  <p class="lede">공식 문제지에서 추출한 <strong>7개 회차 91문항 전문</strong>입니다. 유형 태그는 문제의 동사를 기준으로 분류했으니, 위의 유형별 템플릿과 짝지어 훈련하세요.</p>
+  <h2>회차별 1교시 기출 — 제110~139회</h2>
+  <p class="lede">공식 문제지에서 추출한 <strong>28개 회차 364문항 전문</strong>입니다(제112·115회 미보유). 유형 태그는 문제의 동사를 기준으로 분류했으니, 위의 유형별 템플릿과 짝지어 훈련하세요.</p>
   <div class="note"><p><b>먼저 이걸 하세요.</b> 답안을 외우기 전에, 각 회차 표를 보고 <b>"내가 지금 시험장이라면 어느 3개를 버릴까"</b>를 30초 안에 정하는 훈련부터 하세요. 1교시 점수는 아는 문제를 잘 쓰는 데서 나오는 게 아니라, <b>버릴 문제를 빨리 버리는 데서</b> 나옵니다.</p></div>
 
 <section id="r139" class="round">
   <h3>제139회 <span class="rd">1교시 단답형 · 13문제 중 10문제 선택 · 각 10점</span></h3>
-  <p style="margin:-2px 0 12px;font-size:13.5px"><a href="#g139" style="color:var(--mark);text-decoration:none;font-weight:500">↓ 이 회차 13문항 답안 보기</a></p>
+  <p class="anslink"><a href="#g139">↓ 이 회차 13문항 답안 보기</a></p>
   <div class="tw"><table class="qt"><thead><tr><th>번</th><th>문제</th><th>유형</th></tr></thead><tbody>
     <tr><td class="num">1</td><td>WBS(Work Breakdown Structure) 작성방법</td><td><span class="tag t">절차형</span></td></tr>
     <tr><td class="num">2</td><td>대수의 법칙과 중심극한정리</td><td><span class="tag t">개념형</span></td></tr>
@@ -485,7 +487,7 @@ V.   결론 및 제언                                    [0.2p / 2점]
 </section>
 <section id="r138" class="round">
   <h3>제138회 <span class="rd">1교시 단답형 · 13문제 중 10문제 선택 · 각 10점</span></h3>
-  <p style="margin:-2px 0 12px;font-size:13.5px"><a href="#g138" style="color:var(--mark);text-decoration:none;font-weight:500">↓ 이 회차 13문항 답안 보기</a></p>
+  <p class="anslink"><a href="#g138">↓ 이 회차 13문항 답안 보기</a></p>
   <div class="tw"><table class="qt"><thead><tr><th>번</th><th>문제</th><th>유형</th></tr></thead><tbody>
     <tr><td class="num">1</td><td>미국 국립표준기술연구소에서 발행한 AI RMF(Risk Management Framework)의 개념과 4가지 핵심구조, 7가지 신뢰 가능한 특성을 설명하시오.</td><td><span class="tag t">구성형</span></td></tr>
     <tr><td class="num">2</td><td>프로젝트 위험관리</td><td><span class="tag t">이슈대응형</span></td></tr>
@@ -568,7 +570,7 @@ V.   결론 및 제언                                    [0.2p / 2점]
     <tr><td class="num">7</td><td>정적 SQL(Static SQL)과 동적 SQL(Dynamic SQL) 비교</td><td><span class="tag t">비교형</span></td></tr>
     <tr><td class="num">8</td><td>RIP(Routing Information Protocol)와 OSPF(Open Shortest Path First) 비교</td><td><span class="tag t">비교형</span></td></tr>
     <tr><td class="num">9</td><td>인터미턴트 컴퓨팅(Intermittent Computing)</td><td><span class="tag t">개념형</span></td></tr>
-    <tr><td class="num">10</td><td>스토리지 가상화(Storage Virtualization) 유형별 특징</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">10</td><td>스토리지 가상화(Storage Virtualization) 유형별 특징</td><td><span class="tag t">구성형</span></td></tr>
     <tr><td class="num">11</td><td>개인정보 보호 강화기술(Privacy Enhancing Technology)</td><td><span class="tag t">개념형</span></td></tr>
     <tr><td class="num">12</td><td>고대역 초고속 메모리(High Bandwidth Memory)</td><td><span class="tag t">개념형</span></td></tr>
     <tr><td class="num">13</td><td>RAG(Retrieval Augmented Generation)</td><td><span class="tag t">개념형</span></td></tr>
@@ -578,10 +580,10 @@ V.   결론 및 제언                                    [0.2p / 2점]
   <h3>제133회 <span class="rd">1교시 단답형 · 13문제 중 10문제 선택 · 각 10점</span></h3>
   <div class="tw"><table class="qt"><thead><tr><th>번</th><th>문제</th><th>유형</th></tr></thead><tbody>
     <tr><td class="num">1</td><td>REST API(REpresentational State Transfer Application Programming Interface)에 대하여 설명하시오.</td><td><span class="tag t">개념형</span></td></tr>
-    <tr><td class="num">2</td><td>소프트웨어 테스트 유형 중 뮤테이션 테스트(Mutation Test)에 대하여 설명하시오.</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">2</td><td>소프트웨어 테스트 유형 중 뮤테이션 테스트(Mutation Test)에 대하여 설명하시오.</td><td><span class="tag t">구성형</span></td></tr>
     <tr><td class="num">3</td><td>NoSQL유형과 모델링 절차를 설명하시오.</td><td><span class="tag t">절차형</span></td></tr>
     <tr><td class="num">4</td><td>전자봉투 생성절차와 개봉절차를 설명하시오.</td><td><span class="tag t">절차형</span></td></tr>
-    <tr><td class="num">5</td><td>동형암호(Homomorphic Encryption)의 동작원리와 유형을 설명하시오.</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">5</td><td>동형암호(Homomorphic Encryption)의 동작원리와 유형을 설명하시오.</td><td><span class="tag t">구성형</span></td></tr>
     <tr><td class="num">6</td><td>기술수용모델(TechnologyAcceptanceModel;TAM)의개념과주요구성요소에대하여 설명하시오.</td><td><span class="tag t">구성형</span></td></tr>
     <tr><td class="num">7</td><td>데이터모델링에서CRUD매트릭스(Matrix)를 사용하는목적과이를 표현하는방법에 대하여 설명하시오.</td><td><span class="tag t">절차형</span></td></tr>
     <tr><td class="num">8</td><td>인공지능 신뢰성의 개념과 핵심 속성에 대하여 설명하시오.</td><td><span class="tag t">개념형</span></td></tr>
@@ -590,6 +592,384 @@ V.   결론 및 제언                                    [0.2p / 2점]
     <tr><td class="num">11</td><td>소프트웨어 유지보수 향상 및 비용절감을 위한 3R을 설명하시오.</td><td><span class="tag t">개념형</span></td></tr>
     <tr><td class="num">12</td><td>쿠버네티스(Kubernetes)를 설명하시오.</td><td><span class="tag t">개념형</span></td></tr>
     <tr><td class="num">13</td><td>TCP(TransmissionControlProtocol)프로토콜의3-wayhandshake와4-wayhandshake를 설명하시오.</td><td><span class="tag t">개념형</span></td></tr>
+  </tbody></table></div>
+</section>
+<section id="r132" class="round">
+  <h3>제132회 <span class="rd">1교시 단답형 · 13문제 중 10문제 선택 · 각 10점</span></h3>
+  <div class="tw"><table class="qt"><thead><tr><th>번</th><th>문제</th><th>유형</th></tr></thead><tbody>
+    <tr><td class="num">1</td><td>ISO 31000</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">2</td><td>데이터 거래소</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">3</td><td>베이지안 최적화(Bayesian Optimization)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">4</td><td>대칭 암호화와 비대칭 암호화</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">5</td><td>ISA/IEC 62443</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">6</td><td>큐싱(Qshing)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">7</td><td>ELK(Elasticsearch/Logstash/Kibana) 스택</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">8</td><td>TPM(Trusted Platform Module)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">9</td><td>좋은 소프트웨어가 갖추어야 할 4가지 특징</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">10</td><td>모집단의 특성을 추론하는 점추정과 구간추정 비교</td><td><span class="tag t">비교형</span></td></tr>
+    <tr><td class="num">11</td><td>다중공선성(Multicollinearity)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">12</td><td>블록 스토리지, 파일 스토리지, 오브젝트 스토리지의 데이터 접근방식</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">13</td><td>분산 데이터베이스의 5가지 투명성</td><td><span class="tag t">개념형</span></td></tr>
+  </tbody></table></div>
+</section>
+<section id="r131" class="round">
+  <h3>제131회 <span class="rd">1교시 단답형 · 13문제 중 10문제 선택 · 각 10점</span></h3>
+  <div class="tw"><table class="qt"><thead><tr><th>번</th><th>문제</th><th>유형</th></tr></thead><tbody>
+    <tr><td class="num">1</td><td>디지털 트랜스포메이션(Digital Transformation)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">2</td><td>NFC(Near Field Communication)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">3</td><td>폭포수 개발 방법론과 애자일 개발 방법론의 특징 및 장·단점 비교</td><td><span class="tag t">비교형</span></td></tr>
+    <tr><td class="num">4</td><td>클라우드 컴퓨팅의 Service Model과 Deployment Model 비교</td><td><span class="tag t">비교형</span></td></tr>
+    <tr><td class="num">5</td><td>데이터 차원 축소(Data Dimensionality Reduction)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">6</td><td>정보시스템 감리와 PMO(Project Management Office) 비교</td><td><span class="tag t">비교형</span></td></tr>
+    <tr><td class="num">7</td><td>머신러닝(Machine Learning)과 딥러닝(Deep Learning) 차이</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">8</td><td>오토 스케일링(Auto Scaling)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">9</td><td>독립표본 t-검정(Independent t-test)과 대응표본 t-검정(Paired t-test) 비교</td><td><span class="tag t">비교형</span></td></tr>
+    <tr><td class="num">10</td><td>크리덴셜 스터핑(Credential stuffing)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">11</td><td>데이터 표준화의 필요성과 기대효과</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">12</td><td>객체지향 방법론에서 캡슐화(Encapsulation)와 정보은닉(Information Hiding)</td><td><span class="tag t">절차형</span></td></tr>
+    <tr><td class="num">13</td><td>SBOM(Software Bill of Material)</td><td><span class="tag t">개념형</span></td></tr>
+  </tbody></table></div>
+</section>
+<section id="r130" class="round">
+  <h3>제130회 <span class="rd">1교시 단답형 · 13문제 중 10문제 선택 · 각 10점</span></h3>
+  <div class="tw"><table class="qt"><thead><tr><th>번</th><th>문제</th><th>유형</th></tr></thead><tbody>
+    <tr><td class="num">1</td><td>노코드(no-code)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">2</td><td>데이터베이스 병행 제어 기법 및 필요성</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">3</td><td>요구사항명세서에 기술되어야 하는 항목 설명</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">4</td><td>데이터 거버넌스</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">5</td><td>드론의 보안위협과 대응방안</td><td><span class="tag t">이슈대응형</span></td></tr>
+    <tr><td class="num">6</td><td>블록 암호화 알고리즘</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">7</td><td>6G 이동통신</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">8</td><td>VXLAN(Virtual eXtensible LAN)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">9</td><td>머신러닝 최적화 알고리즘(Optimization Algorithm) 유형 및 장단점</td><td><span class="tag t">구성형</span></td></tr>
+    <tr><td class="num">10</td><td>정보시스템마스터플랜(ISMP)의 기본 구성 내용(단계별 활동, 세부내용, 산출물)</td><td><span class="tag t">절차형</span></td></tr>
+    <tr><td class="num">11</td><td>AHP(Analytic Hierarchy Process) 기법</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">12</td><td>베르누이 분포(Bernoulli distribution)와 기하 분포(Geometric Distribution)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">13</td><td>ISO 21500 구성 모델</td><td><span class="tag t">구성형</span></td></tr>
+  </tbody></table></div>
+</section>
+<section id="r129" class="round">
+  <h3>제129회 <span class="rd">1교시 단답형 · 13문제 중 10문제 선택 · 각 10점</span></h3>
+  <div class="tw"><table class="qt"><thead><tr><th>번</th><th>문제</th><th>유형</th></tr></thead><tbody>
+    <tr><td class="num">1</td><td>디지털 플랫폼 정부의 특징, 구성요소, 기대효과</td><td><span class="tag t">구성형</span></td></tr>
+    <tr><td class="num">2</td><td>정부의 인공지능 윤리기준(과학기술정보통신부 2020.12.23)에서 제시한 인공지능의 3대 기본 원칙 및 10대 핵심 요건</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">3</td><td>AOP(Aspect Oriented Programming)의 정의, 구성, 기대효과</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">4</td><td>정보시스템 감리기준 고시(2021-4호, 2021.1.19)에 의거한 현장감리의 활동, 작업 내용을 기술하고 PMO(Project Management Office)와의 차이점을 설명</td><td><span class="tag t">비교형</span></td></tr>
+    <tr><td class="num">5</td><td>K-Means Clustering과 DBSCAN(Density-BasedSpatial Clustering of Applications withNoise)개념,구성요소,장/단점</td><td><span class="tag t">구성형</span></td></tr>
+    <tr><td class="num">6</td><td>데이터베이스 트랜잭션(Transaction)의 특징</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">7</td><td>소프트웨어 결합도(Coupling)의 종류</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">8</td><td>화이트박스 테스트(White Box Test)와 블랙박스 테스트(Black Box Test)의 비교</td><td><span class="tag t">비교형</span></td></tr>
+    <tr><td class="num">9</td><td>객체지향 프로그래밍의 캡슐화(Encapsulation)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">10</td><td>코드형 인프라스트럭처</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">11</td><td>정보보호 제품 신속 확인제도</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">12</td><td>비직교 다중접속(NOMA, Non-Orthogonal Multiple Access)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">13</td><td>트리정렬(Tree Sort)</td><td><span class="tag t">개념형</span></td></tr>
+  </tbody></table></div>
+</section>
+<section id="r128" class="round">
+  <h3>제128회 <span class="rd">1교시 단답형 · 13문제 중 10문제 선택 · 각 10점</span></h3>
+  <div class="tw"><table class="qt"><thead><tr><th>번</th><th>문제</th><th>유형</th></tr></thead><tbody>
+    <tr><td class="num">1</td><td>WBS(Work Breakdown Structure)에 대하여 설명하시오.</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">2</td><td>IT-ROI 투자 성과평가 모델에 대하여 설명하시오.</td><td><span class="tag t">구성형</span></td></tr>
+    <tr><td class="num">3</td><td>POP(Point Of Production)에 대하여 설명하시오.</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">4</td><td>기계학습(MachineLearning)모델링(Modeling)과모델옵스(ModelOps)에대하여설명하시오.</td><td><span class="tag t">구성형</span></td></tr>
+    <tr><td class="num">5</td><td>소프트웨어 개발 프로젝트의 품질비용 항목 4가지를 제시하고, 각 항목별로 사례를 들어 설명하시오.</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">6</td><td>NoSQL의 3가지 구조에 대하여 설명하시오.</td><td><span class="tag t">구성형</span></td></tr>
+    <tr><td class="num">7</td><td>소프트웨어 아키텍처 평가모델 중 CBAM(Cost Benefit Analysis Method)에 대하여 설명하시오.</td><td><span class="tag t">구성형</span></td></tr>
+    <tr><td class="num">8</td><td>빅데이터 분석에서 상관관계(Correlation)와 인과관계(Causation)에 대하여 비교하여 설명하시오.</td><td><span class="tag t">비교형</span></td></tr>
+    <tr><td class="num">9</td><td>뉴로모픽 칩(Neuromorphic Chip)에 대하여 설명하시오.</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">10</td><td>개인정보의 가명·익명처리 기술에 대하여 설명하시오.</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">11</td><td>메모리 인터리빙(Memory Interleaving)에 대하여 설명하시오.</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">12</td><td>랜섬웨어(Ransomware)와 RaaS(Ransomware as a Service)에 대하여 설명하시오.</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">13</td><td>큐비트(Qubit)에 대하여 설명하시오.</td><td><span class="tag t">개념형</span></td></tr>
+  </tbody></table></div>
+</section>
+<section id="r127" class="round">
+  <h3>제127회 <span class="rd">1교시 단답형 · 13문제 중 10문제 선택 · 각 10점 · 2022년</span></h3>
+  <div class="tw"><table class="qt"><thead><tr><th>번</th><th>문제</th><th>유형</th></tr></thead><tbody>
+    <tr><td class="num">1</td><td>대체불가능 토큰(Non-Fungible Token)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">2</td><td>모델옵스(ModelOps)</td><td><span class="tag t">구성형</span></td></tr>
+    <tr><td class="num">3</td><td>추정통계의 표본과 불편 추정량</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">4</td><td>균형성과기록표(Balanced Score Card)의 구성요소</td><td><span class="tag t">구성형</span></td></tr>
+    <tr><td class="num">5</td><td>메시지 인증 코드(Message Authentication Code)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">6</td><td>스프링 부트(Spring Boot)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">7</td><td>테스트 커버리지(Test Coverage)와 코드 커버리지(Code Coverage)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">8</td><td>MongoDB의 개념 및 특징</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">9</td><td>변조(Modification)와 위조(Fabrication)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">10</td><td>SVM(Support Vector Machine)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">11</td><td>과적합(Overfitting)의 발생이유와 해결방안</td><td><span class="tag t">이슈대응형</span></td></tr>
+    <tr><td class="num">12</td><td>디지털 트윈(Digital Twin)과 메타버스(Metaverse)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">13</td><td>DaaS(Desktop as a Service)</td><td><span class="tag t">개념형</span></td></tr>
+  </tbody></table></div>
+</section>
+<section id="r126" class="round">
+  <h3>제126회 <span class="rd">1교시 단답형 · 13문제 중 10문제 선택 · 각 10점 · 2022년</span></h3>
+  <div class="tw"><table class="qt"><thead><tr><th>번</th><th>문제</th><th>유형</th></tr></thead><tbody>
+    <tr><td class="num">1</td><td>정규분포 특징</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">2</td><td>메타휴리스틱스(Metaheuristics)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">3</td><td>Race Condition</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">4</td><td>SNN(Spiking Neural Network)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">5</td><td>빅데이터 분석도구를 선택하는 원칙</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">6</td><td>소프트웨어 품질인증</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">7</td><td>CAP이론의한계와PACELC(PartitionAvailabilityConsistencyElseLatencyConsistency)이론</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">8</td><td>의사결정나무의 지니 지수(Gini Index)와 엔트로피 지수(Entropy Index)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">9</td><td>임베디드 소프트웨어 테스트(Embedded Software Test)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">10</td><td>스레싱(Thrashing)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">11</td><td>빅 엔디언(Big Endian)과 리틀 엔디언(Little Endian)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">12</td><td>네트워크 스캐닝(Network Scanning)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">13</td><td>파일 슬랙(File Slack)</td><td><span class="tag t">개념형</span></td></tr>
+  </tbody></table></div>
+</section>
+<section id="r125" class="round">
+  <h3>제125회 <span class="rd">1교시 단답형 · 13문제 중 10문제 선택 · 각 10점 · 2021년</span></h3>
+  <div class="tw"><table class="qt"><thead><tr><th>번</th><th>문제</th><th>유형</th></tr></thead><tbody>
+    <tr><td class="num">1</td><td>SECaaS(Security as a Service)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">2</td><td>동형 암호(Homomorphic Encryption)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">3</td><td>자바(Java) 언어의 AWT와 SWING</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">4</td><td>선형 자료구조와 비선형 자료구조</td><td><span class="tag t">구성형</span></td></tr>
+    <tr><td class="num">5</td><td>메타버스(Metaverse)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">6</td><td>관계형 데이터베이스의 정규화와 역정규화</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">7</td><td>데브옵스(DevOps)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">8</td><td>MECE(Mutually Exclusive Collectively Exhaustive)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">9</td><td>포스트 양자 암호(Post-Quantum Cryptography)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">10</td><td>WFQ(Weighted Fair Queuing)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">11</td><td>5G 특화망(지역 5G)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">12</td><td>SDR(Software Defined Radio)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">13</td><td>소프트웨어 형상관리</td><td><span class="tag t">개념형</span></td></tr>
+  </tbody></table></div>
+</section>
+<section id="r124" class="round">
+  <h3>제124회 <span class="rd">1교시 단답형 · 13문제 중 10문제 선택 · 각 10점 · 2021년</span></h3>
+  <div class="tw"><table class="qt"><thead><tr><th>번</th><th>문제</th><th>유형</th></tr></thead><tbody>
+    <tr><td class="num">1</td><td>가치사슬(Value-chain) 관점에서 ERP, SCM, MES, CRM 비교</td><td><span class="tag t">비교형</span></td></tr>
+    <tr><td class="num">2</td><td>통계학의 4가지 척도를 구분하고, 이 관점에서 다중회귀분석(Multiple Regression Analysis)과 로지스틱회귀분석(Logistic Regression Analysis) 비교</td><td><span class="tag t">비교형</span></td></tr>
+    <tr><td class="num">3</td><td>스마트팩토리에서 MES(Manufacturing Execution System) 참조모델인 ISA-88과 ISA-95 비교</td><td><span class="tag t">비교형</span></td></tr>
+    <tr><td class="num">4</td><td>디지털 휴먼증강(Digital Human Augmentation)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">5</td><td>반응형 웹 디자인(Responsive Web Design, RWD) 3가지 패턴</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">6</td><td>의존성 주입(Dependency Injection)의 장점</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">7</td><td>OGC(OpenGeospatialConsortium)의 IMDF(IndoorMappingData Format) 표준화 동향</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">8</td><td>데이터베이스 제5정규형</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">9</td><td>다차원 색인구조(Multidimensional Index Structure) 3가지</td><td><span class="tag t">구성형</span></td></tr>
+    <tr><td class="num">10</td><td>프레임릴레이(Frame Relay)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">11</td><td>거리 벡터 라우팅(Distance Vector Routing)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">12</td><td>적대적 공격(Adversarial Attack)</td><td><span class="tag t">이슈대응형</span></td></tr>
+    <tr><td class="num">13</td><td>NAC(Network Access Control)</td><td><span class="tag t">개념형</span></td></tr>
+  </tbody></table></div>
+</section>
+<section id="r123" class="round">
+  <h3>제123회 <span class="rd">1교시 단답형 · 13문제 중 10문제 선택 · 각 10점 · 2021년</span></h3>
+  <div class="tw"><table class="qt"><thead><tr><th>번</th><th>문제</th><th>유형</th></tr></thead><tbody>
+    <tr><td class="num">1</td><td>SCRUM의 팀구성 및 개발프로세스</td><td><span class="tag t">절차형</span></td></tr>
+    <tr><td class="num">2</td><td>타당도(Validity)와 신뢰도(Reliablity)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">3</td><td>EfficientNet과 EfficientDet의 비교</td><td><span class="tag t">비교형</span></td></tr>
+    <tr><td class="num">4</td><td>디파이(De-fi)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">5</td><td>지능정보화 기본법</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">6</td><td>로우코드(Low Code)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">7</td><td>OAS(OpenAPI Specification)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">8</td><td>오픈소스 프로젝트관리 소프트웨어</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">9</td><td>WebRTC(Web Real-Time Communication)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">10</td><td>HAZOP(HAZard and OPerability analysis)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">11</td><td>Column Family 데이터베이스</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">12</td><td>GADI(Global Architecture for Digital Identity)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">13</td><td>해저케이블 에퀴아노(Equiano) 프로젝트</td><td><span class="tag t">개념형</span></td></tr>
+  </tbody></table></div>
+</section>
+<section id="r122" class="round">
+  <h3>제122회 <span class="rd">1교시 단답형 · 13문제 중 10문제 선택 · 각 10점 · 2020년</span></h3>
+  <div class="tw"><table class="qt"><thead><tr><th>번</th><th>문제</th><th>유형</th></tr></thead><tbody>
+    <tr><td class="num">1</td><td>세마포어(Semaphore)와 모니터(Monitor)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">2</td><td>인슈어테크(InsurTech)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">3</td><td>LOD(Linked Open Data)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">4</td><td>허용적 라이선스(Permissive License)와 카피레프트 라이선스(Copyleft License)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">5</td><td>군집분석(Cluster Analysis)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">6</td><td>텐서플로(TensorFlow)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">7</td><td>DAS(Direct Attached Storage), NAS(Network Attached Storage), SAN(Storage Area Network)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">8</td><td>하이퍼바이저(Hypervisor)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">9</td><td>스프라이트(Sprite)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">10</td><td>고객확인 절차(KYC : Know Your Customer)</td><td><span class="tag t">절차형</span></td></tr>
+    <tr><td class="num">11</td><td>오피니언 마이닝(Opinion Mining)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">12</td><td>술어 논리(Predicate Logic)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">13</td><td>스타 스키마(Star Schema)</td><td><span class="tag t">개념형</span></td></tr>
+  </tbody></table></div>
+</section>
+<section id="r121" class="round">
+  <h3>제121회 <span class="rd">1교시 단답형 · 13문제 중 10문제 선택 · 각 10점 · 2020년</span></h3>
+  <div class="tw"><table class="qt"><thead><tr><th>번</th><th>문제</th><th>유형</th></tr></thead><tbody>
+    <tr><td class="num">1</td><td>지능형 CCTV 스마트관제</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">2</td><td>그로스 해킹(Growth Hacking)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">3</td><td>BaaS(Backend as a Service)와 FaaS(Function as a Service)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">4</td><td>앰비언트 컴퓨팅(Ambient Computing)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">5</td><td>ALM(Application Lifecycle Management)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">6</td><td>통계적 가설 검정(Statistical Hypothesis Test)의 절차</td><td><span class="tag t">절차형</span></td></tr>
+    <tr><td class="num">7</td><td>도커 스웜(Docker Swarm)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">8</td><td>모바일 FSO(Free Space Optics) 통신</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">9</td><td>차량·사물 셀룰러 통신(Cellular Vehicle to Everything)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">10</td><td>CDR(Content Disarm &amp; Reconstruction)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">11</td><td>모바일 신분증</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">12</td><td>전문성의 민주화(Democratization of Expertise)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">13</td><td>머신러닝 파이프라인(Machine Learning Pipeline)</td><td><span class="tag t">개념형</span></td></tr>
+  </tbody></table></div>
+</section>
+<section id="r120" class="round">
+  <h3>제120회 <span class="rd">1교시 단답형 · 13문제 중 10문제 선택 · 각 10점 · 2020년</span></h3>
+  <div class="tw"><table class="qt"><thead><tr><th>번</th><th>문제</th><th>유형</th></tr></thead><tbody>
+    <tr><td class="num">1</td><td>바코드(Barcode)와 QR코드(Quick Response Code)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">2</td><td>스크래핑(Scraping)과 API(Application Programming Interface) 기술</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">3</td><td>무자각 지속 인증(Implicit Continuous Authentication)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">4</td><td>앰비언트 커머스(Ambient Commerce)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">5</td><td>국제은행간통신협회(SWIFT)의 Pay Later API 표준</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">6</td><td>가상물리시스템(Cyber Physical System)의 구축 절차</td><td><span class="tag t">절차형</span></td></tr>
+    <tr><td class="num">7</td><td>스마트팩토리시스템(Smart Factory System)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">8</td><td>RAID 0, RAID 1, RAID 5, RAID 6</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">9</td><td>해쉬 알고리즘(Hash Algorithm)의 특성 및 종류</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">10</td><td>카오스 테스트(Chaos Test)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">11</td><td>정규 표현식(Regular Expression)과 유한오토마타(Finite Automata)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">12</td><td>CPU(Central Processing Unit)와 GPGPU(General-Purpose computing on Graphics Processing Units)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">13</td><td>워크플로우 관리(Workflow Management)의 백필(Backfill)</td><td><span class="tag t">개념형</span></td></tr>
+  </tbody></table></div>
+</section>
+<section id="r119" class="round">
+  <h3>제119회 <span class="rd">1교시 단답형 · 13문제 중 10문제 선택 · 각 10점 · 2019년</span></h3>
+  <div class="tw"><table class="qt"><thead><tr><th>번</th><th>문제</th><th>유형</th></tr></thead><tbody>
+    <tr><td class="num">1</td><td>COCOMO Ⅱ(Constructive Cost Model Ⅱ)의 Post-Architecture Model</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">2</td><td>제약이론 TOC(Theory of Constraints)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">3</td><td>가상화기술의 도커(DOCKER)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">4</td><td>DID(Decentralized Identity)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">5</td><td>OTT(Over-The-Top) 서비스의 제로 레이팅(zero-rating) 문제점</td><td><span class="tag t">이슈대응형</span></td></tr>
+    <tr><td class="num">6</td><td>UX기법인 Design Thinking</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">7</td><td>Data Lake</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">8</td><td>데이터베이스 샤드(database shard)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">9</td><td>기계학습(Machine learning)의 Gradient descent algorithm</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">10</td><td>Lehman의 SW 변화원리</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">11</td><td>머클트리(Merkle Tree)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">12</td><td>리쇼링(Reshoring)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">13</td><td>데이터베이스의 Isolation Level</td><td><span class="tag t">개념형</span></td></tr>
+  </tbody></table></div>
+</section>
+<section id="r118" class="round">
+  <h3>제118회 <span class="rd">1교시 단답형 · 13문제 중 10문제 선택 · 각 10점 · 2019년</span></h3>
+  <div class="tw"><table class="qt"><thead><tr><th>번</th><th>문제</th><th>유형</th></tr></thead><tbody>
+    <tr><td class="num">1</td><td>정규화(Normalization)의 의미와 효과</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">2</td><td>빅데이터 분석 플랫폼이 추구하는 데이터 통합 아키텍처</td><td><span class="tag t">구성형</span></td></tr>
+    <tr><td class="num">3</td><td>현실세계에서 모델링(Modeling)의 필요성과 Inside-Out 전략</td><td><span class="tag t">구성형</span></td></tr>
+    <tr><td class="num">4</td><td>가상공간(Cyber Space)의 특징과 디지털 트윈(Digital Twin)의의미</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">5</td><td>SLM(Service Level Management) 프레임워크의 구성요소</td><td><span class="tag t">구성형</span></td></tr>
+    <tr><td class="num">6</td><td>디지털 윤리(Digital Ethics)와 개인정보보호(Privacy)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">7</td><td>선형회귀모형의 추론에 대한 가정 4가지</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">8</td><td>모바일 엣지 컴퓨팅(Mobile Edge Computing)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">9</td><td>금융권에서 블록체인 시스템을 도입할 시고려해야 할 정보보안 이슈</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">10</td><td>5G 네트워크 슬라이싱(5G Network Slicing)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">11</td><td>멀티 모달 인터페이스(Multimodal Interface)의 구성요소</td><td><span class="tag t">구성형</span></td></tr>
+    <tr><td class="num">12</td><td>해시값(Hash Value)과 해시함수의 구분,종류,용도</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">13</td><td>CMMI(CapabilityMaturityModelIntegration)의단계적표현(StagedRepresentation)과 연속적 표현(Continuous Representation)</td><td><span class="tag t">절차형</span></td></tr>
+  </tbody></table></div>
+</section>
+<section id="r117" class="round">
+  <h3>제117회 <span class="rd">1교시 단답형 · 13문제 중 10문제 선택 · 각 10점 · 2019년</span></h3>
+  <div class="tw"><table class="qt"><thead><tr><th>번</th><th>문제</th><th>유형</th></tr></thead><tbody>
+    <tr><td class="num">1</td><td>HMAC(Hash-based Message Authentication Code)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">2</td><td>하이퍼레저(Hyperledger)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">3</td><td>양자암호통신</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">4</td><td>통계적 가설검정의 1차오류와 2차오류</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">5</td><td>XAI(eXplainable AI)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">6</td><td>마이크로서비스 아키텍처(MicroService Architecture)</td><td><span class="tag t">구성형</span></td></tr>
+    <tr><td class="num">7</td><td>인도어GML(Indoor Geography Markup Language)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">8</td><td>휴리스틱에 의한 사용성 평가</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">9</td><td>NoSQL</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">10</td><td>인메모리 데이터베이스(In-memory Database)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">11</td><td>OSI 7 Layer</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">12</td><td>UNIX 운영체제 부팅과정</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">13</td><td>스마트시티 통합플랫폼</td><td><span class="tag t">개념형</span></td></tr>
+  </tbody></table></div>
+</section>
+<section id="r116" class="round">
+  <h3>제116회 <span class="rd">1교시 단답형 · 13문제 중 10문제 선택 · 각 10점 · 2018년</span></h3>
+  <div class="tw"><table class="qt"><thead><tr><th>번</th><th>문제</th><th>유형</th></tr></thead><tbody>
+    <tr><td class="num">1</td><td>전자서명(Digital Signature)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">2</td><td>SQL(Structured Query Language)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">3</td><td>해쉬 알고리즘(Hash Algorithm)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">4</td><td>교착상태(Deadlock)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">5</td><td>파스-타(PaaS-TA) 3.0</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">6</td><td>제로 레이팅(Zero Rating)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">7</td><td>스피어 피싱(Spear Phishing)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">8</td><td>레그테크(RegTech)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">9</td><td>CPU 보안 취약점에서의 스펙터(Spectre)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">10</td><td>F1 Score에서 정밀도(Precision), 재현율(Recall)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">11</td><td>객체식별자 기반 사물인터넷 디바이스 식별체계(TTAK.KO-06.0365/R1)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">12</td><td>포맷 스트링 공격(Format String Attack)</td><td><span class="tag t">이슈대응형</span></td></tr>
+    <tr><td class="num">13</td><td>힐버트(Hilbert) R-tree</td><td><span class="tag t">개념형</span></td></tr>
+  </tbody></table></div>
+</section>
+<section id="r114" class="round">
+  <h3>제114회 <span class="rd">1교시 단답형 · 13문제 중 10문제 선택 · 각 10점 · 2018년</span></h3>
+  <div class="tw"><table class="qt"><thead><tr><th>번</th><th>문제</th><th>유형</th></tr></thead><tbody>
+    <tr><td class="num">1</td><td>다중연결리스트(Multi-linked List)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">2</td><td>데이터베이스 카디널리티(Database Cardinality)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">3</td><td>양자 암호(Quantum Cryptography)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">4</td><td>스마트 더스트(Smart Dust)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">5</td><td>엣지 컴퓨팅(Edge Computing)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">6</td><td>그래프 데이터베이스(Graph Database)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">7</td><td>우선순위 큐(Priority Queue)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">8</td><td>Q-러닝(Q-Learning)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">9</td><td>디지털 트윈(Digital Twin)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">10</td><td>쉐도우 IT(Shadow IT)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">11</td><td>재공학(Re-engineering), 역공학(Reverse Engineering)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">12</td><td>보안학적 측면에서의 사회공학(Social Engineering)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">13</td><td>품질보증(QA : Quality Assurance), 품질통제(QC : Quality Control) 청렴은 건전한 국가 재정의 첫걸음 종목 정보관리기술사 수험</td><td><span class="tag t">개념형</span></td></tr>
+  </tbody></table></div>
+</section>
+<section id="r113" class="round">
+  <h3>제113회 <span class="rd">1교시 단답형 · 13문제 중 10문제 선택 · 각 10점 · 2017년</span></h3>
+  <div class="tw"><table class="qt"><thead><tr><th>번</th><th>문제</th><th>유형</th></tr></thead><tbody>
+    <tr><td class="num">1</td><td>크라임웨어(Crimeware)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">2</td><td>암호화에서의 Challenge-response 방식</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">3</td><td>MCTS(Monte Carlo Tree Search)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">4</td><td>FIDO(Fast Identity Online) 2.0</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">5</td><td>Linux PAM(Pluggable Authentication Modules)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">6</td><td>로지스틱 회귀분석(logistic regression)에서의 로짓 변환(logit transformation)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">7</td><td>익명 네트워크 TOR(The Onion Routing)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">8</td><td>SPA(Single Page Web Application)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">9</td><td>CPS(Cyber-physical System)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">10</td><td>HCE(Host Card Emulation)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">11</td><td>네트워크에서의 Non-blocking I/O</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">12</td><td>SDDC(Software-defined Data Center)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">13</td><td>망중립성(Network Neutrality) 청렴은 건전한 국가 재정의 첫걸음 종목 정보관리기술사 수험</td><td><span class="tag t">개념형</span></td></tr>
+  </tbody></table></div>
+</section>
+<section id="r111" class="round">
+  <h3>제111회 <span class="rd">1교시 단답형 · 13문제 중 10문제 선택 · 각 10점 · 2017년</span></h3>
+  <div class="tw"><table class="qt"><thead><tr><th>번</th><th>문제</th><th>유형</th></tr></thead><tbody>
+    <tr><td class="num">1</td><td>통계적 가설 검정(Statistical Hypothesis Testing)과 p-value</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">2</td><td>MVC(Model View Control) 패턴</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">3</td><td>CRISP-DM(Cross Industry Standard Process for Data Mining)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">4</td><td>소프트웨어 교육과 CT(Computational Thinking)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">5</td><td>블록체인(Block Chain) 구성요소 중 마이닝(Mining)</td><td><span class="tag t">구성형</span></td></tr>
+    <tr><td class="num">6</td><td>GPGPU(General Purpose Graphics Processing Units)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">7</td><td>무선 센서 네트워크 구성방법 중 Itinerary Routing</td><td><span class="tag t">절차형</span></td></tr>
+    <tr><td class="num">8</td><td>다중 버전 동시성 제어(MVCC : Multi Version Concurrency Control)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">9</td><td>엘가멜(ElGamal)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">10</td><td>Open Adoption Software</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">11</td><td>사이버 킬 체인(Cyber Kill Chain)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">12</td><td>바이모달(Bimodal) IT</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">13</td><td>은닉 마르코프 모델(HMM : Hidden Markov Model)</td><td><span class="tag t">구성형</span></td></tr>
+  </tbody></table></div>
+</section>
+<section id="r110" class="round">
+  <h3>제110회 <span class="rd">1교시 단답형 · 13문제 중 10문제 선택 · 각 10점 · 2016년</span></h3>
+  <div class="tw"><table class="qt"><thead><tr><th>번</th><th>문제</th><th>유형</th></tr></thead><tbody>
+    <tr><td class="num">1</td><td>EIP(Enterprise Integration Patterns)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">2</td><td>LPWA(Low Power Wide Area)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">3</td><td>린 스타트업(Lean Startup)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">4</td><td>유한 오토마타</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">5</td><td>빅데이터 분석기법인 Random Forest</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">6</td><td>XMPP, CoAP, MQTT 특징 비교</td><td><span class="tag t">비교형</span></td></tr>
+    <tr><td class="num">7</td><td>패스트 데이터(Fast Data)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">8</td><td>리버스 프록시(Reverse Proxy)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">9</td><td>웹 신디케이션(Web Syndication)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">10</td><td>프라이버시 보호모델인 k-익명성(k-anonymity)</td><td><span class="tag t">구성형</span></td></tr>
+    <tr><td class="num">11</td><td>ASN.1(Abstract Syntax Notation One)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">12</td><td>챗봇(chatbot)</td><td><span class="tag t">개념형</span></td></tr>
+    <tr><td class="num">13</td><td>스턱스넷(Stuxnet)</td><td><span class="tag t">개념형</span></td></tr>
   </tbody></table></div>
 </section>
 
@@ -1810,7 +2190,7 @@ MA(1) :  ■ ▪ (끝)           다음 1시점만 영향, 이후 0
   <div class="eyebrow">07 / 모범답안</div>
   <h2>1교시 모범답안 12</h2>
   <p class="lede">각 답안은 <strong>답안지 1면 분량</strong>으로 맞췄습니다. 위의 답안 카드는 시험장에서 그대로 재현할 골격이고, 아래 "쉬운 설명"은 이해용입니다 — 설명으로 이해하고, 카드로 암기하세요. 회차 표기는 사장님이 기출 원문을 주시면 채웁니다.</p>
-  <div class="note"><p><b>기출 대응 현황.</b> 제133~139회 91문항을 확인한 결과, 아래 12개 중 <b>RAG(134회 13번 · 139회 3번)</b>, <b>가명처리(139회 13번 · 134회 11번 PET)</b>, <b>쿠버네티스(133회 12번)</b>가 직접 출제된 주제입니다. 나머지는 최근 출제 흐름(AI 거버넌스 · 데이터 품질 · 공급망 보안 · 프로젝트 관리)에 맞춘 대비용입니다. <b>회차별 전 문항 답안은 139·138회를 완료했고 137회부터 계속 채웁니다.</b></p></div>
+  <div class="note"><p><b>기출 대응 현황.</b> 제110~139회 364문항을 확인한 결과, 아래 12개 중 <b>RAG(134회 13번 · 139회 3번)</b>, <b>가명처리(139회 13번 · 134회 11번 PET)</b>, <b>쿠버네티스(133회 12번)</b>가 직접 출제된 주제입니다. 나머지는 최근 출제 흐름(AI 거버넌스 · 데이터 품질 · 공급망 보안 · 프로젝트 관리)에 맞춘 대비용입니다. <b>회차별 전 문항 답안은 139·138회를 완료했고 137회부터 계속 채웁니다.</b></p></div>
 </section>
 <section id="a1" class="ans" data-group="freq" data-item="a1" data-title="CAP 정리와 PACELC">
   <h3>01. CAP 정리와 PACELC</h3>
