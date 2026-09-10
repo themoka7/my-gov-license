@@ -1,4 +1,4 @@
-<title>정보관리기술사 1교시 답안지</title>
+<title>정보관리기술사 답안지</title>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;700&family=Noto+Sans+KR:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap">
 <style>
@@ -226,6 +226,26 @@ table.qt td:last-child{width:132px;white-space:nowrap}
 .shfoot button:hover{color:var(--ink)}
 .shmsg{font-family:var(--mono);font-size:11px;color:var(--ok);margin-left:auto}
 
+/* ---------- essay (2~4교시) question lists ---------- */
+.eh{display:flex;flex-wrap:wrap;gap:4px 10px;align-items:baseline;font-size:15px;
+  margin:26px 0 12px;padding-bottom:7px;border-bottom:1px solid var(--rule-soft)}
+.est{font-family:var(--mono);font-size:9px;color:var(--faint);border:1px solid var(--rule-soft);
+  border-radius:2px;padding:0 3px;margin-left:3px;vertical-align:super;font-weight:400}
+.gy{margin:0 0 16px}
+.gyh{font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--mark);
+  background:var(--mark-soft);border-radius:3px;padding:3px 8px;display:inline-block;margin:0 0 8px}
+ol.ql{list-style:none;counter-reset:ql;margin:0;padding:0;
+  border:1px solid var(--rule-soft);border-radius:8px;background:var(--surface);overflow:hidden}
+ol.ql li{counter-increment:ql;margin:0;padding:11px 14px 11px 40px;position:relative;
+  border-bottom:1px solid var(--rule-soft);font-size:13.5px;line-height:1.62}
+ol.ql li:last-child{border-bottom:0}
+ol.ql li::before{content:counter(ql) ".";position:absolute;left:14px;top:11px;
+  font-family:var(--mono);font-size:11.5px;color:var(--faint)}
+.subs{display:block;margin-top:6px;padding-left:2px}
+.sub{display:block;font-size:12.5px;color:var(--pencil);margin-top:2px}
+.sub b{font-family:var(--mono);font-size:11px;color:var(--mark);font-weight:500;margin-right:4px}
+ol.ql .sh{margin-left:8px;vertical-align:2px}
+
 /* ---------- bottom pager (mobile) ---------- */
 .pager{position:fixed;bottom:0;left:0;right:0;z-index:38;display:none;gap:1px;
   background:var(--rule-soft);border-top:1px solid var(--rule-soft)}
@@ -236,7 +256,7 @@ table.qt td:last-child{width:132px;white-space:nowrap}
 footer{border-top:1px solid var(--rule-soft);padding-top:18px;color:var(--faint);font-size:12.5px}
 </style>
 <div class="bar"><div class="bar-in">
-  <span class="brand">정보관리기술사 <span>1교시 답안지</span></span>
+  <span class="brand">정보관리기술사 <span>답안지</span></span>
   <span class="bar-sp"></span>
   <span class="meter" id="meter">진도 <b>0</b>/12</span>
   <a class="btn" id="repoLink" href="https://github.com/themoka7/my-gov-license/tree/main" target="_blank" rel="noopener">저장소</a>
@@ -505,13 +525,16 @@ V.   결론 및 제언                                    [0.2p / 2점]
 </section>
 <section id="rounds">
   <div class="eyebrow">06 / 기출</div>
-  <h2>회차별 1교시 기출 — 제110~139회</h2>
-  <p class="lede">공식 문제지에서 추출한 <strong>28개 회차 364문항 전문</strong>입니다(제112·115회 미보유). 유형 태그는 문제의 동사를 기준으로 분류했으니, 위의 유형별 템플릿과 짝지어 훈련하세요.</p>
+  <h2>회차별 기출 — 제110~139회 868문항</h2>
+  <p class="lede">공식 문제지에서 추출한 <strong>28개 회차 전 교시 868문항</strong>입니다 — 1교시 364문항 + 논술형 504문항 (제112·115회 미보유). 유형 태그는 문제의 동사를 기준으로 분류했으니, 위의 유형별 템플릿과 짝지어 훈련하세요.</p>
+  <div class="note"><p><b>교시 번호 표기.</b> 제110~127회 문제지는 헤더에 「제 N 교시」가 명기되어 있어 그대로 옮겼습니다.
+  제128회 이후는 <b>문제지에 교시 표기가 없어</b> 수록 순서를 교시 순서로 보았고, 해당 회차의 논술형에는 <sup class="est">추정</sup> 표시를 달았습니다.
+  (표기가 있는 15개 회차 전부에서 교시 번호가 수록 순서와 일치함을 확인한 근거입니다.)</p></div>
   <div class="note"><p><b>먼저 이걸 하세요.</b> 답안을 외우기 전에, 각 회차 표를 보고 <b>"내가 지금 시험장이라면 어느 3개를 버릴까"</b>를 30초 안에 정하는 훈련부터 하세요. 1교시 점수는 아는 문제를 잘 쓰는 데서 나오는 게 아니라, <b>버릴 문제를 빨리 버리는 데서</b> 나옵니다.</p></div>
 
 <section id="r139" class="round">
   <h3>제139회 <span class="rd">1교시 단답형 · 13문제 중 10문제 선택 · 각 10점</span></h3>
-  <p class="anslink"><a href="#g139">↓ 이 회차 13문항 답안 보기</a></p>
+  <p class="anslink"><a href="#g139">↓ 이 회차 1교시 13문항 답안 보기</a></p>
   <div class="tw"><table class="qt"><thead><tr><th>번</th><th>문제</th><th>유형</th></tr></thead><tbody>
     <tr><td class="num">1</td><td>WBS(Work Breakdown Structure) 작성방법</td><td><span class="tag t">절차형</span></td></tr>
     <tr><td class="num">2</td><td>대수의 법칙과 중심극한정리</td><td><span class="tag t">개념형</span></td></tr>
@@ -527,10 +550,44 @@ V.   결론 및 제언                                    [0.2p / 2점]
     <tr><td class="num">12</td><td>양자머신러닝(QML, Quantum Machine Learning)</td><td><span class="tag t">개념형</span></td></tr>
     <tr><td class="num">13</td><td>개인정보보호를 위한 가명처리 기법</td><td><span class="tag t">개념형</span></td></tr>
   </tbody></table></div>
+  <h4 class="eh">논술형 2~4교시 <span class="rd">각 교시 6문제 중 4문제 선택 · 각 25점</span></h4>
+  <div class="gy">
+    <div class="gyh">2교시<sup class="est">추정</sup></div>
+    <ol class="ql">
+      <li data-r="139" data-g="2" data-n="1"><span class="qs">인공지능(AI) 기술의 급속한 발전은 혁신적 변화와 함께 다양한 리스크(Risk)를 수반한다. AI 리스크에 대하여다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> AI 리스크 개념</span><span class="sub"><b>나.</b> AI 보안 리스크</span><span class="sub"><b>다.</b> AI 프라이버시 리스크</span><span class="sub"><b>라.</b> AI 사회적 리스크</span></span></li>
+      <li data-r="139" data-g="2" data-n="2"><span class="qs">A기업은 AI 전환(AX, AI Transformation) 추진을 위해 LLM(Large Language Model) 기반 AI 시스템을 구축하고자 한다. 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 파인튜닝(Fine-Tuning)과RAG(Retrieval-AugmentedGeneration)의개념및역할</span><span class="sub"><b>나.</b> LLM정렬을위한 RLHF(ReinforcementLearningfromHumanFeedback)기반 학습파이프라인과RAFT(RetrievalAugmentedFine-Tuning)기반학습파이프라인비교</span></span></li>
+      <li data-r="139" data-g="2" data-n="3"><span class="qs">인공지능 분석 대상 데이터의 대규모 저장소로서 데이터 레이크(Data Lake) 기반 통합 데이터 플랫폼을 도입하고자 한다. 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 데이터 레이크(Data Lake)의 아키텍처</span><span class="sub"><b>나.</b> 데이터 스웜프(Data Swamp) 발생 원인과 방지 방안</span></span></li>
+      <li data-r="139" data-g="2" data-n="4"><span class="qs">터보퀀트(TurboQuant)의 개념, 특징, 성능, 기존 양자화기술과의차이점, 기대 효과에 대하여 설명하시오.</span></li>
+      <li data-r="139" data-g="2" data-n="5"><span class="qs">행정·공공기관의반복적인전산망장애를계기로,정부는「전자정부법」개정을통해 정보시스템 등급제와 공공 SLA(행정·공공기관 정보시스템 서비스수준협약) 표준을 도입하고,2027년부터의무화를추진하고있다.다음을설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 공공 SLA의 개념과 도입 필요성</span><span class="sub"><b>나.</b> 정보시스템 등급 분류 기준과 등급별 SLA 적용방식</span><span class="sub"><b>다.</b> 공공 SLA 표준안의 주요 내용(가용률, 장애조치 시간, 위약금 체계)과 적용 시 고려사항</span></span></li>
+      <li data-r="139" data-g="2" data-n="6"><span class="qs">데이터 가치평가 및 데이터 자산화에 대하여 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 데이터 가치평가의 개념과 가치평가 방법론</span><span class="sub"><b>나.</b> 데이터 자산화의 개념과 핵심요소</span><span class="sub"><b>다.</b> 데이터 가치평가 및 데이터 자산화의 활용사례 ※ 총 6문제 중 4문제를 선택하여 설명하시오. (각 25점)</span></span></li>
+    </ol>
+  </div>
+  <div class="gy">
+    <div class="gyh">3교시<sup class="est">추정</sup></div>
+    <ol class="ql">
+      <li data-r="139" data-g="3" data-n="1"><span class="qs">기업의업무구조를바꾸는다중에이전트시스템(MAS,MultiAgentSystem)에관하여 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 다중 에이전트 시스템의 정의 및 필요성</span><span class="sub"><b>나.</b> 단일 에이전트 시스템과 다중 에이전트 시스템 비교</span><span class="sub"><b>다.</b> 다중 에이전트 시스템의 효과와 고려사항</span></span></li>
+      <li data-r="139" data-g="3" data-n="2"><span class="qs">데이터분석에서이상치(Outlier)와편향(Bias)의개념을설명하고, 분석결과에미치는 영향 및 처리 방안을 설명하시오.</span></li>
+      <li data-r="139" data-g="3" data-n="3"><span class="qs">명확하지 않은 요구사항 으로 인해 발생하는 소프트웨어 품질저하 문제를 아래의 관점에서 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 기술부채(Technical Debt)</span><span class="sub"><b>나.</b> 코드스멜(Code Smell)</span><span class="sub"><b>다.</b> 리팩토링(Refactoring)</span></span></li>
+      <li data-r="139" data-g="3" data-n="4"><span class="qs">소프트웨어 테스트에 대하여 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 소프트웨어 테스트의 7대 원리</span><span class="sub"><b>나.</b> 화이트박스 테스트와 블랙박스 테스트의 개념 및 기법 비교</span><span class="sub"><b>다.</b> 아래 명세를 기반으로 동등 분할(Equivalence Partitioning)과 경계값 분석 (Boundary Value Analysis) 기법을 적용한 테스트 케이스 작성</span></span></li>
+      <li data-r="139" data-g="3" data-n="5"><span class="qs">이진 탐색 트리와 라우팅 테이블 탐색 알고리즘의 상관관계에 대하여 설명하시오.</span></li>
+      <li data-r="139" data-g="3" data-n="6"><span class="qs">AI(인공지능)데이터수요 증가에 따라체계적인데이터 품질관리가중요해지고있다. AI학습용데이터 품질관리에대하여다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> AI 학습용 데이터 특성</span><span class="sub"><b>나.</b> AI 학습용 데이터 품질관리 지표</span><span class="sub"><b>다.</b> AI 학습용 데이터 품질관리 활동 [명세]학점(Grade) 처리 모듈 입력: 점수(Score), 정수형, 0 ∼ 100 출력: 90이상 → &quot;A&quot;, 80이상 90미만 → &quot;B&quot;, 70이상 80미만 → &quot;C&quot;, 60이상 70미만 → &quot;D&quot;, 60미만 → &quot;F&quot;, 범위 외 → &quot;ERROR&quot; ※ 총 6문제 중 4문제를 선택하여 설명하시오. (각 25점)</span></span></li>
+    </ol>
+  </div>
+  <div class="gy">
+    <div class="gyh">4교시<sup class="est">추정</sup></div>
+    <ol class="ql">
+      <li data-r="139" data-g="4" data-n="1"><span class="qs">빅데이터 분석기법 중 클러스터링, 필터링, 이상치 탐지를 설명하시오.</span></li>
+      <li data-r="139" data-g="4" data-n="2"><span class="qs">운영체제의 프로 세스 동기화 기법 중 뮤텍스(Mutex), 세마포어(Semaphore), 모니터(Monitor)에 대하여 설명하시오.</span></li>
+      <li data-r="139" data-g="4" data-n="3"><span class="qs">전쟁 등과 같은 재난, 재해를 대비한 데이터 센터(IDC)의 지리적 위치 선정 및 대응전략을 설명하시오.</span></li>
+      <li data-r="139" data-g="4" data-n="4"><span class="qs">가상메모리에 대하여 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 가상메모리 관리기법</span><span class="sub"><b>나.</b> 가상메모리 단편화 유형</span><span class="sub"><b>다.</b> 가상메모리 단편화를 최소화하기 위한 방안</span></span></li>
+      <li data-r="139" data-g="4" data-n="5"><span class="qs">VPP(Virtual Power Plant)가상발전소에서는전력수요 예측을위해AI기술을사용하고 있다. 이와 관련해서 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 시계열딥러닝(Time-series Deep Learning)</span><span class="sub"><b>나.</b> 강화학습(Reinforcement Learning)</span><span class="sub"><b>다.</b> 그래프신경망(Graph Neural Network)</span></span></li>
+      <li data-r="139" data-g="4" data-n="6"><span class="qs">네트워크서브네팅(Subnetting)과관련하여다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 슈퍼네팅(Supernetting)과서브네팅(Subnetting)개념</span><span class="sub"><b>나.</b> 192.168.0.0/22 네트워크대역을사용하여인사팀 125명,영업팀 250명,보안팀 125명, 개발팀500명이사용할수있도록4개의 VLSM(VariableLengthSubnetMask)으로</span></span></li>
+    </ol>
+  </div>
 </section>
 <section id="r138" class="round">
   <h3>제138회 <span class="rd">1교시 단답형 · 13문제 중 10문제 선택 · 각 10점</span></h3>
-  <p class="anslink"><a href="#g138">↓ 이 회차 13문항 답안 보기</a></p>
+  <p class="anslink"><a href="#g138">↓ 이 회차 1교시 13문항 답안 보기</a></p>
   <div class="tw"><table class="qt"><thead><tr><th>번</th><th>문제</th><th>유형</th></tr></thead><tbody>
     <tr><td class="num">1</td><td>미국 국립표준기술연구소에서 발행한 AI RMF(Risk Management Framework)의 개념과 4가지 핵심구조, 7가지 신뢰 가능한 특성을 설명하시오.</td><td><span class="tag t">구성형</span></td></tr>
     <tr><td class="num">2</td><td>프로젝트 위험관리</td><td><span class="tag t">이슈대응형</span></td></tr>
@@ -546,10 +603,44 @@ V.   결론 및 제언                                    [0.2p / 2점]
     <tr><td class="num">12</td><td>프롬프트 인젝션(Prompt Injection)</td><td><span class="tag t">개념형</span></td></tr>
     <tr><td class="num">13</td><td>모델 전도 공격(Model Inversion Attack)</td><td><span class="tag t">이슈대응형</span></td></tr>
   </tbody></table></div>
+  <h4 class="eh">논술형 2~4교시 <span class="rd">각 교시 6문제 중 4문제 선택 · 각 25점</span></h4>
+  <div class="gy">
+    <div class="gyh">2교시<sup class="est">추정</sup></div>
+    <ol class="ql">
+      <li data-r="138" data-g="2" data-n="1"><span class="qs">최근 상용 DBMS를 오픈소스 DBMS로 전환하는 수요가 늘고 있다. 다음 내용을 설명 하시오.</span><span class="subs"><span class="sub"><b>가.</b> 오픈소스 DBMS 전환 배경</span><span class="sub"><b>나.</b> 오픈소스 DBMS 전환 시 검토해야 할 제약사항</span><span class="sub"><b>다.</b> 오픈소스 DBMS 전환 시 단계별 마이그레이션 절차</span><span class="sub"><b>라.</b> 신뢰성 확보를 위한 고가용성(HA) 아키텍처 구성 방안</span></span></li>
+      <li data-r="138" data-g="2" data-n="2"><span class="qs">다음 내용을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> ISP(Information Strategy Planning)의 정의 및 목적</span><span class="sub"><b>나.</b> ISP 수행방법론 체계와 절차</span><span class="sub"><b>다.</b> ISP, ISMP(Information System Master Plan) 비교</span></span></li>
+      <li data-r="138" data-g="2" data-n="3"><span class="qs">인공지능 학습에 이용하는 GPU(Graphics Processing Unit)와 TPU(Tensor Processing Unit)에 대하여 다음 내용을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> GPU와 TPU 개념</span><span class="sub"><b>나.</b> GPU와 TPU 비교</span><span class="sub"><b>다.</b> 최근 GPU보다 TPU를 사용하는 이유</span><span class="sub"><b>라.</b> 효율성 측면에서 TPU의 장점 및 향후 전망</span></span></li>
+      <li data-r="138" data-g="2" data-n="4"><span class="qs">B기관은 기존에 운영 중이던 대국민 서비스 포털, 통합 업무 시스템, ERP 및 통합 인허가 관리 시스템을 클라우드 네이티브 환경으로 전환 및 신규 구축하는 프로젝트를 진행하려고 한다. TA(Technical Architect)와 AA(Application Architect)에 대하여 다음 내용을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> TA와 AA의 역할 비교 (범위, 책임/목표, 주요 산출물 측면)</span><span class="sub"><b>나.</b> TA와 AA 협업의 중요성 및 협업 방안</span></span></li>
+      <li data-r="138" data-g="2" data-n="5"><span class="qs">소프트웨어 유지보수를 위한 재공학(Re-engineering)과 역공학(Reverse-engineering)에 대하여 다음 내용을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 재공학 개념 및 목적</span><span class="sub"><b>나.</b> 재공학 절차</span><span class="sub"><b>다.</b> 역공학 개념 및 활용 방안</span></span></li>
+      <li data-r="138" data-g="2" data-n="6"><span class="qs">프로그램 실행 시 운영체제는 메모리를 4가지 주요 영역으로 나누어 할당 및 관리한다. 각 영역의 역할과 특징 그리고 영역 간 동작 메커니즘에 대하여 다음 내용을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 코드(Code)</span><span class="sub"><b>나.</b> 데이터(Data)</span><span class="sub"><b>다.</b> 힙(Heap)</span><span class="sub"><b>라.</b> 스택(Stack) ※ 총 6문제 중 4문제를 선택하여 설명하시오. (각 25점)</span></span></li>
+    </ol>
+  </div>
+  <div class="gy">
+    <div class="gyh">3교시<sup class="est">추정</sup></div>
+    <ol class="ql">
+      <li data-r="138" data-g="3" data-n="1"><span class="qs">최근생성형 인공지능 서비스 확산에따라 이용자권리 보호를 위한 목적으로생성형 인공지능 서비스 이용자 보호 가이드라인(2025. 2. 28.)을 제정하였다. 다음 내용을 설명 하시오.</span><span class="subs"><span class="sub"><b>가.</b> 가이드라인 제정된 배경 및필요성</span><span class="sub"><b>나.</b> 가이드라인에서 제시하는 이용자 보호의 실행방식을 4가지 제시하고, 각 방식이 생성형 AI 서비스에서 중요한 이유</span></span></li>
+      <li data-r="138" data-g="3" data-n="2"><span class="qs">A사는 신규 정보시스템 개발 프로젝트에 로우코드(Low Code)플랫폼을 적용하고자 한다. 다음 내용을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 로우코드(Low Code)의 주요 특징</span><span class="sub"><b>나.</b> 노코드 (No Code)와 로우코드(Low Code) 비교</span><span class="sub"><b>다.</b> 로우코드(Low Code) 적용 시 한계점</span></span></li>
+      <li data-r="138" data-g="3" data-n="3"><span class="qs">분산 데이터베이스 시스템 구축을 위한 데이터베이스분할에 대하여 다음 내용을 설명 하시오.</span><span class="subs"><span class="sub"><b>가.</b> 데이터베이스 분할 단위</span><span class="sub"><b>나.</b> 수평분할과 수직분할</span></span></li>
+      <li data-r="138" data-g="3" data-n="4"><span class="qs">가용성 보장에 대하여 다음 내용을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> FTS(Fault Tolerant System) 구현 방법</span><span class="sub"><b>나.</b> HA(High Availability) 구현 방법</span><span class="sub"><b>다.</b> FTS와 HA 비교 설명</span></span></li>
+      <li data-r="138" data-g="3" data-n="5"><span class="qs">IT 인프라 확장에 따른 사이버 위협에 대하여 다음 내용을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 공격 표면(Attack Surface)과 공격 벡터(Attack Vector)</span><span class="sub"><b>나.</b> 측면 이동(Lateral Movement)의 단계별 메커니즘과 주요 기법</span></span></li>
+      <li data-r="138" data-g="3" data-n="6"><span class="qs">최근 보안과 관련된 사고 및 이슈의 빈번한 발생으로 정보보호를 위한 관리체계에 대한 중요성이 부각되고 있다. 다음 내용을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 정보보호 관리체계(ISMS)의 인증 영역과 법적 근거</span><span class="sub"><b>나.</b> 정보보호 관리체계(ISMS)의 관리과정</span><span class="sub"><b>다.</b> ISMS-P 간편인증 제도</span><span class="sub"><b>라.</b> ISMS-P 제도의 강화 방안 ※ 총 6문제 중 4문제를 선택하여 설명하시오. (각 25점)</span></span></li>
+    </ol>
+  </div>
+  <div class="gy">
+    <div class="gyh">4교시<sup class="est">추정</sup></div>
+    <ol class="ql">
+      <li data-r="138" data-g="4" data-n="1"><span class="qs">「인공지능 발전과 신뢰 기반 조성 등에 관한 기본법」(약칭, 인공지능기본법)이 2026년 1월 22일 시행되었다. 다음 내용을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 인공지능기본법의 주요 목적, 기본 원칙</span><span class="sub"><b>나.</b> 인공지능 기본계획의 주요 내용</span><span class="sub"><b>다.</b> 국가인공지능전략위원회의 주요 기능</span><span class="sub"><b>라.</b> 인공지능 기술 개발 및 산업육성을 위한 시책 4가지</span></span></li>
+      <li data-r="138" data-g="4" data-n="2"><span class="qs">단방향 해시 함수(Hash Function)에 대하여 다음 내용을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 단방향 해시함수의문제점</span><span class="sub"><b>나.</b> Rainbow Table</span><span class="sub"><b>다.</b> 해시 솔트(Hash Salt) 와 키 스트레칭(Key Stretching)</span><span class="sub"><b>라.</b> 해시함수의 활용</span></span></li>
+      <li data-r="138" data-g="4" data-n="3"><span class="qs">6G 이동통신기술 핵심 개념인 AI-NativeNetwork에 대하여 다음 내용을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 자율 최적화</span><span class="sub"><b>나.</b> AI-RAN</span><span class="sub"><b>다.</b> 디지털트윈 기반 네트워크 관리</span></span></li>
+      <li data-r="138" data-g="4" data-n="4"><span class="qs">데이터 통신에서 신뢰성 있는 전송을 보장하기 위한 오류 제어(Error Control) 기술에 대하여 다음 내용을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 오류 검출(Error Detection)과 오류 정정(Error Correction)의 개념</span><span class="sub"><b>나.</b> ‘정지-대기(Stop-and-Wait) ARQ’와 ‘Go-Back-N ARQ’의 개념 및 수행절차</span><span class="sub"><b>다.</b> ‘정지-대기(Stop-and-Wait) ARQ’와 ‘Go-Back-N ARQ’ 비교</span></span></li>
+      <li data-r="138" data-g="4" data-n="5"><span class="qs">최근 기업과 개인을 대상으로 한랜섬웨어(Ransomware)피해가 지속적으로 발생하고 있으며, 이를 서비스 형태로 제공하는 RaaS(Ransomware as a Service)의 등장으로 진입 장벽이낮아지고 있다. 다음 내용을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 랜섬웨어와 RaaS(Ransomware as a Service)의 개념 및 비교</span><span class="sub"><b>나.</b> 랜섬웨어의 주요 감염 경로 및 암호화 동작원리</span><span class="sub"><b>다.</b> 랜섬웨어 피해 예방 및 침해 사고 발생 시 대응 절차</span></span></li>
+      <li data-r="138" data-g="4" data-n="6"><span class="qs">인공지능(AI) 기술의 확산으로 데이터의 가치가 증대됨에 따라, 프라이버시를 보호 하면서도 데이터의 활용성을 극대화할 수 있는 개인정보 보호 강화기술(PET: Privacy Enhancing Technology)이 주목받고 있다. 다음 내용을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> PET의 정의 및 등장 배경</span><span class="sub"><b>나.</b> PET의 주요 기술 분류 및 핵심 기술</span><span class="sub"><b>다.</b> PET 기술(동형암호, 차분 프라이버시, 합성데이터)의 상세 비교</span></span></li>
+    </ol>
+  </div>
 </section>
 <section id="r137" class="round">
   <h3>제137회 <span class="rd">1교시 단답형 · 13문제 중 10문제 선택 · 각 10점</span></h3>
-  <p class="anslink"><a href="#g137">↓ 이 회차 13문항 답안 보기</a></p>
+  <p class="anslink"><a href="#g137">↓ 이 회차 1교시 13문항 답안 보기</a></p>
   <div class="tw"><table class="qt"><thead><tr><th>번</th><th>문제</th><th>유형</th></tr></thead><tbody>
     <tr><td class="num">1</td><td>동적 라우팅프로토콜인IGP (InteriorGatewayProtocol)와 EGP(ExteriorGateway Protocol)를 설명하시오.</td><td><span class="tag t">개념형</span></td></tr>
     <tr><td class="num">2</td><td>디지털 포렌식에서 아티팩트(Artifact)를 설명하시오.</td><td><span class="tag t">개념형</span></td></tr>
@@ -565,6 +656,40 @@ V.   결론 및 제언                                    [0.2p / 2점]
     <tr><td class="num">12</td><td>이진 탐색 트리를 설명하시오.</td><td><span class="tag t">개념형</span></td></tr>
     <tr><td class="num">13</td><td>데이터마이닝의 연관 규칙 분석(Association Rule Analysis) 지표를 설명하시오.</td><td><span class="tag t">개념형</span></td></tr>
   </tbody></table></div>
+  <h4 class="eh">논술형 2~4교시 <span class="rd">각 교시 6문제 중 4문제 선택 · 각 25점</span></h4>
+  <div class="gy">
+    <div class="gyh">2교시<sup class="est">추정</sup></div>
+    <ol class="ql">
+      <li data-r="137" data-g="2" data-n="1"><span class="qs">캐시 메모리(Cache Memory)에 대하여 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 캐시 쓰기 정책(Write Policy)</span><span class="sub"><b>나.</b> 캐시 일관성(CacheCoherence) 문제의 원인과 해결 방법</span></span></li>
+      <li data-r="137" data-g="2" data-n="2"><span class="qs">(A)기업은전자상거래정보시스템개발프로젝트를완료하고,운영으로전환하고자한다. 각항목을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> SLA(Service Level Agreement) 구성요소와 절차</span><span class="sub"><b>나.</b> (A)기업의특성을고려하여하드웨어,소프트웨어,네트워크영역별SLA평가지표와 측정방법에 대한 사례</span></span></li>
+      <li data-r="137" data-g="2" data-n="3"><span class="qs">MCP(ModelContextProtocol)를이용한인공지능서비스구축시보안취약점을설명하고 대응 방안을 제시하시오.</span></li>
+      <li data-r="137" data-g="2" data-n="4"><span class="qs">“공공부문 초거대 AI 도입·활용 가이드라인 2.0”에 대하여 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 초거대 AI의 개념과 구성요소</span><span class="sub"><b>나.</b> 초거대 AI의 기술요소</span><span class="sub"><b>다.</b> 초거대 AI의 도입절차</span></span></li>
+      <li data-r="137" data-g="2" data-n="5"><span class="qs">소프트웨어 테스트 중 동적 테스트에 대하여 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 동적 테스트의 명세기반 테스트와 구조 기반 테스트 비교</span><span class="sub"><b>나.</b> 아래의 [프로그램 명세]로 명세 기반 테스트 기법의 동등 분할과 분류 트리 기법의 테스트 케이스 작성</span></span></li>
+      <li data-r="137" data-g="2" data-n="6"><span class="qs">TEXT2SQL에 대하여 다음 각항목을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> TEXT2SQL의개념</span><span class="sub"><b>나.</b> TEXT2SQL 활용 사례 2가지 [프로그램 명세] 이 기능의입력창은정수로입력되며, 입력값이10 미만이거나100을 초과하면“Fail”, 10 이상이고 100 이하면 “Pass”, 정수가 아니면 “Invalid Input” 메시지를 출력한다. ※ 총 6문제 중 4문제를 선택하여 설명하시오. (각 25점)</span></span></li>
+    </ol>
+  </div>
+  <div class="gy">
+    <div class="gyh">3교시<sup class="est">추정</sup></div>
+    <ol class="ql">
+      <li data-r="137" data-g="3" data-n="1"><span class="qs">운영체제 스케줄링 기법에 대한 각 내용을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> CPU 스케줄링과 디스크 스케줄링의 개념</span><span class="sub"><b>나.</b> SJF(Shortest Job First)와 SRT(Shortest Remaining Time)</span><span class="sub"><b>다.</b> SSTF(Shortest Seek Time First)와SLTF(Shortest Latency Time First)</span></span></li>
+      <li data-r="137" data-g="3" data-n="2"><span class="qs">정보시스템 감리의 시스템 운영 및 유지보수 감리에 대하여 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 시스템 운영, 유지보수 감리의 개념</span><span class="sub"><b>나.</b> 시스템 운영 감리의 점검분야</span><span class="sub"><b>다.</b> 유지보수 감리의 점검분야</span></span></li>
+      <li data-r="137" data-g="3" data-n="3"><span class="qs">다중지역 동시 가동방식(Multi-Region Active-Active) 재해복구시스템에 대하여 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 개념 및 특징</span><span class="sub"><b>나.</b> 주요 기술 요소</span></span></li>
+      <li data-r="137" data-g="3" data-n="4"><span class="qs">데이터베이스트랜잭션격리수준(TransactionIsolationLevel)과관련하여아래사항을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 데이터베이스 트랜잭션 격리 수준4가지</span><span class="sub"><b>나.</b> 데이터베이스 트랜잭션 격리 수준에 따라 발생할 수 있는이상 현상</span></span></li>
+      <li data-r="137" data-g="3" data-n="5"><span class="qs">통신 프로토콜에 대하여 각항목을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 오류 제어,혼잡제어</span><span class="sub"><b>나.</b> 슬라이딩윈도우(Sliding Window) 기법</span><span class="sub"><b>다.</b> 프로토콜 설계시 고려 사항</span></span></li>
+      <li data-r="137" data-g="3" data-n="6"><span class="qs">2025년 1월 국가정보원에서는 공공기관을 대상으로 국가 망 보안체계(National NetworkSecurityFramework,N2SF) 보안 가이드라인을발표하였다. 다음에대하여 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 국가망 보안체계(N2SF) 개념</span><span class="sub"><b>나.</b> 국가망 보안체계(N2SF) 적용절차</span><span class="sub"><b>다.</b> 국가망 보안체계(N2SF) 고려사항 ※ 총 6문제 중 4문제를 선택하여 설명하시오. (각 25점)</span></span></li>
+    </ol>
+  </div>
+  <div class="gy">
+    <div class="gyh">4교시<sup class="est">추정</sup></div>
+    <ol class="ql">
+      <li data-r="137" data-g="4" data-n="1"><span class="qs">BPFdoor(Berkeley Packet Filter door) 악성코드와 관련하여 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> BPFdoor의개념 및 기존 백도어 방식과의 차이점</span><span class="sub"><b>나.</b> BPFdoor의위협요소와 기업 시스템에 미치는 영향</span><span class="sub"><b>다.</b> BPFdoor의위협에대응하기 위한기술적,관리적 방안 제시</span></span></li>
+      <li data-r="137" data-g="4" data-n="2"><span class="qs">벡터 데이터베이스(Vector Database)의 효율적 검색을 위한 HNSW(Hierarchical Navigable Small World)와 IVF(Inverted File Index)의 동작원리를 설명하시오.</span></li>
+      <li data-r="137" data-g="4" data-n="3"><span class="qs">쿠버네티스(Kubernetes)에대하여 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 쿠버네티스의 개념및 특징</span><span class="sub"><b>나.</b> 쿠버네티스의 주요컴포넌트</span><span class="sub"><b>다.</b> HPA(HorizontalPod Autoscaler)</span></span></li>
+      <li data-r="137" data-g="4" data-n="4"><span class="qs">UML(UnifiedModelingLanguage)에서사용하는행위 다이어그램(BehaviorDiagram)인 활동다이어그램(ActivityDiagram),상태 다이어그램(StateDiagram),그리고유스케이스 다이어그램(Use-Case Diagram)에 대하여 각각 설명하시오.</span></li>
+      <li data-r="137" data-g="4" data-n="5"><span class="qs">유전 알고리즘(Genetic Algorithm)에 대하여 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 유전 알고리즘의개념 및 절차</span><span class="sub"><b>나.</b> 유전 알고리즘의최적화방법</span></span></li>
+      <li data-r="137" data-g="4" data-n="6"><span class="qs">소프트웨어 사업 대가산정에 대하여 다음을 설명하시오. (단, &quot;소프트웨어 사업 대가산정 가이드 2025년 개정판&quot;을 기준으로 한다.)</span><span class="subs"><span class="sub"><b>가.</b> 소프트웨어 대가산정 가이드 목적</span><span class="sub"><b>나.</b> 인공지능(AI) 서비스 도입 사업유형과사업비 산정절차</span></span></li>
+    </ol>
+  </div>
 </section>
 <section id="r136" class="round">
   <h3>제136회 <span class="rd">1교시 단답형 · 13문제 중 10문제 선택 · 각 10점</span></h3>
@@ -583,6 +708,40 @@ V.   결론 및 제언                                    [0.2p / 2점]
     <tr><td class="num">12</td><td>타원곡선 암호(ECC, Elliptic Curve Cryptography)</td><td><span class="tag t">개념형</span></td></tr>
     <tr><td class="num">13</td><td>MCP(Model Context Protocol)</td><td><span class="tag t">개념형</span></td></tr>
   </tbody></table></div>
+  <h4 class="eh">논술형 2~4교시 <span class="rd">각 교시 6문제 중 4문제 선택 · 각 25점</span></h4>
+  <div class="gy">
+    <div class="gyh">2교시<sup class="est">추정</sup></div>
+    <ol class="ql">
+      <li data-r="136" data-g="2" data-n="1"><span class="qs">공급망관리(SCM, Supply Chain Management)에 대하여 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 공급망관리의 정의와 배경</span><span class="sub"><b>나.</b> 공급망관리에서 효과성과 효율성</span></span></li>
+      <li data-r="136" data-g="2" data-n="2"><span class="qs">정보시스템구축사업의성공적인수행을위해정보시스템감리와PMO(전자정부사업관리 위탁)를 활용하여 사업관리를 수행하고 있다. 이와 관련하여 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 정보시스템 감리의 법적 근거</span><span class="sub"><b>나.</b> PMO의 정의와 역할</span><span class="sub"><b>다.</b> PMO 대상 사업의 범위</span><span class="sub"><b>라.</b> PMO와 상주감리의 비교</span></span></li>
+      <li data-r="136" data-g="2" data-n="3"><span class="qs">AI 기반 소프트웨어 개발에서 LLM(Large Language Model)을 도입할 때 고려해야 할 보안 위험을 3가지 이상 쓰고 각 대응 방안을 설명하시오.</span></li>
+      <li data-r="136" data-g="2" data-n="4"><span class="qs">소프트웨어 개발방법론 중 하나인 제품계열(Product Line) 방법론에 대하여 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 개념과 특징</span><span class="sub"><b>나.</b> 활용 기술과 고려사항</span></span></li>
+      <li data-r="136" data-g="2" data-n="5"><span class="qs">데이터베이스 인덱스(Index)를 설명하고, 클러스터드 인덱스(Clustered Index)와 논클러스터드 인덱스(Non-Clustered Index)를 비교하여 설명하시오.</span></li>
+      <li data-r="136" data-g="2" data-n="6"><span class="qs">인터넷 통신에서 보안성 강화를 위해 활용되는 TLS(Transport Layer Security) 1.2에 대한취약점이발견되어TLS1.3사용을권고하고있다. 이와관련하여다음을설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> TLS 프로토콜 구조와 핸드셰이크(Handshake) 과정</span><span class="sub"><b>나.</b> TLS 1.2 보안 취약점과 TLS 1.3 개선 사항 ※ 총 6문제 중 4문제를 선택하여 설명하시오. (각 25점)</span></span></li>
+    </ol>
+  </div>
+  <div class="gy">
+    <div class="gyh">3교시<sup class="est">추정</sup></div>
+    <ol class="ql">
+      <li data-r="136" data-g="3" data-n="1"><span class="qs">IT프로젝트수행 시 PM은 프로젝트내·외부의다양한갈등을관리하고해소하여야한다. PM의 입장에서 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 갈등과 프로젝트 성과의 관계</span><span class="sub"><b>나.</b> 갈등의 요인과 해결 전략</span><span class="sub"><b>다.</b> 터크만(Tuckman)의 팀 발달 5단계 모델</span></span></li>
+      <li data-r="136" data-g="3" data-n="2"><span class="qs">최근 인공지능(AI)을 활용한 기업의 디지털 전환(AX, AI Transformation)이 다양한 산업 분야에서 빠르게 진행되고 있다. 이와 관련하여 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 기업에서 AX가 중요한 이유</span><span class="sub"><b>나.</b> 기업에서 AX를 성공적으로 추진하기 위한 전략적 추진 절차와 고려사항</span><span class="sub"><b>다.</b> 기업이 AX를 추진할 때 발생 가능한 장애 요인 3가지 이상과 각 대응방안</span></span></li>
+      <li data-r="136" data-g="3" data-n="3"><span class="qs">소프트웨어 품질보증과 관련하여 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 소프트웨어 품질의 의미</span><span class="sub"><b>나.</b> 소프트웨어 품질보증의 목적과 기능</span><span class="sub"><b>다.</b> 인스펙션(Inspection)과 인스펙션 프로세스(Inspection Process)</span></span></li>
+      <li data-r="136" data-g="3" data-n="4"><span class="qs">데이터 분석 시 아웃라이어(Outlier)에 대하여 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 아웃라이어의 개념</span><span class="sub"><b>나.</b> 아웃라이어와 노이즈(Noise)의 차이점</span><span class="sub"><b>다.</b> 아웃라이어의 3가지 유형인 전역, 맥락, 군집</span></span></li>
+      <li data-r="136" data-g="3" data-n="5"><span class="qs">혼동행렬(Confusion Matrix) 결과를 참고하여 다음을 계산하고 설명하시오. 결과: True Positive(TP)=100, False Positive(FP)=5, False Negative(FN)=7, True Negative(TN)=9 (단, 계산 결과는 %로 표시하고 소수점은 버린다.)</span><span class="subs"><span class="sub"><b>가.</b> 혼동행렬을 사용한 모델의 성능 평가 원리</span><span class="sub"><b>나.</b> 정확도, 정밀도, 재현율 계산 결과와 해석</span><span class="sub"><b>다.</b> F1-score 계산 결과와 해석</span></span></li>
+      <li data-r="136" data-g="3" data-n="6"><span class="qs">메모리 관리 기법 중 동적 메모리 할당과 관련하여 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 동적 메모리 할당의 필요성</span><span class="sub"><b>나.</b> 메모리 누수(Memory Leak)로 인한 문제</span><span class="sub"><b>다.</b> 프로그래밍 언어(Java, Python 등)에서 지원하는 메모리 누수 해결방안 ※ 총 6문제 중 4문제를 선택하여 설명하시오. (각 25점)</span></span></li>
+    </ol>
+  </div>
+  <div class="gy">
+    <div class="gyh">4교시<sup class="est">추정</sup></div>
+    <ol class="ql">
+      <li data-r="136" data-g="4" data-n="1"><span class="qs">국내 인공지능(AI) 윤리기준과 생성형 AI에 대하여 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 3대 기본 원칙과 10대 핵심요건(과기정통부 인공지능 윤리기준)</span><span class="sub"><b>나.</b> 인공지능 윤리 관점에서 생성형 AI의 역기능 요소</span></span></li>
+      <li data-r="136" data-g="4" data-n="2"><span class="qs">프로세스간 통신을 위해 사용되는IPC(InterProcess Communication)에 대하여 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> IPC의 개념과 목적</span><span class="sub"><b>나.</b> IPC 주요기법 3가지</span><span class="sub"><b>다.</b> 공유 자원의 충돌이나 일관성 문제를 해결하기 위한 동기화 기법</span></span></li>
+      <li data-r="136" data-g="4" data-n="3"><span class="qs">대규모 중요 소프트웨어 사업 평가의 전문성을 높이고 수요기관의 전문성을 보완해 공정한 경쟁을 유도하기 위하여 &#x27;조달청 협상에 의한 계약 제안서평가 세부기준&#x27;이 2024년 9월 개정·시행되었다. 이와 관련하여 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 계약 제안서평가 세부기준 개정 주요 내용</span><span class="sub"><b>나.</b> 대형소프트웨어 사업 전문평가제도</span></span></li>
+      <li data-r="136" data-g="4" data-n="4"><span class="qs">공급망 보안(Supply Chain Security)을 설명하고, 제로트러스트(Zero Trust) 기반 공급망 보안 아키텍처를 설명하시오.</span></li>
+      <li data-r="136" data-g="4" data-n="5"><span class="qs">대형언어모델(LLM,LargeLanguageModel)의 활용이급격히 증가함에따라 그와관련된 보안 위협이새롭게 대두되고 있다. OWASP에서는2025년 버전의LLM 애플리케이션을 위한 Top 10 보안 위협 목록(OWASP LLM, OWASP Top 10 for LLM Application 2025)을 발표하여 LLM기반 시스템의안전한개발과운영을 위한 기준을 제시하고있다. 이와 관련하여 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> OWASP LLM이 제시된 배경과 주요 특징</span><span class="sub"><b>나.</b> OWASP LLM에서 제시된 주요 보안 위협</span><span class="sub"><b>다.</b> 기업이LLM 애플리케이션을설계,운영할 때 OWASPLLM을 활용한보안 대응방안</span></span></li>
+      <li data-r="136" data-g="4" data-n="6"><span class="qs">소프트웨어 품질 속성 중 보안 품질에 대하여 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 소프트웨어 보안 품질의 정의와 중요성</span><span class="sub"><b>나.</b> 보안 품질 확보를 위한 자동화 기술과 도구</span><span class="sub"><b>다.</b> 소프트웨어 라이프사이클 관점에서 보안 자동화 구현방안</span><span class="sub"><b>라.</b> 기대 효과와 시사점</span></span></li>
+    </ol>
+  </div>
 </section>
 <section id="r135" class="round">
   <h3>제135회 <span class="rd">1교시 단답형 · 13문제 중 10문제 선택 · 각 10점</span></h3>
@@ -601,6 +760,40 @@ V.   결론 및 제언                                    [0.2p / 2점]
     <tr><td class="num">12</td><td>VAE(Variational AutoEncoder)</td><td><span class="tag t">개념형</span></td></tr>
     <tr><td class="num">13</td><td>AGI(ArtificialGeneralIntelligence)측면에서 ANI(ArtificialNarrowIntelligence)의 필요성</td><td><span class="tag t">개념형</span></td></tr>
   </tbody></table></div>
+  <h4 class="eh">논술형 2~4교시 <span class="rd">각 교시 6문제 중 4문제 선택 · 각 25점</span></h4>
+  <div class="gy">
+    <div class="gyh">2교시<sup class="est">추정</sup></div>
+    <ol class="ql">
+      <li data-r="135" data-g="2" data-n="1"><span class="qs">물리 데이터 모델링 중 반정규화에 대하여 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 반정규화 절차</span><span class="sub"><b>나.</b> 반정규화 유형</span><span class="sub"><b>다.</b> 반정규화 시 고려사항</span></span></li>
+      <li data-r="135" data-g="2" data-n="2"><span class="qs">CI/CD(Continuous Integration/Continuous Delivery or Continuous Deployment) 파이프라인에서 DevSecOps 적용방안에 대하여 설명하시오.</span></li>
+      <li data-r="135" data-g="2" data-n="3"><span class="qs">회귀모형에서 오차의 등분산성(Homoscedasticity)과 다중공선성(Multicollinearity)에 대하여 설명하시오.</span></li>
+      <li data-r="135" data-g="2" data-n="4"><span class="qs">6G 이동통신기술에 대하여 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 서비스 특징</span><span class="sub"><b>나.</b> 성능 요구사항</span><span class="sub"><b>다.</b> 주파수 동향</span></span></li>
+      <li data-r="135" data-g="2" data-n="5"><span class="qs">최근 많은 공공기관에서 거대 언어 모델(Large Language Model)의 적용을 준비하고 있다. 다음에 대하여 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 거대 언어 모델 적용을 위한 5가지 고려사항</span><span class="sub"><b>나.</b> 현재 구현 가능한 5가지 거대 언어 모델 아키텍처</span></span></li>
+      <li data-r="135" data-g="2" data-n="6"><span class="qs">AI 디지털교과서에 대하여 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 개념 및 특징</span><span class="sub"><b>나.</b> 플랫폼 구조</span><span class="sub"><b>다.</b> 기능 및 핵심 서비스 ※ 총 6문제 중 4문제를 선택하여 설명하시오. (각25점)</span></span></li>
+    </ol>
+  </div>
+  <div class="gy">
+    <div class="gyh">3교시<sup class="est">추정</sup></div>
+    <ol class="ql">
+      <li data-r="135" data-g="3" data-n="1"><span class="qs">IT 프로젝트 관리에 대하여 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> IT 프로젝트 관리의 개념</span><span class="sub"><b>나.</b> IT 프로젝트 관리 프로세스</span><span class="sub"><b>다.</b> IT 프로젝트 관리, 프로그램 관리, 포트폴리오 관리의 비교</span></span></li>
+      <li data-r="135" data-g="3" data-n="2"><span class="qs">프롬프트 엔지니어링(Prompt Engineering) 의 기술 요소와 활용 방안에 대하여 설명하시오.</span></li>
+      <li data-r="135" data-g="3" data-n="3"><span class="qs">멀티클라우드(MultiCloud)에 대하여 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 개념 및 필요성</span><span class="sub"><b>나.</b> 시스템 요구사항</span><span class="sub"><b>다.</b> 주요 기술</span></span></li>
+      <li data-r="135" data-g="3" data-n="4"><span class="qs">양자 암호 기술에 대하여 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 양자키분배(QKD : Quantum Key Distribution)</span><span class="sub"><b>나.</b> 양자내성암호(PQC : Post Quantum Cryptography)</span><span class="sub"><b>다.</b> QKD와 PQC 비교</span></span></li>
+      <li data-r="135" data-g="3" data-n="5"><span class="qs">데이터 거래를 위한 데이터 가치평가에 대하여 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 데이터 재화와 데이터 가치의 특징</span><span class="sub"><b>나.</b> 데이터 가치평가의 모델 및 절차</span><span class="sub"><b>다.</b> 데이터 가치평가의 활용방안</span></span></li>
+      <li data-r="135" data-g="3" data-n="6"><span class="qs">딥페이크(Deepfake)에 대하여 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 딥페이크의 개념 및 핵심 기술</span><span class="sub"><b>나.</b> 딥페이크의 문제점</span><span class="sub"><b>다.</b> 딥페이크 대응방안 ※ 총 6문제 중 4문제를 선택하여 설명하시오. (각25점)</span></span></li>
+    </ol>
+  </div>
+  <div class="gy">
+    <div class="gyh">4교시<sup class="est">추정</sup></div>
+    <ol class="ql">
+      <li data-r="135" data-g="4" data-n="1"><span class="qs">확장성 해싱(Extendible Hashing)기법에 대하여 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 개념 및 구성요소</span><span class="sub"><b>나.</b> 충돌회피 기법</span></span></li>
+      <li data-r="135" data-g="4" data-n="2"><span class="qs">릴레이션 무결성 제약의 유형과 사례를 제시하고, 구현 방법에 대하여 설명하시오.</span></li>
+      <li data-r="135" data-g="4" data-n="3"><span class="qs">이항 분포(Binomial Distribution) 와 포아송 분포(Poisson Distribution) 를 비교 설명하시오 .</span></li>
+      <li data-r="135" data-g="4" data-n="4"><span class="qs">빅데이터 시각화(Visualization)에 대하여 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 개념 및 절차</span><span class="sub"><b>나.</b> 방법 및 도구</span></span></li>
+      <li data-r="135" data-g="4" data-n="5"><span class="qs">인공지능 소프트웨어 품질 보증을 위한 테스트 기법에 대하여 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 메타모픽 테스트(Metamorphic Test)</span><span class="sub"><b>나.</b> 뉴런 커버리지 테스트(Neuron Coverage Test)</span><span class="sub"><b>다.</b> 안전 반경 최대화 테스트</span></span></li>
+      <li data-r="135" data-g="4" data-n="6"><span class="qs">경계 기반 보안(Perimeter Security)과 제로 트러스트(Zero Trust) 성숙도모델 2.0에 대하여 비교 설명하고, 제로 트러스트 아키텍처 도입 시 고려사항에 대하여 설명하시오.</span></li>
+    </ol>
+  </div>
 </section>
 <section id="r134" class="round">
   <h3>제134회 <span class="rd">1교시 단답형 · 13문제 중 10문제 선택 · 각 10점</span></h3>
@@ -619,6 +812,40 @@ V.   결론 및 제언                                    [0.2p / 2점]
     <tr><td class="num">12</td><td>고대역 초고속 메모리(High Bandwidth Memory)</td><td><span class="tag t">개념형</span></td></tr>
     <tr><td class="num">13</td><td>RAG(Retrieval Augmented Generation)</td><td><span class="tag t">개념형</span></td></tr>
   </tbody></table></div>
+  <h4 class="eh">논술형 2~4교시 <span class="rd">각 교시 6문제 중 4문제 선택 · 각 25점</span></h4>
+  <div class="gy">
+    <div class="gyh">2교시<sup class="est">추정</sup></div>
+    <ol class="ql">
+      <li data-r="134" data-g="2" data-n="1"><span class="qs">국가기관, 지방자치단체 및 공공기관이 안전하고 효율적으로 SaaS(Software as a Service)를 이용하기 위해 공공부문 SaaS 이용 가이드라인을 발표하였다. 다음에 대하여 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 클라우드 서비스 위험 관리원칙 및 기준</span><span class="sub"><b>나.</b> 보안대책 수립 및 보안성 검토</span><span class="sub"><b>다.</b> 서비스 수준 협약</span></span></li>
+      <li data-r="134" data-g="2" data-n="2"><span class="qs">소비자를기만하여이익을편취하고자하는 다크패턴(DarkPattern)이 발생하고있다. 이와관련하여다크패턴의세부유형및대응방안을설명하시오.</span></li>
+      <li data-r="134" data-g="2" data-n="3"><span class="qs">IT 거버넌스에 대하여 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> IT 거버넌스의 구성요소</span><span class="sub"><b>나.</b> IT 거버넌스 효과 측정 지표</span><span class="sub"><b>다.</b> IT 거버넌스 효과 측정 방법론</span></span></li>
+      <li data-r="134" data-g="2" data-n="4"><span class="qs">대규모 AI 서비스를 위한 데이터센터 구축 기술에 대하여 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 저지연 기술과 스케일링 확보 기술</span><span class="sub"><b>나.</b> DCI(Data Center Interconnect) 기술</span></span></li>
+      <li data-r="134" data-g="2" data-n="5"><span class="qs">ESG(Environment, Social, Governance) 경영에 대하여 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> ESG 경영의 정의 및 목표</span><span class="sub"><b>나.</b> ESG 경영의 주요 지표</span><span class="sub"><b>다.</b> ESG 경영 목표 달성을 지원하기 위한 정보기술(IT)</span></span></li>
+      <li data-r="134" data-g="2" data-n="6"><span class="qs">트랜잭션 격리 수준(Transaction Isolation Level) 4가지를 사례 중심으로 설명하시오. ※ 총 6문제 중 4문제를 선택하여 설명하시오. (각 25점)</span></li>
+    </ol>
+  </div>
+  <div class="gy">
+    <div class="gyh">3교시<sup class="est">추정</sup></div>
+    <ol class="ql">
+      <li data-r="134" data-g="3" data-n="1"><span class="qs">실행 중인 애플리케이션에 대한 배포 전략 및 테스트 전략에 대하여 설명하시오.</span></li>
+      <li data-r="134" data-g="3" data-n="2"><span class="qs">소프트웨어 테스트에 대하여 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 소프트웨어 테스트 원리</span><span class="sub"><b>나.</b> 블랙박스 테스트와 화이트박스 테스트</span><span class="sub"><b>다.</b> 명세기반, 구조기반, 경험기반 테스트 기법</span></span></li>
+      <li data-r="134" data-g="3" data-n="3"><span class="qs">SBOM(Software Bill of Materials)에 대하여 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 오픈소스 소프트웨어 취약점</span><span class="sub"><b>나.</b> SBOM 기반 오픈소스 소프트웨어 관리 방안</span></span></li>
+      <li data-r="134" data-g="3" data-n="4"><span class="qs">알고리즘의 복잡도를 설명하고 성능을 표기하기 위한 O-Notation의 개념과 유형 및 유형별 연산시간의 차이를 설명하시오.</span></li>
+      <li data-r="134" data-g="3" data-n="5"><span class="qs">다차원색인구조(MultidimensionalIndexStructure)의 개념, 유형, 활용사례에대하여 설명하시오.</span></li>
+      <li data-r="134" data-g="3" data-n="6"><span class="qs">일부오픈소스라이선스가개방형(예: MIT,BSD등)에서폐쇄형(예: SSPL(ServerSide PublicLicense),BSL(BusinessSourceLicense)등)으로변화하고있다.이러한오픈소스 라이선스정책변경의배경및소프트웨어산업에미치는영향에대하여설명하시오. ※ 총 6문제 중 4문제를 선택하여 설명하시오. (각 25점)</span></li>
+    </ol>
+  </div>
+  <div class="gy">
+    <div class="gyh">4교시<sup class="est">추정</sup></div>
+    <ol class="ql">
+      <li data-r="134" data-g="4" data-n="1"><span class="qs">IT 프로젝트 관리에서 리스크 대응에 대하여 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 리스크 대응 계획 수립 절차</span><span class="sub"><b>나.</b> 위협에 대한 대응 전략</span><span class="sub"><b>다.</b> 기회에 대한 대응 전략</span></span></li>
+      <li data-r="134" data-g="4" data-n="2"><span class="qs">딥러닝에서 대규모 신경망을 효율적으로 훈련하기 위한 멀티 GPU 기술에 대하여 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 멀티GPU기술의 개념과 장점</span><span class="sub"><b>나.</b> 멀티GPU 환경 구축 시 고려사항</span></span></li>
+      <li data-r="134" data-g="4" data-n="3"><span class="qs">AI 시스템에 대한 법적 이슈, 윤리적 문제, 기술적 문제에 대하여 설명하고 해결 방안을 제시하시오.</span></li>
+      <li data-r="134" data-g="4" data-n="4"><span class="qs">개방형 API(Open API)에 대하여 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 정의 및 특징</span><span class="sub"><b>나.</b> SOAP 및 REST 구성요소</span><span class="sub"><b>다.</b> 취약점 및 대응 방안</span></span></li>
+      <li data-r="134" data-g="4" data-n="5"><span class="qs">클라우드 전환 사업의 단계별 감리 방법과 검토 항목에 대하여 설명하시오.</span></li>
+      <li data-r="134" data-g="4" data-n="6"><span class="qs">군집분석기법인 SOM(Self Organizing Map)에 대하여 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> SOM 정의 및 특징</span><span class="sub"><b>나.</b> SOM 구성요소</span><span class="sub"><b>다.</b> SOM과 신경망 분석기법의 차이점</span></span></li>
+    </ol>
+  </div>
 </section>
 <section id="r133" class="round">
   <h3>제133회 <span class="rd">1교시 단답형 · 13문제 중 10문제 선택 · 각 10점</span></h3>
@@ -637,6 +864,40 @@ V.   결론 및 제언                                    [0.2p / 2점]
     <tr><td class="num">12</td><td>쿠버네티스(Kubernetes)를 설명하시오.</td><td><span class="tag t">개념형</span></td></tr>
     <tr><td class="num">13</td><td>TCP(TransmissionControlProtocol)프로토콜의3-wayhandshake와4-wayhandshake를 설명하시오.</td><td><span class="tag t">개념형</span></td></tr>
   </tbody></table></div>
+  <h4 class="eh">논술형 2~4교시 <span class="rd">각 교시 6문제 중 4문제 선택 · 각 25점</span></h4>
+  <div class="gy">
+    <div class="gyh">2교시<sup class="est">추정</sup></div>
+    <ol class="ql">
+      <li data-r="133" data-g="2" data-n="1"><span class="qs">정보시스템하드웨어규모산정지침(TTAK.KO-10.0292/R3,2023.12.06.개정)에대하여 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 규모산정의 개념 및 대상</span><span class="sub"><b>나.</b> 규모산정 절차</span><span class="sub"><b>다.</b> 규모산정 방식</span></span></li>
+      <li data-r="133" data-g="2" data-n="2"><span class="qs">‘디지털정부서비스UI/UX가이드라인’(2024.2,행정안전부)은디지털서비스를구성하는 사용자 인터페이스(User Interface; UI)와 사용자 경험(User Experience; UX) 품질에 큰영향을주는요소에대하여행정기관및공공기관이준수해야할세부사항을제시한다. 이와 관련하여 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 목적 및 주요특징</span><span class="sub"><b>나.</b> 가이드라인의 구조(구성요소)</span><span class="sub"><b>다.</b> 적용대상 및 기준</span><span class="sub"><b>라.</b> 가이드라인의 활용방법</span></span></li>
+      <li data-r="133" data-g="2" data-n="3"><span class="qs">ISO/IEC 20000에서 제시하는 기준을 중심으로, 정보기술 서비스 관리체계(ITSM)의 개념을설명하고,이시스템의서비스설계및구축,전환을위한활동에대하여설명하시오.</span></li>
+      <li data-r="133" data-g="2" data-n="4"><span class="qs">자연어 언어모델에서의 PLM(Pre-trained Language Model)의 특성을 설명하고, 이 모델이최종LLM(LargeLanguageModel)으로만들어지는과정에대하여훈련특성을 중심으로 설명하시오.</span></li>
+      <li data-r="133" data-g="2" data-n="5"><span class="qs">PbD(PrivacybyDesign)는광범위한네트워크환경에서발생할수있는데이터처리의 폐해를 방지하기 위해 캐나다 온타리오주의 정보 및 프라이버시 위원(Information and Privacy Commissioner)을 지낸 Ann Cavoukian이 처음 창안해 낸 개념이다. ICT분야의 프라이버시 보호를 위한 주요방법론으로서 다수의 국가에서 이를 정책에 반영하고 있다. 이와 관련하여 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> Privacy by Design의 7대 원칙</span><span class="sub"><b>나.</b> Privacy by Design의 8대 전략</span><span class="sub"><b>다.</b> Privacy by Design의 8대 전략과개인정보보호법제3조개인정보보호원칙과의비교</span></span></li>
+      <li data-r="133" data-g="2" data-n="6"><span class="qs">데이터 안심구역의 정의, 기능, 지정요건에 대하여 설명하시오. ※ 총 6문제 중 4문제를 선택하여 설명하시오. (각 25점)</span></li>
+    </ol>
+  </div>
+  <div class="gy">
+    <div class="gyh">3교시<sup class="est">추정</sup></div>
+    <ol class="ql">
+      <li data-r="133" data-g="3" data-n="1"><span class="qs">안티포렌식(Anti-Forensic)이 등장하게 된 배경 및 기술을 설명하고, 안티포렌식에 대응하기 위한 컴플라이언스(Compliance)시스템의 구축 프로세스와활용 프로세스에 대하여 설명하시오.</span></li>
+      <li data-r="133" data-g="3" data-n="2"><span class="qs">국가사이버안보센터는생성형AI의보안위협과안전한활용을위한가이드라인(챗GPT등 생성형AI활용보안가이드라인,2023.6)을발간하였다.이와관련하여다음을설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 생성형AI의 개념 및 활용 서비스 사례</span><span class="sub"><b>나.</b> 생성형AI의 보안 위협 종류별 주요 원인과 발생 가능한 보안위협</span><span class="sub"><b>다.</b> 생성형AI 모델/서비스 개발 시 보안 고려사항과 보안위협 대응방안</span></span></li>
+      <li data-r="133" data-g="3" data-n="3"><span class="qs">슈퍼앱에 대하여 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 슈퍼앱의 정의와 주요요소</span><span class="sub"><b>나.</b> 슈퍼앱과 멀티앱의 비교</span><span class="sub"><b>다.</b> 슈퍼앱상 구동 서비스 미니앱</span><span class="sub"><b>라.</b> 슈퍼앱의 사례와 전망 및 이슈사항</span></span></li>
+      <li data-r="133" data-g="3" data-n="4"><span class="qs">경영환경을분석하는방법인SWOT(Strengths, Weaknesses,Opportunities,Threats), 3C(Customer,Competitor,Company),PEST(Political,Economical,Social,Technological)</span></li>
+      <li data-r="133" data-g="3" data-n="5"><span class="qs">소프트웨어 요구공학(Requirement Engineering)에 대하여 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 요구공학 정의 및 필요성</span><span class="sub"><b>나.</b> 요구공학 절차</span><span class="sub"><b>다.</b> 요구사항 명세서</span></span></li>
+      <li data-r="133" data-g="3" data-n="6"><span class="qs">인공신경망에 대하여 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 인공신경망의 개념, 구성요소, 역할</span><span class="sub"><b>나.</b> 피드포워드 뉴럴 네트워크(Feedforward Neural Network) 개념 및 절차</span><span class="sub"><b>다.</b> 역전파(Backpropagation) 개념 및 절차</span><span class="sub"><b>라.</b> 활성화 함수의 종류 및 역할 . ※ 총 6문제 중 4문제를 선택하여 설명하시오. (각 25점)</span></span></li>
+    </ol>
+  </div>
+  <div class="gy">
+    <div class="gyh">4교시<sup class="est">추정</sup></div>
+    <ol class="ql">
+      <li data-r="133" data-g="4" data-n="1"><span class="qs">데이터 중심 사회에서 데이터의 프라이버시와 보안은 매우 중요한 이슈로 부상하고 있고, 이를 해결하기 위한 다양한 기술적 접근이 시도되고 있다. 그러한 시도 중에서 다자간 계산(Multi-Party Computation; MPC)에 대하여 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> MPC 개념, 원리, 특징</span><span class="sub"><b>나.</b> MPC 기술 종류</span><span class="sub"><b>다.</b> MPC 기반 인증서비스</span></span></li>
+      <li data-r="133" data-g="4" data-n="2"><span class="qs">정보시스템 개발과 운영 단계에서 수행되는 소프트웨어 테스트의 종류를 쓰고, 이 중 신뢰성 테스트와 이식성 테스트의 세부 활동에 대하여 각각 설명하시오.</span></li>
+      <li data-r="133" data-g="4" data-n="3"><span class="qs">정보보호 방법을 암호화와 접근제어로 크게 분류할 때, 접근제어에 대하여 그 개념과 정책, 절차, 그리고 이를 구현하는 메커니즘에 대하여 설명하시오.</span></li>
+      <li data-r="133" data-g="4" data-n="4"><span class="qs">RDBMS를 적용하기 위한 데이터 모델링에 대하여 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 데이터 모델링의 개념 및 모델링 단계별 수행내용</span><span class="sub"><b>나.</b> 데이터관계모델링시식별(Identification)과비식별(NonIdentification)에대하여비교</span><span class="sub"><b>다.</b> 데이터 모델링 시 고려사항</span></span></li>
+      <li data-r="133" data-g="4" data-n="5"><span class="qs">5G특화망을위한네트워크를구축할때고려되어야할사항에대하여다음을설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 안정성‧ 신뢰성 확보 방안</span><span class="sub"><b>나.</b> 간섭회피 방안</span></span></li>
+      <li data-r="133" data-g="4" data-n="6"><span class="qs">VPN(Virtual Private Network)에 대하여 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> VPN의 개념 및 특징</span><span class="sub"><b>나.</b> IPSec(Internet Protocol Security) VPN과 SSL(Secure Socket Layer) VPN</span><span class="sub"><b>다.</b> VPN의 기술요소</span></span></li>
+    </ol>
+  </div>
 </section>
 <section id="r132" class="round">
   <h3>제132회 <span class="rd">1교시 단답형 · 13문제 중 10문제 선택 · 각 10점</span></h3>
@@ -655,6 +916,40 @@ V.   결론 및 제언                                    [0.2p / 2점]
     <tr><td class="num">12</td><td>블록 스토리지, 파일 스토리지, 오브젝트 스토리지의 데이터 접근방식</td><td><span class="tag t">개념형</span></td></tr>
     <tr><td class="num">13</td><td>분산 데이터베이스의 5가지 투명성</td><td><span class="tag t">개념형</span></td></tr>
   </tbody></table></div>
+  <h4 class="eh">논술형 2~4교시 <span class="rd">각 교시 6문제 중 4문제 선택 · 각 25점</span></h4>
+  <div class="gy">
+    <div class="gyh">2교시<sup class="est">추정</sup></div>
+    <ol class="ql">
+      <li data-r="132" data-g="2" data-n="1"><span class="qs">중심극한정리, t-검정, z-검정을 설명하시오.</span></li>
+      <li data-r="132" data-g="2" data-n="2"><span class="qs">머신러닝의 분류 모델인 서포트 벡터 머신(Support Vector Machine) 중 선형 서포트 벡터 머신의 마진(Margin) 분류 방법 2가지를 설명하시오.</span></li>
+      <li data-r="132" data-g="2" data-n="3"><span class="qs">현재, 소프트웨어 기술자 구분은 과거 기술자 등급제에서 IT역량분류체계를기반으로 한 직무제(이하 IT직무제)로 변경되어운영되고있으나실무 현장에서는여전히폐지된등급제가 다수 활용되고 있는 실정이다. 소프트웨어 기술자 구분에 대하여 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 소프트웨어 기술자 등급제와 IT직무제의 개념과 특징</span><span class="sub"><b>나.</b> 현행 IT직무제의 문제점과 개선방향</span></span></li>
+      <li data-r="132" data-g="2" data-n="4"><span class="qs">최근 개인정보보호위원회는 마이데이터 전송 시 개인정보의 안전한 처리를 보장하기 위한 가이드라인(마이데이터 전송 보안 안내서, 2023.09.)을 발간하였다. 이와 관련하여 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 전송대상 개인정보 보호책임자의 지정</span><span class="sub"><b>나.</b> 전송대상 개인정보처리시스템의 접근 관리</span><span class="sub"><b>다.</b> 전송대상 개인정보관리 및 재해·재난 대비 조치</span></span></li>
+      <li data-r="132" data-g="2" data-n="5"><span class="qs">ISO 14000 인증의 개념과 필요성, 인증규격, 구축 및 인증절차, 인증효과를 설명하시오.</span></li>
+      <li data-r="132" data-g="2" data-n="6"><span class="qs">선형 자료 구조인 스택, 큐, 리스트의 자료 입출력 원리를 설명하시오. ※ 다음 문제 중 4문제를 선택하여 설명하시오. (각25점)</span></li>
+    </ol>
+  </div>
+  <div class="gy">
+    <div class="gyh">3교시<sup class="est">추정</sup></div>
+    <ol class="ql">
+      <li data-r="132" data-g="3" data-n="1"><span class="qs">소프트웨어(이하 SW) 운영단계 대가산정에 대하여 다음을 설명하시오. (단, “소프트웨어 사업 대가산정 가이드 2023년 개정판” 기준)</span><span class="subs"><span class="sub"><b>가.</b> 응용SW 요율제 유지관리비 산정방식과 SW운영 투입공수 산정방식</span><span class="sub"><b>나.</b> 고정비/변동비 산정방식</span></span></li>
+      <li data-r="132" data-g="3" data-n="2"><span class="qs">클라우드관리플랫폼의정의및 필요성, 필수기능, 플랫폼선정기준, 기대효과를설명하시오.</span></li>
+      <li data-r="132" data-g="3" data-n="3"><span class="qs">다음과 같이 형태소 분석을 통하여 문서별로 단어의 횟수가 식별되었다. 각 문서의 TF-IDF(Term Frequency - Inverse Document Frequency)를 식별하기 위한 계산 과정과 그 결과를 설명하시오. (단, Inverse Document Frequency 계산 시 log를 취하여 구하되 Document Frequency 값을 임의로 가공하지 않아야 하며,주어진 log값만을 활용한다.) &lt;TF(Term Frequency) 결과&gt; 단어 문서 1 문서 2 문서 3 엔진 15 10 10 모터 3 0 0 미션 3 5 3 스티어링휠 0 5 1 타이어 2 3 5 &lt;log값 조견표&gt; log   , log   , log   </span></li>
+      <li data-r="132" data-g="3" data-n="4"><span class="qs">SCTP(Stream Control Transmission Protocol)와 관련하여 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> SCTP 개요와 특징</span><span class="sub"><b>나.</b> SCTP 프로토콜(Protocol) 구조 및 동작 방식</span></span></li>
+      <li data-r="132" data-g="3" data-n="5"><span class="qs">APEC(Asia-Pacific Economic Cooperation)의 CBPR(Cross Border Privacy Rules)에 대하여 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> APEC 프라이버시 9원칙</span><span class="sub"><b>나.</b> CBPR의 주요 인증기준</span></span></li>
+      <li data-r="132" data-g="3" data-n="6"><span class="qs">정보시스템의 성능 요구사항 작성 시 고려해야 하는 주요 성능지표 및 내용에 대하여 설명하시오. ※ 다음 문제 중 4문제를 선택하여 설명하시오. (각25점)</span></li>
+    </ol>
+  </div>
+  <div class="gy">
+    <div class="gyh">4교시<sup class="est">추정</sup></div>
+    <ol class="ql">
+      <li data-r="132" data-g="4" data-n="1"><span class="qs">FIPS(Federal Information Processing Standard) 140-2에 대하여 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> FIPS 140-2 레벨 분류</span><span class="sub"><b>나.</b> 암호화 시스템 설계 시 고려사항</span><span class="sub"><b>다.</b> 암호화 시스템의 보안 요소</span><span class="sub"><b>라.</b> 보안 위협 대응 전략</span></span></li>
+      <li data-r="132" data-g="4" data-n="2"><span class="qs">행정안전부에서는 고품질의 공공데이터 제공 및 활용의 선제적 대응을 위해‘공공데이터 베이스표준화 관리매뉴얼(2023.04.)’을 마련하여예방적품질관리 기준을 제시하고 있다. 이와 관련하여 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 시스템 구축 추진 단계별 예방적 품질관리 활동</span><span class="sub"><b>나.</b> 공공데이터 예방적품질관리 4개 진단영역과 9개 진단항목</span></span></li>
+      <li data-r="132" data-g="4" data-n="3"><span class="qs">설비예지정비(Predictive Maintenance)시스템 구축 시 LangChain 프레임워크를 활용할 수 있는 방안에 대하여 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 설비 예지정비의 개념 및 필요성</span><span class="sub"><b>나.</b> LangChain 프레임워크와 LLM(Large Language Model)</span><span class="sub"><b>다.</b> LangChain을 이용한 설비 예지정비</span></span></li>
+      <li data-r="132" data-g="4" data-n="4"><span class="qs">소프트웨어 진흥법(시행 2023.10.19.)은 소프트웨어 산업의 발전을 위해 시행되어야 할 다양한 활동의 법적 근거를 마련하고 있다. 이와 관련하여 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 제5조(기본계획의 수립 등)의 2항에따른 기본계획 내 포함되어야 할 사항</span><span class="sub"><b>나.</b> 제30조(소프트웨어안전 확보)의 2항에 따른 소프트웨어안전 확보를 위한 지침 내 포함되어야 할 사항</span></span></li>
+      <li data-r="132" data-g="4" data-n="5"><span class="qs">소프트웨어개발에 필요한 규모 산정 방식종류와 특징을 비교 설명하고, 공공 소프트웨어 사업 규모 산정 방식의 현실적 개선 방안에 대하여 설명하시오.</span></li>
+      <li data-r="132" data-g="4" data-n="6"><span class="qs">A 기업의 경영진은 임직원들의 증가로 인해 정보보안의 필요성을 인식하고 정보보안 부서의 신설과 정보보안 체계를 수립하고자 한다. 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 정보보호 정책의 개념</span><span class="sub"><b>나.</b> 정보보호 시점별 보안 활동(Security Action Cycle)</span><span class="sub"><b>다.</b> 정보보안 전문가의 역할과 역량</span></span></li>
+    </ol>
+  </div>
 </section>
 <section id="r131" class="round">
   <h3>제131회 <span class="rd">1교시 단답형 · 13문제 중 10문제 선택 · 각 10점</span></h3>
@@ -673,6 +968,40 @@ V.   결론 및 제언                                    [0.2p / 2점]
     <tr><td class="num">12</td><td>객체지향 방법론에서 캡슐화(Encapsulation)와 정보은닉(Information Hiding)</td><td><span class="tag t">절차형</span></td></tr>
     <tr><td class="num">13</td><td>SBOM(Software Bill of Material)</td><td><span class="tag t">개념형</span></td></tr>
   </tbody></table></div>
+  <h4 class="eh">논술형 2~4교시 <span class="rd">각 교시 6문제 중 4문제 선택 · 각 25점</span></h4>
+  <div class="gy">
+    <div class="gyh">2교시<sup class="est">추정</sup></div>
+    <ol class="ql">
+      <li data-r="131" data-g="2" data-n="1"><span class="qs">ISP(Information Strategic Planning)와 BPR(Business Process Reengineering)의 개념과 수행절차를 비교 설명하고, 기업에서 이 두 가지가 상호 보완적으로 활용하기 위한 방안을 설명하시오.</span></li>
+      <li data-r="131" data-g="2" data-n="2"><span class="qs">데이터 시각화(Data Visualization)와 관련하여 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 데이터 시각화의 개요</span><span class="sub"><b>나.</b> 데이터 시각화의 원리 및 절차</span><span class="sub"><b>다.</b> 데이터 시각화 유형</span><span class="sub"><b>라.</b> 효과적인 데이터 시각화를 위한 효율화 방안</span></span></li>
+      <li data-r="131" data-g="2" data-n="3"><span class="qs">인공지능의 개발 및 적용과정에서 윤리적으로 다루어져야 할 주요 내용과 인공지능을 효과적으로 관리하고 규제하기 위한 거버넌스 모형에 대하여 설명하시오.</span></li>
+      <li data-r="131" data-g="2" data-n="4"><span class="qs">제로 트러스트 보안(Zero Trust Security)모델의 보안원리, 핵심원칙, 적용분야를 트러스트 보안(Trust Security) 모델과 비교하여 설명하시오.</span></li>
+      <li data-r="131" data-g="2" data-n="5"><span class="qs">소켓(Socket) 통신과 관련하여 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 소켓 통신 정의</span><span class="sub"><b>나.</b> 소켓 통신 방식 개념도 및 유형</span><span class="sub"><b>다.</b> TCP 소켓 및 Web 소켓 흐름 설명</span><span class="sub"><b>라.</b> 소켓 통신 방식과 HTTP 통신 방식 비교</span></span></li>
+      <li data-r="131" data-g="2" data-n="6"><span class="qs">아키텍처 스타일과 디자인 패턴에 대하여 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 아키텍처 스타일과 디자인 패턴의 차이점</span><span class="sub"><b>나.</b> 대표적인 아키텍처 스타일 3가지</span><span class="sub"><b>다.</b> GoF(Gang of Four) 디자인 패턴의 유형을 구분하고, 유형별 대표적인 디자인 패턴 설명 ※ 다음 문제 중 4문제를 선택하여 설명하시오. (각25점)</span></span></li>
+    </ol>
+  </div>
+  <div class="gy">
+    <div class="gyh">3교시<sup class="est">추정</sup></div>
+    <ol class="ql">
+      <li data-r="131" data-g="3" data-n="1"><span class="qs">인공지능 학습용 데이터 허브 구축 과정에서 생성된 학습용 데이터 셋의 품질확보를 위한 주요활동과 데이터 생애 주기별 품질관리 수행절차에 대하여 설명하시오.</span></li>
+      <li data-r="131" data-g="3" data-n="2"><span class="qs">데이터 구조(Data Structure)에 대하여 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 선형 구조(Linear Structure)의 개념 및 유형</span><span class="sub"><b>나.</b> 비선형 구조(Non-Linear Structure)의 개념 및 유형</span><span class="sub"><b>다.</b> 선형 구조(Linear Structure)와 비선형 구조(Non-Linear Structure) 비교</span></span></li>
+      <li data-r="131" data-g="3" data-n="3"><span class="qs">통합 테스트(Integration Test)에 대하여 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 비점진적 통합 방식과 점진적 통합 방식</span><span class="sub"><b>나.</b> 하향식(Top Down) 통합 테스트와 상향식(Bottom Up) 통합 테스트</span><span class="sub"><b>다.</b> 테스트 드라이버(Test Driver)와 테스트 스텁(Test Stub)</span></span></li>
+      <li data-r="131" data-g="3" data-n="4"><span class="qs">소프트웨어 안전성 분석의 필요성과 다음의 분석 기법을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> FTA(Fault Tree Analysis)</span><span class="sub"><b>나.</b> FMEA(Failure Mode and Effects Analysis)</span><span class="sub"><b>다.</b> HAZOP(Hazard and Operability Analysis)</span></span></li>
+      <li data-r="131" data-g="3" data-n="5"><span class="qs">운영체제 메모리 관리 기법 중 페이징 기법과 세그멘테이션 기법의 개념을 설명하고, 두 기법에 대하여 비교 설명하시오.</span></li>
+      <li data-r="131" data-g="3" data-n="6"><span class="qs">정보보호 및 개인정보보호 인증제도(ISMS, Information Security Management System)에 대하여 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> ISMS와 ISMS-P 차이점</span><span class="sub"><b>나.</b> ISMS 의무 대상 기준 ※ 다음 문제 중 4문제를 선택하여 설명하시오. (각25점)</span></span></li>
+    </ol>
+  </div>
+  <div class="gy">
+    <div class="gyh">4교시<sup class="est">추정</sup></div>
+    <ol class="ql">
+      <li data-r="131" data-g="4" data-n="1"><span class="qs">전략적 기업경영(Strategic Enterprise Management)에 대하여 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 전략적 기업경영의 정의</span><span class="sub"><b>나.</b> 전략적 기업경영의 구성요소</span><span class="sub"><b>다.</b> 전략적 기업경영의 구축 방안 및 구축 절차</span></span></li>
+      <li data-r="131" data-g="4" data-n="2"><span class="qs">개인정보보호를 위한 ‘개인정보의 안전성 확보조치 기준’ 고시 내용 중 다음을 설명 하시오.</span><span class="subs"><span class="sub"><b>가.</b> 내부관리계획 수립·이행</span><span class="sub"><b>나.</b> 암호화 적용방안</span></span></li>
+      <li data-r="131" data-g="4" data-n="3"><span class="qs">데이터 품질관리에 대하여 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 데이터 품질관리 아키텍처</span><span class="sub"><b>나.</b> 데이터 품질관리 성숙도</span><span class="sub"><b>다.</b> 정형 데이터 및 비정형 데이터 품질기준</span><span class="sub"><b>라.</b> 데이터 품질관리 전략</span></span></li>
+      <li data-r="131" data-g="4" data-n="4"><span class="qs">인공지능 분야에서 파운데이션(Foundation) 모델의 개념, 특징, 기반기술 및 구현 시 법적·환경적·사회적 측면의 고려사항에 대하여 설명하시오.</span></li>
+      <li data-r="131" data-g="4" data-n="5"><span class="qs">소프트웨어 규모산정에 대하여 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 필요성과 산정방법</span><span class="sub"><b>나.</b> 규모산정 방식의 종류별 특징</span></span></li>
+      <li data-r="131" data-g="4" data-n="6"><span class="qs">정렬 알고리즘은 데이터Set이 주어졌을 때, 이를 사용자가 지정한 기준에 맞게 순서 대로 나열하여 재배치하는 기법이다. 정렬 알고리즘과 관련하여 다음에 대하여 설명 하시오.</span><span class="subs"><span class="sub"><b>가.</b> 버블 정렬</span><span class="sub"><b>나.</b> 삽입 정렬</span><span class="sub"><b>다.</b> 퀵 정렬</span></span></li>
+    </ol>
+  </div>
 </section>
 <section id="r130" class="round">
   <h3>제130회 <span class="rd">1교시 단답형 · 13문제 중 10문제 선택 · 각 10점</span></h3>
@@ -691,6 +1020,40 @@ V.   결론 및 제언                                    [0.2p / 2점]
     <tr><td class="num">12</td><td>베르누이 분포(Bernoulli distribution)와 기하 분포(Geometric Distribution)</td><td><span class="tag t">개념형</span></td></tr>
     <tr><td class="num">13</td><td>ISO 21500 구성 모델</td><td><span class="tag t">구성형</span></td></tr>
   </tbody></table></div>
+  <h4 class="eh">논술형 2~4교시 <span class="rd">각 교시 6문제 중 4문제 선택 · 각 25점</span></h4>
+  <div class="gy">
+    <div class="gyh">2교시<sup class="est">추정</sup></div>
+    <ol class="ql">
+      <li data-r="130" data-g="2" data-n="1"><span class="qs">데이터 마이닝의 기법 중아래 기법에 대하여 설명하시오. 1) K-means Clustering 2) DBSCAN(Density Based Spatial Clustering of Applications withNoise) 3) SVM(Support Vector Machine)</span></li>
+      <li data-r="130" data-g="2" data-n="2"><span class="qs">최근 데이터사이언스와 기계학습이 융합된 DSML(Data Science &amp; Machine Learning) 프로젝트가 확산되고 있다. 성공적인 DSML프로젝트를 수행하기 위해 아래 항목을 설명하시오. 1) DSML 프로젝트 수명주기 2) 기계학습 운영화(Machine Learning Operationalizations/Operations : MLops)</span></li>
+      <li data-r="130" data-g="2" data-n="3"><span class="qs">네트워크 서브네팅(subnetting)과 관련하여 아래 사항들을 설명하시오. 1) 수퍼네팅(supernetting)과서브네팅(subnetting) 개념을 설명하시오. 2) 192.168.100.0/24네트워크대역을동일한IP개수를가진4개의서브넷(Subnet)으로 그리고하나의서브넷에서할당가능한IP수량을제시하시오.</span></li>
+      <li data-r="130" data-g="2" data-n="4"><span class="qs">최근(2023년2월 27일) 국회에서개인정보보호법개정안이의결되었다. 이와 관련하여 아래사항들을설명하시오. 1) 개인정보보호법 개정안 주요 내용 2) 개인정보 관련 개별 주체들과 개인 정보 처리 흐름 3) 개인정보 전송요구권과 AI 활용을 위한 자동화 의사결정 대응권</span></li>
+      <li data-r="130" data-g="2" data-n="5"><span class="qs">과학기술정보통신부가 발표한 「메타버스 윤리원칙」에 대하여 다음을 설명하시오. 1) 3대 지향가치와 8대실천원칙 2) 인터넷 윤리,인공지능 윤리 및메타버스 윤리 비교</span></li>
+      <li data-r="130" data-g="2" data-n="6"><span class="qs">최근 디지털 역기능이 확산되고 있어 심각한 사회적 문제로 대두되고 있다. 디지털 역기능에대하여다음을설명하시오. 1) 디지털 역기능 개념과 사례 2) 디지털 역기능 3대 이슈 3) 대응방안 ※ 다음 문제 중 4문제를 선택하여 설명하시오. (각25점)</span></li>
+    </ol>
+  </div>
+  <div class="gy">
+    <div class="gyh">3교시<sup class="est">추정</sup></div>
+    <ol class="ql">
+      <li data-r="130" data-g="3" data-n="1"><span class="qs">머신 러닝(Machine Learning)에서 활용되는 의사결정나무(Decision Tree) 모델을 설명하시오.</span></li>
+      <li data-r="130" data-g="3" data-n="2"><span class="qs">데이터저장 측면에서 파일, 데이터베이스,블록체인을 비교하시오.</span></li>
+      <li data-r="130" data-g="3" data-n="3"><span class="qs">TCP(Transmission Control Protocol)는 네트워크에 혼잡(Congestion)이 발생한 경우, 이를해소하기위한다양한메커니즘을사용한다. 이와관련하여아래사항들에대해서 설명하시오. 1) TCP 혼잡제어 메커니즘의 구성요소 2) 혼잡상황감지 3) 혼잡상황제어 4) 혼잡 윈도우 크기</span></li>
+      <li data-r="130" data-g="3" data-n="4"><span class="qs">최근 인공지능 기술 활용이 증가하면서 다양한 보안 위협이 증가하고 있다. 이와 관련하여 아래 사항들에 대하여 설명하시오. 1) 머신러닝 학습과정에서의 적대적 공격 4가지와 방어기법 2) 생성형 언어모델 기반의인공지능 기술 활용 시발생할 수 있는 보안취약점</span></li>
+      <li data-r="130" data-g="3" data-n="5"><span class="qs">인공지능등지능정보기술에비현실적인감리기준을해결하기위해지능정보기술감리 실무가이드(한국지능정보사회진흥원,2023년)를발간했다.그중빅데이터정보화사업의</span></li>
+      <li data-r="130" data-g="3" data-n="6"><span class="qs">금융 클라우드서비스를받는 금융회사의데이터는가장 중요한자산이며 민감정보를 다룬다.금융클라우드SLA(ServiceLevelAgreement)에대하여설명하시오. 1) SLA의 개념 2) 클라우드SLA 가이드 3) 금융 클라우드 SLA 가이드 ※ 다음 문제 중 4문제를 선택하여 설명하시오. (각25점)</span></li>
+    </ol>
+  </div>
+  <div class="gy">
+    <div class="gyh">4교시<sup class="est">추정</sup></div>
+    <ol class="ql">
+      <li data-r="130" data-g="4" data-n="1"><span class="qs">음성데이터 마이닝의 정의, 목적, 주요 기술, 활용 가능 분야, 발전 방향에 대하여 기술하시오.</span></li>
+      <li data-r="130" data-g="4" data-n="2"><span class="qs">최근 많은 범죄들이 지능화·고도화 되면서 디지털 포렌식의 중요성이 증가하고 있다. 이러한 디지털 포렌식과 관련하여 아래 사항을 설명하시오. 1) 디지털 포렌식의 개념 2) 디지털 포렌식의 유형과 절차 3) 디지털 포렌식 기술 및 활용분야</span></li>
+      <li data-r="130" data-g="4" data-n="3"><span class="qs">최근다수의기업들이클라우드서비스를도입하면서다양한보안문제가대두되고있다. IT담당자입장에서클라우드서비스도입시고려해야할보안요소를설명하시오.</span></li>
+      <li data-r="130" data-g="4" data-n="4"><span class="qs">IT프로젝트를 성공적으로 수행하기 위해 요구사항의 체계적인 관리와 문서화가 매우 중요하다.요구사항에 대하여 다음을 설명하시오. 1) 소프트웨어(SW) 요구사항 품질속성 2) 요구사항 도출기법 3) 요구사항 개발 프로세스</span></li>
+      <li data-r="130" data-g="4" data-n="5"><span class="qs">웹3.0에 대하여 다음을 설명하시오. 1) 웹3.0의 도입배경 및 개념 2) 웹3.0의 주요특징 및 기술요소 3) 웹3.0 기반의 서비스 활용 방안</span></li>
+      <li data-r="130" data-g="4" data-n="6"><span class="qs">데이터옵스(DataOps)와 데브옵스(DevOps)에 대하여 다음을 설명하시오. 1) 데이터옵스와 데브옵스의 비교 2) 데이터옵스 아키텍처 및 주요 기술</span></li>
+    </ol>
+  </div>
 </section>
 <section id="r129" class="round">
   <h3>제129회 <span class="rd">1교시 단답형 · 13문제 중 10문제 선택 · 각 10점</span></h3>
@@ -709,6 +1072,40 @@ V.   결론 및 제언                                    [0.2p / 2점]
     <tr><td class="num">12</td><td>비직교 다중접속(NOMA, Non-Orthogonal Multiple Access)</td><td><span class="tag t">개념형</span></td></tr>
     <tr><td class="num">13</td><td>트리정렬(Tree Sort)</td><td><span class="tag t">개념형</span></td></tr>
   </tbody></table></div>
+  <h4 class="eh">논술형 2~4교시 <span class="rd">각 교시 6문제 중 4문제 선택 · 각 25점</span></h4>
+  <div class="gy">
+    <div class="gyh">2교시<sup class="est">추정</sup></div>
+    <ol class="ql">
+      <li data-r="129" data-g="2" data-n="1"><span class="qs">가상화(Virtualization)에 대하여 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 일반적인 운영 체제의 프로그램 동작방식</span><span class="sub"><b>나.</b> 응용 프로그램 가상화 동작방식</span><span class="sub"><b>다.</b> 원격 데스크톱 프로토콜의 종류</span></span></li>
+      <li data-r="129" data-g="2" data-n="2"><span class="qs">접근 제어(Access Control)의 통제정책과 경량 디렉토리 액세스 프로토콜 (LDAP: Lightweight Directory Access Protocol)의 인증 흐름(Flow)에 대하여 설명 하시오.</span></li>
+      <li data-r="129" data-g="2" data-n="3"><span class="qs">딥뷰(DeepView)의 개념과 기술요소를 설명하시오.</span></li>
+      <li data-r="129" data-g="2" data-n="4"><span class="qs">최근 대규모 공공 차세대 시스템이 오픈이후에 많은 문제점이 발생되어 사회적 불편을 초래하게 되었다. 이에 대하여 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 발생된 문제점의 원인</span><span class="sub"><b>나.</b> 재발 방지를 위한 대책 및 법제도 보완 방안</span><span class="sub"><b>다.</b> 시스템 오픈 가능여부 판단을 위한 지표관리</span></span></li>
+      <li data-r="129" data-g="2" data-n="5"><span class="qs">A 기업은 다수의 기존 정보시스템을 운영 및 유지보수를 하고 있으며 신규 시스템에 대한 개발을 기획중에 있다.개발 방법론으로 구조적 방법론을 주로 활용하여 왔지만 Agile 방법론의 도입을 검토하고 있다. 다음의 사항에 대하여 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 구조적 방법론과 Agile 방법론 비교</span><span class="sub"><b>나.</b> Agile 방법론의 스크럼(Scrum)과 칸반(Kanban) 설명</span><span class="sub"><b>다.</b> Agile 방법론의 효율적인 수행 방안 제시</span></span></li>
+      <li data-r="129" data-g="2" data-n="6"><span class="qs">객체지향의 기법 중에는 리팩토링(Refactoring)과 디자인패턴(Design Pattern)이 있다. 두기법을 각각 정의하고 공통점과 차이점에 대하여 설명하시오. ※ 다음 문제 중 4문제를 선택하여 설명하시오. (각25점)</span></li>
+    </ol>
+  </div>
+  <div class="gy">
+    <div class="gyh">3교시<sup class="est">추정</sup></div>
+    <ol class="ql">
+      <li data-r="129" data-g="3" data-n="1"><span class="qs">한국지능정보사회진흥원(NIA) 및 기획재정부는 최근 “ISP(Information Strategy Planning) 및 ISMP(Information System Master Plan) 수립 공통가이드” 6판 (2022.5.20)을 출시하였다. 다음에 대하여 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 공통 가이드 수립 배경 및 필요성</span><span class="sub"><b>나.</b> ISP와 ISMP의 차이점</span><span class="sub"><b>다.</b> ISP 및 ISMP의 각 단계별활동 내용 및 산출물의 종류</span></span></li>
+      <li data-r="129" data-g="3" data-n="2"><span class="qs">정보화사업에서 작업분류체계(WBS, Work Breakdown Structure)를 이용하여 범위 및 일정 등을 관리한다. 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> WBS 작성 원칙</span><span class="sub"><b>나.</b> WBS 작성 장점</span><span class="sub"><b>다.</b> WBS 작성 고려사항</span><span class="sub"><b>라.</b> 일정지연 시 만회대책 및 사례</span></span></li>
+      <li data-r="129" data-g="3" data-n="3"><span class="qs">데이터 마이닝(Data Mining)에 대하여 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 데이터 마이닝과 통계의 차이점</span><span class="sub"><b>나.</b> 정형 데이터 마이닝과 비정형 데이터 마이닝의 비교</span><span class="sub"><b>다.</b> 오피니언 마이닝(Opinion Mining) 수행 절차를 설명하고, 텍스트 마이닝(Text Mining)과 비교</span></span></li>
+      <li data-r="129" data-g="3" data-n="4"><span class="qs">A기관은 데이터 품질관리 역량을 갖추고, 품질 제고 활동을 하기 위해 데이터 품질관리에 관련된 정책 및 제도를 마련하고자 한다. 데이터 품질관리에 포함되어야 할다음의사항에대하여설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 데이터 품질관리 총괄 책임자의 역할</span><span class="sub"><b>나.</b> 정보 생명주기 (Information Life Cycle) 단계별 데이터 품질 관리 활동</span><span class="sub"><b>다.</b> 데이터 품질 진단 및 개선 절차</span></span></li>
+      <li data-r="129" data-g="3" data-n="5"><span class="qs">EDA(Event Driven Architecture)의 토폴로지 구성요소인 중재자 토폴로지(Mediator Topology), 브로커 토폴로지(Broker Topology)를 비교 설명하시오.</span></li>
+      <li data-r="129" data-g="3" data-n="6"><span class="qs">기업의 ESG(Environment, Social, Governance) 실현에서 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 정보보호 시스템 구축 측면에서의 ESG</span><span class="sub"><b>나.</b> 개인정보 침해 및 구제 측면에서의 ESG ※ 다음 문제 중 4문제를 선택하여 설명하시오. (각25점)</span></span></li>
+    </ol>
+  </div>
+  <div class="gy">
+    <div class="gyh">4교시<sup class="est">추정</sup></div>
+    <ol class="ql">
+      <li data-r="129" data-g="4" data-n="1"><span class="qs">인포스틸러(InfoStealer)개념을설명하고공격절차와 공격에대한 대응방안을조직의 정보보안담당자입장에서설명하시오.</span></li>
+      <li data-r="129" data-g="4" data-n="2"><span class="qs">데이터베이스에서정규화는이상현상(Anomaly)이 있는 릴레이션(Relation)을 해결하기 위한방법이다.다음의&lt;수강테이블&gt;을활용하여설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 이상현상 3가지와 발생 이유</span><span class="sub"><b>나.</b> 해결방안</span><span class="sub"><b>다.</b> 테이블 재구성 &lt;수강테이블&gt; 기본키 : {학번, 수강코드} 학번 학과 지도교수 수강코드 221571 컴퓨터과 K1 C412 221572 컴퓨터과 M1 C412 211561 수학과 P2 C324 201511 전기과 C1 E123 201511 전기과 C1 C412</span></span></li>
+      <li data-r="129" data-g="4" data-n="3"><span class="qs">반도체 생태계를 차지하고자 하는 글로벌 기업들의 소리없는 전쟁이 계속되고 있다. 우리나라는 메모리반도체의 강국이지만 비메모리 반도체 분야에서는 뒤쳐져 있다. 다음에 대하여 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 메모리 반도체와 비메모리 반도체 비교</span><span class="sub"><b>나.</b> 반도체 산업의 가치사슬(Value Chain)</span><span class="sub"><b>다.</b> 비메모리 반도체 성장을 위한 비전과 전략</span></span></li>
+      <li data-r="129" data-g="4" data-n="4"><span class="qs">정보시스템 개발 및 운영 단계에서 수행하는 소프트웨어 테스트와 관련하여 다음 사항에 대하여 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 몽키 테스트(Monkey Test)와 회귀 테스트(Regression Test) 비교 설명</span><span class="sub"><b>나.</b> 통합 테스트 계획서에 포함되어야 할 주요 사항</span></span></li>
+      <li data-r="129" data-g="4" data-n="5"><span class="qs">IT 투자분석의 프로세스, 프레임워크, 분석방법론에 대하여 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 프로세스</span><span class="sub"><b>나.</b> 프레임워크</span><span class="sub"><b>다.</b> 분석 방법론</span></span></li>
+      <li data-r="129" data-g="4" data-n="6"><span class="qs">조직이 클라우드컴퓨팅 서비스를 이용하고자 할 경우, 클라우드서비스 제공자 (CSP,CloudServiceProvider)에대한리스크를관리하여야한다.다음을설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 클라우드 아웃소싱에 대한 요구사항</span><span class="sub"><b>나.</b> 리스크 관리 시 고려사항</span><span class="sub"><b>다.</b> 리스크 대응방안</span></span></li>
+    </ol>
+  </div>
 </section>
 <section id="r128" class="round">
   <h3>제128회 <span class="rd">1교시 단답형 · 13문제 중 10문제 선택 · 각 10점</span></h3>
@@ -727,6 +1124,40 @@ V.   결론 및 제언                                    [0.2p / 2점]
     <tr><td class="num">12</td><td>랜섬웨어(Ransomware)와 RaaS(Ransomware as a Service)에 대하여 설명하시오.</td><td><span class="tag t">개념형</span></td></tr>
     <tr><td class="num">13</td><td>큐비트(Qubit)에 대하여 설명하시오.</td><td><span class="tag t">개념형</span></td></tr>
   </tbody></table></div>
+  <h4 class="eh">논술형 2~4교시 <span class="rd">각 교시 6문제 중 4문제 선택 · 각 25점</span></h4>
+  <div class="gy">
+    <div class="gyh">2교시<sup class="est">추정</sup></div>
+    <ol class="ql">
+      <li data-r="128" data-g="2" data-n="1"><span class="qs">인공지능(AI, Artificial Intelligence) 학습용 데이터 품질의 중요성이 대두됨에 따라, ‘인공지능 학습용 데이터 품질관리 가이드라인 v2.0(한국지능정보사회진흥원)’이 발표 되었다. 인공지능 학습용 데이터 품질관리에 대한 아래 사항을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 인공지능 학습용 데이터 품질관리 개념 및 필요성</span><span class="sub"><b>나.</b> 인공지능 학습용 데이터 품질관리 모델, 품질관리 단계별 수행방안</span><span class="sub"><b>다.</b> 인공지능 학습용 데이터 품질관리 지표</span></span></li>
+      <li data-r="128" data-g="2" data-n="2"><span class="qs">공공부문에서민간 클라우드서비스를활용하여운영하고자한다. 다음 사항들에 대하여 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 서비스 활용 절차에 따른 주요 태스크와 클라우드의 기본설계과정</span><span class="sub"><b>나.</b> 클라우드의 4가지 활용구조 및 클라우드 서비스 보안인증(CSAP) 절차</span><span class="sub"><b>다.</b> 클라우드 서비스유형(SaaS/PaaS/IaaS) 및 유형별 평가기준</span></span></li>
+      <li data-r="128" data-g="2" data-n="3"><span class="qs">코로나 19로 인한 중국 물류수급 문제 및 반도체 대란에 따른 전체 산업분야에서 재고관리의 중요성이 대두되고 있다. 공급망관리(SCM) 관련하여 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 공급망관리(SCM)의 개념과 중요성 대두 배경</span><span class="sub"><b>나.</b> 수요 예측의 7단계 및 수요 예측 기법</span><span class="sub"><b>다.</b> 안전재고 및 적정재고 산정방법</span></span></li>
+      <li data-r="128" data-g="2" data-n="4"><span class="qs">개정된 ‘데이터 3법’이 국회를 통과한 후에 데이터를 활용한 클라우드, IoT 등 여러 산업 군에서의 혁신과 신사업 개발 속도가 빨라지고 있다. 4차 산업혁명시대에 핵심 자원인 데이터를 좀 더 원활하게 이용할 수 있도록 ‘데이터 3법’과 마이데이터사업 관련하여 다음을 설명하시오. (단, ‘데이터 3법’은 개인정보보호법, 정보통신망법, 신용정보법을 통칭함)</span><span class="subs"><span class="sub"><b>가.</b> ‘데이터 3법’ 개정 배경과 주요개정내용</span><span class="sub"><b>나.</b> 마이데이터 사업의 개념 및 산업별 주요 제공정보 범위</span><span class="sub"><b>다.</b> 마이데이터 사업의 활성화 방안</span></span></li>
+      <li data-r="128" data-g="2" data-n="5"><span class="qs">디지털혁신을위한 고려사항과CoE(Centerof Excellence)의 역할에대하여설명하시오.</span></li>
+      <li data-r="128" data-g="2" data-n="6"><span class="qs">귀납적사고(Inductive Reasoning)와 기계학습(Machine Learning)에 대하여 설명하시오. ※ 다음 문제 중 4문제를 선택하여 설명하시오. (각25점)</span></li>
+    </ol>
+  </div>
+  <div class="gy">
+    <div class="gyh">3교시<sup class="est">추정</sup></div>
+    <ol class="ql">
+      <li data-r="128" data-g="3" data-n="1"><span class="qs">소프트웨어 모듈(Module)과 관련하여 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 소프트웨어 모듈의 응집도와 결합도</span><span class="sub"><b>나.</b> 소프트웨어 모듈의 fan-in과 fan-out</span></span></li>
+      <li data-r="128" data-g="3" data-n="2"><span class="qs">최근에는 웹기반 서비스의 증가와 모바일 퍼스트(Mobile First)에 따른 웹기반 서비스의</span><span class="subs"><span class="sub"><b>가.</b> 웹 성능저하 요인</span><span class="sub"><b>나.</b> 프론트-엔드 관점에서의 웹 최적화 방안 6가지</span></span></li>
+      <li data-r="128" data-g="3" data-n="3"><span class="qs">최근 시스템이 복잡해지고 안전(Safety)이 중요시되면서 다양한 위험분석 방법이 적용 되고 있다. 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 전통적위험분석기법인FMEA(FailureModeandEffectsAnalysis),HAZOP(Hazard and OperabilityAnalysis)의 특징 및 한계점</span><span class="sub"><b>나.</b> STPA(System Theoretic Process Analysis) 개념 및 위험분석 방법</span></span></li>
+      <li data-r="128" data-g="3" data-n="4"><span class="qs">공공소프트웨어 사업의 계획단계에서 사업의 확정 및 사업 기간의 적정성 평가를 위한 검토항목과 사업수행 중 과업 변경에 대한 적정성 판단 평가 기준에 대하여 설명하시오.</span></li>
+      <li data-r="128" data-g="3" data-n="5"><span class="qs">데이터 통합 및 마이그레이션 프로젝트에서 데이터 무결성 목표를 달성하기 위해서는 데이터들의 정합성을 확보하고 신뢰도를 높이는 일이 매우 중요하다. 다음의 내용을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 데이터 무결성(Integrity)과 정합성(Consistency)의 차이</span><span class="sub"><b>나.</b> 데이터 값(Value) 진단 프로파일링(Data Profiling)의 중점 분석 관점</span><span class="sub"><b>다.</b> 데이터 마이그레이션 검증 테스트 방법</span></span></li>
+      <li data-r="128" data-g="3" data-n="6"><span class="qs">개인정보 보호를 위한 분산 인공지능(AI, Artificial Intelligence) 학습 모델인 연합학습 (Federated Learning)에 대하여 아래 사항을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 연합학습의 동작 원리</span><span class="sub"><b>나.</b> 연합학습의 주요 알고리즘</span><span class="sub"><b>다.</b> 연합학습의 보안 및 프라이버시 보장형 기술 ※ 다음 문제 중 4문제를 선택하여 설명하시오. (각25점)</span></span></li>
+    </ol>
+  </div>
+  <div class="gy">
+    <div class="gyh">4교시<sup class="est">추정</sup></div>
+    <ol class="ql">
+      <li data-r="128" data-g="4" data-n="1"><span class="qs">최근 NFT(Non-Fungible Token) 시장의 활성화 및 생태계 형성의 견인차인 NFT 마켓 플레이스가 해커들의 주요 타겟이 되고 있다. 대형 거래소인 OpenSea의 보안 침해사례를기반으로 NFT 특성과 NFT마켓 플레이스에서의보안 취약점을 설명하시오.</span></li>
+      <li data-r="128" data-g="4" data-n="2"><span class="qs">웹서버의 안전한운영을위해 다양한 방안을고려할수 있다. 다음을설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 리버스 프록시(Reverse Proxy)의 개념, 동작원리, 설정방법</span><span class="sub"><b>나.</b> DDoS 사이버대피소</span></span></li>
+      <li data-r="128" data-g="4" data-n="3"><span class="qs">6G 이동통신을 위한 위성-상공-지상 통합형 무선 네트워크(Satellite-Aerial-Terrestrial Integrated Network, SATIN)에 대하여 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> SATIN의 개념 및 네트워크 특징</span><span class="sub"><b>나.</b> SATIN의 재난대비, UAV(Unmanned Aerial Vehicle) 활용, 낙후지역 네트워크 서비스에 활용방법</span></span></li>
+      <li data-r="128" data-g="4" data-n="4"><span class="qs">최근 정보통신의 발전으로 인해 도감청이 불가능한 양자암호통신에 대한 관심이 높아 지고 있다. 양자암호통신에 대하여 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 양자암호통신의 암호키 분배방식</span><span class="sub"><b>나.</b> 양자암호통신의 주요기술</span><span class="sub"><b>다.</b> 양자암호통신의 취약점</span></span></li>
+      <li data-r="128" data-g="4" data-n="5"><span class="qs">데이터베이스의 병행제어(Concurrency Control)에 대하여 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 병행제어의 정의</span><span class="sub"><b>나.</b> 병행제어 기법의 종류</span><span class="sub"><b>다.</b> 병행제어의 문제점</span></span></li>
+      <li data-r="128" data-g="4" data-n="6"><span class="qs">식별(Identification)과 인증(Authentication)에 대하여 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 개인 식별과 사용자 인증의 정의 및 차이점</span><span class="sub"><b>나.</b> 사용자 인증 시 보안 요구 사항</span><span class="sub"><b>다.</b> 인증 방식에 따른 4가지 유형 및 유형별 특징</span></span></li>
+    </ol>
+  </div>
 </section>
 <section id="r127" class="round">
   <h3>제127회 <span class="rd">1교시 단답형 · 13문제 중 10문제 선택 · 각 10점 · 2022년</span></h3>
@@ -745,6 +1176,40 @@ V.   결론 및 제언                                    [0.2p / 2점]
     <tr><td class="num">12</td><td>디지털 트윈(Digital Twin)과 메타버스(Metaverse)</td><td><span class="tag t">개념형</span></td></tr>
     <tr><td class="num">13</td><td>DaaS(Desktop as a Service)</td><td><span class="tag t">개념형</span></td></tr>
   </tbody></table></div>
+  <h4 class="eh">논술형 2~4교시 <span class="rd">각 교시 6문제 중 4문제 선택 · 각 25점</span></h4>
+  <div class="gy">
+    <div class="gyh">2교시</div>
+    <ol class="ql">
+      <li data-r="127" data-g="2" data-n="1"><span class="qs">국제연합(UN)은 매 2년마다 전체 회원국을 대상으로 전자정부 평가를 실시한다. 전자정부 평가에 대한 아래 사항을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 전자정부 평가 개념과 평가지수의 종류</span><span class="sub"><b>나.</b> 전자정부 발전지수(E-Government Development Index)개념과 평가 방법</span></span></li>
+      <li data-r="127" data-g="2" data-n="2"><span class="qs">소프트웨어 개발 방법론이 발전하면서 제품은 더 빨리 출시되며 기능 추가와 보완을 위해 더 자주 배포되고 있다. 개발 결과물을 고객에게 제공하기 위해 서버에 배포할 경우 검토할 수 있는 아래의 사항에 대해 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 중단 배포의 문제점</span><span class="sub"><b>나.</b> 무중단 배포를 위한 리버스 프록시와 로드밸런싱</span><span class="sub"><b>다.</b> 무중단 배포 방식의 종류</span></span></li>
+      <li data-r="127" data-g="2" data-n="3"><span class="qs">데이터 용량이 증가할수록 데이터베이스 튜닝(Tuning)의 필요성이 증가하고 있다. 데이터베이스 튜닝에 대한 아래의 사항을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 데이터베이스 튜닝의 개념과 목적</span><span class="sub"><b>나.</b> 데이터베이스 설계 단계 튜닝 기법</span><span class="sub"><b>다.</b> 힌트(Hint)의 유형</span></span></li>
+      <li data-r="127" data-g="2" data-n="4"><span class="qs">온디바이스 AI(Artificial Intelligence)에 대한 아래의 사항을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 온디바이스 AI의 개념</span><span class="sub"><b>나.</b> 온디바이스 AI의 하드웨어 및 소프트웨어 기술</span><span class="sub"><b>다.</b> 온디바이스 AI의 시사점</span></span></li>
+      <li data-r="127" data-g="2" data-n="5"><span class="qs">개인정보 안전성 확보조치 기준에 명시된 내부관리계획의정의 및 필요성, 주요 내용에 대하여 설명하시오.</span></li>
+      <li data-r="127" data-g="2" data-n="6"><span class="qs">아래의 접근 통제 보안 모델에 대하여 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 벨 라파듈라(BLP) 모델</span><span class="sub"><b>나.</b> 비바(BIBA) 모델</span><span class="sub"><b>다.</b> Clark and Wilson 모델 ※채점기준및모범답안은『공공기관의정보공개에관한법률제9조제1항제5호』에의거공개하지않습니다. ※ 다음 문제 중 4문제를 선택하여 설명하시오. (각25점)</span></span></li>
+    </ol>
+  </div>
+  <div class="gy">
+    <div class="gyh">3교시</div>
+    <ol class="ql">
+      <li data-r="127" data-g="3" data-n="1"><span class="qs">정보전략계획(Information Strategy Planning)에 대하여 아래의 사항을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 단계별 활동 및 산출물</span><span class="sub"><b>나.</b> ISMP(Information System Master Plan)와 비교</span></span></li>
+      <li data-r="127" data-g="3" data-n="2"><span class="qs">리팩토링(Refactoring)에 대한 아래의 사항을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 정의, 목적, 리팩토링 순서, 리팩토링 주요기법</span><span class="sub"><b>나.</b> 코드스멜(Code Smell)의 정의와 특징</span><span class="sub"><b>다.</b> 코드스멜의 종류를 3개 이상 기술하고 각각의 리팩토링 방법</span></span></li>
+      <li data-r="127" data-g="3" data-n="3"><span class="qs">A기업에서는 비즈니스 수행과정에서 수집된 많은 양의 빅데이터(Bigdata)를 통합 관리하고자 한다. 데이터 관리에 대한 아래의 사항을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 데이터 거버넌스(Data Governance)의 개념 및 주요 기능</span><span class="sub"><b>나.</b> 마스터 데이터(Master Data)의 개념과 필요성</span><span class="sub"><b>다.</b> 마스터 데이터 관리(Master Data Management)의 구성요소와 구축 시 고려사항</span></span></li>
+      <li data-r="127" data-g="3" data-n="4"><span class="qs">데이터베이스 옵티마이저(Optimizer)에 대한 아래의 사항을 설명하시오</span><span class="subs"><span class="sub"><b>가.</b> 옵티마이저의 개념</span><span class="sub"><b>나.</b> RBO(Rule Based Optimizer)와 CBO(Cost Based Optimizer) 비교</span><span class="sub"><b>다.</b> 옵티마이저의 적용 시 고려사항</span></span></li>
+      <li data-r="127" data-g="3" data-n="5"><span class="qs">소프트웨어 정의 네트워크(SDN)에 대한 아래의 사항을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> SDN 제어평면의 개요 및 구조의 특징</span><span class="sub"><b>나.</b> 오픈플로우(OpenFlow) 프로토콜</span></span></li>
+      <li data-r="127" data-g="3" data-n="6"><span class="qs">SOAR(Security Orchestration, Automation and Response)의 개념 및 등장배경, 구성 요소, 주요 기능, 기대효과, 도입 시 고려사항에 대하여 설명하시오. ※채점기준및모범답안은『공공기관의정보공개에관한법률제9조제1항제5호』에의거공개하지않습니다. ※ 다음 문제 중 4문제를 선택하여 설명하시오. (각25점)</span></li>
+    </ol>
+  </div>
+  <div class="gy">
+    <div class="gyh">4교시</div>
+    <ol class="ql">
+      <li data-r="127" data-g="4" data-n="1"><span class="qs">최근 여러 기업에서 MSA(Micro Service Architecture) 도입이 활발하게 이루어지고 있다. MSA에 대한 아래의 사항을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> MSA 개념 및 특징과 구현시 지켜야 할 원칙</span><span class="sub"><b>나.</b> 모놀리스 아키텍처(Monolith Architecture)와 MSA 비교</span><span class="sub"><b>다.</b> MSA 구현을 위한 서비스 매쉬(Service Mesh)</span></span></li>
+      <li data-r="127" data-g="4" data-n="2"><span class="qs">데이터 커머스(Data Commerce)의 중요성이 점차 증대되고 있다. 데이터 커머스에 대한 아래의 사항을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 개념과 주요 기술</span><span class="sub"><b>나.</b> 특징</span><span class="sub"><b>다.</b> 활용 분야</span></span></li>
+      <li data-r="127" data-g="4" data-n="3"><span class="qs">데이터베이스 샤딩(Sharding)에 대한 아래의 사항을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 샤딩의 개념 및 분할방법</span><span class="sub"><b>나.</b> 샤딩과 파티셔닝(Partitioning)의 차이점</span><span class="sub"><b>다.</b> 샤딩 적용 시 고려사항</span></span></li>
+      <li data-r="127" data-g="4" data-n="4"><span class="qs">최근 데이터 산업 발전을 위하여 “데이터 산업진흥 및 이용촉진에 관한 기본법”(약칭: 데이터산업법)을 제정하였다. 이 법의 목적 및 주요 내용과 기대 효과에 대하여 설명 하시오.</span></li>
+      <li data-r="127" data-g="4" data-n="5"><span class="qs">UML 2.0의 순차 다이어그램(Sequence Diagram)에 대한 아래의 사항을 작성하시오.</span><span class="subs"><span class="sub"><b>가.</b> 순차 다이어그램의 목적과 작성순서, 구성요소별 표기법 구성요소 Frame, Object, Lifelines, Activation Box, Messages, Guard</span><span class="sub"><b>나.</b> 아래의 도서예약시스템의 협력 다이어그램(Collaboration Diagram)을 순차 다이어 그램으로 변환 대여자 대여 도서예약 도서항목 (대여표시처리) 1. 대여 요청 2. 재고 확인 3. [재고=0] 재고 없음 통보 4. 예약 요청 5. 예약 처리 3. [재고&gt;0] 대여 처리 3. 대여 처리</span></span></li>
+      <li data-r="127" data-g="4" data-n="6"><span class="qs">블록(Block) 암호 모드에 대한 아래의 사항을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> ECB(Electronic CodeBook) 모드</span><span class="sub"><b>나.</b> CBC(Cipher Block Chaining) 모드</span><span class="sub"><b>다.</b> CFB(Cipher FeedBack) 모드</span><span class="sub"><b>라.</b> OFB(Output FeedBack) 모드 ※채점기준및모범답안은『공공기관의정보공개에관한법률제9조제1항제5호』에의거공개하지않습니다.</span></span></li>
+    </ol>
+  </div>
 </section>
 <section id="r126" class="round">
   <h3>제126회 <span class="rd">1교시 단답형 · 13문제 중 10문제 선택 · 각 10점 · 2022년</span></h3>
@@ -763,6 +1228,40 @@ V.   결론 및 제언                                    [0.2p / 2점]
     <tr><td class="num">12</td><td>네트워크 스캐닝(Network Scanning)</td><td><span class="tag t">개념형</span></td></tr>
     <tr><td class="num">13</td><td>파일 슬랙(File Slack)</td><td><span class="tag t">개념형</span></td></tr>
   </tbody></table></div>
+  <h4 class="eh">논술형 2~4교시 <span class="rd">각 교시 6문제 중 4문제 선택 · 각 25점</span></h4>
+  <div class="gy">
+    <div class="gyh">2교시</div>
+    <ol class="ql">
+      <li data-r="126" data-g="2" data-n="1"><span class="qs">소프트웨어 비용 산정 방법에 대하여 설명하고, 각각의 장·단점을 비교하시오.</span></li>
+      <li data-r="126" data-g="2" data-n="2"><span class="qs">포스트코로나시대의지속가능경영전략으로ESG(Environmental,Social and Governance) 경영이 각광받고 있다. ESG경영에서 정보기술(IT)의 역할에 대하여 설명하시오.</span></li>
+      <li data-r="126" data-g="2" data-n="3"><span class="qs">최근 경제협력개발기구(OECD)에서 2023년부터 부과하기로 합의한 디지털세의 내용과 의미 및 전망에 대하여 설명하시오.</span></li>
+      <li data-r="126" data-g="2" data-n="4"><span class="qs">다음 주사위게임 유스케이스(Usecase)에 대하여 작성하시오. 참여자는주사위게임을수행한다. 주사위게임은두 개의 주사위를굴려서결과를 보여 준다. 주사위앞면에나온 값의 합이 8이면 이기는것이고, 그렇지않으면지게 된다. 1) 개념적 객체 모델(Conceptual Object Model) 2) 시퀀스 다이어그램(Sequence Diagram) 3) 클래스 다이어그램(Class Diagram)</span></li>
+      <li data-r="126" data-g="2" data-n="5"><span class="qs">퍼블릭 블록체인(Public Blockchain), 프라이빗 블록체인(Private Blockchain), 하이브리드 블록체인(Hybrid Blockchain)을 비교 설명하시오.</span></li>
+      <li data-r="126" data-g="2" data-n="6"><span class="qs">빅데이터 플랫폼 아키텍처 설계를 위한 다음 주제에 대하여 설명하시오. 1) 빅데이터 플랫폼 인프라 구조 설계 2) 빅데이터 데이터 구조 분석 3) 빅데이터 입출력 구조 설계 ※채점기준및모범답안은『공공기관의정보공개에관한법률제9조제1항제5호』에의거공개하지않습니다. ※ 다음 문제 중 4문제를 선택하여 설명하시오. (각25점)</span></li>
+    </ol>
+  </div>
+  <div class="gy">
+    <div class="gyh">3교시</div>
+    <ol class="ql">
+      <li data-r="126" data-g="3" data-n="1"><span class="qs">공공기관의 데이터베이스 표준화지침에서 정의하는 테이블 정의서에 기록될 항목과 항목의 작성 지침에 대하여 설명하시오.</span></li>
+      <li data-r="126" data-g="3" data-n="2"><span class="qs">전자정부 웹사이트 UI/UX 설계기준 7가지와 웹접근성, 웹호환성, 웹개방성, 웹최적화에 대해 각각 설명하시오.</span></li>
+      <li data-r="126" data-g="3" data-n="3"><span class="qs">최근 SW가 대부분 산업에 적용되면서 소프트웨어 안전이 중요하게 여겨지고 있다. 「소프트웨어 안전진단 가이드(공통분야)」에 따른 소프트웨어 안전성 진단 항목 중 기능동작 정확성 진단의 단계별 절차 및 주요 활동 내용을 설명하시오.</span></li>
+      <li data-r="126" data-g="3" data-n="4"><span class="qs">앙상블(Ensemble) 모형의 Bagging과 Boosting 알고리즘을 설명하시오.</span></li>
+      <li data-r="126" data-g="3" data-n="5"><span class="qs">소프트웨어 구조의 평가 및 개선을 위한 소프트웨어 아키텍처 분석 방법에 대하여 다음 내용을 설명하시오. 1) 소프트웨어 아키텍처 분석의 필요성 2) 소프트웨어 아키텍처 정방향 분석과 역방향 분석 개념 3) 소프트웨어아키텍처평가 기법 중 ATAM(ArchitectureTrade-off Analysis Method)</span></li>
+      <li data-r="126" data-g="3" data-n="6"><span class="qs">디지털뉴딜‘데이터댐’의핵심인 인공지능학습용 빅데이터 구축 사업의 성공적추진을 위한 정책과 데이터 품질에 대한 관심도가높아지고 있다. 다음의 내용을 설명하시오. 1) 인공지능 학습용 데이터의 특성 2) 데이터 획득·정제 방법과 기준 3) 데이터 라벨링(Data Labeling) 및 어노테이션(Annotation) 방식 ※채점기준및모범답안은『공공기관의정보공개에관한법률제9조제1항제5호』에의거공개하지않습니다. ※ 다음 문제 중 4문제를 선택하여 설명하시오. (각25점)</span></li>
+    </ol>
+  </div>
+  <div class="gy">
+    <div class="gyh">4교시</div>
+    <ol class="ql">
+      <li data-r="126" data-g="4" data-n="1"><span class="qs">메타버스(Metaverse)는 현실과 가상을 혼합하는 기술이다. 메타버스로 구현된 세계 에는 편리한 면도 있지만 보안적, 사회적으로 많은 문제가 내포되어 있다. 다음과 같은 측면으로 설명하시오. 1) 메타버스의 특징 2) 정보시스템측면의 메타버스의 보안 위협 3) 메타버스에서 발생할 수 있는 사회적 문제점 4) 안전한 메타버스를 위한 방안</span></li>
+      <li data-r="126" data-g="4" data-n="2"><span class="qs">Real Time Scheduling이 갖는 문제 중 우선순위 역전(Priority Inversion)이 있다. Task1, Task2, Task3 순으로 우선순위가 낮다고 할 때 우선순위 역전을 사례기반 으로 설명하고, 우선순위 역전을 해결하기 위한 2가지 기법에 대하여 설명하시오. (단. P, V연산을 사용한다.)</span></li>
+      <li data-r="126" data-g="4" data-n="3"><span class="qs">미라이 봇넷(Mirai Botnet)에 대하여 설명하시오. 1) 미라이 봇넷의 개념 2) IoT 서비스 생애주기별 보안위협 및 해결 방안 3) IoT 공통보안 7대 원칙</span></li>
+      <li data-r="126" data-g="4" data-n="4"><span class="qs">VPN(Virtual Private Network)과 Tor에 대하여 설명하시오.</span></li>
+      <li data-r="126" data-g="4" data-n="5"><span class="qs">RSA(Rivest-Shamir-Adleman)알고리즘과 DSA(Digital Signature Algorithm)를 비교 하여 설명하시오.</span></li>
+      <li data-r="126" data-g="4" data-n="6"><span class="qs">디지털포렌식(DigitalForensic)의 증거수집기술 중 하나인파일카빙(FC: File Carving)에 대하여설명하시오. 1) 파일 카빙에 대한 개념 2) 파일 카빙의 4종류 기법의 특징 ※채점기준및모범답안은『공공기관의정보공개에관한법률제9조제1항제5호』에의거공개하지않습니다.</span></li>
+    </ol>
+  </div>
 </section>
 <section id="r125" class="round">
   <h3>제125회 <span class="rd">1교시 단답형 · 13문제 중 10문제 선택 · 각 10점 · 2021년</span></h3>
@@ -781,6 +1280,40 @@ V.   결론 및 제언                                    [0.2p / 2점]
     <tr><td class="num">12</td><td>SDR(Software Defined Radio)</td><td><span class="tag t">개념형</span></td></tr>
     <tr><td class="num">13</td><td>소프트웨어 형상관리</td><td><span class="tag t">개념형</span></td></tr>
   </tbody></table></div>
+  <h4 class="eh">논술형 2~4교시 <span class="rd">각 교시 6문제 중 4문제 선택 · 각 25점</span></h4>
+  <div class="gy">
+    <div class="gyh">2교시</div>
+    <ol class="ql">
+      <li data-r="125" data-g="2" data-n="1"><span class="qs">대부분 공공부문 소프트웨어 사업에 ISMP(Information System Master Plan)를 적용 하고 있다. ISMP의 방법론 체계를 설명하고, 정보시스템구축사업 이행방안 수립 절차와 산출물을 설명하시오.</span></li>
+      <li data-r="125" data-g="2" data-n="2"><span class="qs">프로젝트 획득가치관리(Earned Value Management) 보고서의 EV(Earned Value)가 500만원, PV(Planned Value)가 600만원 그리고 AC(Actual Cost)가 450만원일 때, 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 획득가치관리를 분석하고, 일정과 비용에 대한 위험(Risk)요소를 설명하시오.</span><span class="sub"><b>나.</b> 부정적인 위험대응 방법을 설명하고, 일정과 비용에 대한 부정적인 위험대응 방안을 예시로 설명하시오.</span></span></li>
+      <li data-r="125" data-g="2" data-n="3"><span class="qs">병렬처리 시스템의 상호연결망(Interconnection Network)에 대해 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 상호연결망의 개념과 종류</span><span class="sub"><b>나.</b> 토러스(Torus) 구조</span></span></li>
+      <li data-r="125" data-g="2" data-n="4"><span class="qs">구현단계에서 발생 가능한 코딩 보안 약점인 검사시점과 사용시점(TOCTOU)에 대하여 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> TOCTOU의 정의와 개념</span><span class="sub"><b>나.</b> 문제가 발생하는 상황과 보안대책</span><span class="sub"><b>다.</b> TOCTOU 관점에서 아래 코드 실행시 발생가능한 문제점을 설명하고, 해결방안을 제시하시오. static volatile double account; void deposit(int amount) { account += amount; } void withdraw(int amount) { account -= amount; }</span></span></li>
+      <li data-r="125" data-g="2" data-n="5"><span class="qs">EMP공격(ElectroMagnetic Pulse attack)에 대하여 다음 물음에 답하시오.</span><span class="subs"><span class="sub"><b>가.</b> EMP공격의 정의와 구분</span><span class="sub"><b>나.</b> HEMP(High altitude EMP)의 원리</span><span class="sub"><b>다.</b> EMP공격의 위협을 정의하고 위협별 방호 방안 제시</span></span></li>
+      <li data-r="125" data-g="2" data-n="6"><span class="qs">소프트웨어의 시험(Test)에 사용되는 다음의 기법에 대해 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 블랙박스(Black Box) 시험</span><span class="sub"><b>나.</b> 화이트박스(White Box) 시험 ※채점기준및모범답안은『공공기관의정보공개에관한법률제9조제1항제5호』에의거공개하지않습니다. ※ 다음 문제 중 4문제를 선택하여 설명하시오. (각25점)</span></span></li>
+    </ol>
+  </div>
+  <div class="gy">
+    <div class="gyh">3교시</div>
+    <ol class="ql">
+      <li data-r="125" data-g="3" data-n="1"><span class="qs">배열을 이용하여 큐(Queue)를 구성할 때의 단점과 해결 방법을 설명하시오.</span></li>
+      <li data-r="125" data-g="3" data-n="2"><span class="qs">IT 프로젝트의 위험도가 크거나 대규모 사업은 상주감리 제도를 적용할 수 있다. 상주감리 업무 수행 범위와 절차를 설명하고, PMO(Project Management Office)와의 연관관계를 설명하시오.</span></li>
+      <li data-r="125" data-g="3" data-n="3"><span class="qs">QoS(Quality of Service) 방식인 DiffServ와 IntServ를 설명하시오.</span></li>
+      <li data-r="125" data-g="3" data-n="4"><span class="qs">인공지능(AI) 기술이 확산됨에 따라 개인정보 침해 등 다양한 사회적 문제 발생 우려가 높아졌다. 이를 대응하기 위하여, 최근 개인정보보호위원회에서 인공지능(AI) 개인정보보호 자율점검표를 확정하였다. 인공지능(AI) 개인정보보호 자율점검표의 원칙과 총괄흐름도를 설명하시오.</span></li>
+      <li data-r="125" data-g="3" data-n="5"><span class="qs">JASON Web Token에 대하여 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> JASON Web Token의 개념</span><span class="sub"><b>나.</b> JASON Web Token의 구성과 인증 메커니즘</span><span class="sub"><b>다.</b> JASON Web Token의 장․단점과 활용방안</span></span></li>
+      <li data-r="125" data-g="3" data-n="6"><span class="qs">IT 투자평가 기법에 대하여 다음 물음에 답하시오.</span><span class="subs"><span class="sub"><b>가.</b> IT 투자 평가의 정량적 및 정성적 평가 항목 및 내용을 설명하시오.</span><span class="sub"><b>나.</b> 매출증대의 재무적 목표 달성을 위해 고객에게 배송시간 절감과 만족도 증가를 제공하려는 기업의 BSC(Balanced Score Card) 전략맵을작성하시오. ※채점기준및모범답안은『공공기관의정보공개에관한법률제9조제1항제5호』에의거공개하지않습니다. ※ 다음 문제 중 4문제를 선택하여 설명하시오. (각25점)</span></span></li>
+    </ol>
+  </div>
+  <div class="gy">
+    <div class="gyh">4교시</div>
+    <ol class="ql">
+      <li data-r="125" data-g="4" data-n="1"><span class="qs">금융 환경의변화로 최근 은행권 공동 오픈 플랫폼을 구축하여핀테크서비스가 활성화 되고 있다. 다음 내용에 대하여 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 오픈플랫폼의 개념</span><span class="sub"><b>나.</b> 오픈플랫폼의 주요기술인 Open API</span><span class="sub"><b>다.</b> 오픈플랫폼의 제공 기능</span></span></li>
+      <li data-r="125" data-g="4" data-n="2"><span class="qs">정보통신분야 정보이론(Information Theory)과샤논(Shannon)의 정리에 대하여 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 정보이론의 개념</span><span class="sub"><b>나.</b> 샤논의 제1정리 및 제2정리</span><span class="sub"><b>다.</b> 샤논-하틀리(Shannon-Hartley)의 정리</span></span></li>
+      <li data-r="125" data-g="4" data-n="3"><span class="qs">한 공장에서 스마트팩토리(Smart Factory) 적용을통한 생산시간 단축을 확인하려고 한다. 기존 공정에서의 제품 생산시간이 정규분포를 따르며 평균이 30분, 표준 편차가 5분인 것으로 알려져 있다. 스마트 팩토리가 적용된 공정의 제품에 대한 생산시간을 49개 랜덤 추출하여 관측한 결과 평균이 28.5분이었다. 스마트팩토리가 적용된 공정의 생산시간이 표준편차가 5분인 정규분포를 따른다고 할 때, 스마트 팩토리를통해 생산 시간이 단축되었는지 가설을 설정하고 검정하시오. (단, 유의수준 5%, Z0.05=1.645)</span></li>
+      <li data-r="125" data-g="4" data-n="4"><span class="qs">방향성 비순환 그래프(Directed Acyclic Graph)에 대하여 다음 물음에 답하시오.</span><span class="subs"><span class="sub"><b>가.</b> 방향성 비순환 그래프의 개념과 특징</span><span class="sub"><b>나.</b> 아래 방향성 비순환 그래프에대하여 위상정렬(TopologySort)을 실시하고결과값 제시</span></span></li>
+      <li data-r="125" data-g="4" data-n="5"><span class="qs">절차지향 프로그래밍(Procedure Oriented Programming) 방법과 객체지향 프로그래밍 (Object Oriented Programming) 방법을 비교 설명하시오.</span></li>
+      <li data-r="125" data-g="4" data-n="6"><span class="qs">산업제어시스템(Industrial Control System)의 퍼듀(Purdue) 모델에 대하여 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 퍼듀 모델의 개념</span><span class="sub"><b>나.</b> 퍼듀 모델의 계층과 계층별 특징 ※채점기준및모범답안은『공공기관의정보공개에관한법률제9조제1항제5호』에의거공개하지않습니다.</span></span></li>
+    </ol>
+  </div>
 </section>
 <section id="r124" class="round">
   <h3>제124회 <span class="rd">1교시 단답형 · 13문제 중 10문제 선택 · 각 10점 · 2021년</span></h3>
@@ -799,6 +1332,40 @@ V.   결론 및 제언                                    [0.2p / 2점]
     <tr><td class="num">12</td><td>적대적 공격(Adversarial Attack)</td><td><span class="tag t">이슈대응형</span></td></tr>
     <tr><td class="num">13</td><td>NAC(Network Access Control)</td><td><span class="tag t">개념형</span></td></tr>
   </tbody></table></div>
+  <h4 class="eh">논술형 2~4교시 <span class="rd">각 교시 6문제 중 4문제 선택 · 각 25점</span></h4>
+  <div class="gy">
+    <div class="gyh">2교시</div>
+    <ol class="ql">
+      <li data-r="124" data-g="2" data-n="1"><span class="qs">코로나-19(Covid-19)로 인한 언택트 시대의 데이터 주권 이슈와 데이터 거버넌스 전략 방향에 대하여 설명하시오.</span></li>
+      <li data-r="124" data-g="2" data-n="2"><span class="qs">디자인 싱킹(Design Thinking)에서 요구분석을 위한 공감(Empathize) 방법의 중요성을 설명하시오.</span></li>
+      <li data-r="124" data-g="2" data-n="3"><span class="qs">사용자 요구사항 도출 기법 4가지 및 요구사항 도출 시 유의사항을 설명하시오.</span></li>
+      <li data-r="124" data-g="2" data-n="4"><span class="qs">소프트웨어 신뢰성 성장 모델(Software Reliability Growth Model, SRGM)을 2가지 설명하시오.</span></li>
+      <li data-r="124" data-g="2" data-n="5"><span class="qs">DA(Data Architect)와 DBA(Database Administrator)의 역할을 비교하여 설명하시오.</span></li>
+      <li data-r="124" data-g="2" data-n="6"><span class="qs">OWASP에서 발표한 보안 위협 인젝션(Injection)의 개념과 대응 방안을 설명하시오. ※채점기준및모범답안은『공공기관의정보공개에관한법률제9조제1항제5호』에의거공개하지않습니다. ※ 다음 문제 중 4문제를 선택하여 설명하시오. (각25점)</span></li>
+    </ol>
+  </div>
+  <div class="gy">
+    <div class="gyh">3교시</div>
+    <ol class="ql">
+      <li data-r="124" data-g="3" data-n="1"><span class="qs">최근 우리나라 IT기업은 개발자 공급부족이라는 매우 어려운 상황에 직면해 있다. 이의 원인과 해결방안을 다음의 관점에서 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> IT서비스 분야의 산업 특수성과 노동 특성 관점에서의 원인</span><span class="sub"><b>나.</b> 소프트웨어산업진흥법에 명시된 하도급 구조 개선 제도의 한계점 및 개선방안</span></span></li>
+      <li data-r="124" data-g="3" data-n="2"><span class="qs">자료구조 Heap의 2가지 유형인 Max-heap과 Min-heap을 설명하시오.</span></li>
+      <li data-r="124" data-g="3" data-n="3"><span class="qs">NoSQL 모델링 패턴 3가지 및 NoSQL 모델링 절차를 설명하시오.</span></li>
+      <li data-r="124" data-g="3" data-n="4"><span class="qs">교착 상태(Dead Lock)의 개념과 교착 상태를 회피하기 위한 은행가 알고리즘 (Banker&#x27;s Algorithm)의 개념 및 자료구조를 설명하시오.</span></li>
+      <li data-r="124" data-g="3" data-n="5"><span class="qs">OSI 7 Layer의 각 계층과 특징을 설명하시오.</span></li>
+      <li data-r="124" data-g="3" data-n="6"><span class="qs">침입탐지시스템(Intrusion Detection System, IDS)과 침입방지시스템(Intrusion Prevention System, IPS)의 개념을 비교하여 설명하시오. ※채점기준및모범답안은『공공기관의정보공개에관한법률제9조제1항제5호』에의거공개하지않습니다. ※ 다음 문제 중 4문제를 선택하여 설명하시오. (각25점)</span></li>
+    </ol>
+  </div>
+  <div class="gy">
+    <div class="gyh">4교시</div>
+    <ol class="ql">
+      <li data-r="124" data-g="4" data-n="1"><span class="qs">인공지능(AI)을 이용한 자연어 처리 임베딩(Embedding) 기술에 대하여 설명하시오.</span></li>
+      <li data-r="124" data-g="4" data-n="2"><span class="qs">오픈소스의 개념, 특징, 현황을 기술하고 오픈소스가 4차 산업혁명에 기여하는 시사점을 설명하시오.</span></li>
+      <li data-r="124" data-g="4" data-n="3"><span class="qs">공간 DB에서 사용되는 공간 연산자(Spatial Operator)를 5개 나열하고 설명하시오.</span></li>
+      <li data-r="124" data-g="4" data-n="4"><span class="qs">정보보호 관리체계(Information Security Management System)의 개념과 관리과정을 설명하시오.</span></li>
+      <li data-r="124" data-g="4" data-n="5"><span class="qs">퍼블릭(Public) 블록체인과 프라이빗(Private) 블록체인의 차이점을 비교하여 설명하시오.</span></li>
+      <li data-r="124" data-g="4" data-n="6"><span class="qs">인공지능(AI)에서 윤리의 필요성 및 선진국의 정책 동향을 설명하고, 바람직한 AI 윤리 정책 수립 시 고려사항에 대하여 설명하시오. ※채점기준및모범답안은『공공기관의정보공개에관한법률제9조제1항제5호』에의거공개하지않습니다.</span></li>
+    </ol>
+  </div>
 </section>
 <section id="r123" class="round">
   <h3>제123회 <span class="rd">1교시 단답형 · 13문제 중 10문제 선택 · 각 10점 · 2021년</span></h3>
@@ -817,6 +1384,40 @@ V.   결론 및 제언                                    [0.2p / 2점]
     <tr><td class="num">12</td><td>GADI(Global Architecture for Digital Identity)</td><td><span class="tag t">개념형</span></td></tr>
     <tr><td class="num">13</td><td>해저케이블 에퀴아노(Equiano) 프로젝트</td><td><span class="tag t">개념형</span></td></tr>
   </tbody></table></div>
+  <h4 class="eh">논술형 2~4교시 <span class="rd">각 교시 6문제 중 4문제 선택 · 각 25점</span></h4>
+  <div class="gy">
+    <div class="gyh">2교시</div>
+    <ol class="ql">
+      <li data-r="123" data-g="2" data-n="1"><span class="qs">다음의 개념에 대하여 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 소프트웨어의 주요 특성과 공학의 발전원리</span><span class="sub"><b>나.</b> 소프트웨어 공학이 다루는 주제와 그 목표</span><span class="sub"><b>다.</b> 좋은 소프트웨어의 조건들과 개발에 영향을 미치는 요인들</span></span></li>
+      <li data-r="123" data-g="2" data-n="2"><span class="qs">머신러닝 보안 취약점에 대하여 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 머신러닝 학습과정에서의 적대적 공격 4가지</span><span class="sub"><b>나.</b> 각각 적대적 공격의 방어기법</span></span></li>
+      <li data-r="123" data-g="2" data-n="3"><span class="qs">차세대 플랫폼 기술로 등장하는 메타버스(초월우주)에 대하여 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 개념</span><span class="sub"><b>나.</b> 운영사례</span><span class="sub"><b>다.</b> 시사점</span></span></li>
+      <li data-r="123" data-g="2" data-n="4"><span class="qs">다음의 분석기법에 대하여 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 변수의 차원을 줄이는 다변량회귀분석</span><span class="sub"><b>나.</b> 변수의 차원을 줄이는 주성분분석</span><span class="sub"><b>다.</b> 케이스의 차원을 줄이는 다차원척도법</span></span></li>
+      <li data-r="123" data-g="2" data-n="5"><span class="qs">“정보시스템 감리 수행 가이드”의 검사기준서에 대하여 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 기능 및 비기능 요구사항의 검사기준 점검방법</span><span class="sub"><b>나.</b> 과업이행여부 점검결과에 대한 적부 판정방법</span></span></li>
+      <li data-r="123" data-g="2" data-n="6"><span class="qs">“정보화전략계획수립(ISP) 공통가이드(제4판)”에 대하여 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> ISP 추진 및 검토 절차</span><span class="sub"><b>나.</b> ISP 기본 구성 내용(단계별 활동, 세부내용, 산출물) ※채점기준및모범답안은『공공기관의정보공개에관한법률제9조제1항제5호』에의거공개하지않습니다. ※ 다음 문제 중 4문제를 선택하여 설명하시오. (각25점)</span></span></li>
+    </ol>
+  </div>
+  <div class="gy">
+    <div class="gyh">3교시</div>
+    <ol class="ql">
+      <li data-r="123" data-g="3" data-n="1"><span class="qs">메시지큐잉에 대한 개념과 필요성, 종류, 기능에 대하여 설명하시오.</span></li>
+      <li data-r="123" data-g="3" data-n="2"><span class="qs">데이터 품질관리 프레임워크, 데이터 관리, 데이터 구조관리, 데이터 관리프로세스에 대하여 설명하시오.</span></li>
+      <li data-r="123" data-g="3" data-n="3"><span class="qs">기술통계와 추론통계에 대하여 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 기술통계와 추론통계의 차이점 비교</span><span class="sub"><b>나.</b> 기술통계와 추론통계에 사용되는 기술(각각 4개만 쓰시오)</span></span></li>
+      <li data-r="123" data-g="3" data-n="4"><span class="qs">API Gateway를 활용하여 정보시스템을 구축하고자 한다. API Gateway의 역할과 필요성, 주요기능, 적용 시 고려사항과 적용사례에 대하여 설명하시오.</span></li>
+      <li data-r="123" data-g="3" data-n="5"><span class="qs">코로나19로비대면언택트시대에부각되고있는가상융합기술에대하여설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 가상현실, 증강현실, 가상융합기술 비교</span><span class="sub"><b>나.</b> 가상융합경제 발전전략</span></span></li>
+      <li data-r="123" data-g="3" data-n="6"><span class="qs">비대면시대에떠오르는이슈인행동인터넷(IoB,InternetofBehavior)에대하여설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 개념과 배경</span><span class="sub"><b>나.</b> IoT와의 비교</span><span class="sub"><b>다.</b> 기술의 영향 ※채점기준및모범답안은『공공기관의정보공개에관한법률제9조제1항제5호』에의거공개하지않습니다. ※ 다음 문제 중 4문제를 선택하여 설명하시오. (각25점)</span></span></li>
+    </ol>
+  </div>
+  <div class="gy">
+    <div class="gyh">4교시</div>
+    <ol class="ql">
+      <li data-r="123" data-g="4" data-n="1"><span class="qs">최근Netflix 등 CP(ContentsProvider)들의망관리 비용을요구하는법제화움직임이 일자 그들의불만이표시되고있다. 4차 산업혁명시대의망중립성이슈에대하여설명 하시오.</span><span class="subs"><span class="sub"><b>가.</b> 쟁점 사항 및 정책 이슈</span><span class="sub"><b>나.</b> 시사점 및 대응 방안</span></span></li>
+      <li data-r="123" data-g="4" data-n="2"><span class="qs">A발주기관은B수행업체에게IT아웃소싱업무를위탁하였다.다음에대하여설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 발주가능한 아웃소싱의 유형</span><span class="sub"><b>나.</b> SLA(Service Level Agreement)와 OLA(Operational Level Agreement)</span><span class="sub"><b>다.</b> Penalty/Incentive 관리체계, SIP(Service Improvement Plan), Annual Reset</span></span></li>
+      <li data-r="123" data-g="4" data-n="3"><span class="qs">정보윤리와 관련하여 다음에 대하여 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 정보윤리 정의 및 원칙</span><span class="sub"><b>나.</b> 컴퓨터(사이버) 범죄의 정의와 특징, 종류와 그 대응책</span><span class="sub"><b>다.</b> 컴퓨터(사이버) 중독의 정의, 종류와 그 문제점</span></span></li>
+      <li data-r="123" data-g="4" data-n="4"><span class="qs">자연어처리와 관련하여 다음에 대하여 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> NER(Named Entity Recognition)과 Word Embedding</span><span class="sub"><b>나.</b> BERT와 GPT-3의 비교</span></span></li>
+      <li data-r="123" data-g="4" data-n="5"><span class="qs">정량적 위험분석의 정의와 필요성을 설명하고, 아래의 4가지 위험분석 기법에 대하여 예시를 들어 설명하시오. - 의사결정나무 분석(Decision Tree Analysis) - 금전적 기대값 분석(Expected Monetary Value Analysis) - 몬테카를로 시뮬레이션(Monte Carlo Simulation) - 민감도 분석(Sensitivity Analysis)</span></li>
+      <li data-r="123" data-g="4" data-n="6"><span class="qs">다음에 대하여 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 최단경로 알고리즘의 유형4가지</span><span class="sub"><b>나.</b> 다음 그래프에서 4가지 알고리즘 계산방법 - A, B, C, D, E 5개 노드로 구성된 그래프(A가 출발지, E가 목적지임)</span><span class="sub"><b>다.</b> “나”의 4가지 알고리즘계산결과 비교 ※채점기준및모범답안은『공공기관의정보공개에관한법률제9조제1항제5호』에의거공개하지않습니다.</span></span></li>
+    </ol>
+  </div>
 </section>
 <section id="r122" class="round">
   <h3>제122회 <span class="rd">1교시 단답형 · 13문제 중 10문제 선택 · 각 10점 · 2020년</span></h3>
@@ -835,6 +1436,40 @@ V.   결론 및 제언                                    [0.2p / 2점]
     <tr><td class="num">12</td><td>술어 논리(Predicate Logic)</td><td><span class="tag t">개념형</span></td></tr>
     <tr><td class="num">13</td><td>스타 스키마(Star Schema)</td><td><span class="tag t">개념형</span></td></tr>
   </tbody></table></div>
+  <h4 class="eh">논술형 2~4교시 <span class="rd">각 교시 6문제 중 4문제 선택 · 각 25점</span></h4>
+  <div class="gy">
+    <div class="gyh">2교시</div>
+    <ol class="ql">
+      <li data-r="122" data-g="2" data-n="1"><span class="qs">파이썬(Python)의 특징 및 자료형(Data Type)을 설명하시오.</span></li>
+      <li data-r="122" data-g="2" data-n="2"><span class="qs">블록체인 합의 알고리즘(Consensus Algorithm)에 대하여 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 합의 알고리즘의 목적</span><span class="sub"><b>나.</b> 합의 알고리즘의 원리</span><span class="sub"><b>다.</b> 합의 알고리즘의 종류 및 특징</span></span></li>
+      <li data-r="122" data-g="2" data-n="3"><span class="qs">개방형 API(Open Application Programming Interface)와 관련하여 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 정의 및 필요성</span><span class="sub"><b>나.</b> 개방형 API시스템 구성도</span><span class="sub"><b>다.</b> 2가지 구조(SOAP, REST)별 특징 비교</span><span class="sub"><b>라.</b> SOAP의 4가지 구성요소</span></span></li>
+      <li data-r="122" data-g="2" data-n="4"><span class="qs">서비스 워커(Service Worker)에 대하여 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 서비스 워커의 개념</span><span class="sub"><b>나.</b> 구현 기술</span><span class="sub"><b>다.</b> 수명 주기</span><span class="sub"><b>라.</b> 활용 분야</span></span></li>
+      <li data-r="122" data-g="2" data-n="5"><span class="qs">정보시스템 운영환경 변환과정에서 장애 예방 및 대응과 관련하여 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 목적 및 필요성</span><span class="sub"><b>나.</b> 운영환경 변환 유형 및 장애 유형</span><span class="sub"><b>다.</b> 장애 예방 및 대응 활동 강화 방안</span></span></li>
+      <li data-r="122" data-g="2" data-n="6"><span class="qs">스택(Stack)의 개념을 설명하고, 아래의 조건을 만족하는 스택의 작동 알고리즘을 작성하시오.</span><span class="subs"><span class="sub"><b>가.</b> 스택(S)의 스택 포인터(Top)를 1 증가시킨다. 스택 포인터가 스택의 크기(K)보다 크면 Overflow 처리한다. 그렇지 않으면 Item이 가지고 있는 값을 스택의 Top 위치에 삽입한다.</span><span class="sub"><b>나.</b> 스택 포인터가 0이면 스택의 바닥이며 더 이상 삭제할 자료가 없으므로 Underflow 처리한다. 그렇지 않으면 Top 위치에 있는 값을 Item으로 옮기고 스택 포인터를 1 감소시킨다. K : 스택의 크기 Top : 스택 포인터 S : 스택의 이름 ※ 다음 문제 중 4문제를 선택하여 설명하시오. (각25점)</span></span></li>
+    </ol>
+  </div>
+  <div class="gy">
+    <div class="gyh">3교시</div>
+    <ol class="ql">
+      <li data-r="122" data-g="3" data-n="1"><span class="qs">웹크롤링(Web Crawling)에 대하여 설명하시오.</span></li>
+      <li data-r="122" data-g="3" data-n="2"><span class="qs">ISO/IEC 27017(클라우드 서비스 정보보호 통제)을 설명하시오.</span></li>
+      <li data-r="122" data-g="3" data-n="3"><span class="qs">분산 ID(Decentralized Identity)와 관련하여 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 개념 및 등장배경</span><span class="sub"><b>나.</b> 신원증명 발전 단계</span><span class="sub"><b>다.</b> 특징 및 기본 구조도</span><span class="sub"><b>라.</b> 활용 분야</span></span></li>
+      <li data-r="122" data-g="3" data-n="4"><span class="qs">블랙박스 테스트(Blackbox Test) 기법을 설명하고, YYYY-MM-DD 형식의 날짜 처리 모듈을 위한 블랙박스 테스트 케이스를 작성하시오. YYYY는 년(네자리 숫자) MM은 월(한자리 또는 두자리 숫자) DD는 일(한자리 또는 두자리 숫자) 빈칸은 무시</span></li>
+      <li data-r="122" data-g="3" data-n="5"><span class="qs">IT투자관리와 관련하여 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 개념 및 필요성</span><span class="sub"><b>나.</b> 추진단계별 주요 활동</span><span class="sub"><b>다.</b> IT투자 평가 항목 및 내용(정량적, 정성적)</span><span class="sub"><b>라.</b> 기대 효과</span></span></li>
+      <li data-r="122" data-g="3" data-n="6"><span class="qs">아래 시나리오를 기반으로 고객과 점주가 사용하는 주문 시스템에 대한 Use Case Diagram을 작성하시오.</span><span class="subs"><span class="sub"><b>가.</b> 고객은 주문 시스템을 통해 가격을 조회하고 주문할 수 있다.</span><span class="sub"><b>나.</b> 고객은 주문 시스템을 통해 주문 상태를 확인하고 주문을 취소할 수 있다.</span><span class="sub"><b>다.</b> 점주는 주문 시스템을 통해 주문 활동을 모니터링하고 창고를 관리할 수 있다.</span><span class="sub"><b>라.</b> 회계 시스템은 주문 시스템과 연동하여 주문이나 취소 처리할 수 있다. ※ 다음 문제 중 4문제를 선택하여 설명하시오. (각25점)</span></span></li>
+    </ol>
+  </div>
+  <div class="gy">
+    <div class="gyh">4교시</div>
+    <ol class="ql">
+      <li data-r="122" data-g="4" data-n="1"><span class="qs">IaaS(Infrastructure as a Service), PaaS(Platform as a Service), SaaS(Software as a Service)의 특징 및 구축방법을 설명하시오.</span></li>
+      <li data-r="122" data-g="4" data-n="2"><span class="qs">공공 기관의 정보시스템 구축업체 선정 및 계약 체결과 관련하여 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 협상에 의한 계약체결 방식과 품질 등에 따른 낙찰자 결정방식의 비교</span><span class="sub"><b>나.</b> 협상에 의한 계약체결 방식의 진행 절차</span><span class="sub"><b>다.</b> 협상에 의한 계약체결 방식의 기준에서 제시하는 제안서의평가항목 및 배점한도</span></span></li>
+      <li data-r="122" data-g="4" data-n="3"><span class="qs">2020년 5월에 공인인증서와 사설인증서의 구별을 없애는 전자서명법이 개정되었다. 이에따라국내에 대중화되어 있는사설인증서의 종류 및 전자서명 시장의 발전방향에 대하여 설명하시오.</span></li>
+      <li data-r="122" data-g="4" data-n="4"><span class="qs">IT프로젝트 관리과정에서의 IT개발 요구사항과 관련하여 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> IT 프로젝트 관리의 정의 및 관리 영역</span><span class="sub"><b>나.</b> IT개발 요구사항의 정의 및 특징</span><span class="sub"><b>다.</b> IT개발 요구사항의 유형 : 기능, 비기능 및 인터페이스</span><span class="sub"><b>라.</b> IT개발 요구사항의 명세 조건</span></span></li>
+      <li data-r="122" data-g="4" data-n="5"><span class="qs">아래 조건으로 학생과 수강신청서 간의 관계에 대하여 다음을 작성하시오. 개체(Entity) 속성(Attribute) 학생 학번, 성명, 전화번호 수강신청서 신청번호, 과목명, 교수명, 학점 학생과 수강신청서는 일 대 다의 관계이다. 즉, 한 사람의 학생이 다수의 수강신청을 할 수 있고, 수강신청서 1개는 특정학생의 수강신청서로 되어 있다.</span><span class="subs"><span class="sub"><b>가.</b> ERD(Entity Relationship Diagram)</span><span class="sub"><b>나.</b> 관계형 데이터 모델(Relational Data Model)</span></span></li>
+      <li data-r="122" data-g="4" data-n="6"><span class="qs">아래 내용을 반영한 클래스 다이어그램(Class Diagram)을 작성하시오.</span><span class="subs"><span class="sub"><b>가.</b> 훈련교사(Trainer)는 하나 이상의 여러 종목(Program)을 훈련시킬 수 있다.</span><span class="sub"><b>나.</b> 각 종목(Program)은 훈련시간표 상 슬롯(Slot)에 훈련시간(Time)과 훈련실(Room)이 할당되어 있다. 클래스 속성 Trainer id, name Program number, name Room number, name Time day, hour</span></span></li>
+    </ol>
+  </div>
 </section>
 <section id="r121" class="round">
   <h3>제121회 <span class="rd">1교시 단답형 · 13문제 중 10문제 선택 · 각 10점 · 2020년</span></h3>
@@ -853,6 +1488,40 @@ V.   결론 및 제언                                    [0.2p / 2점]
     <tr><td class="num">12</td><td>전문성의 민주화(Democratization of Expertise)</td><td><span class="tag t">개념형</span></td></tr>
     <tr><td class="num">13</td><td>머신러닝 파이프라인(Machine Learning Pipeline)</td><td><span class="tag t">개념형</span></td></tr>
   </tbody></table></div>
+  <h4 class="eh">논술형 2~4교시 <span class="rd">각 교시 6문제 중 4문제 선택 · 각 25점</span></h4>
+  <div class="gy">
+    <div class="gyh">2교시</div>
+    <ol class="ql">
+      <li data-r="121" data-g="2" data-n="1"><span class="qs">기존의 데이터웨어하우스와 빅데이터의 핵심 기술인 하둡을 통합해 추상화한 정보분석 아키텍처로서 로지컬 데이터웨어하우스(LDW : Logical Data Warehouse)에 대하여 검토하고 있다. 다음에 대하여 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> LDW의 정의 및 특징</span><span class="sub"><b>나.</b> LDW의 구성요소</span><span class="sub"><b>다.</b> LDW의 아키텍처</span><span class="sub"><b>라.</b> LDW의 활용방안</span></span></li>
+      <li data-r="121" data-g="2" data-n="2"><span class="qs">DBMS 병행수행(Concurrency)제어가 되지 않는 경우 발생할 수 있는 3가지 문제와 그 해결방법에 대하여 예시를 들어 각각 설명하시오.</span></li>
+      <li data-r="121" data-g="2" data-n="3"><span class="qs">침해사고 대응 측면과 디지털 감사(Audit) 측면에서 디지털포렌식의 필요성을 설명 하고, 디지털포렌식 절차 및 활용되는 기술을 설명하시오.</span></li>
+      <li data-r="121" data-g="2" data-n="4"><span class="qs">소프트웨어 재사용성과 유지보수 향상을 위하여 객체지향 설계 5대 원칙을 적용하고 있다. 다음에 대하여 답하시오.</span><span class="subs"><span class="sub"><b>가.</b> 의존성 역전 원칙(Dependency Inversion Principle)을 설명하시오.</span><span class="sub"><b>나.</b> 의존성주입(DependencyInjection)을 구현하는3가지방식을설명하고 각 방식별 아래의 조건을고려하여구현 예시를 작성하시오. 조건)</span></span></li>
+      <li data-r="121" data-g="2" data-n="5"><span class="qs">최근 부하 분산을 위하여 클라우드 서비스에서 Auto Scale 기능을 많이 활용한다. 다음에 대하여 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> Auto Scale Up과 Auto Scale Out 아키텍처 비교</span><span class="sub"><b>나.</b> 스케쥴 기반의 Auto Scale과 부하 기반의 Auto Scale 기능 비교</span></span></li>
+      <li data-r="121" data-g="2" data-n="6"><span class="qs">CISO(Chief Information Security Officer)의 자격요건과 겸직 여부 등을 개정한 「정보통신망 이용촉진 및 정보보호 등에 관한 법률」이 2020년 1월 1일부터 적용 되고 있다. 다음에 대하여 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> CISO의 직무</span><span class="sub"><b>나.</b> CISO의 지정·신고 의무대상자</span><span class="sub"><b>다.</b> CISO의 겸직 제한 대상</span><span class="sub"><b>라.</b> CISO의 일반 자격요건 ※ 다음 문제 중 4문제를 선택하여 설명하시오. (각25점)</span></span></li>
+    </ol>
+  </div>
+  <div class="gy">
+    <div class="gyh">3교시</div>
+    <ol class="ql">
+      <li data-r="121" data-g="3" data-n="1"><span class="qs">A기관은 행정안전부의 “정보시스템 운영 성과측정 매뉴얼”에 따라 해당시스템의 계속 유지 또는 폐기, 기능고도화를 결정하기 위하여 정보시스템 운영 성과를 측정하고 있다. 다음에 대하여 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 정보시스템 운영 성과관리 개념</span><span class="sub"><b>나.</b> 정보시스템 운영 성과측정 기준</span><span class="sub"><b>다.</b> 정보시스템 운영 성과측정 방법</span></span></li>
+      <li data-r="121" data-g="3" data-n="2"><span class="qs">소프트웨어 테스트 자동화의 개념과 방법에 대하여 각각 설명하시오.</span></li>
+      <li data-r="121" data-g="3" data-n="3"><span class="qs">소프트웨어사업의 단계별 발주제도에 대한 내용이다. 다음에 대하여 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 소프트웨어사업의 단계별 발주제도의 정의</span><span class="sub"><b>나.</b> 일반 발주와 단계별 발주와의 비교</span><span class="sub"><b>다.</b> 발주 표준 프로세스</span></span></li>
+      <li data-r="121" data-g="3" data-n="4"><span class="qs">데이터 3법 시행령 개정안이 입법(2020.3.31.∼5.11.) 예고되어 있다. 다음에 대하여 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 개정안에 따른 개인정보의 추가 이용을 위한 4가지 충족요건</span><span class="sub"><b>나.</b> 개인정보처리자 간 가명정보 결합 및 반출방법</span></span></li>
+      <li data-r="121" data-g="3" data-n="5"><span class="qs">인터넷쇼핑몰 시스템을 개발하기 위하여 “문제 설명서”를 작성하였다. 다음 조건을 고려하여 작성하시오. &lt;문제 설명서&gt; 인터넷쇼핑몰 시스템은 인터넷으로 상품을 판매하는 시스템이다. 쇼핑몰 관리자는 인터 넷쇼핑몰에 상품을 등록하여 판매한다. 인터넷쇼핑몰 사용자는 일반고객(비회원), 회원, 관리자로 구분한다. 일반고객은 상품구매를 위해서 회원가입을 한다. 관리자는 상품관리 (등록, 수정, 조회, 삭제)나 회원관리(조회, 수정, 삭제), 카테고리 관리 등의 활동을 수행 한다. 사용자는 상품조회와 검색을 할 수 있다. 상품조회는 특정 카테고리를 선택하여야 하며, 상품검색은 특정 검색어로 검색한다. 관리자는카테고리 분류체계를 관리하고 상품을 해당 카테고리에 등록한다. 상품구매는 회원만 할 수 있으며 장바구니에 상품을 담아서 구매한다. 결재수단은 온라인입금과 신용카드결재가 있다. 온라인입금은 은행시스템을 통해 입금 여부를확인하여 결재처리한다. 신용카드결재는 신용카드 인증회사의 결재승인 서비스를 이용한다. 조건)</span><span class="subs"><span class="sub"><b>가.</b> 유즈케이스 다이어그램 (Usecase Diagram)</span><span class="sub"><b>나.</b> 상품등록 유즈케이스 시나리오</span></span></li>
+      <li data-r="121" data-g="3" data-n="6"><span class="qs">A기업은 신규로 클라우드 존을 구성하려고 한다. 다음에 대하여 설계하시오.</span><span class="subs"><span class="sub"><b>가.</b> 다음 조건을 고려한 클라우드 공통인프라(보안, 네트워크) 아키텍처 - IPS, 웹 방화벽, L3 스위치, 방화벽, L4 스위치는 이중화로 구성 - 네크워크는 백본망에서 직접연계 조건)</span><span class="sub"><b>나.</b> 다음 조건을 고려한 클라우드 서버(Web, WAS, DB) 아키텍처 - 네트워크는 「정보통신망법」에 의거하여 DMZ(DeMilitarized Zone) 존과 Internal Network은 망 분리 - Web 서버는 DMZ존에 위치 - WAS와 DB 서버는 Internal Network에 위치 - Web 서버에서 DB혹은 WAS 서버 접근시 방화벽을 반드시 통과 조건) ※ 다음 문제 중 4문제를 선택하여 설명하시오. (각25점)</span></span></li>
+    </ol>
+  </div>
+  <div class="gy">
+    <div class="gyh">4교시</div>
+    <ol class="ql">
+      <li data-r="121" data-g="4" data-n="1"><span class="qs">「소프트웨어산업진흥법」은 공공정보화사업에 대하여 요구사항을 명확하고 상세하게 제안요청서(RFP)를 작성하도록 의무화하였다. 공공정보화 사업 유형이 정보화프로 젝트관리서비스(PMO) 사업을 준비하는 경우, 다음에 대하여 작성하시오.</span><span class="subs"><span class="sub"><b>가.</b> RFP의 목차 구성</span><span class="sub"><b>나.</b> 제안요청내용 중 필수 요구사항</span></span></li>
+      <li data-r="121" data-g="4" data-n="2"><span class="qs">최근 행정안전부에서전자문서증명서 사업을 추진하고 있다. 다음에 대하여 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 전자문서중계소를 포함한 전자문서증명서의 기술적 아키텍쳐</span><span class="sub"><b>나.</b> 전자문서증명서를 활용할 수 있는 비즈니스 케이스</span></span></li>
+      <li data-r="121" data-g="4" data-n="3"><span class="qs">A기업이 HCI(Hyper Converged Infrastructure)의 도입을 검토하고 있다. 다음에 대하여 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> HCI의 개념</span><span class="sub"><b>나.</b> HCI의 특징</span><span class="sub"><b>다.</b> HCI의 유형별 비교</span></span></li>
+      <li data-r="121" data-g="4" data-n="4"><span class="qs">안전한 소프트웨어 개발 관련하여 다음에 대하여 답하시오.</span><span class="subs"><span class="sub"><b>가.</b> 보안 소프트웨어 개발 생명주기(Secure SDLC) 방법론의 유형을 설명하시오.</span><span class="sub"><b>나.</b> 다음 조건의 Java 코드에서 보안 위험성이 없는 안전한 코드로 수정하시오. String param = request.getParameter(“id”); . . . String sql = “select name from board where id =‘” + param + “’ ”; Connection con = db.getConnection(); Statement stmt = con.createStatement(); ResultSet rs = stmt.executeQuery(sql); 조건)</span></span></li>
+      <li data-r="121" data-g="4" data-n="5"><span class="qs">사용성평가(Usability Evaluation) 절차,평가항목, 측정지표에 대하여 각각 설명하시오.</span></li>
+      <li data-r="121" data-g="4" data-n="6"><span class="qs">B기업은공급망 시스템 개발을 위해공급자(Suppliers)와 상품(Products)데이터베이스를 다음 조건과 같이 설계중이다. 다음에 대하여 작성하시오. 조건)</span><span class="subs"><span class="sub"><b>가.</b> 바커(Barker) 표기법으로 표현된 ERD</span><span class="sub"><b>나.</b> 도메인과 테이블을 생성하는 DDL</span><span class="sub"><b>다.</b> ‘P02’ 상품을 공급하는 서울소재 공급자의 SNAME을 조회하는 SQL SUPPLIERS(공급자) SID SNAME STATUS CITY S01 A사 20 서울 S02 B사 10 부산 S03 C사 30 부산 S04 D사 20 서울 S05 E사 30 경주 S06 F사 20 광주 PRODUCTS (상품) PID PNAME UNIT PRICE STORAGE P01 마스크 박스 20,000 서울 P02 세정제 박스 40,000 부산 P03 소독제 병 100,000 광주 P04 장갑 개 5,000 서울 P05 고글 박스 200,000 부산 P06 가운 개 10,000 서울 STOCKS(재고) SID PID QTY S01 P01 300 S01 P02 200 S01 P03 400 S01 P04 200 S01 P05 100 S01 P06 100 S02 P01 400 S02 P02 200 S03 P02 200 S04 P02 200 S05 P04 300 S06 P05 400</span></span></li>
+    </ol>
+  </div>
 </section>
 <section id="r120" class="round">
   <h3>제120회 <span class="rd">1교시 단답형 · 13문제 중 10문제 선택 · 각 10점 · 2020년</span></h3>
@@ -871,6 +1540,40 @@ V.   결론 및 제언                                    [0.2p / 2점]
     <tr><td class="num">12</td><td>CPU(Central Processing Unit)와 GPGPU(General-Purpose computing on Graphics Processing Units)</td><td><span class="tag t">개념형</span></td></tr>
     <tr><td class="num">13</td><td>워크플로우 관리(Workflow Management)의 백필(Backfill)</td><td><span class="tag t">개념형</span></td></tr>
   </tbody></table></div>
+  <h4 class="eh">논술형 2~4교시 <span class="rd">각 교시 6문제 중 4문제 선택 · 각 25점</span></h4>
+  <div class="gy">
+    <div class="gyh">2교시</div>
+    <ol class="ql">
+      <li data-r="120" data-g="2" data-n="1"><span class="qs">바이오정보 분산관리와 관련하여 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 개념,필요성 및 특징</span><span class="sub"><b>나.</b> 처리과정별 보안위협 및 대책</span><span class="sub"><b>다.</b> 적용 사례 및 전망</span></span></li>
+      <li data-r="120" data-g="2" data-n="2"><span class="qs">마이데이터(MyData)산업과관련하여다음을설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 마이데이터 및 마이데이터 산업의 개념</span><span class="sub"><b>나.</b> 필요성과 특징</span><span class="sub"><b>다.</b> 마이데이터 산업 주체별 역할과 처리 흐름</span><span class="sub"><b>라.</b> 적용 시 문제점과 해결방안</span></span></li>
+      <li data-r="120" data-g="2" data-n="3"><span class="qs">모놀리스(Monolith)와마이크로서비스(Microservice)아키텍처의개념을비교하여설명하고 데브옵스(DevOps) 구현시의 장·단점에 대하여 설명하시오.</span></li>
+      <li data-r="120" data-g="2" data-n="4"><span class="qs">가상머신(Virtual Machine)과 컨테이너(Container)를비교하여 설명하시오.</span></li>
+      <li data-r="120" data-g="2" data-n="5"><span class="qs">스마트팩토리(SmartFactory)의정보시스템구축 사업을통해얻을 수있는성과측정 항목을생산성(Productivity),품질(Quality),비용(Cost),납기(Delivery)의4가지관점으로 구분하여 설명하고 매출(Revenue), 원가(Cost), 이익(Profit)에 미치는 상관관계를 설명하시오.</span></li>
+      <li data-r="120" data-g="2" data-n="6"><span class="qs">대기행렬시스템(QueueSystem)의개념을설명하고,처리기법을예를들어설명하시오. ※ 다음 문제 중 4문제를 선택하여 설명하시오. (각25점)</span></li>
+    </ol>
+  </div>
+  <div class="gy">
+    <div class="gyh">3교시</div>
+    <ol class="ql">
+      <li data-r="120" data-g="3" data-n="1"><span class="qs">QR코드 기반의 결제 방식과 관련하여 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> MPM(Merchant Presented Mode)/CPM(Customer Presented Mode) 비교</span><span class="sub"><b>나.</b> 도입시 보안 고려사항 및 시사점</span></span></li>
+      <li data-r="120" data-g="3" data-n="2"><span class="qs">레그테크(Regtech)와 관련하여 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 레그테크 정의와 필요성</span><span class="sub"><b>나.</b> 주요 특징</span><span class="sub"><b>다.</b> 추진동향 및 도입시 고려사항</span></span></li>
+      <li data-r="120" data-g="3" data-n="3"><span class="qs">머신 러닝(Machine Learning)에서 활용되는 앙상블(Ensemble) 기법을 설명하시오.</span></li>
+      <li data-r="120" data-g="3" data-n="4"><span class="qs">네트워크 가상화 기술인 VLAN(Virtual LAN), VPN(Virtual Private Network), NFV(Network Function Virtualization)를 비교하여 설명하시오.</span></li>
+      <li data-r="120" data-g="3" data-n="5"><span class="qs">소프트웨어 아키텍처(Architecture)의 모델 유형에 대하여 설명하시오.</span></li>
+      <li data-r="120" data-g="3" data-n="6"><span class="qs">클라우드 컴퓨팅서비스에 대한 공공기관의 보안인증제도를 설명하시오. ※ 다음 문제 중 4문제를 선택하여 설명하시오. (각25점)</span></li>
+    </ol>
+  </div>
+  <div class="gy">
+    <div class="gyh">4교시</div>
+    <ol class="ql">
+      <li data-r="120" data-g="4" data-n="1"><span class="qs">정보시스템의사용자인증요소(UserAuthenticationFactor)와관련하여다음을설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 사용자 인증의 정의 및 필요성</span><span class="sub"><b>나.</b> 사용자 인증의 절차</span><span class="sub"><b>다.</b> 사용자 인증 요소별 특징</span></span></li>
+      <li data-r="120" data-g="4" data-n="2"><span class="qs">오픈 뱅킹(Open Banking)과 관련하여 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 개념 및 등장 배경</span><span class="sub"><b>나.</b> 구성 주체 및 역할</span><span class="sub"><b>다.</b> 기대 효과 및 시장 전망</span></span></li>
+      <li data-r="120" data-g="4" data-n="3"><span class="qs">딥러닝(Deep Learning)의 파라미터(Parameter)와 하이퍼파라미터(Hyperparameter)를 비교하고, 하이퍼파라미터의 튜닝 방법을 설명하시오.</span></li>
+      <li data-r="120" data-g="4" data-n="4"><span class="qs">웹 서비스를 제공하기 위하여 여러 서버에 데이터를 복제하는 경우의 복제 유형에 대하여 설명하시오.</span></li>
+      <li data-r="120" data-g="4" data-n="5"><span class="qs">개인정보의 비식별조치 가이드라인에 대하여 설명하시오.</span></li>
+      <li data-r="120" data-g="4" data-n="6"><span class="qs">블록체인 플랫폼 구축과정에서 성능및 보안 측면의 고려사항을 설명하시오.</span></li>
+    </ol>
+  </div>
 </section>
 <section id="r119" class="round">
   <h3>제119회 <span class="rd">1교시 단답형 · 13문제 중 10문제 선택 · 각 10점 · 2019년</span></h3>
@@ -889,6 +1592,40 @@ V.   결론 및 제언                                    [0.2p / 2점]
     <tr><td class="num">12</td><td>리쇼링(Reshoring)</td><td><span class="tag t">개념형</span></td></tr>
     <tr><td class="num">13</td><td>데이터베이스의 Isolation Level</td><td><span class="tag t">개념형</span></td></tr>
   </tbody></table></div>
+  <h4 class="eh">논술형 2~4교시 <span class="rd">각 교시 6문제 중 4문제 선택 · 각 25점</span></h4>
+  <div class="gy">
+    <div class="gyh">2교시</div>
+    <ol class="ql">
+      <li data-r="119" data-g="2" data-n="1"><span class="qs">두 제품 또는 사건 사이의 연관성 발견을 위해 데이터 마이닝을 실무에서 활용하고 있다. 다음에 대하여 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 연관규칙의 특징과 도출 과정</span><span class="sub"><b>나.</b> 연관정도를 측정하기 위한 3가지 기준</span><span class="sub"><b>다.</b> 아래 데이터를 참조하여 ‘기저귀 → 맥주’의 지지도, 신뢰도, 향상도 도출</span></span></li>
+      <li data-r="119" data-g="2" data-n="2"><span class="qs">기획과 설계를 강화하고 과업변경과 분쟁을 적극적으로 조정하며, 계약을 공정하게 체결하고 이행할 수 있도록 ‘SW진흥법’ 전면개정안이 국무회의를 통과하였다. 다음에 대하여 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> SRS(Software Requirement Specification)의 중요성과 역할</span><span class="sub"><b>나.</b> SRS 중심의 공공사업 관리를 위한 이행방안 거래번호 구매한 상품 1003 기저귀, 맥주, 빵 1056 기저귀, 맥주 1071 기저귀, 빵, 음료수 2005 빵, 음료수, 커피</span></span></li>
+      <li data-r="119" data-g="2" data-n="3"><span class="qs">IT 투자성과 평가에 대하여 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 품질지표, 이용지표, 효과지표</span><span class="sub"><b>나.</b> 정보화 투자 성과평가 측정 기법</span></span></li>
+      <li data-r="119" data-g="2" data-n="4"><span class="qs">A사는 공공 소프트웨어 개발 프로젝트 규모를 산정하기 위해 기능점수(Function Point)를 사용하고자 한다. 다음에 대하여 설명하시오. (단, “SW사업 대가산정 가이드 2018년 개정판” 기준)</span><span class="subs"><span class="sub"><b>가.</b> 기능점수 방식의 정의 및 특징</span><span class="sub"><b>나.</b> 기능점수 산정방식의 종류 및 소프트웨어 개발비의 구성요소</span><span class="sub"><b>다.</b> 기능점수 방식에 의한 소프트웨어 개발비 산정 절차, 개발원가 보정의 필요성, 5가지 보정원가 계수</span></span></li>
+      <li data-r="119" data-g="2" data-n="5"><span class="qs">Agile 프로세스가 국내에 많이 도입이 되고 있다. 프로젝트 관리자는 개발방법론과 Agile 프로세스를 프로젝트에 맞게 테일러링(Tailoring)하고자 한다. EVM(Earned Value Management)와 Burn Down Chart를 비교하고, 프로젝트 적용 방안을 설명 하시오.</span></li>
+      <li data-r="119" data-g="2" data-n="6"><span class="qs">기업에 블록체인기술을 도입하기 위한 보안 고려사항을 설명하시오. ※ 다음 문제 중 4문제를 선택하여 설명하시오. (각25점)</span></li>
+    </ol>
+  </div>
+  <div class="gy">
+    <div class="gyh">3교시</div>
+    <ol class="ql">
+      <li data-r="119" data-g="3" data-n="1"><span class="qs">4차 산업의 핵심기술로 부상하고 있는 Digital Twin 기술을 활용하여 스마트 시티를 구현하려고 한다. 다음에 대하여 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 디지털 트윈 기술의 정의 및 역할</span><span class="sub"><b>나.</b> 디지털 트윈의 구성도 및 구축기술</span><span class="sub"><b>다.</b> 디지털 트윈 적용 시 고려사항</span></span></li>
+      <li data-r="119" data-g="3" data-n="2"><span class="qs">빅데이터 분석을 위해서는 데이터 공학, 수학, 통계학, 컴퓨터 공학, 시각화, 업종 지식 등 종합한 학문이 필요하다. 다음에 대하여 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 데이터사이언스의 영역, 요구역량(Soft Skill / Hard Skill)</span><span class="sub"><b>나.</b> 데이터사이언스 발전 방안</span></span></li>
+      <li data-r="119" data-g="3" data-n="3"><span class="qs">ISMS(Information Security Management System)에 대하여 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> ISMS 인증 의무대상자 기준(단, 정보통신망법 제47조 2항)</span><span class="sub"><b>나.</b> ISMS-P 인증기준과 주요 개정 사항</span></span></li>
+      <li data-r="119" data-g="3" data-n="4"><span class="qs">A기업은 산재된 지식과 시스템을 통합하고 단일화된 업무환경을 제공함으로써 협업을 강화하고 업무 효율성을 향상하고자 페이퍼리스 프로젝트를 진행하게 되었다. 현재 업무 환경의 문제점을 도출하고, 이를 최적화된 시스템 활용으로 전사 임직원의 업무 효율성을 향상하고자 ECM(EnterpriseContent Management)을 도입하려고 한다. 다음에 대하여 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> ECM 정의 및 필요성</span><span class="sub"><b>나.</b> ECM 구성요소 및 주요기능</span><span class="sub"><b>다.</b> ECM 구축을 위한 주요 기능별 구축기술</span><span class="sub"><b>라.</b> ECM 구축 시 고려사항</span></span></li>
+      <li data-r="119" data-g="3" data-n="5"><span class="qs">클라우드 서비스 PaaS(Platform as a Service) 기반의 소프트웨어 개발 방법론을 제시하시오.</span></li>
+      <li data-r="119" data-g="3" data-n="6"><span class="qs">CPU 스케줄링 알고리즘에 대하여 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> SJF(Shortest Job First)와 HRN(Highest Response-ratio Next)</span><span class="sub"><b>나.</b> MLQ(Multi Level Queue)와 MLFQ(Multi Level Feedback Queue) ※ 다음 문제 중 4문제를 선택하여 설명하시오. (각25점)</span></span></li>
+    </ol>
+  </div>
+  <div class="gy">
+    <div class="gyh">4교시</div>
+    <ol class="ql">
+      <li data-r="119" data-g="4" data-n="1"><span class="qs">IPS(Indoor Positioning System)을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 정의 및 특징</span><span class="sub"><b>나.</b> IPS 측위 기술</span><span class="sub"><b>다.</b> 활용 서비스 유형</span></span></li>
+      <li data-r="119" data-g="4" data-n="2"><span class="qs">정보시스템 운영 및 유지보수 관점에서 소프트웨어 공학의 리펙토링(Refactoring) 기법을 활용한 3R (Reverse-Engineering,Re-Engineering,Re-use)에 대하여 설명하시오.</span></li>
+      <li data-r="119" data-g="4" data-n="3"><span class="qs">다음에 대하여 설명하시오</span><span class="subs"><span class="sub"><b>가.</b> ISMP(Information System Master Plan)의 정의 및 목적</span><span class="sub"><b>나.</b> ISMP 수행방법론 체계와 절차</span><span class="sub"><b>다.</b> ISP, EA/ITA, ISMP 비교</span></span></li>
+      <li data-r="119" data-g="4" data-n="4"><span class="qs">소프트웨어 안전성 분석 개념 및 안전성 분석 기법을 설명하시오.</span></li>
+      <li data-r="119" data-g="4" data-n="5"><span class="qs">빅데이터분석 기술 중 오픈데이터 플랫폼을 구성하기 위한 LOD(Linked Open Data) 기술요소를 설명하시오.</span></li>
+      <li data-r="119" data-g="4" data-n="6"><span class="qs">소프트웨어사업의 복잡도가 증가하면서 정보시스템 감리역할이 중요해지고 있다. 고시된 감리기준(행정안전부 고시 제2017-1호)에 대해 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 감리 실시시기 및 감리인력 배치기준</span><span class="sub"><b>나.</b> 감리 제안서 기술평가 항목</span></span></li>
+    </ol>
+  </div>
 </section>
 <section id="r118" class="round">
   <h3>제118회 <span class="rd">1교시 단답형 · 13문제 중 10문제 선택 · 각 10점 · 2019년</span></h3>
@@ -907,6 +1644,40 @@ V.   결론 및 제언                                    [0.2p / 2점]
     <tr><td class="num">12</td><td>해시값(Hash Value)과 해시함수의 구분,종류,용도</td><td><span class="tag t">개념형</span></td></tr>
     <tr><td class="num">13</td><td>CMMI(CapabilityMaturityModelIntegration)의단계적표현(StagedRepresentation)과 연속적 표현(Continuous Representation)</td><td><span class="tag t">절차형</span></td></tr>
   </tbody></table></div>
+  <h4 class="eh">논술형 2~4교시 <span class="rd">각 교시 6문제 중 4문제 선택 · 각 25점</span></h4>
+  <div class="gy">
+    <div class="gyh">2교시</div>
+    <ol class="ql">
+      <li data-r="118" data-g="2" data-n="1"><span class="qs">프로세스마이닝의개념과필요성,기술요소와연구분야,적용사례에대하여설명하시오.</span></li>
+      <li data-r="118" data-g="2" data-n="2"><span class="qs">기업에서 현재 운영하는 전산실을 클라우드로 전환하는 것을 검토하고 있다. 다음에 대하여 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 클라우드 전환 시 선정기준 및 고려사항, 평가항목</span><span class="sub"><b>나.</b> 클라우드 전환대상 분류 및 이행절차</span></span></li>
+      <li data-r="118" data-g="2" data-n="3"><span class="qs">비정형 데이터를 분석할 예정이다. 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 비정형 데이터 마이닝의 개념과 필요성</span><span class="sub"><b>나.</b> 텍스트 마이닝의 개념, 기능, 기본 분석절차</span><span class="sub"><b>다.</b> 사회연결망 분석의 개념, 분석 표현방법, 분석기법, 분석절차</span></span></li>
+      <li data-r="118" data-g="2" data-n="4"><span class="qs">개인정보 비식별 조치 관련하여 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 비식별화의 개념</span><span class="sub"><b>나.</b> 단계별 조치사항</span><span class="sub"><b>다.</b> 비식별 조치 및 사후관리 절차</span><span class="sub"><b>라.</b> 개인정보 해당 여부 판단 기준</span></span></li>
+      <li data-r="118" data-g="2" data-n="5"><span class="qs">소프트웨어설계에있어서중심이되는원리인추상화,정보은닉,단계적분해,모듈화에 대하여 설명하시오.</span></li>
+      <li data-r="118" data-g="2" data-n="6"><span class="qs">스마트 그리드의 개념과 핵심기술을 설명하시오. ※ 다음 문제 중 4문제를 선택하여 설명하시오. (각25점)</span></li>
+    </ol>
+  </div>
+  <div class="gy">
+    <div class="gyh">3교시</div>
+    <ol class="ql">
+      <li data-r="118" data-g="3" data-n="1"><span class="qs">데이터웨어하우스에적용되는온라인분석처리(OLAP,On-LineAnalyticalProcessing)를 온라인 트랜잭션처리(OLTP, On-Line Transaction Processing)와 비교하여 설명하고,</span></li>
+      <li data-r="118" data-g="3" data-n="2"><span class="qs">패스워드 없는 인증기술인 FIDO(Fast IDentity Online)에 대하여 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> FIDO의 개념</span><span class="sub"><b>나.</b> 표준 프로토콜인 UAF와 U2F</span><span class="sub"><b>다.</b> 유니버셜 인증 프레임워크 (UAF) 총 11개 기술표준 구성요소</span></span></li>
+      <li data-r="118" data-g="3" data-n="3"><span class="qs">클라우드 컴퓨팅 환경에서 클라우드 서비스 제공자가 이용자에게 안전한 서비스 제공을 위하여 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 정보보호 정책의 관리적 측면과 기술적 측면으로 구분한 보호 조치분야</span><span class="sub"><b>나.</b> 클라우드 컴퓨팅의 보안위협</span><span class="sub"><b>다.</b> 클라우드 컴퓨팅의 프라이버시(Privacy) 이슈</span></span></li>
+      <li data-r="118" data-g="3" data-n="4"><span class="qs">소프트웨어 기능안전(Functional Safety)에 대하여 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 소프트웨어 안전과 소프트웨어 보안의 차이점</span><span class="sub"><b>나.</b> IEC 61508에서 정의한 안전기능 요구사항의 도출과정</span><span class="sub"><b>다.</b> IEC 61508과 의료기기, 항공기, 자동차 분야의 기능안전 표준들 간 비교</span></span></li>
+      <li data-r="118" data-g="3" data-n="5"><span class="qs">정보시스템감리와사업관리위탁(PMO,ProjectManagementOffice)을비교설명하시오.</span></li>
+      <li data-r="118" data-g="3" data-n="6"><span class="qs">당신은 어느한 프로젝트의 PM이다. 아래 사항을 참조하여 다음을 설명하시오. 1. 프로젝트 수행기간의 목표는 25일이다. 2. A 액티비티는 소요기간이 10일이다. 3. B 액티비티는 A 액티비티가 완료된 후에 시작할 수 있으며, 소요기간이 13일이다. 4. C 액티비티는 소요기간이 12일이다. 5. D 액티비티는 C 액티비티 완료된 후에 시작할 수 있으며, 소요기간이 15일이다.</span><span class="subs"><span class="sub"><b>가.</b> 네트워크 다이어그램을 작성하시오.</span><span class="sub"><b>나.</b> 주경로의 수행기간을 계산하시오.</span><span class="sub"><b>다.</b> 목표 수행기간을 맞추기 위해서 수행기간을 단축할 수 있는 방법을 설명하시오.</span><span class="sub"><b>라.</b> 일정을 단축하기 위해 기존팀원 5명에 더해 팀원 1명을 추가로 투입하였다. 의사 소통 수(커뮤니케이션 통로의 수)가 기존보다 얼마나 더늘어나는지 계산하시오. 마. 프로젝트획득가치관리(EarnedValueManagement)보고서에EV=95백만원,PV=110백만원, AC=100백만원, BAC=950백만원이다. CV와 CPI를 구하고 현재까지의 작업효율이 유지될경우의 EAC를 계산하고 설명하시오. (단, EV:EarnedValue,PV:PlannedValue,AC:ActualCost,BAC:BudgetAtCompletion, CV:CostVariance,CPI:CostPerformanceIndex,EAC:EstimateAtCompletion이다.) ※ 다음 문제 중 4문제를 선택하여 설명하시오. (각25점)</span></span></li>
+    </ol>
+  </div>
+  <div class="gy">
+    <div class="gyh">4교시</div>
+    <ol class="ql">
+      <li data-r="118" data-g="4" data-n="1"><span class="qs">소프트웨어개발방법론의4가지유형을설명하고,그중하나인제품계열(ProductLine) 방법론의 필요성과 2가지 구성요소에 대하여 설명하시오.</span></li>
+      <li data-r="118" data-g="4" data-n="2"><span class="qs">창업회사가 만든 사업계획서의 기술을 평가하여 가치를 산정하는 일들이 중요하게 대두되고 있다. 기술 가치 평가에 대하여 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 기술 평가의 정의와 일반적인 평가요소</span><span class="sub"><b>나.</b> 기술 가치 평가와 기술 사업타당성 평가의 비교</span><span class="sub"><b>다.</b> 기술 가치 평가의 3가지 평가기법</span></span></li>
+      <li data-r="118" data-g="4" data-n="3"><span class="qs">디지털 포렌식(Digital Forensics)과 관련하여 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 디지털 포렌식 조사모델</span><span class="sub"><b>나.</b> 디지털 포렌식의 분야와 각 분야별 활용 소프트웨어</span><span class="sub"><b>다.</b> 디지털 포렌식 수행 시 고려사항 및 디지털 포렌식 5대 원칙</span></span></li>
+      <li data-r="118" data-g="4" data-n="4"><span class="qs">스마트 계약(Smart Contract)은 계약 조건을 블록체인에 기록하고 조건이 충족 시 자동으로 계약이 실행되게 하는 프로그램이며, 금융 거래 등 다양한 계약에 활용될 수 있다. 스마트 계약과 관련된 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 솔리디티(Solidity)</span><span class="sub"><b>나.</b> 이더리움가상머신(EVM:Ethereum Virtual Machine)</span><span class="sub"><b>다.</b> 디앱(DApp, Decentralized Application)</span></span></li>
+      <li data-r="118" data-g="4" data-n="5"><span class="qs">엣지컴퓨팅(EdgeComputing)은소형서버를통해실시간으로처리되는기술로독립적인 하드웨어로 구성된다. 다음에 대하여 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 구성요소</span><span class="sub"><b>나.</b> 제품분류관점의 기반기술로 프로세서, 메모리, 플랫폼, 네트워크의 세부기술</span><span class="sub"><b>다.</b> 공급망 관점의 기술범위로 스마트 팩토리, 자율주행 자동차, 실시간 관리시스템, 리모트 시스템의 세부기술</span></span></li>
+      <li data-r="118" data-g="4" data-n="6"><span class="qs">정보통신용어 및 교환방식에 대하여 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 두 사람이 대화를 할 때 나타나는 문제점이다. 각 경우에 대해서 보기와 같이 문제점을 해결하는 방향으로서 통신 용어로 설명하시오. (보기) 서로 다른 언어를 사용하면 서로를 이해할 수 없다. → 표준 프로토콜을 사용해야 한다. - 말하는 사람이 작은 소리로 이야기하면의사소통을 할 수 없다. → - 빠른 속도로 이야기하면 듣는 사람이 이해할 수 없다. → - 동시에 두 사람이 이야기를 하면 대화를 이해할 수 없다. → - 물속에서 이야기를 하면 소리가 전달되지 않는다. →</span><span class="sub"><b>나.</b> 회선교환(Circuit Switching) 방식과 패킷교환(Packet Switching) 방식의 차이점</span></span></li>
+    </ol>
+  </div>
 </section>
 <section id="r117" class="round">
   <h3>제117회 <span class="rd">1교시 단답형 · 13문제 중 10문제 선택 · 각 10점 · 2019년</span></h3>
@@ -925,6 +1696,40 @@ V.   결론 및 제언                                    [0.2p / 2점]
     <tr><td class="num">12</td><td>UNIX 운영체제 부팅과정</td><td><span class="tag t">개념형</span></td></tr>
     <tr><td class="num">13</td><td>스마트시티 통합플랫폼</td><td><span class="tag t">개념형</span></td></tr>
   </tbody></table></div>
+  <h4 class="eh">논술형 2~4교시 <span class="rd">각 교시 6문제 중 4문제 선택 · 각 25점</span></h4>
+  <div class="gy">
+    <div class="gyh">2교시</div>
+    <ol class="ql">
+      <li data-r="117" data-g="2" data-n="1"><span class="qs">정량적 위험분석 4가지 방법에 대하여 예시를 들어 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 민감도 분석(Sensitivity Analysis)</span><span class="sub"><b>나.</b> 금전적 기대값 분석(Expected Monetary Value Analysis)</span><span class="sub"><b>다.</b> 의사결정나무 분석(Decision Tree Analysis)</span><span class="sub"><b>라.</b> 몬테카를로 시뮬레이션(Monte Carlo Simulation)</span></span></li>
+      <li data-r="117" data-g="2" data-n="2"><span class="qs">소프트웨어 비용 산정 방법 중 상향식 비용 산정 방법, 하향식 비용 산정 방법에 대하여 설명하시오.</span></li>
+      <li data-r="117" data-g="2" data-n="3"><span class="qs">동적 SQL 개념, 장점, 단점에 대하여 설명하시오.</span></li>
+      <li data-r="117" data-g="2" data-n="4"><span class="qs">IPC(Inter Process Communication) 방식의 주요기법 3가지에 대하여 설명하시오.</span></li>
+      <li data-r="117" data-g="2" data-n="5"><span class="qs">블록체인(Block Chain)의 Smart Contract는 다양한 기능을 제공하지만 불안한 소스 코드로 인해 해킹 및 보안사고의 원인이 되고 있다. Smart Contract Audit에 대하여 설명하시오.</span></li>
+      <li data-r="117" data-g="2" data-n="6"><span class="qs">분산원장기술에 대하여 설명하고, 퍼블릭(Public) 블록체인과 프라이빗(Private) 블록 체인을 비교하시오. ※ 다음 문제 중 4문제를 선택하여 설명하시오. (각25점)</span></li>
+    </ol>
+  </div>
+  <div class="gy">
+    <div class="gyh">3교시</div>
+    <ol class="ql">
+      <li data-r="117" data-g="3" data-n="1"><span class="qs">비트코인은 이더리움의 계좌잔고모델(Account Balance Model)과 달리 UTXO (Unspent Transaction Output) 기반으로 거래의 유효성을 검사하고 코인의 존재여부를 확인한다.</span><span class="subs"><span class="sub"><b>가.</b> UTXO의 개념을 설명하시오.</span><span class="sub"><b>나.</b> 비트코인 주소A에서 주소B로 3.6BTC(BiTCoin)를 송금하고자 할 때 가장 적은 네트워크 수수료(Transaction Fee)로 거래하는 방법을 아래 조건을 고려하여 설명하시오. 조건) 주소A의 지갑에는 현재 UTXO가 5.2BTC, 1.7BTC, 0.5BTC 보유 중이다. 네트워크 수수료 (Transaction Fee)는 다음과 같이 가정한다. 1개의 UTXO를 사용할 경우 0.001BTC 2개의 UTXO를 사용할 경우 0.002BTC 3개의 UTXO를 사용할 경우 0.003BTC</span></span></li>
+      <li data-r="117" data-g="3" data-n="2"><span class="qs">“정보시스템 하드웨어 규모산정 지침”의 하드웨어 규모산정 3가지 방법에 대하여 개념과 장·단점을 설명하시오.</span></li>
+      <li data-r="117" data-g="3" data-n="3"><span class="qs">MST(Minimum Spanning Tree)를 구하는 알고리즘인 크루스칼(Kruskal) 알고리즘, 프림(Prim) 알고리즘을 설명하시오.</span></li>
+      <li data-r="117" data-g="3" data-n="4"><span class="qs">블록체인의 핵심기술 중 하나인 P2P통신 중 하이브리드 P2P(Hybrid P2P)방식과 퓨어 P2P(Pure P2P)방식을 비교하여 설명하시오.</span></li>
+      <li data-r="117" data-g="3" data-n="5"><span class="qs">CCTV통합관제센터의폐쇄회로화면(CCTV) 개인영상정보보호방안에 대하여 설명하시오.</span></li>
+      <li data-r="117" data-g="3" data-n="6"><span class="qs">정보시스템 감리 시행 절차의 활동(감리법인 관점)과 산출물을 설명하시오. ※ 다음 문제 중 4문제를 선택하여 설명하시오. (각25점)</span></li>
+    </ol>
+  </div>
+  <div class="gy">
+    <div class="gyh">4교시</div>
+    <ol class="ql">
+      <li data-r="117" data-g="4" data-n="1"><span class="qs">소프트웨어 성능테스트에 대하여 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 리틀의 법칙(Little’s Law)을 통한 성능테스트의 목적에 대하여 설명하시오.</span><span class="sub"><b>나.</b> 성능테스트의 종류 및 구성요소에 대하여 설명하시오.</span></span></li>
+      <li data-r="117" data-g="4" data-n="2"><span class="qs">JAVA언어의 Abstract Class(추상클래스)와 Interface(인터페이스)에 대하여 다음질문에 답하시오.</span><span class="subs"><span class="sub"><b>가.</b> 다음 조건일 때 클래스 다이어그램을 작성하시오. 조건) - name, eat(), sleep() 속성을 가지며 자식클래스명은 Dog인 Animal 추상클래스 - STATUS, draw(), open()속성을 가지며 자식클래스명이 Blind인 Curtain 인터페이스</span><span class="sub"><b>나.</b> 위의 가. 조건에서 Animal, Curtain, Dog, Blind클래스를JAVA언어로선언부분을 작성하시오.</span></span></li>
+      <li data-r="117" data-g="4" data-n="3"><span class="qs">병렬 데이터베이스와 분산 데이터베이스를 비교하여 설명하시오.</span></li>
+      <li data-r="117" data-g="4" data-n="4"><span class="qs">운영체제에서 페이지 교체 알고리즘을 사용한다.</span><span class="subs"><span class="sub"><b>가.</b> 페이지 교체 알고리즘을 사용하는 이유에 대하여 설명하시오.</span><span class="sub"><b>나.</b> 페이지 교체 알고리즘의 종류를 나열하고,각 종류별 동작 과정에 대하여 설명하시오.</span></span></li>
+      <li data-r="117" data-g="4" data-n="5"><span class="qs">디지털 포렌식의 증거수집기술과 증거분석기술에 대하여 설명하시오.</span></li>
+      <li data-r="117" data-g="4" data-n="6"><span class="qs">머신러닝(Machine Learning)과 인공지능(Artificial Intelligence)에서 편향(biased)된 결과를 만들어 내는 이유를 3가지만 설명하시오.</span></li>
+    </ol>
+  </div>
 </section>
 <section id="r116" class="round">
   <h3>제116회 <span class="rd">1교시 단답형 · 13문제 중 10문제 선택 · 각 10점 · 2018년</span></h3>
@@ -943,6 +1748,40 @@ V.   결론 및 제언                                    [0.2p / 2점]
     <tr><td class="num">12</td><td>포맷 스트링 공격(Format String Attack)</td><td><span class="tag t">이슈대응형</span></td></tr>
     <tr><td class="num">13</td><td>힐버트(Hilbert) R-tree</td><td><span class="tag t">개념형</span></td></tr>
   </tbody></table></div>
+  <h4 class="eh">논술형 2~4교시 <span class="rd">각 교시 6문제 중 4문제 선택 · 각 25점</span></h4>
+  <div class="gy">
+    <div class="gyh">2교시<sup class="est">추정</sup></div>
+    <ol class="ql">
+      <li data-r="116" data-g="2" data-n="1"><span class="qs">지능형 지속공격(APT, Advanced Persistent Threat)의 정의, 특징, 공격과정 및 대응방안을 관리적, 기술적 관점에서 설명하시오.</span></li>
+      <li data-r="116" data-g="2" data-n="2"><span class="qs">FTP(File Transfer Protocol), FTPS(FTP Secure) 및 SFTP(SSH FTP)의 정의 및 특징에 대하여 비교 설명하시오.</span></li>
+      <li data-r="116" data-g="2" data-n="3"><span class="qs">4차 산업혁명의 개념 및 주요 정보화 활용 기술에 대하여 설명하시오.</span></li>
+      <li data-r="116" data-g="2" data-n="4"><span class="qs">공공기관 정보화사업 예비타당성조사 제도의 필요성, 주요기준, 문제점 및 개선방향에 대하여 설명하시오.</span></li>
+      <li data-r="116" data-g="2" data-n="5"><span class="qs">IT 컴플라이언스(Compliance)의 주요 요구사항을 제시하고, 기업의 IT 컴플라이언스 위험 대응 방안을 인식 전환, 제도 및 기술 측면에서 설명하시오.</span></li>
+      <li data-r="116" data-g="2" data-n="6"><span class="qs">Unix 파일 시스템의 구조 및 /etc/passwd 파일의 구성에 대하여 설명하시오.</span></li>
+    </ol>
+  </div>
+  <div class="gy">
+    <div class="gyh">3교시<sup class="est">추정</sup></div>
+    <ol class="ql">
+      <li data-r="116" data-g="3" data-n="1"><span class="qs">이상금융거래 탐지시스템(FDS, Fraud Detection System)의 정의 및 주요기능, 이상금융거래 판정방식에 대하여 설명하시오.</span></li>
+      <li data-r="116" data-g="3" data-n="2"><span class="qs">개인정보 보호에 관한 아래 사항에 대하여 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 개인정보의 정의 및 유출 원인</span><span class="sub"><b>나.</b> 오남용 행위 탐지 시나리오 생성방안별(4W1H, 데이터 생명주기) 생성기준 및 구성요소</span><span class="sub"><b>다.</b> 오남용 행위 탐지 시나리오 생성방안별 사례 제시</span></span></li>
+      <li data-r="116" data-g="3" data-n="3"><span class="qs">블록체인(Block Chain) 플랫폼의 보안 위협과 대응 방안에 대하여 설명하시오.</span></li>
+      <li data-r="116" data-g="3" data-n="4"><span class="qs">스레드(Thread)와 멀티스레드(Multi-thread)의 개념, 스레드(Thread)와 프로세스(Process)의 차이점을 비교하여 설명하시오.</span></li>
+      <li data-r="116" data-g="3" data-n="5"><span class="qs">대기행렬이론(Queuing Theory)의 개념과 처리 기법에 대하여 설명하시오.</span></li>
+      <li data-r="116" data-g="3" data-n="6"><span class="qs">Socket 통신방식의 개념, TCP Socket 및 Web Socket 기술을 비교하여 설명하시오.</span></li>
+    </ol>
+  </div>
+  <div class="gy">
+    <div class="gyh">4교시<sup class="est">추정</sup></div>
+    <ol class="ql">
+      <li data-r="116" data-g="4" data-n="1"><span class="qs">데스크톱 가상화(VDI, Virtual Desktop Infrastructure)의 정의, 특징 및 계층별 구성요소에 대하여 설명하시오.</span></li>
+      <li data-r="116" data-g="4" data-n="2"><span class="qs">디도스 공격(DDoS, Distributed Denial of Service Attack)에 대응하기 위한 클라우드 기반 보안서비스 구축 방식 모델인 스크러빙 센터(Scrubbing Center) 및 콘텐츠 전송네트워크(Content Delivery Network)의 대응방법, 대응규모, 대응시점, 암호화 트래픽 방어 여부, 기존 시스템 활용 관점에서 비교하여 설명하시오.</span></li>
+      <li data-r="116" data-g="4" data-n="3"><span class="qs">FIDO(Fast Identity Online) 1.0과 FIDO 2.0을 비교하여 설명하시오.</span></li>
+      <li data-r="116" data-g="4" data-n="4"><span class="qs">아키텍처 모델 중 기능의 분할과 배치 관점에서 데이터 중심형 모델, 클라이언트-서버 모델, 계층 모델 및 MVC(Model View Controller) 모델을 각각 설명하시오.</span></li>
+      <li data-r="116" data-g="4" data-n="5"><span class="qs">영상감시시스템(Video Surveillance System)의 주요 요소인 영상 전처리 기술, 객체탐지 및 분류기술, 객체 추적 기술, 영상 보안 기술에 대하여 설명하시오.</span></li>
+      <li data-r="116" data-g="4" data-n="6"><span class="qs">발주처는 BPR/PI 컨설팅 사업의 결과물에서 정성적 기대효과 뿐만 아니라, 정량적인 기대효과도 명확히 제시받기를 기대한다. 그러나 현재(As-is) 업무프로세스가 제대로 분석되었는지에 대한 신뢰성(Reliability) 부족과 미래(To-be) 개선 프로세스로 전환된 이후에 정량적 목표가 제대로 달성될지 여부에 대한 가시성(Visibility) 부족이 문제점으로 대두되고 있다. 최근 이러한 문제점을 개선하고 미래 비즈니스 프로세스의 정보자원 배치를 최적화하기 위한 시뮬레이션(Simulation) 기법이 활용되고 있는 데, 이 과정에서 진행되는 시뮬레이션의 개념, 진행 절차, 특징 및 정량적 지표(KPI) 도출 등에 대하여 설명하시오.</span></li>
+    </ol>
+  </div>
 </section>
 <section id="r114" class="round">
   <h3>제114회 <span class="rd">1교시 단답형 · 13문제 중 10문제 선택 · 각 10점 · 2018년</span></h3>
@@ -961,6 +1800,40 @@ V.   결론 및 제언                                    [0.2p / 2점]
     <tr><td class="num">12</td><td>보안학적 측면에서의 사회공학(Social Engineering)</td><td><span class="tag t">개념형</span></td></tr>
     <tr><td class="num">13</td><td>품질보증(QA : Quality Assurance), 품질통제(QC : Quality Control) 청렴은 건전한 국가 재정의 첫걸음 종목 정보관리기술사 수험</td><td><span class="tag t">개념형</span></td></tr>
   </tbody></table></div>
+  <h4 class="eh">논술형 2~4교시 <span class="rd">각 교시 6문제 중 4문제 선택 · 각 25점</span></h4>
+  <div class="gy">
+    <div class="gyh">2교시</div>
+    <ol class="ql">
+      <li data-r="114" data-g="2" data-n="1"><span class="qs">로봇과비즈니스의융합인로봇프로세스자동화(RPA: RoboticsProcessAutomation)의 개념, 기반기술, 적용분야 및 시사점에 대하여 설명하시오.</span></li>
+      <li data-r="114" data-g="2" data-n="2"><span class="qs">자율주행자동차의 핵심 장비로 주목받고 있는 라이다(LiDAR : Light Detection and Ranging)의 연혁, 기술종류, 적용분야 및 시사점에 대하여 설명하시오.</span></li>
+      <li data-r="114" data-g="2" data-n="3"><span class="qs">빅데이터 프로세싱 아키텍처의 필요성, 람다 아키텍처(Lambda Architecture)와 카파 아키텍처(Capa Architecture)를 비교 설명하시오.</span></li>
+      <li data-r="114" data-g="2" data-n="4"><span class="qs">소프트웨어 기능안전(Functional Safety)에 대한 사항이다. 다음 질문에 답하시오.</span><span class="subs"><span class="sub"><b>가.</b> 소프트웨어 안전과 소프트웨어 보안의 차이점</span><span class="sub"><b>나.</b> IEC 61508에서 정의한 안전기능 요구사항 도출과정</span><span class="sub"><b>다.</b> IEC 61508과 의료기기, 항공기, 자동차 분야의 기능안전 표준들 간 비교</span></span></li>
+      <li data-r="114" data-g="2" data-n="5"><span class="qs">비즈니스 연속성 계획(BCP : Business Continuity Plan)의 구성방안과 검사방안에 대하여 설명하시오.</span></li>
+      <li data-r="114" data-g="2" data-n="6"><span class="qs">소프트웨어 개발보안을 위해서는 소프트웨어 보안약점을 이해해야 한다. 소프트웨어 보안약점들을유형별로열거하고,대표적인웹개발보안공격방지방법들을설명하시오. 청렴은 건전한 국가 재정의 첫걸음 종목 정보관리기술사 수험 ※ 다음 문제 중 4문제를 선택하여 설명하시오. (각25점)</span></li>
+    </ol>
+  </div>
+  <div class="gy">
+    <div class="gyh">3교시</div>
+    <ol class="ql">
+      <li data-r="114" data-g="3" data-n="1"><span class="qs">NoSQL 특징, 데이터 모델링 패턴 및 데이터 모델링 절차에 대하여 설명하시오.</span></li>
+      <li data-r="114" data-g="3" data-n="2"><span class="qs">CPU 아키텍처의 보안 취약점인 멜트다운(Meltdown)에 대하여 CPU 마이크로 아키 텍처 및 CPU 아키텍처 측면에서 설명하시오.</span></li>
+      <li data-r="114" data-g="3" data-n="3"><span class="qs">데이터웨어하우스에서 다차원 온라인분석처리(MOLAP)의 설계방법과 고려사항을 설명하고, 다음의 요구사항에 맞는 다차원 데이터 큐브를 설계하시오. - 2017년 2월, 서울 매장에서 팔린 침대의 매출액은 얼마인가? - 2017년 2월, 강남 매장에서 팔린 매출액은 얼마인가? - 2017년 1월∼3월간, 부산 매장에서 팔린 침대의 매출액은 얼마인가? - 2017년 1월∼3월간, 대전 매장에서 팔린 의자의 매출액은 얼마인가? - 2017년 3월, 팔린 의자의 매출액은 얼마인가? - 2017년 1월∼3월간, 팔린 의자의 매출액은 얼마인가? - 2017년 1월∼3월간, 팔린 총 매출액은 얼마인가? 종목 정보관리기술사 수험</span></li>
+      <li data-r="114" data-g="3" data-n="4"><span class="qs">시계열분석에 관한 다음 사항에 대하여 답하시오.</span><span class="subs"><span class="sub"><b>가.</b> 시계열분석의 정상성(Stationary)</span><span class="sub"><b>나.</b> 시계열모형의 유형(자기상관 모형, 이동평균 모형, 자기회귀누적이동평균 모형)</span><span class="sub"><b>다.</b> 빅데이터의 시계열자료 분석을 위한 심층신경망 기법</span></span></li>
+      <li data-r="114" data-g="3" data-n="5"><span class="qs">국제표준(ISO)에 준하여 정보보호 거버넌스의 6대 원리, 핵심 프로세스 및 주요 구성 요소에 대하여 설명하시오.</span></li>
+      <li data-r="114" data-g="3" data-n="6"><span class="qs">소프트웨어품질의테스트방법인화이트박스및블랙박스테스트의4가지검증기준(coverage)을 예를 들어 설명하고, 테스트 자동화 도구의 유형에 대하여 설명하시오. 청렴은 건전한 국가 재정의 첫걸음 종목 정보관리기술사 수험 ※ 다음 문제 중 4문제를 선택하여 설명하시오. (각25점)</span></li>
+    </ol>
+  </div>
+  <div class="gy">
+    <div class="gyh">4교시</div>
+    <ol class="ql">
+      <li data-r="114" data-g="4" data-n="1"><span class="qs">4차 산업혁명시대의 망 중립성 정책 내용, 쟁점 및 정책 이슈에 대하여 설명하시오.</span></li>
+      <li data-r="114" data-g="4" data-n="2"><span class="qs">공인인증서 의무화가 폐지되는 상황이다. 다음의 질문에 답하시오.</span><span class="subs"><span class="sub"><b>가.</b> 기존공인인증서의 적용기술 및 문제점</span><span class="sub"><b>나.</b> 인터넷전문은행의 사설 인증 방법</span><span class="sub"><b>다.</b> 블록체인 방식의 인증 방법</span></span></li>
+      <li data-r="114" data-g="4" data-n="3"><span class="qs">조직경쟁력 강화를 위해 데이터 기반의 인사이트를 활용하고자 한다. 이를 위한 분석 주제 도출방안, 도출된 방안을 실행하기 위한 분석 거버넌스 수립방안에 대하여 설명 하시오.</span></li>
+      <li data-r="114" data-g="4" data-n="4"><span class="qs">인공지능으로 해결할 수 있는 문제의 특징을 기술하고, 문제해결 방법 중 균일비용 탐색(Uniform Cost Search)과 A*알고리즘에 대하여 비교 설명하시오.</span></li>
+      <li data-r="114" data-g="4" data-n="5"><span class="qs">클라우드 컴퓨팅의 서비스 모델별, 배치 모델별 고려사항에 대하여 설명하시오.</span></li>
+      <li data-r="114" data-g="4" data-n="6"><span class="qs">초연결 시대의 5G 네트워크의 기술적 특징, 국내외 추진 동향 및 시사점에 대하여 설명하시오. 청렴은 건전한 국가 재정의 첫걸음</span></li>
+    </ol>
+  </div>
 </section>
 <section id="r113" class="round">
   <h3>제113회 <span class="rd">1교시 단답형 · 13문제 중 10문제 선택 · 각 10점 · 2017년</span></h3>
@@ -979,6 +1852,40 @@ V.   결론 및 제언                                    [0.2p / 2점]
     <tr><td class="num">12</td><td>SDDC(Software-defined Data Center)</td><td><span class="tag t">개념형</span></td></tr>
     <tr><td class="num">13</td><td>망중립성(Network Neutrality) 청렴은 건전한 국가 재정의 첫걸음 종목 정보관리기술사 수험</td><td><span class="tag t">개념형</span></td></tr>
   </tbody></table></div>
+  <h4 class="eh">논술형 2~4교시 <span class="rd">각 교시 6문제 중 4문제 선택 · 각 25점</span></h4>
+  <div class="gy">
+    <div class="gyh">2교시</div>
+    <ol class="ql">
+      <li data-r="113" data-g="2" data-n="1"><span class="qs">공공소프트웨어사업영향평가제를도입한배경, 그 적용범위 그리고시사점에대하여 설명하시오.</span></li>
+      <li data-r="113" data-g="2" data-n="2"><span class="qs">DBMS(Database Management System)에서의 SQL(Structured Query Language) 처리과정을설명하고,Statement와PreparedStatement방식을비교하여설명하시오.</span></li>
+      <li data-r="113" data-g="2" data-n="3"><span class="qs">애자일(Agile)개발방법론을정의하고, 그특징을CBD(ComponentBasedDevelopment) 방법론과 비교하여 설명하시오.</span></li>
+      <li data-r="113" data-g="2" data-n="4"><span class="qs">멀티프로세스환경에서프로그램실행시컴퓨터내외부에서발생할수있는인터럽트 (Interrupt)의 처리 우선순위에 대하여 설명하시오.</span></li>
+      <li data-r="113" data-g="2" data-n="5"><span class="qs">월드와이드웹(WWW)프로토콜인HTTP의취약점을설명하고, 그대안으로사용하는 HTTPS의 특징에 대하여 설명하시오.</span></li>
+      <li data-r="113" data-g="2" data-n="6"><span class="qs">인공신경망의가장단순한형태인퍼셉트론(perceptron)의구조와활성화함수(activation function)에 대하여 설명하고, 단층 퍼셉트론으로는 Exclusive-OR 연산을 학습할 수 없는 이유를 설명하시오. 청렴은 건전한 국가 재정의 첫걸음 종목 정보관리기술사 수험 ※ 다음 문제 중 4문제를 선택하여 설명하시오. (각25점)</span></li>
+    </ol>
+  </div>
+  <div class="gy">
+    <div class="gyh">3교시</div>
+    <ol class="ql">
+      <li data-r="113" data-g="3" data-n="1"><span class="qs">소프트웨어개발방법론에있어서테일러링(Tailoring)절차와고려사항에대하여설명하시오.</span></li>
+      <li data-r="113" data-g="3" data-n="2"><span class="qs">직감기술(IntuitiveTechnology)을 정의하고, 이 기술의 발전과정과직감기술의종류에 대하여 설명하시오.</span></li>
+      <li data-r="113" data-g="3" data-n="3"><span class="qs">랜섬웨어공격에대하여사전,사후적대응방안을기술적,관리적관점에서설명하시오.</span></li>
+      <li data-r="113" data-g="3" data-n="4"><span class="qs">특정 개인의 프라이버시(privacy)를 보호하면서도 그 개인의 정보를 사용하기 위해 설계된방법의하나인PPDM(PrivacyPreservingDataMining)을정의하고, 그기법에 대하여 설명하시오.</span></li>
+      <li data-r="113" data-g="3" data-n="5"><span class="qs">유전 알고리즘(Genetic algorithm)을 정의하고, 그 알고리즘의 흐름을 설명한 후, 이 알고리즘에서사용되는기법인룰렛휠선택(roulettewheelselection)의역할에대하여 설명하시오.</span></li>
+      <li data-r="113" data-g="3" data-n="6"><span class="qs">기업내부사용자의시스템접근을더욱체계적으로관리하기위하여별도의비밀번호 관리시스템을구축하고자한다.별도의비밀번호관리시스템을구축하는경우의장단점을 설명하고,시스템 개념 구성도 및 처리 절차 등에 대하여 설명하시오. 청렴은 건전한 국가 재정의 첫걸음 종목 정보관리기술사 수험 ※ 다음 문제 중 4문제를 선택하여 설명하시오. (각25점)</span></li>
+    </ol>
+  </div>
+  <div class="gy">
+    <div class="gyh">4교시</div>
+    <ol class="ql">
+      <li data-r="113" data-g="4" data-n="1"><span class="qs">업무용 망을 인터넷 망에서 분리하는 경우의 장단점과 그 구축 방안을 제시하고, 각 방안을 3가지 관점(보안,성능,비용)에서 비교하여 설명하시오.</span></li>
+      <li data-r="113" data-g="4" data-n="2"><span class="qs">블록체인(Block Chain)기술을 정의하고, 블록체인의 생성주체(Public, Private)별 운영 방식의특징을정보생성,합의주체,규칙변경,거래속도,거래확정주체의관점에서 비교하여 설명하시오.</span></li>
+      <li data-r="113" data-g="4" data-n="3"><span class="qs">기업경쟁력 제고를 위해 빅데이터(BigData) 분석의 중요성이 대두됨에 따라, 기업의 문제점을 체계적으로 파악하고, 이를 해결하여 사업적 가치를 재평가하기 위해서는 통합적 빅데이터프로젝트수행이 필요하다. 빅데이터분석의특징을설명한후적절한 수행 절차와 각 단계에서의 처리내용을 설명하시오.</span></li>
+      <li data-r="113" data-g="4" data-n="4"><span class="qs">CPU의명령어처리에있어서 파이프라인(pipeline)방식과비파이프라인방식에대하여 각각의 CPU처리시간을 비교하여 설명하시오. (단, 파이프라인의 단계 수를 m, 각 파인프라인 단계에서의 처리시간을 k, 실행할</span></li>
+      <li data-r="113" data-g="4" data-n="5"><span class="qs">오픈 데이터(OpenData)를정의하고(특히오픈의의미를구체적으로설명),그 데이터의 등급을 5단계로 나누어 설명하시오.</span></li>
+      <li data-r="113" data-g="4" data-n="6"><span class="qs">유엔(UN)이세계각국의전자정부수준을평가하는 데 사용하는EGDI(E-Government DevelopmentIndex)의 구성요소와 EGDI 값을 산출하는 방식에 대하여 설명하시오. 청렴은 건전한 국가 재정의 첫걸음</span></li>
+    </ol>
+  </div>
 </section>
 <section id="r111" class="round">
   <h3>제111회 <span class="rd">1교시 단답형 · 13문제 중 10문제 선택 · 각 10점 · 2017년</span></h3>
@@ -997,6 +1904,40 @@ V.   결론 및 제언                                    [0.2p / 2점]
     <tr><td class="num">12</td><td>바이모달(Bimodal) IT</td><td><span class="tag t">개념형</span></td></tr>
     <tr><td class="num">13</td><td>은닉 마르코프 모델(HMM : Hidden Markov Model)</td><td><span class="tag t">구성형</span></td></tr>
   </tbody></table></div>
+  <h4 class="eh">논술형 2~4교시 <span class="rd">각 교시 6문제 중 4문제 선택 · 각 25점</span></h4>
+  <div class="gy">
+    <div class="gyh">2교시</div>
+    <ol class="ql">
+      <li data-r="111" data-g="2" data-n="1"><span class="qs">RDBMS의 Dirty Read와 Phantom Read를 설명하시오.</span></li>
+      <li data-r="111" data-g="2" data-n="2"><span class="qs">딥러닝(Deep Learning)구현을 위한 Feed Forward모델을 설명하고, CNN(Convolutional Neural Network)과의 차이점을 설명하시오.</span></li>
+      <li data-r="111" data-g="2" data-n="3"><span class="qs">사이버전(Cyber Warfare)의 개념, 특징, 보안 기술을 설명하시오.</span></li>
+      <li data-r="111" data-g="2" data-n="4"><span class="qs">데브옵스(DevOps)와 애자일(Agile) 방법론을 비교하여 설명하시오.</span></li>
+      <li data-r="111" data-g="2" data-n="5"><span class="qs">인공지능, 사물인터넷, 클라우드가 로봇과 접목하여 인간과 상호작용이 가능한 소셜 로봇이 등장하였다. 소셜 로봇의 개념, 특징, 시장 현황 및 전망에 대하여 설명하시오.</span></li>
+      <li data-r="111" data-g="2" data-n="6"><span class="qs">사물인터넷(IoT) 네트워크는 초연결성을 가지고 있어 장치 간 신뢰성 확보가 필수적으로 요구된다. 사물인터넷(IoT) 네트워크 보안기술의 개념, 특성, CoAP / MQTT / LwM2M 프로토콜 구조, 보안 이슈에 대하여 설명하시오. ※ 다음 문제 중 4문제를 선택하여 설명하시오. (각25점)</span></li>
+    </ol>
+  </div>
+  <div class="gy">
+    <div class="gyh">3교시</div>
+    <ol class="ql">
+      <li data-r="111" data-g="3" data-n="1"><span class="qs">제조 공장에서 제품 계측에 활용되는 가상계측(Virtual Metrology)에 대하여 설명하시오.</span></li>
+      <li data-r="111" data-g="3" data-n="2"><span class="qs">동일한 규격의 제품이 B공장에서 생산될 때 보다 A공장에서 생산될 때 제품의 무게가 더 적다고 주장하고 있다. 이를 확인하기 위하여 아래 표와 같이 제품을 랜덤하게 뽑아 조사하였다. A와 B 공장의 제품 무게는 모두 정규 분포로 가정하여 A공장 제품이 B공장 제품에 비하여 무게가 적다고 할 수 있는지 가설을 설정하고 검정하시오.(단, 유의수준 5%) 구분 표본크기(개) 표본평균(그램) 표본표준편차(그램) A공장 제품 36 23.001 6.000 B공장 제품 25 25.829 5.000</span></li>
+      <li data-r="111" data-g="3" data-n="3"><span class="qs">국내 중소기업은 소프트웨어공학 프로세스에 의한 소프트웨어 개발 품질관리를 수행하기에 인력과 비용이 부족하여, 소프트웨어 개발 품질관리를 수행하기 위한 방안으로 소프트웨어 Visualization이 부각되고 있다. 소프트웨어 Visualization을 개발 프로세스 및 소스코드 관점에서 설명하시오.</span></li>
+      <li data-r="111" data-g="3" data-n="4"><span class="qs">정보시스템 감리와 정보통신공사 감리를 설명하고, 감리보고서의 주요 내용을 비교하시오.</span></li>
+      <li data-r="111" data-g="3" data-n="5"><span class="qs">기업 측면에서 오픈소스 소프트웨어를 도입하여 시스템을 구축할 때 기업 가치가 향상되기를 원한다. 다음을 설명하시오.</span><span class="subs"><span class="sub"><b>가.</b> 오픈소스 소프트웨어의 정의</span><span class="sub"><b>나.</b> 기업 혁신 탐색(Exploration)과 효율 추구(Exploitation) 관점에서 오픈소스 소프트웨어의 활용 방식 비교</span><span class="sub"><b>다.</b> 오픈소스의 비즈니스 모델 사례 제시</span></span></li>
+      <li data-r="111" data-g="3" data-n="6"><span class="qs">공공 클라우드 포렌식(Forensic) 조사 절차, 클라우드 시그니처(Cloud Signature) 탐지 도구의 개념 및 기능에 대하여 설명하시오. ※ 다음 문제 중 4문제를 선택하여 설명하시오. (각25점)</span></li>
+    </ol>
+  </div>
+  <div class="gy">
+    <div class="gyh">4교시</div>
+    <ol class="ql">
+      <li data-r="111" data-g="4" data-n="1"><span class="qs">데이터 분석의 분류 모델에서 모델 평가 시 사용되는 혼동행렬(Confusion Matrix)에 대하여 설명하고, 혼동행렬 기반의 모델 성능평가 항목을 산식을 이용하여 설명하시오.</span></li>
+      <li data-r="111" data-g="4" data-n="2"><span class="qs">네트워크 데이터 분석에서 네트워크 중심성을 평가하는 연결중심성(Degree Centrality), 매개중심성(Betweenness Centrality), 인접중심성(Closeness Centrality) 에 대하여 설명하시오.</span></li>
+      <li data-r="111" data-g="4" data-n="3"><span class="qs">공간 인덱스 구조에서 MBR(Minimum Bounding Region)을 설명하고, R트리, R+트리, R*트리를 비교하시오.</span></li>
+      <li data-r="111" data-g="4" data-n="4"><span class="qs">최근 기업들은 인공지능(AI) 콜센터를 구축하려고 한다. 인공지능 콜센터는 딥러닝(Deep Learning)을 적용한 인공지능 상담사가 고객과 대화하고 요청된 업무를 처리하는 시스템이다. 도입 시 적용 가능한 서비스를 인바운드, 아웃바운드, 녹취록 분석으로 구분하여 구현 방안을 제시하시오.</span></li>
+      <li data-r="111" data-g="4" data-n="5"><span class="qs">최근 가상현실(VR)은 ICT 및 인프라의 발달로 확산 되고 있다. 가상현실의 개념, 확산요인, 생태계 현황 및 시사점에 대하여 설명하시오.</span></li>
+      <li data-r="111" data-g="4" data-n="6"><span class="qs">데이터센터 운영과 기후변화에 대비한 친 환경기업 이미지 구축을추구하고 있는 IT 기업의 신재생에너지 사업진출 현황과 관련 생태계 구축 현황에 대하여 설명하시오.</span></li>
+    </ol>
+  </div>
 </section>
 <section id="r110" class="round">
   <h3>제110회 <span class="rd">1교시 단답형 · 13문제 중 10문제 선택 · 각 10점 · 2016년</span></h3>
@@ -1015,6 +1956,40 @@ V.   결론 및 제언                                    [0.2p / 2점]
     <tr><td class="num">12</td><td>챗봇(chatbot)</td><td><span class="tag t">개념형</span></td></tr>
     <tr><td class="num">13</td><td>스턱스넷(Stuxnet)</td><td><span class="tag t">개념형</span></td></tr>
   </tbody></table></div>
+  <h4 class="eh">논술형 2~4교시 <span class="rd">각 교시 6문제 중 4문제 선택 · 각 25점</span></h4>
+  <div class="gy">
+    <div class="gyh">2교시</div>
+    <ol class="ql">
+      <li data-r="110" data-g="2" data-n="1"><span class="qs">4차 산업혁명의 정의와 연혁, 특징, 국내 문제점 및 해결 방안을 설명하시오.</span></li>
+      <li data-r="110" data-g="2" data-n="2"><span class="qs">SW(소프트웨어) 사업 분할 발주를 위한 수발주자 가이드라인의 목적과 필요성, 내용을 설명하고, 분할 발주 도입 시에 예상되는 문제점과 대책, 그리고 향후 공공 SW 사업에 대한 발주 모델을 설명하시오.</span></li>
+      <li data-r="110" data-g="2" data-n="3"><span class="qs">2016년부터 공공 발주 시 의무화된 상용 SW 품질평가 성능시험(BMT)의 근거 법률과 BMT 도입배경, BMT 제도, BMT 적용대상, BMT 절차 및 제도개선을위한 문제점과 개선방안에 대하여 설명하시오.</span></li>
+      <li data-r="110" data-g="2" data-n="4"><span class="qs">무선센서네트워크(WSN)와 이동 가능한 무선단말로 구축되는 애드혹(Ad-hoc) 네트 워크의 차이점을 비교하고, 애드혹 네트워크의 경로제어 방법인 리액티브(Reactive)형 방법과 프로액티브(Proactive) 방법에 대하여 비교 설명하시오.</span></li>
+      <li data-r="110" data-g="2" data-n="5"><span class="qs">동기화 기법인 스핀 락(Read/Write Spin Lock)의 개념을 기술하고 스핀 락을 활용 하는 방법을 사례를 들어 설명하시오.</span></li>
+      <li data-r="110" data-g="2" data-n="6"><span class="qs">최근 핀테크, 인터넷전문은행, 간편결제 서비스의 등장으로 비대면 거래가 늘어나면서 이에 대한 보안 기술의 중요성이 강조되고 있다. 최근 비대면 보안 기술로 각광을 받는 기술들의 개념과 특징을 열거하고, 이들을 비교 설명하시오. ※ 다음 문제 중 4문제를 선택하여 설명하시오. (각25점)</span></li>
+    </ol>
+  </div>
+  <div class="gy">
+    <div class="gyh">3교시</div>
+    <ol class="ql">
+      <li data-r="110" data-g="3" data-n="1"><span class="qs">2016년 공공부분에 매년 시행이 의무화된 정보시스템 운영 성과평가의 근거 법률과</span></li>
+      <li data-r="110" data-g="3" data-n="2"><span class="qs">인공지능 산업 발전을 위한 (1) 촉진 관련 법제도, (2) 규제 관련 법제도를 기술 하고, 현행 법제도의 문제점 및 개선방안에 대하여 설명하시오.</span></li>
+      <li data-r="110" data-g="3" data-n="3"><span class="qs">CRC(Cyclic Redundancy Check)의 원리를 기술하고, CRC-8 = x8 + x2 + x + 1이고 데이터워드가 01101011 일 때 코드워드를 계산하는 과정을 설명하고, 그 결과가 옳음을 검증하시오.</span></li>
+      <li data-r="110" data-g="3" data-n="4"><span class="qs">가상현실(VR) 생태계 현황에 대한 문제점과 해결방안을 C(콘텐츠)-P(플랫폼)-N (네트워크)-D(디바이스) 관점에서 설명하시오.</span></li>
+      <li data-r="110" data-g="3" data-n="5"><span class="qs">최근 발간된 “개인정보 비식별 조치 가이드라인”의 추진 배경, 비식별 조치기준을 설명하고 향후 기대되는 효과에 대하여 설명하시오.</span></li>
+      <li data-r="110" data-g="3" data-n="6"><span class="qs">최근 미국에서 자율자동차의 사고로 인하여 인명 피해가 발생하였다. 이로 인해 자율 시스템에 포함된 소프트웨어의 기능 안전 문제가 크게 대두되고 있는 데 모든 산업에 적용 가능한 기능 안전기준을 제시한 IEC61508 시리즈의 전체 프레임워크를 도식화하여 설명하시오. ※ 다음 문제 중 4문제를 선택하여 설명하시오. (각25점)</span></li>
+    </ol>
+  </div>
+  <div class="gy">
+    <div class="gyh">4교시</div>
+    <ol class="ql">
+      <li data-r="110" data-g="4" data-n="1"><span class="qs">다음은 어떤 프로젝트를 수행하기 위한 활동과 그 활동에 필요한 시간, 이를 수행 하기 전에 해야 할 선행활동및 가용인원수를 나타낸 것이다. 각각의 물음에 답하시오. 활동 기간(일) 선행활동 가용인원(명) 가 2 - 2 나 3 - 3 다 4 가,나 3 라 3 다 2 마 1 가,나,다 4 바 2 라,마 2 사 3 바 3</span><span class="subs"><span class="sub"><b>가.</b> 프로젝트 완료일은 언제인가?</span><span class="sub"><b>나.</b> 주공정(Critical Path)은 어떤 경로인가?</span><span class="sub"><b>다.</b> 활동 “라”를 2일 앞당긴다면 프로젝트 완료 일정은 어떻게 되는가?</span><span class="sub"><b>라.</b> “가”번의 경우, 가용인원을 4명/일로 제한한다면 프로젝트 완료 일정은 어떻게 되는가? 마. “라”번의 경우, 주공정연쇄법(critical chain project management)으로 관리한 다면 어떤 버퍼를 어디에 설치해야 하는가?</span></span></li>
+      <li data-r="110" data-g="4" data-n="2"><span class="qs">정보보호 인증제도인 ISMS, G-ISMS, PIPL, PIMS에 대하여 근거 법령, 인증 대상, 인증 평가 내용, 의무 여부, 인증 취득 시 혜택을 설명하시오.</span></li>
+      <li data-r="110" data-g="4" data-n="3"><span class="qs">특허 기술가치평가의 법적 근거와 활용분야 및 정성적 평가 항목(기술성, 권리성, 시장성, 사업성)에 대하여 설명하시오.</span></li>
+      <li data-r="110" data-g="4" data-n="4"><span class="qs">SQL에서 정의하는 JOIN의 유형을 기술하고, JOIN 성능을 높이기 위한 기법을 사례를 들어 설명하시오.</span></li>
+      <li data-r="110" data-g="4" data-n="5"><span class="qs">프로세스 스레싱(Thrashing)의 발생 원인과 예방책을 설명하시오.</span></li>
+      <li data-r="110" data-g="4" data-n="6"><span class="qs">가상화폐의 핵심기술로 사용되는 블록체인의 개념과 작동 원리를 설명하고, 블록 체인의 오픈플랫폼(Open Platform)인 이더리움(Ethereum)의 개념과 특징을 가상화폐와 비교하여설명하시오.</span></li>
+    </ol>
+  </div>
 </section>
 
 <section id="g139" >
@@ -3487,8 +4462,24 @@ MA(1) :  ■ ▪ (끝)           다음 1시점만 영향, 이후 0
     { label: "Gemini",     url: function () { return "https://gemini.google.com/app"; }, copyFirst: true }
   ];
 
-  function buildPrompt(round, num, text) {
-    var where = round ? ("정보관리기술사 제" + round + "회 1교시 " + num + "번") : "정보관리기술사 1교시 출제 예상 주제";
+  function buildPrompt(round, num, text, essay) {
+    var where = round ? ("정보관리기술사 제" + round + "회 " + (essay ? num : "1교시 " + num) + "번")
+                      : "정보관리기술사 1교시 출제 예상 주제";
+    if (essay) {
+      return [
+        "아래는 " + where + " 논술형 문제입니다. (25점 · 100분에 4문제 · 답안 3페이지 분량)",
+        "",
+        text,
+        "",
+        "기술사 논술형 답안 목차로 정리해 주세요.",
+        "1. 소문항(가/나/다)을 대제목 II·III·IV 로 1:1 매핑 — 출제 지문 표현을 그대로 사용",
+        "2. 각 대제목 아래에 넣을 표 구성과 도해를 지정 (페이지당 시각물 1개 이상)",
+        "3. 대제목별 채점 키워드",
+        "4. 결론(V)은 요약이 아니라 거버넌스 연계·법제도 개선·단계적 도입 중 2~3개 제언",
+        "",
+        "배점 배분(도입 3 · 소문항 각 6~8 · 결론 2)에 맞춰 지면을 나눠 주세요."
+      ].join("\n");
+    }
     return [
       "아래는 " + where + " 문제입니다.",
       "",
@@ -3512,6 +4503,12 @@ MA(1) :  ■ ▪ (끝)           다음 1시점만 영향, 이후 0
     b.type = "button"; b.className = "sh"; b.textContent = "공유";
     b.setAttribute("aria-label", "이 문제를 다른 AI에게 물어보기");
     tr.cells[2].appendChild(b);
+  });
+  document.querySelectorAll("section.round ol.ql > li").forEach(function (li) {
+    var b = document.createElement("button");
+    b.type = "button"; b.className = "sh"; b.textContent = "공유";
+    b.setAttribute("aria-label", "이 문제를 다른 AI에게 물어보기");
+    li.querySelector(".qs").appendChild(b);
   });
   answers.forEach(function (sec) {
     var row = sec.querySelector(".prog");
@@ -3544,9 +4541,9 @@ MA(1) :  ■ ▪ (끝)           다음 1시점만 영향, 이후 0
   function closeDialog() {
     if (dlg) { dlg.remove(); dlg = null; }
   }
-  function openDialog(round, num, text) {
+  function openDialog(round, num, text, essay) {
     closeDialog();
-    var prompt = buildPrompt(round, num, text);
+    var prompt = buildPrompt(round, num, text, essay);
     var title = round ? ("제" + round + "회 " + num + "번") : "출제 예상 주제";
 
     dlg = document.createElement("div");
@@ -3618,6 +4615,14 @@ MA(1) :  ■ ▪ (끝)           다음 1시점만 영향, 이후 0
   document.addEventListener("click", function (e) {
     var btn = e.target.closest(".sh");
     if (!btn) return;
+    var li = btn.closest("section.round ol.ql > li");
+    if (li) {
+      var stem = li.querySelector(".qs").textContent.replace(/공유$/, "").trim();
+      var subs = [].map.call(li.querySelectorAll(".sub"), function (s) { return s.textContent.trim(); });
+      openDialog(li.dataset.r, li.dataset.g + "교시 " + li.dataset.n,
+                 stem + (subs.length ? "\n" + subs.join("\n") : ""), true);
+      return;
+    }
     var tr = btn.closest("section.round tbody tr");
     if (tr) {
       openDialog(btn.closest("section.round").id.slice(1),
