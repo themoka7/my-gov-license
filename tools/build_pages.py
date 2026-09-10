@@ -59,4 +59,8 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except BrokenPipeError:
+        # 출력이 head 등으로 잘린 경우 — 파일은 이미 기록됨
+        os._exit(0)
